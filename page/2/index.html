@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="deep learning," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -81,26 +81,13 @@
 
 
 
-<meta name="description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
-<meta name="keywords" content="deep learning">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Deep Learning Practice">
-<meta property="og:url" content="http://james20141606.github.io/2018/04/10/Deep-Learning-Practice/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="James Chen&#39;s Blogs">
+<meta property="og:url" content="http://james20141606.github.io/page/2/index.html">
 <meta property="og:site_name" content="James Chen&#39;s Blogs">
-<meta property="og:description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://i2.bvimg.com/640680/fefc8e3a01a27627.jpg">
-<meta property="og:image" content="http://i2.bvimg.com/640680/989124bdbb83b921.jpg">
-<meta property="og:image" content="http://i2.bvimg.com/640680/af93d6a2daaba726.png">
-<meta property="og:image" content="http://i2.bvimg.com/640680/58bc934f371dcd6f.jpg">
-<meta property="og:image" content="http://i2.bvimg.com/640680/71440c6ba2a94251.jpg">
-<meta property="og:image" content="http://i2.bvimg.com/640680/35dfa92b54debbe6.png">
-<meta property="og:image" content="http://i2.bvimg.com/640680/acf000d769f49e4f.png">
-<meta property="og:updated_time" content="2018-04-11T15:30:40.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Deep Learning Practice">
-<meta name="twitter:description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
-<meta name="twitter:image" content="http://i2.bvimg.com/640680/fefc8e3a01a27627.jpg">
+<meta name="twitter:title" content="James Chen&#39;s Blogs">
 
 
 
@@ -130,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://james20141606.github.io/2018/04/10/Deep-Learning-Practice/"/>
+  <link rel="canonical" href="http://james20141606.github.io/page/2/"/>
 
 
 
 
 
-  <title>Deep Learning Practice | James Chen's Blogs</title>
+  <title>James Chen's Blogs</title>
   
 
 
@@ -165,7 +152,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,9 +226,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -270,7 +258,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Deep Learning Practice</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/10/Deep-Learning-Practice/" itemprop="url">Deep Learning Practice</a></h1>
         
 
         <div class="post-meta">
@@ -342,7 +332,9 @@
       
 
       
-        <p>这是在实验室Learning Club上的分享，整理到这里。</p>
+        
+          
+            <p>这是在实验室Learning Club上的分享，整理到这里。</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都十分充分，很适合快速地学习。</p>
 <p>也许大家也都有这样的经历：到处看到关于人工智能解决了某某问题的报道，对神经网络、卷积等概念有粗浅的印象，知道深度学习很强大，探讨着和深度学习相关的话题，却是否没有真正去试图学一学，正所谓Talk is Cheap, Show Me the Code. 其实最好的入门方法就是动手试一试。<br>仅仅从入门的角度来看，在现在这个时间节点，搭建起一个基本的神经网络，乃至应用深度学习解决一个自己正在研究的问题，都比以往任何时候简单很多。</p>
 <p>在这个分享中我主要简单介绍了深度学习相关的资源、平台、教程，通过几个例子展示如何利用深度学习平台搭建模型解决一个具体的问题。</p>
@@ -479,6 +471,8 @@
 <h5 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h5><p>接下来就是用数据训练数据，可以定义的参数包括每批投入的样本量，轮数，是否混合，cross validation的比例，是否需要提前中止训练，训练过程保存到Tensorboard，模型权重的保存等等<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model_checkpoint = ModelCheckpoint<span class="params">('newunet__row_col_weights_mse.hdf5', <span class="attr">monitor</span>='binary_accuracy_with_nan', <span class="attr">save_best_only</span>=True)</span></span><br><span class="line"></span><br><span class="line">def Model<span class="params">(images_train,y_train,cv,seq_counts)</span>:</span><br><span class="line">    model.fit<span class="params">(images_train, y_train, <span class="attr">batch_size</span>=32, <span class="attr">nb_epoch</span>=150,<span class="attr">verbose</span>=1,<span class="attr">shuffle</span>=True,<span class="attr">validation_split</span>=0.2,<span class="attr">callbacks</span>=[model_checkpoint,EarlyStopping(<span class="attr">monitor</span>='CrossEntropyLoss',<span class="attr">patience</span>=10,<span class="attr">verbose</span>=0)</span>,TensorBoard<span class="params">(<span class="attr">log_dir</span>=path)</span>])</span><br><span class="line">    model.save<span class="params">(path)</span></span><br></pre></td></tr></table></figure></p>
 <p>使用K.function函数，可以查看一个输入数据每一层的输出情况，再通过画图可视化之后，非常适合对模型做进一步的分析。<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">inp = model.input                                           <span class="comment"># input placeholder</span></span><br><span class="line">outputs = [layer.output for layer in model.layers]          <span class="comment"># all layer outputs</span></span><br><span class="line">functor = K.function([inp]+ [K.learning_phase()], outputs ) <span class="comment"># evaluation function</span></span><br><span class="line"><span class="comment"># Testing</span></span><br><span class="line">layer_outs = functor([images_train[80], 1.])</span><br></pre></td></tr></table></figure></p>
 
+          
+        
       
     </div>
     
@@ -493,40 +487,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/deep-learning/" rel="tag"># deep learning</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/05/26/auto0/" rel="next" title="陈炳林回忆录 An Autobiography 序言">
-                <i class="fa fa-chevron-left"></i> 陈炳林回忆录 An Autobiography 序言
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/11/auto1/" rel="prev" title="auto1">
-                auto1 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -536,11 +504,158 @@
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2017/05/26/auto0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Chen's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/26/auto0/" itemprop="url">陈炳林回忆录 An Autobiography 序言</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-26T12:12:57+08:00">
+                2017-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/爷爷回忆录/" itemprop="url" rel="index">
+                    <span itemprop="name">爷爷回忆录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Preface-前言"><a href="#Preface-前言" class="headerlink" title="Preface 前言"></a>Preface 前言</h1><pre><code>这份不长不短的回忆录源自于清华大学的毛中特课程的一份作业，在一年以前就打算选择冯务中老师的课，原因就是打听了各个老师的任务，对这项任务非常感兴趣，无奈没有抢到课，但是却开始了帮助爷爷奶奶整理这份回忆录的过程。平时每个周末都会和爷爷奶奶视频聊天一两个小时，自从有了这个想法，就会专门和爷爷奶奶聊过去的故事，顺带鼓励他们动笔写一些。爷爷年轻时是县委组织部的笔杆子，虽然已经七十多岁了，听到我的鼓励也有些心动，多年未提笔，写起来却是收不住，听奶奶说爷爷经常凌晨四五点起来就开始写，边写边流泪，回忆幼年时的艰辛与不易。这份回忆录，讲到了爷爷中年时期即止，爷爷说，年轻的生活更加刻骨铭心，令人难忘，后来生活好转，一切顺利如意，倒也没什么可写了。
+这份回忆录以爷爷为主要视角叙述，补充了很多和奶奶讨论之后获得的细节，家里过去非常的穷，留下的资料几乎为零，曾经爷爷的哥哥大爷试图整理一份家谱出来，也被爷爷的爸爸在大爷去世后烧毁，因此我们也觉得能够再整理出一些过去的故事非常有意义。这里面的一些故事朴实又动人，在我整理的过程中充满了感慨和感动，让我体会到祖辈们的艰苦和不屈的精神。有的故事还带来了意想不到的惊喜，比如爷爷专门回忆了他年轻时结识的一个好朋友周聚照，已经几十年联系不上了，我整理完爷爷的回忆录，对这位朋友印象深刻，因此自告奋勇帮爷爷联系，在几个可能的地点的百度贴吧发布帖子，真的找到了这位老人的家人。爷爷和奶奶非常激动，第二天就坐车前去看望，周聚照老人已经不在了，但是他的后代生活的很好，孙辈们都获得了很好的教育，考入了很好的大学，改变了自己的命运，真的很令人感慨。另一个故事，爷爷没有亲手写下来，但是还是忍不住告诉了我，就是回忆录的最后一个故事，关于正义的故事，这个发生于爷爷的父亲身上的真实的故事深深的震撼了我，让我对那个混乱的年代有了更深的体会。
+</code></pre><p>最后还整理了一个简单的按照年份的时间表，还用一个专门的软件macfamilytree制作了一个这三四代人的家谱树，希望未来的家谱树可以越来越大，开枝散叶，生生不息。</p>
+<h1 id="目录-Table-of-Contents"><a href="#目录-Table-of-Contents" class="headerlink" title="目录   Table of Contents"></a>目录   Table of Contents</h1><h2 id="前言-1"><a href="#前言-1" class="headerlink" title="前言 1"></a>前言 1</h2><h2 id="Chapter-Ⅰ-我的童年"><a href="#Chapter-Ⅰ-我的童年" class="headerlink" title="Chapter Ⅰ 我的童年"></a>Chapter Ⅰ 我的童年</h2><h2 id="Chapter-Ⅱ-初中生活"><a href="#Chapter-Ⅱ-初中生活" class="headerlink" title="Chapter Ⅱ 初中生活"></a>Chapter Ⅱ 初中生活</h2><h2 id="Chapter-Ⅲ-难忘的一九五八"><a href="#Chapter-Ⅲ-难忘的一九五八" class="headerlink" title="Chapter Ⅲ 难忘的一九五八"></a>Chapter Ⅲ 难忘的一九五八</h2><h2 id="Chapter-Ⅳ-新的篇章"><a href="#Chapter-Ⅳ-新的篇章" class="headerlink" title="Chapter Ⅳ 新的篇章"></a>Chapter Ⅳ 新的篇章</h2><h2 id="Chapter-Ⅴ-休学的日子"><a href="#Chapter-Ⅴ-休学的日子" class="headerlink" title="Chapter Ⅴ 休学的日子"></a>Chapter Ⅴ 休学的日子</h2><h2 id="Chapter-Ⅵ-婚后的生活"><a href="#Chapter-Ⅵ-婚后的生活" class="headerlink" title="Chapter Ⅵ 婚后的生活"></a>Chapter Ⅵ 婚后的生活</h2><h2 id="Chapter-Ⅶ-喜上加喜-喜中有忧"><a href="#Chapter-Ⅶ-喜上加喜-喜中有忧" class="headerlink" title="Chapter Ⅶ 喜上加喜 喜中有忧"></a>Chapter Ⅶ 喜上加喜 喜中有忧</h2><h2 id="Chapter-Ⅷ-工作-崭新的篇章"><a href="#Chapter-Ⅷ-工作-崭新的篇章" class="headerlink" title="Chapter Ⅷ 工作 崭新的篇章"></a>Chapter Ⅷ 工作 崭新的篇章</h2><h2 id="Essays-短文数篇"><a href="#Essays-短文数篇" class="headerlink" title="Essays    短文数篇"></a>Essays    短文数篇</h2><h3 id="忆祖母"><a href="#忆祖母" class="headerlink" title="忆祖母"></a>忆祖母</h3><h3 id="忆母亲"><a href="#忆母亲" class="headerlink" title="忆母亲"></a>忆母亲</h3><h3 id="四伯家生活写照"><a href="#四伯家生活写照" class="headerlink" title="四伯家生活写照"></a>四伯家生活写照</h3><h3 id="八岁孩子学走路"><a href="#八岁孩子学走路" class="headerlink" title="八岁孩子学走路"></a>八岁孩子学走路</h3><h3 id="我的第一双棉鞋"><a href="#我的第一双棉鞋" class="headerlink" title="我的第一双棉鞋"></a>我的第一双棉鞋</h3><h3 id="大伯和父亲给祖母惹祸"><a href="#大伯和父亲给祖母惹祸" class="headerlink" title="大伯和父亲给祖母惹祸"></a>大伯和父亲给祖母惹祸</h3><h3 id="真实故事三则"><a href="#真实故事三则" class="headerlink" title="真实故事三则"></a>真实故事三则</h3><h3 id="我的朋友周聚照"><a href="#我的朋友周聚照" class="headerlink" title="我的朋友周聚照"></a>我的朋友周聚照</h3><h3 id="人生机遇只有一次"><a href="#人生机遇只有一次" class="headerlink" title="人生机遇只有一次"></a>人生机遇只有一次</h3><h3 id="过个革命化春节"><a href="#过个革命化春节" class="headerlink" title="过个革命化春节"></a>过个革命化春节</h3><h3 id="石人传说二则"><a href="#石人传说二则" class="headerlink" title="石人传说二则"></a>石人传说二则</h3><h3 id="Poems-诗歌九则"><a href="#Poems-诗歌九则" class="headerlink" title="Poems 诗歌九则"></a>Poems 诗歌九则</h3><h4 id="玩秋千"><a href="#玩秋千" class="headerlink" title="玩秋千"></a>玩秋千</h4><h4 id="石人山景"><a href="#石人山景" class="headerlink" title="石人山景"></a>石人山景</h4><h4 id="恋家"><a href="#恋家" class="headerlink" title="恋家"></a>恋家</h4><h4 id="四伯"><a href="#四伯" class="headerlink" title="四伯"></a>四伯</h4><h4 id="无题"><a href="#无题" class="headerlink" title="无题"></a>无题</h4><h4 id="思往昔看今朝"><a href="#思往昔看今朝" class="headerlink" title="思往昔看今朝"></a>思往昔看今朝</h4><h4 id="石人山下荡秋千"><a href="#石人山下荡秋千" class="headerlink" title="石人山下荡秋千"></a>石人山下荡秋千</h4><h4 id="咏春"><a href="#咏春" class="headerlink" title="咏春"></a>咏春</h4><h4 id="大竹园变堰潭"><a href="#大竹园变堰潭" class="headerlink" title="大竹园变堰潭"></a>大竹园变堰潭</h4><h2 id="Story-of-Justice-一个关于正义的故事"><a href="#Story-of-Justice-一个关于正义的故事" class="headerlink" title="Story of Justice    一个关于正义的故事"></a>Story of Justice    一个关于正义的故事</h2><h2 id="Chronology年表"><a href="#Chronology年表" class="headerlink" title="Chronology年表"></a>Chronology年表</h2>
+          
+        
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -548,10 +663,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -572,17 +683,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -665,22 +767,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习"><span class="nav-number">2.</span> <span class="nav-text">深度学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是深度学习"><span class="nav-number">2.1.</span> <span class="nav-text">什么是深度学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源"><span class="nav-number">2.2.</span> <span class="nav-text">资源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#书籍资源"><span class="nav-number">2.2.1.</span> <span class="nav-text">书籍资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#课程资源"><span class="nav-number">2.2.2.</span> <span class="nav-text">课程资源</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速实践入门"><span class="nav-number">3.</span> <span class="nav-text">快速实践入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么从实践开始"><span class="nav-number">3.1.</span> <span class="nav-text">为什么从实践开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内力和剑法哪个更重要"><span class="nav-number">3.1.1.</span> <span class="nav-text">内力和剑法哪个更重要</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#“气宗”"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">“气宗”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#“剑宗”"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">“剑宗”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#以气驭剑？"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">以气驭剑？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一招制敌？"><span class="nav-number">3.1.1.4.</span> <span class="nav-text">一招制敌？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用jupyter-notebook学习各种入门教程"><span class="nav-number">3.2.</span> <span class="nav-text">用jupyter notebook学习各种入门教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动手实践理解卷积："><span class="nav-number">3.2.1.</span> <span class="nav-text">动手实践理解卷积：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#神经网络在做什么"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">神经网络在做什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#卷积神经网络为什么有效？"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">卷积神经网络为什么有效？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用opencv中的卷积函数对图像进行变换"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">使用opencv中的卷积函数对图像进行变换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度学习平台介绍"><span class="nav-number">3.3.</span> <span class="nav-text">深度学习平台介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tensorflow-amp-Keras-Recommend"><span class="nav-number">3.3.1.</span> <span class="nav-text">Tensorflow &amp; Keras.  (Recommend)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文档"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Tensorboard监控学习情况"><span class="nav-number">3.3.1.3.</span> <span class="nav-text">Tensorboard监控学习情况</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pytorch-Recommend"><span class="nav-number">3.3.2.</span> <span class="nav-text">Pytorch  (Recommend)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高层库"><span class="nav-number">3.3.3.</span> <span class="nav-text">高层库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于平台的一些教程"><span class="nav-number">3.3.4.</span> <span class="nav-text">关于平台的一些教程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#深度学习框架PyTorch：入门与实践"><span class="nav-number">3.3.4.1.</span> <span class="nav-text">深度学习框架PyTorch：入门与实践</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Keras-Tutorials-Recommend"><span class="nav-number">3.3.4.2.</span> <span class="nav-text">Keras Tutorials   (Recommend)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#几个不错的基于深度学习平台的学习资源"><span class="nav-number">3.3.5.</span> <span class="nav-text">几个不错的基于深度学习平台的学习资源</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动手学深度学习（基于GLUON）-Recommend"><span class="nav-number">3.3.5.1.</span> <span class="nav-text">动手学深度学习（基于GLUON） (Recommend)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DeepLearningProject"><span class="nav-number">3.3.5.2.</span> <span class="nav-text">DeepLearningProject</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DeepSchool-io"><span class="nav-number">3.3.5.3.</span> <span class="nav-text">DeepSchool.io</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他类似的学习资源"><span class="nav-number">3.3.5.4.</span> <span class="nav-text">其他类似的学习资源</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动手实践部分"><span class="nav-number">4.</span> <span class="nav-text">动手实践部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#气宗派：徒手实现simple-neural-network"><span class="nav-number">4.1.</span> <span class="nav-text">气宗派：徒手实现simple neural network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MNIST手写数据识别问题-level-1"><span class="nav-number">4.2.</span> <span class="nav-text">MNIST手写数据识别问题 level 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MNIST手写识别及语义分析-level-2"><span class="nav-number">4.3.</span> <span class="nav-text">MNIST手写识别及语义分析 level 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用U-net探索Deepshape问题基本介绍"><span class="nav-number">4.4.</span> <span class="nav-text">使用U-net探索Deepshape问题基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据形式"><span class="nav-number">4.4.1.</span> <span class="nav-text">数据形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-net"><span class="nav-number">4.4.2.</span> <span class="nav-text">U-net</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计"><span class="nav-number">4.4.3.</span> <span class="nav-text">设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用Lambda函数按列对图像求平均值"><span class="nav-number">4.4.3.1.</span> <span class="nav-text">使用Lambda函数按列对图像求平均值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#维持对称性设计"><span class="nav-number">4.4.3.2.</span> <span class="nav-text">维持对称性设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#训练"><span class="nav-number">4.4.3.3.</span> <span class="nav-text">训练</span></a></li></ol></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -814,10 +900,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
