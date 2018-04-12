@@ -394,7 +394,7 @@
 <h5 id="after-2001"><a href="#after-2001" class="headerlink" title="after 2001"></a>after 2001</h5><p>Use R to extract row and columns and compare<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#first</span> run Rscript to get row and <span class="attribute">columns</span></span><br><span class="line">run extractrowandcol.R</span><br><span class="line">#second</span><br><span class="line">refer to codes <span class="keyword">in</span> analyze_dim_name<span class="selector-class">.ipynb</span>:<span class="number">2001</span>以后的，用R脚本转出来csv，同样的方式读取并判断</span><br><span class="line"><span class="selector-id">#run</span> and check</span><br></pre></td></tr></table></figure></p>
 <p><strong>All the files have exactly the same structure</strong></p>
 <h2 id="extract-data-concerning-CHINA"><a href="#extract-data-concerning-CHINA" class="headerlink" title="extract data concerning CHINA"></a>extract data concerning CHINA</h2><h3 id="analysis"><a href="#analysis" class="headerlink" title="analysis"></a>analysis</h3><p><strong>The data dimension is: </strong> 1435<em>1435</em>41<br>If use RData to extract some matrix to analyze its row and column names,  the  automatically saved names have mistakes. So we use the previous plot to inspire us and find the true data structure:</p>
-<p><img src="https://github.com/james20141606/economics/blob/master/plot/arrdata.png" alt="PNG"><br>The first big block is <strong>to</strong> the first country(AUS)</p>
+<p><img src="https://github.com/james20141606/economics/blob/master/plot/arrdata.png" alt="Markdown"><br>The first big block is <strong>to</strong> the first country(AUS)</p>
 <p>So the column names in first big block are:   X&gt;AUS</p>
 <p>When row and columns names match there are values, so there are only values in diagonal. </p>
 <p><strong>(That’s the main reason the R data file is big: the minimum number is :41<em>41</em>35<em>35, but RData have 1435</em>1435*41, 41 fold redundancy)</strong></p>
@@ -418,7 +418,7 @@
 <h2 id="To-do"><a href="#To-do" class="headerlink" title="To do"></a>To do</h2><h3 id="Exception-dealing"><a href="#Exception-dealing" class="headerlink" title="Exception dealing"></a>Exception dealing</h3><ul>
 <li style="list-style: none"><input type="checkbox"> before 2001 there are some files not in standard form, needs more examine to extract. Maybe case by case<h3 id="analyze-data"><a href="#analyze-data" class="headerlink" title="analyze data"></a>analyze data</h3><h4 id="plot-the-change"><a href="#plot-the-change" class="headerlink" title="plot the change,"></a>plot the change,</h4>for example, heat map, line chart, animation …</li>
 </ul>
-<p><img src="https://github.com/james20141606/economics/blob/master/plot/USA%20to%20CHN.gif" alt="image"></p>
+<p><img src="https://github.com/james20141606/economics/blob/master/plot/USA%20to%20CHN.gif" alt="Markdown"></p>
 <h4 id="do-simple-statistics"><a href="#do-simple-statistics" class="headerlink" title="do simple statistics"></a>do simple statistics</h4><h4 id="model-the-change"><a href="#model-the-change" class="headerlink" title="model the change"></a>model the change</h4>
           
         
