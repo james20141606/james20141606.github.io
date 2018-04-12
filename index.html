@@ -249,6 +249,228 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/12/economics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Chen's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/12/economics/" itemprop="url">Extract Countries' Commercial Data</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T23:49:57+08:00">
+                2018-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/interestings/" itemprop="url" rel="index">
+                    <span itemprop="name">interestings</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/12/economics/" class="leancloud_visitors" data-flag-title="Extract Countries' Commercial Data">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  741
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>It is a brief pipeline to extract data from datasets in <a href="http://139.129.209.66:8000/d/daedafb854/" target="_blank" rel="noopener">here</a></p>
+<p>The work is from my cute girl friend, who know nothing about code but brag to her mentor she can do it.</p>
+<p>In this work, I use R, Bash and Python to extract different countries different indicators in different years. The data have some property: big, not unified(.RData or .csv), some have mistakes. It is very sparse so it waste many storage. And the conversion of Rdata to csv leads some mistakes, so it needs very careful examination and check work. At first I want to store all of them in HDF5 for better IO, but people in my girl friend’s working team are’t familiar with codes, so I store them in csv. I also think about later work(for example, basic statistical work, model the interaction and time series, maybe a hierarchical time series machine learning model), but I am too busy to help my little bragger to do all kinds of things.</p>
+<p>Here are codes I wrote to extract and organize data: <a href="https://github.com/james20141606/economics" target="_blank" rel="noopener">https://github.com/james20141606/economics</a></p>
+<h4 id="wget-to-extract-data"><a href="#wget-to-extract-data" class="headerlink" title="wget to extract data"></a>wget to extract data</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">getdata</span><span class="selector-class">.sh</span></span><br></pre></td></tr></table></figure>
+<h4 id="check-row-and-col-names-for-further-extraction"><a href="#check-row-and-col-names-for-further-extraction" class="headerlink" title="check row and col names for further extraction"></a>check row and col names for further extraction</h4><h5 id="before-2001"><a href="#before-2001" class="headerlink" title="before 2001"></a>before 2001</h5><p>use awk to read row and columns in csv, then compare them with std names<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#first</span><br><span class="line">extractnames.sh</span><br><span class="line">#second</span><br><span class="line">refer to codes <span class="keyword">in</span> analyze_dim_name<span class="selector-class">.ipynb</span>:检查<span class="number">1995</span>-<span class="number">2000</span>年的行和列名</span><br><span class="line"><span class="selector-id">#run</span> and check</span><br></pre></td></tr></table></figure></p>
+<p><strong>There are some wrong files, need to examine them later</strong></p>
+<h5 id="after-2001"><a href="#after-2001" class="headerlink" title="after 2001"></a>after 2001</h5><p>Use R to extract row and columns and compare<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#first</span> run Rscript to get row and <span class="attribute">columns</span></span><br><span class="line">run extractrowandcol.R</span><br><span class="line">#second</span><br><span class="line">refer to codes <span class="keyword">in</span> analyze_dim_name<span class="selector-class">.ipynb</span>:<span class="number">2001</span>以后的，用R脚本转出来csv，同样的方式读取并判断</span><br><span class="line"><span class="selector-id">#run</span> and check</span><br></pre></td></tr></table></figure></p>
+<p><strong>All the files have exactly the same structure</strong></p>
+<h2 id="extract-data-concerning-CHINA"><a href="#extract-data-concerning-CHINA" class="headerlink" title="extract data concerning CHINA"></a>extract data concerning CHINA</h2><h3 id="analysis"><a href="#analysis" class="headerlink" title="analysis"></a>analysis</h3><p><strong>The data dimension is: </strong> 1435<em>1435</em>41<br>If use RData to extract some matrix to analyze its row and column names,  the  automatically saved names have mistakes. So we use the previous plot to inspire us and find the true data structure:</p>
+<p><img src="https://github.com/james20141606/economics/blob/master/plot/arrdata.png" alt="PNG"><br>The first big block is <strong>to</strong> the first country(AUS)</p>
+<p>So the column names in first big block are:   X&gt;AUS</p>
+<p>When row and columns names match there are values, so there are only values in diagonal. </p>
+<p><strong>(That’s the main reason the R data file is big: the minimum number is :41<em>41</em>35<em>35, but RData have 1435</em>1435*41, 41 fold redundancy)</strong></p>
+<h3 id="How-to-find-a-country"><a href="#How-to-find-a-country" class="headerlink" title="How to find a country"></a>How to find a country</h3><h4 id="after-2001-1"><a href="#after-2001-1" class="headerlink" title="after 2001"></a>after 2001</h4><p>The data we use is RData, use Rscript to extract data</p>
+<h5 id="to-CHINA"><a href="#to-CHINA" class="headerlink" title="to CHINA"></a>to CHINA</h5><p>Locate the country，<strong>CHN is 7th</strong></p>
+<p><strong>The seventh block are all countries to CHINA</strong><br><strong>dat[,,7]</strong>  the matrix dimension is 1435*1435<br><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">datt&lt;-dat[,,7]</span><br><span class="line">datt[1<span class="string">+35</span>*(i<span class="string">-1</span>):35*i,1<span class="string">+35</span>*(i<span class="string">-1</span>):35*i]</span><br></pre></td></tr></table></figure></p>
+<p>Use for loop, <strong>use a array:35<em>（35</em>41）</strong> to store<br>save to <strong>tochn.csv</strong><br>Rows:c1-c35<br>Columns: every 35 columns are a same country<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Run extract2001.R</span><br><span class="line"><span class="selector-id">#output</span> <span class="keyword">in</span> out directory</span><br></pre></td></tr></table></figure></p>
+<h5 id="CHINA-to"><a href="#CHINA-to" class="headerlink" title="CHINA to"></a>CHINA to</h5><p><strong>each 1435*1435 block’s seventh mini block is China to another country</strong><br><strong>dat[211:245,211:245,i]</strong><br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Run</span><span class="bash"> extract2001.R</span></span><br></pre></td></tr></table></figure></p>
+<p>Use for loop, <strong>use a array:35<em>（35</em>41）</strong>to store<br><strong>save to chnto.csv</strong></p>
+<p>Rows:c1-c35</p>
+<p>Columns: every 35 columns are a same country</p>
+<h4 id="before-2001-1"><a href="#before-2001-1" class="headerlink" title="before 2001"></a>before 2001</h4><p>There are some exceptions we do not deal with at first</p>
+<p>The data we use only has csv, so use python to extract</p>
+<h5 id="to-CHINA-1"><a href="#to-CHINA-1" class="headerlink" title="to CHINA"></a>to CHINA</h5><p>The principle is similar to after 2001</p>
+<p>But the data is just the transpose: (1435<em>41)</em>1435</p>
+<p><strong>The seventh block are all countries to CHINA</strong></p>
+<p><strong>Run extract1995.py</strong><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datt = dat[<span class="number">1435</span>*<span class="number">6</span>:<span class="number">1435</span>*<span class="number">7</span>,:]   <span class="number">#143</span>5*<span class="number">1435</span>datt[<span class="number">35</span>*<span class="selector-tag">i</span>:<span class="number">35</span>*(i+<span class="number">1</span>),<span class="number">35</span>*<span class="selector-tag">i</span>:<span class="number">35</span>*(i+<span class="number">1</span>)]  #loop</span><br></pre></td></tr></table></figure></p>
+<p>Use for loop, <strong>use a array:35<em>（35</em>41）</strong>to store<br><strong>save to chnto.csv</strong></p>
+<h5 id="CHINA-to-1"><a href="#CHINA-to-1" class="headerlink" title="CHINA to"></a>CHINA to</h5><p><strong>each 1435*1435 block’ seventh mini block is China to another country</strong><br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dattt =dat[1435*i:1435*(i+1),:]  <span class="comment">#the ith country 1435*1435</span></span><br><span class="line"><span class="section">dattt[35*6:35*(6+1),35*6:35*(6+1)]</span></span><br></pre></td></tr></table></figure></p>
+<p>Save to <strong>chnto.csv</strong></p>
+<h2 id="To-do"><a href="#To-do" class="headerlink" title="To do"></a>To do</h2><h3 id="Exception-dealing"><a href="#Exception-dealing" class="headerlink" title="Exception dealing"></a>Exception dealing</h3><ul>
+<li style="list-style: none"><input type="checkbox"> before 2001 there are some files not in standard form, needs more examine to extract. Maybe case by case<h3 id="analyze-data"><a href="#analyze-data" class="headerlink" title="analyze data"></a>analyze data</h3><h4 id="plot-the-change"><a href="#plot-the-change" class="headerlink" title="plot the change,"></a>plot the change,</h4>for example, heat map, line chart, animation …</li>
+</ul>
+<p><img src="https://github.com/james20141606/economics/blob/master/plot/USA%20to%20CHN.gif" alt="image"></p>
+<h4 id="do-simple-statistics"><a href="#do-simple-statistics" class="headerlink" title="do simple statistics"></a>do simple statistics</h4><h4 id="model-the-change"><a href="#model-the-change" class="headerlink" title="model the change"></a>model the change</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/12/setup/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -652,7 +874,7 @@
         
           
             <p>这是为实验室写的，借由eMaize问题帮助大家简单了解机器学习基本方法和基础代码的教程。也可以在<a href="https://lulab.gitbooks.io/bioinfo/content/5%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88----%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/51.html" target="_blank" rel="noopener">这里</a>看到</p>
-<p>由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在<a href="https://github.com/james20141606/somethingmore/blob/master/bioinfo.ipynb" target="_blank" rel="noopener">这里</a>,欢迎取用。<a href="http://localhost:4000/2018/04/12/setup/" target="_blank" rel="noopener">在这里</a>我简单介绍了如何配置jupyter，在<a href="http://localhost:4000/2018/04/10/Deep-Learning-Practice/" target="_blank" rel="noopener">Deep Learning tutorial</a>中我也强烈推荐了jupyter，并且介绍了很多基于jupyter的资源，强烈建议尝试一下。</p>
+<p>由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在<a href="https://github.com/james20141606/somethingmore/blob/master/bioinfo.ipynb" target="_blank" rel="noopener">这里</a>,欢迎取用。<a href="http://localhost:4000/2018/04/12/setup/" target="_blank" rel="noopener">在这里</a>我简单介绍了如何配置jupyter，在<a href="https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/">Deep Learning tutorial</a>中我也强烈推荐了jupyter，并且介绍了很多基于jupyter的资源，强烈建议尝试一下。</p>
 <h2 id="0-背景简介"><a href="#0-背景简介" class="headerlink" title="0.背景简介"></a>0.背景简介</h2><p>该通过基因型预测表型的实例来自<a href="http://emaize.imaze.org" target="_blank" rel="noopener">eMaize challenge</a>:<br>eMaize问题要求我们以SNP作为特征，通过训练一个模型，对玉米的三个性状进行预测。<br>接下来的教程会展示从原始数据开始，如何对数据进行转换，存取，特征选择以及回归和后续分析的整个过程。本问题最基本的目标是使用6210个样本中的前4754个样本作为训练集，预测其他样本的性状<br></p>
 <h2 id="I-上机指南"><a href="#I-上机指南" class="headerlink" title="I.上机指南"></a>I.上机指南</h2><p>本任务依赖于python语言及jupyter notebook，所需工具已安装到虚拟机。以下指南的所有代码均可在4.Emaize/jupyter_notebook/basic_tutorial.ipynb 中找到。</p>
 <p>使用方法：</p>
@@ -2158,198 +2380,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/11/auto7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Chen's Blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/auto7/" itemprop="url">回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T10:09:49+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/爷爷回忆录/" itemprop="url" rel="index">
-                    <span itemprop="name">爷爷回忆录</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/04/11/auto7/" class="leancloud_visitors" data-flag-title="回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1,697
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/auto7/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2404,7 +2434,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2415,7 +2445,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2426,7 +2456,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2504,7 +2534,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.1k字</span>
+  <span class="post-count">博客全站共40.9k字</span>
 </div>
 
         
