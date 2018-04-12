@@ -249,6 +249,273 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/12/setup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Chen's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/12/setup/" itemprop="url">Setup and Linux</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T23:39:17+08:00">
+                2018-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/12/setup/" class="leancloud_visitors" data-flag-title="Setup and Linux">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  2,736
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>分享一点setup和linux的东西，包括使用git，使用支持markdown的笔记软件Bear，Anaconda的一些使用技巧以及jupyter在服务器上的设置。也可以在<a href="https://legacy.gitbook.com/book/lulab/bioinfo-training-2018/details" target="_blank" rel="noopener">这里</a>找到更多分享</p>
+<h1 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h1><h2 id="版本控制与GitHub管理"><a href="#版本控制与GitHub管理" class="headerlink" title="版本控制与GitHub管理"></a>版本控制与GitHub管理</h2><h3 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h3><h4 id="Git是目前世界上最先进的分布式版本控制系统。"><a href="#Git是目前世界上最先进的分布式版本控制系统。" class="headerlink" title="Git是目前世界上最先进的分布式版本控制系统。"></a>Git是目前世界上最先进的分布式版本控制系统。</h4><h5 id="没有版本控制系统会遇到什么困难："><a href="#没有版本控制系统会遇到什么困难：" class="headerlink" title="没有版本控制系统会遇到什么困难："></a>没有版本控制系统会遇到什么困难：</h5><ul>
+<li>版本更新的困难：如果你用Microsoft Word写过长篇大论，那你一定有这样的经历：想删除一个段落，又怕将来想恢复找不回来怎么办？于是只好先把当前文件“另存为”一个新的Word文件，再接着改，改到一定程度，再“另存为”一个新文件，这样一直改下去，最后你的Word文档可能会有几十个不同版本的备份。过了一周，你想找回被删除的文字，但是已经记不清删除前保存在哪个文件里了，只好一个一个文件回去找，非常麻烦。如果是代码的话，来回的更改就更频繁了，如果想找到之前某个版本的代码，很有可能已经被删除了，对于稍微大一点的工程来说可能麻烦就大了。</li>
+<li>合作时的困难：有些部分需要你的合作者帮助写，于是你把文件Copy到U盘里给她（也可能通过Email发送一份给她），然后，你继续修改文件。一段时间后你的合作者把改动后的文件给你，此时，文件的合并就是一件麻烦事了，你要不然得问她一个一个指出她的改动，或者你就要记录自己的改动，和她的文件合并。<br><br></li>
+</ul>
+<p>如果有一个软件，不但能自动帮我记录每次文件的改动，还可以让同事协作编辑，这样就不用自己管理一堆类似的文件了，也不需要把文件传来传去。如果想查看某次改动，只需要在软件里看一眼就可以看到改动的日期和内容，岂不是很方便？</p>
+<h5 id="这就是21世纪的版本控制系统，Git。"><a href="#这就是21世纪的版本控制系统，Git。" class="headerlink" title="这就是21世纪的版本控制系统，Git。"></a>这就是21世纪的版本控制系统，Git。</h5><h4 id="Git诞生"><a href="#Git诞生" class="headerlink" title="Git诞生"></a>Git诞生</h4><p>Git是Linus (Linux之父)花了两周时间用C写的，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码，Linux反对集中式的，需要联网的版本控制系统，也反对商业版的版本控制系统，于是创造了Git，一个月之内，Linux系统的源码已经由Git管理了。<br>Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，这就是程序员最爱的Git和Github的诞生史。</p>
+<h3 id="安装与使用Git"><a href="#安装与使用Git" class="headerlink" title="安装与使用Git"></a>安装与使用Git</h3><h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>只介绍Mac OS系统安装方法</p>
+<ul>
+<li><p>方法一：先安装homebrew，然后通过homebrew安装Git。安装homebrew可查看<a href="http://brew.sh/" target="_blank" rel="noopener">http://brew.sh/</a></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span><span class="keyword">install </span>git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：<br>第二种方法更简单，也是推荐的方法，就是用Xcode，Xcode集成了Git，不过默认没有安装，在终端输入命令安装command line tools，即可安装git。</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-<span class="keyword">select</span> <span class="comment">--install</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="使用git"><a href="#使用git" class="headerlink" title="使用git"></a>使用git</h4><h5 id="创建或使用文件夹作为需要管理的仓库"><a href="#创建或使用文件夹作为需要管理的仓库" class="headerlink" title="创建或使用文件夹作为需要管理的仓库"></a>创建或使用文件夹作为需要管理的仓库</h5><p>在本地建立项目文件夹，或者使用已存在的项目文件夹，如helloworld<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> helloworld</span><br><span class="line">git init <span class="comment">#通过git init命令把这个目录变成Git可以管理的仓库</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="添加或更改文件"><a href="#添加或更改文件" class="headerlink" title="添加或更改文件"></a>添加或更改文件</h5><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi README.md <span class="comment">#创建一个新文件README.md，添加内容并保存</span></span><br><span class="line">git <span class="keyword">add</span><span class="bash"> README.md</span></span><br><span class="line"><span class="bash"><span class="comment">#用命令git add告诉Git，把文件README.md添加到仓库</span></span></span><br><span class="line"><span class="bash"><span class="comment">#如果一次性添加了多个文件，可以使用git add . git会自己判别哪些是新文件。</span></span></span><br></pre></td></tr></table></figure>
+<p>所有的版本控制系统只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，只知道大小的改动，但更改的内容版本控制系统无法知道。</p>
+<h5 id="添加更改信息"><a href="#添加更改信息" class="headerlink" title="添加更改信息"></a>添加更改信息</h5><p>下面可以告诉git你本次更改的内容，如果一次add了多个文件，则所有的文件都会被标注同样的更改信息。比如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">commit</span> -m <span class="string">"first commit"</span></span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">"add README.md"</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="上传至GitHub"><a href="#上传至GitHub" class="headerlink" title="上传至GitHub"></a>上传至GitHub</h5><p>首先在github上新建一个repository，如helloworld，你将会看到跳转页面上提示你需要推送到的HTTPS地址<a href="https://github.com/accountname/repositoryname.git" target="_blank" rel="noopener">https://github.com/accountname/repositoryname.git</a><br>接下来使用<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote <span class="keyword">add</span><span class="bash"> origin https://github.com/accountname/repositoryname.git</span></span><br><span class="line"><span class="bash">git push -u origin master</span></span><br></pre></td></tr></table></figure></p>
+<p>即可把自己的本地仓库推送到github上，速度很快。<br>注意如果第一次把远程地址输入错误，可以用以下命令更正地址<br><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">git </span><span class="string">remote </span><span class="built_in">set-url</span> <span class="string">origin </span><span class="string">https:</span>//<span class="string">github.</span><span class="string">com/</span><span class="string">accountname/</span><span class="string">repositoryname.</span><span class="string">git</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="使用ssh-key-免账户与密码推送方法："><a href="#使用ssh-key-免账户与密码推送方法：" class="headerlink" title="使用ssh key 免账户与密码推送方法："></a>使用ssh key 免账户与密码推送方法：</h4><h5 id="在终端输入"><a href="#在终端输入" class="headerlink" title="在终端输入"></a>在终端输入</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"yourgithubname"</span></span><br><span class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"yourgithubaccountmail"</span></span><br></pre></td></tr></table></figure>
+<h5 id="生成ssh-key"><a href="#生成ssh-key" class="headerlink" title="生成ssh key"></a>生成ssh key</h5><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen</span></span><br></pre></td></tr></table></figure>
+<p>生成的密钥在~/.ssh/id_rsa.pub位置。</p>
+<h5 id="配置git-的ssh-key"><a href="#配置git-的ssh-key" class="headerlink" title="配置git 的ssh key"></a>配置git 的ssh key</h5><ul>
+<li>登录github 点击头像选择settings</li>
+<li>选择左侧菜单SSH and GPG keys ；点击右上角的NEW SSH key</li>
+<li>新建ssh 链接。</li>
+<li>title 可随意填写</li>
+<li>Key 将上一步生成的 id_rsa.pub文件 的内容全部复制到此处</li>
+</ul>
+<p>参考链接：<br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程</a><br><a href="http://blog.csdn.net/u012373815/article/details/53575362" target="_blank" rel="noopener">SSH连接GitHub、GitHub配置ssh key</a><br><a href="https://peerj.com/preprints/3159/" target="_blank" rel="noopener">version control</a></p>
+<h2 id="支持markdown的轻量笔记软件-Bear"><a href="#支持markdown的轻量笔记软件-Bear" class="headerlink" title="支持markdown的轻量笔记软件 Bear"></a>支持markdown的轻量笔记软件 Bear</h2><p>推荐一款Mac下的非常好用额轻量级笔记软件Bear</p>
+<h5 id="它的优点包括："><a href="#它的优点包括：" class="headerlink" title="它的优点包括："></a>它的优点包括：</h5><ul>
+<li>轻量级，非常顺滑，无任何延迟</li>
+<li>快捷键/markdown支持，符合程序员思维</li>
+<li>加粗，下划线，项目列举，待办方块，代码块，多级标题，均有键盘快捷键以及markdown格式下的快捷键</li>
+<li>网页链接、文件可拖拽至笔记，并显示内容概要。</li>
+<li>内容可无缝衔接至gitbook等支持markdown格式的场合。（比如这些tips都可以直接在Bear编辑好，复制粘贴来就可以。）</li>
+<li>可以快速通过# 加入标签，对笔记进行分类</li>
+</ul>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h5 id="Edited-by-19’-Under-Xupeng-Chen"><a href="#Edited-by-19’-Under-Xupeng-Chen" class="headerlink" title="Edited by 19’ Under Xupeng Chen"></a>Edited by 19’ Under Xupeng Chen</h5><h2 id="Conda-amp-Bioconda"><a href="#Conda-amp-Bioconda" class="headerlink" title="Conda &amp; Bioconda"></a>Conda &amp; Bioconda</h2><p>Conda是一个包管理软件，可以帮助方便地下载各种软件而不需要编译。尤其是Bioconda可以用来管理linux系统上的生信相关的软件，是解决安装权限不够的问题的好工具。</p>
+<h3 id="Conda"><a href="#Conda" class="headerlink" title="Conda"></a>Conda</h3><p>conda是一个包，依赖和环境管理工具，适用于多种语言，如: Python, R, Scala, Java, Javascript, C/ C++, FORTRAN</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>Anaconda安装可以去官方下载，但是强烈推荐使用tuna镜像，免流量，而且速度极快。<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">下载地址</a>，下载.sh文件后运行，按照提示一步一步往下运行即可。<br>下载Anaconda后，很多python的常用库都会被自动安装好，另外建议运行以下命令</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/free/</span><br><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="keyword">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<p>这样以后使用conda install packages命令下载需要的包的时候，会自动从tuna镜像下载，速度会非常快。</p>
+<h3 id="Bioconda"><a href="#Bioconda" class="headerlink" title="Bioconda"></a>Bioconda</h3><p>Bioconda是conda上一个分发生物信息软件的频道，使用它的最大好处是，你不用自己编译软件了。<br>Conda tuna 安装 conda设置 从tuna下载免流量，快<br>目前Bioconda有超过130个添加、更新和维护生物信息软件的贡献者，他们为这个频道发布了1500多个软件包。总结起来，bioconda有以下几个特点：</p>
+<ul>
+<li>软件是编译好的，无需自己编译</li>
+<li>跨平台，支持Linux和Mac OS（本身conda还支持Windows）</li>
+<li>支持多种语言，Python/Perl/R/Java/Go等</li>
+<li>兼容多种语言的包管理器，如pip，CRAN，CPAN，Bioconductor，apt-get以及 homebrew<br>针对Python来说，使用conda相比pip的很大优势，就是不用自己编译。安装软件最头疼的问题，就是解决编译报错，很多时候忙活一天就为了把一个软件装好。</li>
+</ul>
+<h4 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h4><p>先添加Bioconda频道</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda<span class="built_in"> config </span>--<span class="builtin-name">add</span> channels defaults</span><br><span class="line">conda<span class="built_in"> config </span>--<span class="builtin-name">add</span> channels conda-forge</span><br><span class="line">conda<span class="built_in"> config </span>--<span class="builtin-name">add</span> channels bioconda</span><br></pre></td></tr></table></figure>
+<p>然后即可用conda安装各种需要的软件，可以先去bioconda channel看看自己需要的软件在不在列表内。</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="keyword">install </span><span class="keyword">bowtie</span></span><br><span class="line"><span class="keyword">conda </span>create -n myenv <span class="keyword">bwa </span><span class="keyword">bowtie </span>hisat star <span class="comment">#a new environment can be created</span></span><br><span class="line">source activate myenv <span class="comment">#activate the environment</span></span><br></pre></td></tr></table></figure>
+<p>参考资料：<br><a href="https://bioconda.github.io/" target="_blank" rel="noopener">Using Bioconda — Bioconda documentation</a><br><a href="https://bioconda.github.io/recipes.html" target="_blank" rel="noopener">packages list</a></p>
+<h2 id="在服务器上运行jupyter-notebook并在本地浏览器使用"><a href="#在服务器上运行jupyter-notebook并在本地浏览器使用" class="headerlink" title="在服务器上运行jupyter notebook并在本地浏览器使用"></a>在服务器上运行jupyter notebook并在本地浏览器使用</h2><p>Jupyter Notebook是基于网页的用于交互计算的应用程序。其可被应用于全过程计算：开发、文档编写（markdown）、运行代码和展示结果。</p>
+<ul>
+<li><p>jupyter适合课题的早期尝试、绘图等非常便利，代码重复运行和复制粘贴方便，方便反复调试，尤其适合尚未工程化，需要大量尝试的阶段。</p>
+</li>
+<li><p>jupyter非常适合教学，交互效果非常好，github上有大量的教学项目是用jupyter notebook展示的，方便查看结果，查看相关说明、公式，方便学习者进行反复实验。</p>
+</li>
+</ul>
+<h4 id="本地设置服务器信息"><a href="#本地设置服务器信息" class="headerlink" title="本地设置服务器信息"></a>本地设置服务器信息</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi .ssh/config</span><br><span class="line">Host ibme</span><br><span class="line">HostName 166.111.152.116 #ibme的ip</span><br><span class="line">ControlPersist <span class="literal">yes</span></span><br><span class="line">ControlMaster auto</span><br><span class="line">User chenxupeng</span><br><span class="line">DynamicForward 127.0.0.1:32987 #最后的port（如32987）要自己设置，不能与他人冲突</span><br></pre></td></tr></table></figure>
+<h4 id="使用SwitchOmega在本地浏览器设置代理"><a href="#使用SwitchOmega在本地浏览器设置代理" class="headerlink" title="使用SwitchOmega在本地浏览器设置代理"></a>使用SwitchOmega在本地浏览器设置代理</h4><h5 id="添加情景模式，如ibme"><a href="#添加情景模式，如ibme" class="headerlink" title="添加情景模式，如ibme"></a>添加情景模式，如ibme</h5><p>代理协议SOCKS5，代理服务器127.0.0.1，代理端口填写自己设置的port。</p>
+<h5 id="在auto-switch页面添加规则"><a href="#在auto-switch页面添加规则" class="headerlink" title="在auto switch页面添加规则"></a>在auto switch页面添加规则</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172<span class="selector-class">.235</span><span class="selector-class">.0</span>.*，192<span class="selector-class">.235</span><span class="selector-class">.0</span>.*，<span class="selector-tag">node50</span>*等，情景模式选择<span class="selector-tag">ibme</span></span><br></pre></td></tr></table></figure>
+<p>点击应用选项</p>
+<h5 id="在服务器上设置start-jupyter文件"><a href="#在服务器上设置start-jupyter文件" class="headerlink" title="在服务器上设置start-jupyter文件"></a>在服务器上设置start-jupyter文件</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vi ~/bin/start-jupyter</span><br><span class="line">填写：</span><br><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line">bsub &lt;&lt;EOF</span><br><span class="line"><span class="comment">#BSUB -J jupyter</span></span><br><span class="line"><span class="comment">#BSUB -R span[hosts=1]</span></span><br><span class="line"><span class="comment">#BSUB -q Z-LU</span></span><br><span class="line"><span class="built_in">cd</span></span><br><span class="line">jupyter notebook --no-browser --ip=0.0.0.0 --port=10087 <span class="comment">#port自己设置一个，不要冲突</span></span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<p>(也可以使用#BSUB -q Z-BNODE)</p>
+<h4 id="start-jupyter"><a href="#start-jupyter" class="headerlink" title="start jupyter"></a>start jupyter</h4><p>首先start-jupyter启动，会自动提交一个任务到某个节点</p>
+<h5 id="使用节点名称连接"><a href="#使用节点名称连接" class="headerlink" title="使用节点名称连接"></a>使用节点名称连接</h5><p>接下来可以用bjobs看到jupyter被提交到了哪个节点。接下来打开本地浏览器，输入</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node5<span class="number">0</span>*<span class="symbol">:port</span> <span class="comment">#如node504/10087</span></span><br></pre></td></tr></table></figure>
+<p>若使用Z-BNODE，可在浏览器填写</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">zbnode01</span><span class="selector-class">.cluster</span><span class="selector-class">.com</span><span class="selector-pseudo">:port</span></span><br></pre></td></tr></table></figure>
+<h5 id="使用ip连接"><a href="#使用ip连接" class="headerlink" title="使用ip连接"></a>使用ip连接</h5><p>用nslookup获得节点的ip，在本地浏览器输入：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ip</span><span class="selector-pseudo">:port</span> #如192<span class="selector-class">.235</span><span class="selector-class">.5</span><span class="selector-class">.48</span><span class="selector-pseudo">:10087</span></span><br><span class="line">#获得<span class="selector-tag">ip</span>方法</span><br><span class="line"><span class="selector-tag">nslookup</span> <span class="selector-tag">node504</span><span class="selector-class">.cluster</span><span class="selector-class">.com</span></span><br><span class="line"><span class="selector-tag">nslookup</span> <span class="selector-tag">zbnode01</span><span class="selector-class">.cluster</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure>
+<p>第一次登陆需要密码，用bpeek查看任务输出，即可看到token，复制至浏览器即可使用jupyter notebook进行编程了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/12/emaize-tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2083,199 +2350,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/11/auto8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Chen's Blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/auto8/" itemprop="url">回忆录 CHAPTER Ⅷ 工作,崭新的篇章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T10:09:47+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/爷爷回忆录/" itemprop="url" rel="index">
-                    <span itemprop="name">爷爷回忆录</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/04/11/auto8/" class="leancloud_visitors" data-flag-title="回忆录 CHAPTER Ⅷ 工作,崭新的篇章">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1,889
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>一九六四年八月中旬，我和妻子顺利毕业了，回宛后住在现在的新华宾馆等地方人事部门分配工作，妻子被分配到原安皋拖拉机站，我被安排到茶庵拖拉机站，过着两地分居的生活。</p>
-<p>我在茶庵期间，单位的一把手杨永江是原来的茶庵区副区长，人很能干精明。他是姑婆家（槐树湾姑爷妹妹的老公）亲戚，待我非常的好，我就和他住在一个房间，他既是领导，也是朋友、同事，我们无话不说，因此工作上我就不怕了，谁也不敢欺负我。一九六四年八月十五日到达工作岗位后，我赶上了发工资，领到了人生的第一笔工资，成了国家的正式干部。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/auto8/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2330,7 +2404,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2430,7 +2504,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共37.4k字</span>
+  <span class="post-count">博客全站共40.1k字</span>
 </div>
 
         
