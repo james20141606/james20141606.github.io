@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://james20141606.github.io/2018/04/12/setup/</loc>
+    
+    <lastmod>2018-04-14T17:20:41.471Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://james20141606.github.io/2018/04/12/emaize-tutorial/</loc>
+    
+    <lastmod>2018-04-14T17:20:35.461Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://james20141606.github.io/2018/04/10/Deep-Learning-Practice/</loc>
+    
+    <lastmod>2018-04-14T17:20:25.227Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://james20141606.github.io/2018/04/15/datamining/</loc>
     
-    <lastmod>2018-04-14T17:17:37.865Z</lastmod>
+    <lastmod>2018-04-14T17:20:12.751Z</lastmod>
     
   </url>
   
@@ -16,23 +37,9 @@
   </url>
   
   <url>
-    <loc>http://james20141606.github.io/2018/04/12/emaize-tutorial/</loc>
-    
-    <lastmod>2018-04-13T09:24:21.484Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://james20141606.github.io/2018/04/12/economics/</loc>
     
     <lastmod>2018-04-12T16:10:43.156Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://james20141606.github.io/2018/04/12/setup/</loc>
-    
-    <lastmod>2018-04-12T16:08:31.966Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>http://james20141606.github.io/2018/04/11/auto12/</loc>
     
     <lastmod>2018-04-12T11:29:50.477Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://james20141606.github.io/2018/04/10/Deep-Learning-Practice/</loc>
-    
-    <lastmod>2018-04-12T08:12:48.628Z</lastmod>
     
   </url>
   
