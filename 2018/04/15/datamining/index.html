@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://i4.bvimg.com/640680/4414d03a5b228e77.png">
 <meta property="og:image" content="http://i4.bvimg.com/640680/3c6048942654bc2c.png">
 <meta property="og:image" content="http://i4.bvimg.com/640680/5ef0af735a848eca.png">
-<meta property="og:updated_time" content="2018-04-14T17:33:52.445Z">
+<meta property="og:updated_time" content="2018-04-14T17:39:03.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Data Mining of Deng Era">
 <meta name="twitter:description" content="期中作业之一是写一篇邓小平时代的读后感，说实话这种书是实在没空读了，虽然粗略地翻了几章，十分吸引人，但是这两年真的越来越讨厌写文科式的论文，瞎胡诌凑字数曾经也是我作为理科生的优势，但是这一两年对这种风格的文章：东拼西凑，无病呻吟，迷茫又自负的写作非常地厌恶。因为就想玩点花样，做点简单的文本数据挖掘凑凑字数，虽然多花了很多时间，但是毕竟很有意思，有意思的事情就不算浪费时间对吧，没有意思的事情，哪怕一">
@@ -434,8 +434,7 @@
       
 
       
-        <p>期中作业之一是写一篇邓小平时代的读后感，说实话这种书是实在没空读了，虽然粗略地翻了几章，十分吸引人，但是这两年真的越来越讨厌写文科式的论文，瞎胡诌凑字数曾经也是我作为理科生的优势，但是这一两年对这种风格的文章：东拼西凑，无病呻吟，迷茫又自负的写作非常地厌恶。因为就想玩点花样，做点简单的文本数据挖掘凑凑字数，虽然多花了很多时间，但是毕竟很有意思，有意思的事情就不算浪费时间对吧，没有意思的事情，哪怕一分钟也是对生命的浪费呢。</p>
-<p>中文分词是个很好玩的事情，但是jieba和THULAC之类的工具已经把中文分词和词性标注之类的变得很简单，最折腾的，花了我很久时间的是这本中文材料。。。matplotlib本身不支持英文绘图，python的encoding方式也让我折腾了很久，竟然做了很久装卸各种包的工作，，，直到最后奇葩的matplotlib就是找不到字体，不管在本地还是在几个服务器上竟然都不行，于是只好测试好代码让斌斌帮忙跑一下。下面简单记一下过程和代码，最后再把自己胡乱拼凑的论文也扔上。</p>
+        <p>期中作业之一是写一篇邓小平时代的读后感，说实话这种书是实在没空读了，虽然粗略地翻了几章，十分吸引人，但是这两年真的越来越讨厌写文科式的论文，瞎胡诌凑字数曾经也是我作为理科生的优势，但是这一两年对这种风格的文章：东拼西凑，无病呻吟，迷茫又自负的写作非常地厌恶。因为就想玩点花样，做点简单的文本数据挖掘凑凑字数，虽然多花了很多时间，但是毕竟很有意思，有意思的事情就不算浪费时间对吧，没有意思的事情，哪怕一分钟也是对生命的浪费呢。<br><a id="more"></a><br>中文分词是个很好玩的事情，但是jieba和THULAC之类的工具已经把中文分词和词性标注之类的变得很简单，最折腾的，花了我很久时间的是这本中文材料。。。matplotlib本身不支持英文绘图，python的encoding方式也让我折腾了很久，竟然做了很久装卸各种包的工作，，，直到最后奇葩的matplotlib就是找不到字体，不管在本地还是在几个服务器上竟然都不行，于是只好测试好代码让斌斌帮忙跑一下。下面简单记一下过程和代码，最后再把自己胡乱拼凑的论文也扔上。</p>
 <p>代码也放到<a href="https://github.com/james20141606/somethingmore/datamining_dxp" target="_blank" rel="noopener">GitHub</a>上了,里面附有jupyter版本的代码和可以直接运行产生各种类型图片的代码。</p>
 <h1 id="对邓小平时代的分词与词频统计"><a href="#对邓小平时代的分词与词频统计" class="headerlink" title="对邓小平时代的分词与词频统计"></a>对邓小平时代的分词与词频统计</h1><p><strong>Use THULAC for Chinese words partition</strong></p>
 <h4 id="convert-to-UTF-8-format"><a href="#convert-to-UTF-8-format" class="headerlink" title="convert to UTF-8 format"></a>convert to UTF-8 format</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file ip.txt</span><br><span class="line"><span class="comment">#use vim to change encoding format</span></span><br><span class="line">:<span class="builtin-name">set</span> <span class="attribute">fileencoding</span>=utf-8</span><br></pre></td></tr></table></figure>
