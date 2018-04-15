@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://james20141606.github.io/"/>
-  <updated>2018-04-15T06:25:00.516Z</updated>
+  <updated>2018-04-15T06:26:39.160Z</updated>
   <id>http://james20141606.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://james20141606.github.io/2018/04/15/peomofmeng/"/>
     <id>http://james20141606.github.io/2018/04/15/peomofmeng/</id>
     <published>2018-04-15T05:54:30.000Z</published>
-    <updated>2018-04-15T06:25:00.516Z</updated>
+    <updated>2018-04-15T06:26:39.160Z</updated>
     
-    <content type="html"><![CDATA[<p>就像pdf文档里所说的那样，这组诗作于2013年春⽇在郑州外国语学校就读期间，我十七岁，孟孟年方二八，正是豆蔻年华，如今看起来有些羞涩的文字却是那个时候的真情流露，并不觉得夸张。人们总是喜欢用青涩形容自己年轻的岁月，我却一直秉持着大胆地做自己想做的事情的原则，因此青春中做了很多美好的值得回味的，不落于俗套的美好事情。这一路来所做所想，都是自己所爱，能够在自己多年来心仪的学校继续和多年来心爱的姑娘经历生活的美好与平淡，实在是人生的幸运。<br><a id="more"></a><br>原诗曾记录整理于高中的电⼦词典中，并⼀⼀抄录于⼿折玫瑰中赠予孟孟。那个春天每天晚上一朵纸折的玫瑰，如今还能回忆起春风沉醉，空气温暖，眼眸明亮，笑容可人，这些是刻在记忆里了，以及这些文字，在2018 年1 ⽉30 ⽇整理旧寝室的物品的时候，发现还完好无损地躺在我的电子词典中，于是导出，重新用LaTeX排了版，如今也放在这里，希望可以和记忆一起永恒。</p><div class="row"><iframe src="https://drive.google.com/file/d/13SnPSH00HpKuChr3WbLrnRF_qtTgFnuu/view" style="width:100%; height:550px"></iframe></div><div class="row"><iframe src="https://drive.google.com/file/d/13SnPSH00HpKuChr3WbLrnRF_qtTgFnuu/view" style="width:100%; height:550px"></iframe></div>]]></content>
+    <content type="html"><![CDATA[<p>就像pdf文档里所说的那样，这组诗作于2013年春⽇在郑州外国语学校就读期间，我十七岁，孟孟年方二八，正是豆蔻年华，如今看起来有些羞涩的文字却是那个时候的真情流露，并不觉得夸张。人们总是喜欢用青涩形容自己年轻的岁月，我却一直秉持着大胆地做自己想做的事情的原则，因此青春中做了很多美好的值得回味的，不落于俗套的美好事情。这一路来所做所想，都是自己所爱，能够在自己多年来心仪的学校继续和多年来心爱的姑娘经历生活的美好与平淡，实在是人生的幸运。<br><a id="more"></a><br>原诗曾记录整理于高中的电⼦词典中，并⼀⼀抄录于⼿折玫瑰中赠予孟孟。那个春天每天晚上一朵纸折的玫瑰，如今还能回忆起春风沉醉，空气温暖，眼眸明亮，笑容可人，这些是刻在记忆里了，以及这些文字，在2018 年1 ⽉30 ⽇整理旧寝室的物品的时候，发现还完好无损地躺在我的电子词典中，于是导出，重新用LaTeX排了版，如今也放在这里，希望可以和记忆一起永恒。</p><div class="row"><iframe src="https://drive.google.com/file/d/13SnPSH00HpKuChr3WbLrnRF_qtTgFnuu/preview" style="width:100%; height:550px"></iframe></div><div class="row"><iframe src="https://drive.google.com/file/d/13SnPSH00HpKuChr3WbLrnRF_qtTgFnuu/view" style="width:100%; height:550px"></iframe></div>]]></content>
     
     <summary type="html">
     
@@ -92,11 +92,11 @@
       <category term="interestings" scheme="http://james20141606.github.io/categories/interestings/"/>
     
     
-      <category term="economics" scheme="http://james20141606.github.io/tags/economics/"/>
-    
       <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
     
       <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+    
+      <category term="economics" scheme="http://james20141606.github.io/tags/economics/"/>
     
       <category term="girl friend" scheme="http://james20141606.github.io/tags/girl-friend/"/>
     
@@ -153,11 +153,11 @@
     
       <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
     
+      <category term="machine learning" scheme="http://james20141606.github.io/tags/machine-learning/"/>
+    
       <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
     
       <category term="bioinformatics" scheme="http://james20141606.github.io/tags/bioinformatics/"/>
-    
-      <category term="machine learning" scheme="http://james20141606.github.io/tags/machine-learning/"/>
     
   </entry>
   
