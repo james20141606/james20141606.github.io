@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="codes,R,assignment,linear regression," />
 
 
 
@@ -88,14 +88,18 @@
 
 
 
+<meta name="description" content="The sixth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
+<meta name="keywords" content="codes,R,assignment,linear regression">
 <meta property="og:type" content="article">
-<meta property="og:title" content="line1">
+<meta property="og:title" content="Linear Regression Assignment 6">
 <meta property="og:url" content="http://james20141606.github.io/2018/04/16/line1/index.html">
 <meta property="og:site_name" content="James Chen&#39;s Blogs">
+<meta property="og:description" content="The sixth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T06:07:26.086Z">
+<meta property="og:updated_time" content="2018-04-16T06:25:04.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="line1">
+<meta name="twitter:title" content="Linear Regression Assignment 6">
+<meta name="twitter:description" content="The sixth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
 
 
 
@@ -131,7 +135,7 @@
 
 
 
-  <title>line1 | James Chen's Blogs</title>
+  <title>Linear Regression Assignment 6 | James Chen's Blogs</title>
   
 
 
@@ -296,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">line1</h1>
+          <h1 class="post-title" itemprop="name headline">Linear Regression Assignment 6</h1>
         
 
         <div class="post-meta">
@@ -308,7 +312,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T14:07:26+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T13:59:19+08:00">
                 2018-04-16
               </time>
             
@@ -319,6 +323,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/school-work/" itemprop="url" rel="index">
+                    <span itemprop="name">school work</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -326,7 +352,7 @@
 
           
           
-             <span id="/2018/04/16/line1/" class="leancloud_visitors" data-flag-title="line1">
+             <span id="/2018/04/16/line1/" class="leancloud_visitors" data-flag-title="Linear Regression Assignment 6">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -351,7 +377,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  0
+                  791
                 </span>
               
 
@@ -367,7 +393,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  5
                 </span>
               
             </div>
@@ -388,7 +414,36 @@
       
 
       
-        
+        <p>The sixth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a><br>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended.</p>
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># read the data</span><br><span class="line">setwd(&apos;~/Desktop/三春/5线性回归分析/作业/HW6/&apos;)</span><br><span class="line">dat&lt;-read.csv(&quot;hw6.csv&quot;)</span><br><span class="line">cases&lt;-dat$X1</span><br><span class="line">percent&lt;-dat$X2</span><br><span class="line">holiday&lt;-dat$X3</span><br><span class="line">labor&lt;-dat$Y</span><br><span class="line"># plot stem and leaf plots</span><br><span class="line">stem(cases)</span><br><span class="line">stem(percent)</span><br></pre></td></tr></table></figure>
+<p>The plots are above.<br>There seems to be some outliers. For example for $X_2$, the values more than 9 and lower than 5 seem to be outliers. The gaps are obvious.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># plot time plots</span><br><span class="line">time&lt;-1:52</span><br><span class="line">plot(time,dat$X1,xlab=&quot;time (weeks)&quot;,ylab=&quot;X1&quot;)</span><br><span class="line">plot(time,dat$X2,xlab=&quot;time (weeks)&quot;,ylab=&quot;X2&quot;)</span><br><span class="line">plot(time,dat$X3,xlab=&quot;time (weeks)&quot;,ylab=&quot;X3&quot;)</span><br></pre></td></tr></table></figure>
+<p>1) $X_1$ may depent on time. it has a tendency to be larger over time<br>2) $X_2$ is independent of time<br>3) $X_3$ seems independent of time </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pairs(~cases+percent+holiday+labor,data=dat, </span><br><span class="line">   main=&quot;Simple Scatterplot Matrix&quot;)</span><br><span class="line">cor(dat[,1:4])</span><br></pre></td></tr></table></figure>
+<p>It is obvious that $X_3$ and Y has a very strong correlation(it also makes sense). the others have no significant correlation.</p>
+<h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dat.fit&lt;-lm(labor~cases+percent+holiday)</span><br><span class="line">sm&lt;-summary(dat.fit)</span><br><span class="line">sm</span><br><span class="line">resid1&lt;-dat.fit$residuals</span><br><span class="line">resid1</span><br></pre></td></tr></table></figure>
+<p>a) The regression function is <script type="math/tex">Y=0.0007871X_1-13.17X_2+623.6X3+4150</script><br>$b_1, b_2, b_3$ are unbiased estimates of <script type="math/tex">\beta_1 , \beta_2 , \beta_3</script></p>
+<p>b)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boxplot(resid1,ylab=&quot;residuals&quot;, pch=19)</span><br></pre></td></tr></table></figure></p>
+<p>From the boxplot, we can know the median, maximum, minimum, 25 and 75 percent quantile of the residuals.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">plot(labor,resid1)</span><br><span class="line">plot(cases,resid1)</span><br><span class="line">plot(percent,resid1)</span><br><span class="line">plot(holiday,resid1)</span><br><span class="line">plot(cases*percent,resid1)</span><br><span class="line">qqnorm(resid1, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(resid1)</span><br></pre></td></tr></table></figure>
+<p>c) The plots show that the regression function may not be linear. The residuals change systematically as Y increases, as shown in the first plot. Also the normal probability plot shows that the residuals may not be strictly normally distributed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(time,resid1)</span><br></pre></td></tr></table></figure>
+<p>d) There does not seem to be any indication that the error terms are correlated.</p>
+<h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><p>a) </p>
+<script type="math/tex; mode=display">
+H_0:\ \beta_1=\beta_2=\beta_3=0\;\;H_a:\ otherwise</script><script type="math/tex; mode=display">
+We\;reject\;H_0\;if\;F^*=\frac{MSR}{MSE}>F_{0.95,3,48}</script><p>Based on the result:”F-statistic: 35.34 on 3 and 48 DF,  p-value: 3.316e-12”, we reject H0 and conclude Ha.<br>The p value is 3.316e-12<br>The t-test result from above implies that <script type="math/tex">\beta_1 \; and\; \beta_3</script> are likely to be non-zero but $\beta_2$ may be zero.</p>
+<p>b)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">confint(dat.fit,c(2,4),level = 1-0.05/4)</span><br></pre></td></tr></table></figure></p>
+<p>The family confidence interval is shown above. The family  confidence coefficient means that when doing many simulations, the proportion of samples which values fall correctly in the cofifence interval.</p>
+<p>c.Coefficient of multiple determination is 0.6883. It can be viewed as a coefficient of simple determination between the responses and the fitted values.</p>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plot(cases, percent,ylim=c(4,11))</span><br><span class="line">points(400000,7.2,pch=2)</span><br><span class="line">points(400000,9.9,pch=3)</span><br></pre></td></tr></table></figure>
+<p>It is a plot of the two variables: X1 and X2. The cross and triangle represent the two points where predictions are to be made. It can be seen that the triangle lies well within the joint range of the two variables, but the cross seems to be out of the scope of the model.</p>
+<h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new1 &lt;- data.frame(cases=230000,percent=7.5,holiday=0)</span><br><span class="line">new2 &lt;- data.frame(cases=250000,percent=7.3,holiday=0)</span><br><span class="line">new3 &lt;- data.frame(cases=280000,percent=7.1,holiday=0)</span><br><span class="line">new4 &lt;- data.frame(cases=340000,percent=6.9,holiday=0)</span><br><span class="line">predict(dat.fit, new1, se.fit = F, interval = &quot;prediction&quot;, level = 1-0.05/8)</span><br><span class="line">predict(dat.fit, new2, se.fit = F, interval = &quot;prediction&quot;, level = 1-0.05/8)</span><br><span class="line">predict(dat.fit, new3, se.fit = F, interval = &quot;prediction&quot;, level = 1-0.05/8)</span><br><span class="line">predict(dat.fit, new4, se.fit = F, interval = &quot;prediction&quot;, level = 1-0.05/8)</span><br></pre></td></tr></table></figure>
+<p>The intervals are presented above.</p>
+<h1 id="6"><a href="#6" class="headerlink" title="6"></a>6</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new &lt;- data.frame(cases=282000,percent=7.1,holiday=0)</span><br><span class="line">predict(dat.fit, new, se.fit = T, interval = &quot;prediction&quot;, level = 1-0.05)</span><br><span class="line">mse &lt;- mean(dat.fit$residuals^2)</span><br><span class="line">mse</span><br></pre></td></tr></table></figure>
+<p>We obtained MSE and se.fit.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lwr&lt;-4278.365-qt(1-0.05/2,df=48)*sqrt(mse/3+22.83758^2)</span><br><span class="line">upr&lt;-4278.365+qt(1-0.05/2,df=48)*sqrt(mse/3+22.83758^2)</span><br><span class="line">lwr</span><br><span class="line">upr</span><br></pre></td></tr></table></figure></p>
+<p>a. The interval is (4112.088,4444.642)<br>b. Just multiply the interval by 3. We obtain (12336.27,13333.92)</p>
+
       
     </div>
     
@@ -414,6 +469,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/codes/" rel="tag"><i class="fa fa-tag"></i> codes</a>
+          
+            <a href="/tags/R/" rel="tag"><i class="fa fa-tag"></i> R</a>
+          
+            <a href="/tags/assignment/" rel="tag"><i class="fa fa-tag"></i> assignment</a>
+          
+            <a href="/tags/linear-regression/" rel="tag"><i class="fa fa-tag"></i> linear regression</a>
+          
+        </div>
+      
 
       
       
@@ -433,8 +500,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/16/line2/" rel="prev" title="line2">
-                line2 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/16/line2/" rel="prev" title="Linear Regression Assignment 4">
+                Linear Regression Assignment 4 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -487,8 +554,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -576,6 +652,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3"><span class="nav-number">3.</span> <span class="nav-text">3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4"><span class="nav-number">4.</span> <span class="nav-text">4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5"><span class="nav-number">5.</span> <span class="nav-text">5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6"><span class="nav-number">6.</span> <span class="nav-text">6</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -607,7 +699,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共48.6k字</span>
+  <span class="post-count">博客全站共50.8k字</span>
 </div>
 
         
@@ -874,6 +966,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
