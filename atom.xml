@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://james20141606.github.io/"/>
-  <updated>2018-04-20T02:53:27.442Z</updated>
+  <updated>2018-04-21T02:53:11.314Z</updated>
   <id>http://james20141606.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Solution of MCM Problem C</title>
+    <link href="http://james20141606.github.io/2018/04/21/mcm/"/>
+    <id>http://james20141606.github.io/2018/04/21/mcm/</id>
+    <published>2018-04-21T01:15:19.000Z</published>
+    <updated>2018-04-21T02:53:11.314Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>It is about our solution of 2018 MCM contest, our result get Meritorious award.<br><div class="row"><iframe src="https://drive.google.com/file/d/1dsWsVDi-VES_-OSU2MX2PceZ4GOeYXlv/preview" style="width:100%; height:550px"></iframe></div><br>I have put the codes and others in <a href="https://github.com/james20141606/MCM2018problemC" target="_blank" rel="noopener">GitHub</a><br>Here is the final paper of our solution:<br><div class="row"><iframe src="https://drive.google.com/file/d/1qpGsc65yvT8BGrGisMkxNSOspTGXFo6G/preview" style="width:100%; height:550px"></iframe></div></p><h2 id="Abstract-of-Paper"><a href="#Abstract-of-Paper" class="headerlink" title="Abstract of Paper"></a>Abstract of Paper</h2><p>In this paper, we construct two evaluation systems: Renewable Energy Indicator (REI) and Network Instability Indicator (NII). By using data mining methods and developing two models, we succeed in visualizing, characterizing, evaluating and predicting the energy flow network and the use of renewable energy.\par</p><p>First, we process the data. We do data screening to select two groups of variables to characterize the energy profile. As some data is missing, we do imputation based on existing data and data from other reliable sources. The data constructing key indicators are normalized with all fifty states. To illustrate energy profile, we also do data visualization with vivid diagrams like Sankey diagram and radar diagram.\par</p><p>Second, we construct two evaluation systems REI and NII to trace and compare the energy profiles of four states and their evolution. NII is derived from a Constrained-Ridge model to characterize the structural stability of energy flow. To specify on renewable energy, we define REI with five key indicators. We use combined Analytic Hierarchy Process(AHP) and Entropy Weight Method(EWM) to construct REI, which characterizes the profile for use of cleaner, renewable energy. We then compare REI and NII of four states and Arizona performs best.\par</p><p>Third, we use several time series models to predict the energy profile of each state in the future. Structural profile of energy flow NII is predicted with Constrained-Ridge model, and renewable energy profile REI is predicted with Autoregressive Integrated Moving Average Model(ARIMA) and Long Short Term Memory(LSTM). Based on the comparison and prediction, we determine the renewable energy usage target for four states and propose several feasible actions.\par</p><p>Finally, we conduct sensitivity analysis of our model. We try several machine learning models to predict 5 key indicators, and use independent validation datasets to evaluate their performances. We also do a perturb-and-profile test to evaluate Constrained-Ridge model’s power to characterize network profile.</p><p>Our model is reasonable and legible with theoretical and data support. The model can be easily applied to characterize the energy profile of renewable energy and energy flow network after data training.</p><h2 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h2><p>Used data in data file, produced data in produced data</p><h2 id="Codes-and-method"><a href="#Codes-and-method" class="headerlink" title="Codes and method"></a>Codes and method</h2><p>For quick work in limited time, all codes are written in jupyter notebook, which is a good interactive environment easier to plot and analyze data.<br>We have implemented some algorithm and some visualization method to analyze data.  We use AHP and EWM to construct REI, use ARIMA, Machine Learning model and Deep Learning model to predict time series data. We construct a Restricted Ridge model, using optimization method to depict the network relationship. We use sankey plot, radar plot, and many ordinary plots to visualize data vividly.</p><h2 id="Key-point-manually-feature-selection"><a href="#Key-point-manually-feature-selection" class="headerlink" title="Key point: manually feature selection"></a>Key point: manually feature selection</h2><p>We use a network to extract key features to depict the energy profile. The network is visualized through sankey plot.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;It is about our solution of 2018 MCM contest, our result get Meritorious award.&lt;br&gt;
+
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;iframe src=&quot;https://drive
+      
+    
+    </summary>
+    
+      <category term="projects" scheme="http://james20141606.github.io/categories/projects/"/>
+    
+    
+      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+    
+      <category term="contest" scheme="http://james20141606.github.io/tags/contest/"/>
+    
+      <category term="math model" scheme="http://james20141606.github.io/tags/math-model/"/>
+    
+  </entry>
   
   <entry>
     <title>Linear Regression Assignment 8</title>
@@ -357,11 +390,11 @@
     
       <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
     
-      <category term="machine learning" scheme="http://james20141606.github.io/tags/machine-learning/"/>
-    
       <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
     
       <category term="bioinformatics" scheme="http://james20141606.github.io/tags/bioinformatics/"/>
+    
+      <category term="machine learning" scheme="http://james20141606.github.io/tags/machine-learning/"/>
     
   </entry>
   
@@ -524,30 +557,6 @@
       &lt;p&gt;燕尾山拾柴历险记&lt;/p&gt;
 &lt;p&gt;经过双方父母见面，我们这两个老同学确立了夫妻关系，于一九六二年农历七月十一日喜结良缘，开始了又一段崭新的生活。我不仅是一名失学的学生，农村的农民，还是一名丈夫，而且很快，就要成为父亲了。&lt;/p&gt;
 &lt;p&gt;一九六二年的农历闰四月，家里连一点可以吃的东西都没有了。已经怀了身孕的妻子只能靠着白水煮红薯干充饥，想吃点别的什么食物都是奢望。老家每年四月八号的庙会总会有亲朋好友和同学们来家里，断炊了还拿什么招待呢？我决定跟随邻居，去燕尾山拾柴变卖来赚些钱买点粮食。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="爷爷回忆录" scheme="http://james20141606.github.io/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-    
-    
-      <category term="life" scheme="http://james20141606.github.io/tags/life/"/>
-    
-      <category term="autobiograpy" scheme="http://james20141606.github.io/tags/autobiograpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧</title>
-    <link href="http://james20141606.github.io/2018/04/11/auto7/"/>
-    <id>http://james20141606.github.io/2018/04/11/auto7/</id>
-    <published>2018-04-11T02:09:49.000Z</published>
-    <updated>2018-04-12T08:12:06.547Z</updated>
-    
-    <content type="html"><![CDATA[<p>我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。<br><a id="more"></a><br>开席了，村里面很多年没有人家办全席了，男女老幼满庭院，孩童们将白馒头偷偷揣进怀里，大人们猜枚行令，真是热闹非凡。</p><p>两点多啦，酒宴临近撤席，有的亲戚朋友到院外互相问候、攀谈，准备道别。女人们争相到妻子床边亲眼看一看儿子的容貌。为了准备这十几桌酒席，我忙活了好几天，这会是个空隙，我搬个小凳子坐在大门外左侧池塘边那棵桃树下稍事休息，成家啦，得子啦，还是个小子呢！我忍不住开心地笑着。这棵桃树桃儿满枝头，硕果累累，这树是我亲手所栽，一点点培育长大的呢！农家人的快乐、幸福与满足一齐涌上心头，多久都没有这么快乐过了呢！</p><p>正想着心里的事，有两个推着自行车的人朝大门口走去，询问陈炳林、王若平两人是否住在这里。我抬头望去，两个人的面孔好生熟悉，这是哪里来的客人呢，怎么这个时候才到，我该怎么招待呀。再仔细一看，原来是郑州学校的班主任何老师和教汽托课的邢仁军老师，我赶忙跑步过去迎接。我心里震惊得说话都语无伦次了，我说，老师您吃饭了没有，您咋知道我和王若平的家在这里？在校时我俩是他们的学生，现在我们已经成为了夫妻，孩子都出生了，正好赶上办酒席，真的有点尴尬。</p><p>邢仁军老师教汽车拖拉机课，他语言精练易懂实践经验丰富，实习课上他经常让我操作示范给大家看，对我器重有加，青眼相看，我也非常喜欢他，他是我心中的偶像。班主任和我最喜欢的老师来到家里，自然是非常激动。</p><p>接下来的消息更是让人激动不已，老师说：祝贺你们双喜临门，学校也要复课啦，这是入学通知书，交给你们。我双手接住了两份沉甸甸的通知书。</p><p>事前没有任何的讯息，二位老师又千里迢迢将入学通知书递到了手里，我既惊喜又感激。我说：老师，我和王若平已经结婚生子了，学校还会要我们吗？老师的回答是坚定的：这个问题是国家造成的，你们没有过错，学校会接收你们的。你们在校时的表现我是知道的，王若平还是班干部，学生会的学习委员哩，放心吧，学校一定会收你们的！</p><p>我校能复课开学，乃是占了“农”字的光。因着毛主席提出“农业的根本出路在机械化”的批示得以率先复课，其他的院校都还没消息呢。</p><p>瞬间，地道的农民又可以上学啦，可以重新当城里人，读书人了。做了爸妈的人要去上学啦，儿子怎么办呢？在农村出了这样的新鲜事，你说稀奇不稀奇？</p><p>距离开学只剩下两个月了，谁去谁留？都去都留？欣喜之后是烦恼，这个问题始终困扰着我俩，萦绕在我们心头。全家人也争论不休，我们征求了岳父母的意见，也和内兄写信联系，大家的意见是，都去上学。岳父母资助了一些费用，内兄也汇来了钱款。再难也得坚持下去啊，妻子也强调，不管谁去谁留都可能给婚姻和家庭带来变故，而我们都极其渴望重新上学，改变命运，因此最终我们达成了一致，一起复课学习。</p><p>两个月飞速过去，我俩要离开这个家了，要离开儿子了，儿子虽然个头不小，可是因为他母亲怀他时严重营养不良，这时竟然连头也直不起来。儿子让我们割舍不下，心疼不已，后来在沽沱村找到奶妈，草草安置后，含泪依依不舍地离开了家，我们重新踏上了求学之路。</p><p>可怜天下父母心，儿子是母亲身上掉下来的肉，儿行千里母担忧，如今是母行千里，留儿子在家里。在最后一年的学生生涯里，儿子的身影时刻萦绕在她的心头，她上课经常走神，清净时甚至能隐约听到儿子啼哭的声音，身边没人时她就经常把自己为儿子做的一身小衣服，连同帽子摆在自己床上，摆弄摆弄看是否合身。她只要听到楼上女教师儿子的啼哭声就会不由自主地流眼泪。这一年应该说是短暂的，对我们来说却是无比漫长的。春节到了，本来是个千载难逢的探望家人的机会，团聚一堂的机会，可以和家人还有儿子团聚了，可是因为没有经费，我俩只能回去一个人，于是妻子回家，我一人留在学校，我会情愿吗，实在是无奈之举啊。妻子为了既能探望婆家人，又能见到父母，拉着架子车把婆婆和儿子拉到外婆家，以达到和儿子分秒不离的目的。留在学校的我心中是什么滋味，就让各位读者自己品味吧！</p><p>在这最后的学生生活里，因为精神压力大，我曾多次生病，眼睛患结膜炎、角膜炎，还有胸膜炎，胃病，失眠等疾病。由于视力极度下降，怕光、怕风、流泪，我无法进行毕业笔试考试，后来经校方特批，部分课程改成口述答题。坚持就是胜利，最后我竟然以优异的成绩顺利完成考试，毕业了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。&lt;br&gt;
     
     </summary>
     
