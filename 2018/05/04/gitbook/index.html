@@ -96,10 +96,14 @@
 <meta property="og:site_name" content="James Chen&#39;s Blogs">
 <meta property="og:description" content="写书必备的工具之前用过一些，比如：  帮老板写过书里的一章(5.1 eMaize Challenge  · 生物信息学实践) training课的一些notes(Introduction · Bioinfo Training - Shared - 2018)，后来又移到github的wiki上了(Home · lulab/training Wiki · GitHub) 还把爷爷的回忆录也用mark">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-03T18:05:56.332Z">
+<meta property="og:image" content="http://i4.fuimg.com/640680/36e1abf41b49870e.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/393c5bd3f8debba7.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/18392c162ed87862.png">
+<meta property="og:updated_time" content="2018-05-04T03:40:50.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GitBook intro &amp; Grandpa&#39;s Bio">
 <meta name="twitter:description" content="写书必备的工具之前用过一些，比如：  帮老板写过书里的一章(5.1 eMaize Challenge  · 生物信息学实践) training课的一些notes(Introduction · Bioinfo Training - Shared - 2018)，后来又移到github的wiki上了(Home · lulab/training Wiki · GitHub) 还把爷爷的回忆录也用mark">
+<meta name="twitter:image" content="http://i4.fuimg.com/640680/36e1abf41b49870e.png">
 
 
 
@@ -377,7 +381,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,869
+                  1,826
                 </span>
               
 
@@ -419,8 +423,9 @@
 <li>帮老板写过书里的一章(<a href="https://lulab.gitbooks.io/bioinfo/content/5%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88----%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/51.html" target="_blank" rel="noopener">5.1 eMaize Challenge  · 生物信息学实践</a>)</li>
 <li>training课的一些notes(<a href="https://lulab.gitbooks.io/bioinfo-training-2018/content/" target="_blank" rel="noopener">Introduction · Bioinfo Training - Shared - 2018</a>)，后来又移到github的wiki上了(<a href="https://github.com/lulab/training/wiki" target="_blank" rel="noopener">Home · lulab/training Wiki · GitHub</a>)</li>
 <li>还把爷爷的回忆录也用markdown整理了一遍放到gitbook上(<a href="https://james20141606.gitbooks.io/grandpa-autobiography/content/" target="_blank" rel="noopener">爷爷回忆录</a>)，（一文多用，之前也已经放到blog上面了），排版比word辛辛苦苦排来排去随便一弄就全乱了是强太多了。<a id="more"></a>
-最近gitbook正好做了一个重大的<a href="https://www.gitbook.com/" target="_blank" rel="noopener">改版</a>，看起来是不仅希望大家写书，而是做一个更全面的平台？试用了一下，相当自动化和友好，看起来是希望大家以后写各种API的手册之类的都用它来做好了。<br>[image:77900C58-51E4-4C88-84F9-0B5F8A9F7FD1-354-000035C7FDE5E1AB/屏幕快照 2018-04-29 下午3.17.55.png]</li>
+最近gitbook正好做了一个重大的<a href="https://www.gitbook.com/" target="_blank" rel="noopener">改版</a>，看起来是不仅希望大家写书，而是做一个更全面的平台？试用了一下，相当自动化和友好，看起来是希望大家以后写各种API的手册之类的都用它来做好了。</li>
 </ul>
+<p><img src="http://i4.fuimg.com/640680/36e1abf41b49870e.png" alt="Markdown"></p>
 <p>当然gitbook有很差的缺点，就是实在太慢太慢，翻墙后还是慢，还好它有本地版的，可以在本地编辑好再同步。以及大多数人markdown本来就是在本地编好的，很多程序员可能还是在用命令行版本的gitbook。</p>
 <p>因为网页版的没有办法调整下载的pdf的中文字体，而我想给爷爷的回忆录的pdf字体修改一下，于是还是得用命令行版的gitbook。</p>
 <h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><p>找到的几个教程<br><a href="http://www.chengweiyang.cn/gitbook/basic-usage/README.html" target="_blank" rel="noopener">使用 | GitBook 简明教程</a><br><a href="http://zhaoda.net/2015/11/09/gitbook-plugins/" target="_blank" rel="noopener">Gitbook 的使用和常用插件</a><br><a href="https://www.jianshu.com/p/f38d8ff999cb" target="_blank" rel="noopener">使用 Gitbook 打造你的电子书 - 简书</a></p>
@@ -440,9 +445,11 @@
 <h4 id="gitbook-serve"><a href="#gitbook-serve" class="headerlink" title="gitbook serve"></a>gitbook serve</h4><p>书籍目录结构创建完成以后，就可以使用 gitbook serve 来编译和预览书籍了：</p>
 <figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">$</span> gitbook serve</span><br><span class="line"><span class="function"><span class="title">Press</span></span> CTRL+C to quit ...</span><br><span class="line"></span><br><span class="line">Live reload server started on port: <span class="number">35729</span></span><br><span class="line"><span class="function"><span class="title">Starting</span></span> build ...</span><br><span class="line">Successfully built!</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">Starting</span></span> server ...</span><br><span class="line">Serving book on http:<span class="comment">//localhost:4000</span></span><br></pre></td></tr></table></figure>
 <p>gitbook serve 命令实际上会首先调用 gitbook build 编译书籍，完成以后会打开一个 web 服务器，监听在本地的 4000 端口。</p>
-<p>现在，可以用浏览器打开 <a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 查看书籍的效果，如下图：<br>[image:A72B94AD-D1FD-4C48-A2D0-7F1E9B987582-78506-000119EA50D4EE89/gitbook-sample.png]</p>
+<p>现在，可以用浏览器打开 <a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a> 查看书籍的效果，如下图：</p>
+<p><img src="http://i4.fuimg.com/640680/393c5bd3f8debba7.png" alt="Markdown"></p>
 <p>现在，gitbook 为我们创建了书籍目录结构后，就可以向其中添加真正的内容了，文件的编写使用 markdown 语法，在文件修改过程中，每一次保存文件，gitbook serve 都会自动重新编译，所以可以持续通过浏览器来查看最新的书籍效果~</p>
-<p>另外，用户还可以下载 gitbook 编辑器，做到所见即所得的编辑，如下图所示：<br>[image:A7310CD2-BB9F-4D49-8C4F-9D3421B2E946-78506-000119EF95A2F254/gitbook-editor.png]</p>
+<p>另外，用户还可以下载 gitbook 编辑器，做到所见即所得的编辑，如下图所示：</p>
+<p><img src="http://i4.fuimg.com/640680/18392c162ed87862.png" alt="Markdown"></p>
 <p>Gitbook editor 就是gitbook的本地版本，对于gitbook这个反人类的老年网站还是有意义的，当然MWeb之类的markdown编辑器也够用了，轻量级使用感觉MWeb足够好了。</p>
 <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#install</span></span><br><span class="line">sudo npm install gitbook-cli -g</span><br><span class="line">gitbook -V</span><br><span class="line">npm i ebook-convert  <span class="comment">#solve warning:InstallRequiredError: "ebook-convert" is not installed.</span></span><br><span class="line">gitbook init <span class="string">//</span>初始化目录文件</span><br><span class="line">gitbook serve</span><br><span class="line">gitbook <span class="keyword">help</span> <span class="string">//</span>列出gitbook所有的命令</span><br><span class="line">gitbook <span class="params">--help</span> <span class="string">//</span>输出gitbook-cli的帮助信息</span><br><span class="line">gitbook build <span class="string">//</span>生成静态网页</span><br><span class="line">gitbook serve <span class="string">//</span>生成静态网页并运行服务器</span><br><span class="line">gitbook build <span class="params">--gitbook=2</span>.0.1 <span class="string">//</span>生成时指定gitbook的版本, 本地没有会先下载</span><br><span class="line">gitbook <span class="keyword">ls</span> <span class="string">//</span>列出本地所有的gitbook版本</span><br><span class="line">gitbook ls-remote <span class="string">//</span>列出远程可用的gitbook版本</span><br><span class="line">gitbook fetch 标签/版本号 <span class="string">//</span>安装对应的gitbook版本</span><br><span class="line">gitbook update <span class="string">//</span>更新到gitbook的最新版本</span><br><span class="line">gitbook uninstall 2.0.1 <span class="string">//</span>卸载对应的gitbook版本</span><br><span class="line">gitbook build <span class="params">--log=debug</span> <span class="string">//</span>指定log的级别</span><br><span class="line">gitbook build <span class="params">--debug</span> <span class="string">//</span>输出错误信息</span><br><span class="line">gitbook pdf</span><br></pre></td></tr></table></figure>
 <h3 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h3><p>只做到这些的话就没必要用命令行版的gitbook了，当然是为了做一些个性化定制，包括对book.json的配置以及使用插件。</p>
