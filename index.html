@@ -279,6 +279,196 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/05/05/alias-setting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Chen's Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/05/alias-setting/" itemprop="url">Alias Setting</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-05T00:17:18+08:00">
+                2018-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/05/05/alias-setting/" class="leancloud_visitors" data-flag-title="Alias Setting">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,050
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Alias is a very good way to save time and reduce non necessary memory. Since I use zsh, I set the alias in ~/.zshrc. </p>
+<p>For example, I even set one alias: srczsh=’source ~/.zshrc’ to enable source more convienient.</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br></pre></td><td class="code"><pre><span class="line">source /Users/james/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line">plugins=(zsh-syntax-highlighting)</span><br><span class="line">alias github='cd /Users/james/Desktop/website/github'</span><br><span class="line">alias web='cd /Users/james/Desktop/website/jamesblog/james20141606.github.io'</span><br><span class="line">alias gitp='ga . &amp;&amp; gcmsg 'update' &amp;&amp; gp'</span><br><span class="line">alias srczsh='source ~/.zshrc'</span><br><span class="line">alias deep='cd /Users/james/Desktop/Deepshape_whole/Deepshape/'</span><br><span class="line">alias gitbookbp='gitbook build &amp;&amp; gitbook pdf .'</span><br><span class="line">alias jp='jupyter notebook'</span><br><span class="line">alias snip='bash syncsnip.sh'</span><br><span class="line">alias hgd='hexo g &amp;&amp; hexo d'</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">zsh配置好的：</span><br><span class="line">-='cd -'</span><br><span class="line">...=../..</span><br><span class="line">....=../../..</span><br><span class="line">.....=../../../..</span><br><span class="line">......=../../../../..</span><br><span class="line">1='cd -'</span><br><span class="line">2='cd -2'</span><br><span class="line">3='cd -3'</span><br><span class="line">4='cd -4'</span><br><span class="line">5='cd -5'</span><br><span class="line">6='cd -6'</span><br><span class="line">7='cd -7'</span><br><span class="line">8='cd -8'</span><br><span class="line">9='cd -9'</span><br><span class="line">_=sudo</span><br><span class="line">afind='ack -il'</span><br><span class="line">d='dirs -v | head -10'</span><br><span class="line">g=git</span><br><span class="line">ga='git add'</span><br><span class="line">gaa='git add --all'</span><br><span class="line">gap='git apply'</span><br><span class="line">gapa='git add --patch'</span><br><span class="line">gau='git add --update'</span><br><span class="line">gb='git branch'</span><br><span class="line">gba='git branch -a'</span><br><span class="line">gbd='git branch -d'</span><br><span class="line">gbda='git branch --no-color --merged | command grep -vE <span class="string">"^(\*|\s*(master|develop|dev)\s*$)"</span> | command xargs -n 1 git branch -d'</span><br><span class="line">gbl='git blame -b -w'</span><br><span class="line">gbnm='git branch --no-merged'</span><br><span class="line">gbr='git branch --remote'</span><br><span class="line">gbs='git bisect'</span><br><span class="line">gbsb='git bisect bad'</span><br><span class="line">gbsg='git bisect good'</span><br><span class="line">gbsr='git bisect reset'</span><br><span class="line">gbss='git bisect start'</span><br><span class="line">gc='git commit -v'</span><br><span class="line">'gc!'='git commit -v --amend'</span><br><span class="line">gca='git commit -v -a'</span><br><span class="line">'gca!'='git commit -v -a --amend'</span><br><span class="line">gcam='git commit -a -m'</span><br><span class="line">'gcan!'='git commit -v -a --no-edit --amend'</span><br><span class="line">'gcans!'='git commit -v -a -s --no-edit --amend'</span><br><span class="line">gcb='git checkout -b'</span><br><span class="line">gcd='git checkout develop'</span><br><span class="line">gcf='git config --list'</span><br><span class="line">gcl='git clone --recursive'</span><br><span class="line">gclean='git clean -fd'</span><br><span class="line">gcm='git checkout master'</span><br><span class="line">gcmsg='git commit -m'</span><br><span class="line">'gcn!'='git commit -v --no-edit --amend'</span><br><span class="line">gco='git checkout'</span><br><span class="line">gcount='git shortlog -sn'</span><br><span class="line">gcp='git cherry-pick'</span><br><span class="line">gcpa='git cherry-pick --abort'</span><br><span class="line">gcpc='git cherry-pick --continue'</span><br><span class="line">gcs='git commit -S'</span><br><span class="line">gcsm='git commit -s -m'</span><br><span class="line">gd='git diff'</span><br><span class="line">gdca='git diff --cached'</span><br><span class="line">gdct='git describe --tags `git rev-list --tags --max-count=1`'</span><br><span class="line">gdcw='git diff --cached --word-diff'</span><br><span class="line">gdt='git diff-tree --no-commit-id --name-only -r'</span><br><span class="line">gdw='git diff --word-diff'</span><br><span class="line">gf='git fetch'</span><br><span class="line">gfa='git fetch --all --prune'</span><br><span class="line">gfo='git fetch origin'</span><br><span class="line">gg='git gui citool'</span><br><span class="line">gga='git gui citool --amend'</span><br><span class="line">ggpull='git pull origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ggpur=ggu</span><br><span class="line">ggpush='git push origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ggsup='git branch --set-upstream-to=origin/<span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ghh='git help'</span><br><span class="line">gignore='git update-index --assume-unchanged'</span><br><span class="line">gignored='git ls-files -v | grep <span class="string">"^[[:lower:]]"</span>'</span><br><span class="line">git-svn-dcommit-push='git svn dcommit &amp;&amp; git push github master:svntrunk'</span><br><span class="line">gk='\gitk --all --branches'</span><br><span class="line">gke='\gitk --all <span class="variable">$(git log -g --pretty=%h)</span>'</span><br><span class="line">gl='git pull'</span><br><span class="line">glg='git log --stat'</span><br><span class="line">glgg='git log --graph'</span><br><span class="line">glgga='git log --graph --decorate --all'</span><br><span class="line">glgm='git log --graph --max-count=10'</span><br><span class="line">glgp='git log --stat -p'</span><br><span class="line">glo='git log --oneline --decorate'</span><br><span class="line">globurl='noglob urlglobber '</span><br><span class="line">glog='git log --oneline --decorate --graph'</span><br><span class="line">gloga='git log --oneline --decorate --graph --all'</span><br><span class="line">glol='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'\'</span><br><span class="line">glola='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'\'' --all'</span><br><span class="line">glp=_git_log_prettily</span><br><span class="line">glum='git pull upstream master'</span><br><span class="line">gm='git merge'</span><br><span class="line">gma='git merge --abort'</span><br><span class="line">gmom='git merge origin/master'</span><br><span class="line">gmt='git mergetool --no-prompt'</span><br><span class="line">gmtvim='git mergetool --no-prompt --tool=vimdiff'</span><br><span class="line">gmum='git merge upstream/master'</span><br><span class="line">gp='git push'</span><br><span class="line">gpd='git push --dry-run'</span><br><span class="line">gpoat='git push origin --all &amp;&amp; git push origin --tags'</span><br><span class="line">gpristine='git reset --hard &amp;&amp; git clean -dfx'</span><br><span class="line">gpsup='git push --set-upstream origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">gpu='git push upstream'</span><br><span class="line">gpv='git push -v'</span><br><span class="line">gr='git remote'</span><br><span class="line">gra='git remote add'</span><br><span class="line">grb='git rebase'</span><br><span class="line">grba='git rebase --abort'</span><br><span class="line">grbc='git rebase --continue'</span><br><span class="line">grbi='git rebase -i'</span><br><span class="line">grbm='git rebase master'</span><br><span class="line">grbs='git rebase --skip'</span><br><span class="line">grep='grep  --color=auto --exclude-dir=&#123;.bzr,CVS,.git,.hg,.svn&#125;'</span><br><span class="line">grh='git reset HEAD'</span><br><span class="line">grhh='git reset HEAD --hard'</span><br><span class="line">grmv='git remote rename'</span><br><span class="line">grrm='git remote remove'</span><br><span class="line">grset='git remote set-url'</span><br><span class="line">grt='cd <span class="variable">$(git rev-parse --show-toplevel || echo ".")</span>'</span><br><span class="line">gru='git reset --'</span><br><span class="line">grup='git remote update'</span><br><span class="line">grv='git remote -v'</span><br><span class="line">gsb='git status -sb'</span><br><span class="line">gsd='git svn dcommit'</span><br><span class="line">gsi='git submodule init'</span><br><span class="line">gsps='git show --pretty=short --show-signature'</span><br><span class="line">gsr='git svn rebase'</span><br><span class="line">gss='git status -s'</span><br><span class="line">gst='git status'</span><br><span class="line">gsta='git stash save'</span><br><span class="line">gstaa='git stash apply'</span><br><span class="line">gstc='git stash clear'</span><br><span class="line">gstd='git stash drop'</span><br><span class="line">gstl='git stash list'</span><br><span class="line">gstp='git stash pop'</span><br><span class="line">gsts='git stash show --text'</span><br><span class="line">gsu='git submodule update'</span><br><span class="line">gts='git tag -s'</span><br><span class="line">gtv='git tag | sort -V'</span><br><span class="line">gunignore='git update-index --no-assume-unchanged'</span><br><span class="line">gunwip='git log -n 1 | grep -q -c <span class="string">"\-\-wip\-\-"</span> &amp;&amp; git reset HEAD~1'</span><br><span class="line">gup='git pull --rebase'</span><br><span class="line">gupv='git pull --rebase -v'</span><br><span class="line">gwch='git whatchanged -p --abbrev-commit --pretty=medium'</span><br><span class="line">gwip='git add -A; git rm <span class="variable">$(git ls-files --deleted)</span> 2&gt; /dev/null; git commit --no-verify -m <span class="string">"--wip-- [skip ci]"</span>'</span><br><span class="line">history=omz_history</span><br><span class="line">l='ls -lah'</span><br><span class="line">la='ls -lAh'</span><br><span class="line">ll='ls -lh'</span><br><span class="line">ls='ls -G'</span><br><span class="line">lsa='ls -lah'</span><br><span class="line">md='mkdir -p'</span><br><span class="line">please=sudo</span><br><span class="line">po=popd</span><br><span class="line">pu=pushd</span><br><span class="line">rd=rmdir</span><br><span class="line">run-help=man</span><br><span class="line">which-command=whence</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/05/05/conda/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2029,198 +2219,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://james20141606.github.io/2018/04/16/Statistic-Inferences/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="James Chen's Blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/16/Statistic-Inferences/" itemprop="url">Assignments of Statistic Inferences</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T14:33:06+08:00">
-                2018-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/school-work/" itemprop="url" rel="index">
-                    <span itemprop="name">school work</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/04/16/Statistic-Inferences/" class="leancloud_visitors" data-flag-title="Assignments of Statistic Inferences">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  238
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>ALL the assignments of <strong>Statistic Inferences</strong>. The assignment is written in Rmarkdown/LaTeX, LaTeX is a classic formula editor but a little hard to use intensely. Rmarkdown is introduced by TA and it is a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/16/Statistic-Inferences/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2275,7 +2273,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2297,7 +2295,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2375,7 +2373,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共68.0k字</span>
+  <span class="post-count">博客全站共69.0k字</span>
 </div>
 
         
