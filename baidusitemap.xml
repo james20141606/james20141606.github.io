@@ -5,17 +5,17 @@
     
   <url>
     <loc>http://james20141606.github.io/2018/05/05/snakemake/</loc>
-    <lastmod>2018-05-05T14:41:38.116Z</lastmod>
+    <lastmod>2018-05-05T14:50:49.471Z</lastmod>
     <data>
         <display>
         <title>Snakemake初步</title>
         <pubTime>2018-05-05T14:39:51.000Z</pubTime>
         
+        <tag>codes</tag>
+         
         <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
-         
-        <tag>codes</tag>
          
          
            
@@ -62,9 +62,9 @@
         
         <tag>techniques</tag>
          
-        <tag>software</tag>
-         
         <tag>setup</tag>
+         
+        <tag>software</tag>
          
          
            
@@ -162,9 +162,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -471,13 +471,13 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
-        <tag>bioinformatics</tag>
-         
         <tag>codes</tag>
          
         <tag>statistics</tag>
+         
+        <tag>techniques</tag>
+         
+        <tag>bioinformatics</tag>
          
         <tag>machine learning</tag>
          
