@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>http://james20141606.github.io/2018/05/05/snakemake/</loc>
+    <lastmod>2018-05-05T14:41:38.116Z</lastmod>
+    <data>
+        <display>
+        <title>Snakemake初步</title>
+        <pubTime>2018-05-05T14:39:51.000Z</pubTime>
+        
+        <tag>techniques</tag>
+         
+        <tag>bioinformatics</tag>
+         
+        <tag>codes</tag>
+         
+         
+           
+             
+              <breadCrumb title="techniques" url="http://james20141606.github.io/categories/techniques/"/>
+          
+             
+              <breadCrumb title="bioinformatics" url="http://james20141606.github.io/categories/techniques/bioinformatics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://james20141606.github.io/2018/05/05/search-engine/</loc>
     <lastmod>2018-05-05T04:57:26.648Z</lastmod>
     <data>
@@ -59,11 +86,11 @@
         
         <tag>techniques</tag>
          
-        <tag>setup</tag>
-         
         <tag>zsh</tag>
          
         <tag>alias</tag>
+         
+        <tag>setup</tag>
          
          
            
@@ -135,9 +162,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -444,13 +471,13 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>codes</tag>
-         
-        <tag>statistics</tag>
-         
         <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
+         
+        <tag>codes</tag>
+         
+        <tag>statistics</tag>
          
         <tag>machine learning</tag>
          
