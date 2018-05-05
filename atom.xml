@@ -62,9 +62,9 @@
     
       <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
     
-      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
-    
       <category term="software" scheme="http://james20141606.github.io/tags/software/"/>
+    
+      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
     
   </entry>
   
@@ -89,11 +89,11 @@
     
       <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
     
+      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
+    
       <category term="zsh" scheme="http://james20141606.github.io/tags/zsh/"/>
     
       <category term="alias" scheme="http://james20141606.github.io/tags/alias/"/>
-    
-      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
     
   </entry>
   
@@ -144,9 +144,9 @@
       <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
-    
       <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+    
+      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
     
   </entry>
   

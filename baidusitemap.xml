@@ -35,9 +35,9 @@
         
         <tag>techniques</tag>
          
-        <tag>setup</tag>
-         
         <tag>software</tag>
+         
+        <tag>setup</tag>
          
          
            
@@ -59,11 +59,11 @@
         
         <tag>techniques</tag>
          
+        <tag>setup</tag>
+         
         <tag>zsh</tag>
          
         <tag>alias</tag>
-         
-        <tag>setup</tag>
          
          
            
@@ -135,9 +135,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -444,11 +444,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
          
         <tag>statistics</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
