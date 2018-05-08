@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>https://www.cmwonderland.com/2018/05/08/autobio/</loc>
-    <lastmod>2018-05-08T11:52:19.239Z</lastmod>
-    <data>
-        <display>
-        <title>爷爷回忆录总结</title>
-        <pubTime>2018-05-08T11:47:25.000Z</pubTime>
-        
-        <tag>life</tag>
-         
-        <tag>autobiograpy</tag>
-         
-         
-           
-             
-              <breadCrumb title="爷爷回忆录" url="https://www.cmwonderland.com/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.cmwonderland.com/2018/05/05/conda/</loc>
-    <lastmod>2018-05-08T11:51:44.046Z</lastmod>
+    <lastmod>2018-05-08T11:54:09.620Z</lastmod>
     <data>
         <display>
         <title>Conda详细配置指南</title>
@@ -45,6 +23,28 @@
            
              
               <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/05/08/autobio/</loc>
+    <lastmod>2018-05-08T11:52:19.239Z</lastmod>
+    <data>
+        <display>
+        <title>爷爷回忆录总结</title>
+        <pubTime>2018-05-08T11:47:25.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+        <tag>autobiograpy</tag>
+         
+         
+           
+             
+              <breadCrumb title="爷爷回忆录" url="https://www.cmwonderland.com/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
           
         </display>
     </data>
