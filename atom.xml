@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://james20141606.github.io/"/>
+  <link href="https://www.cmwonderland.com/"/>
   <updated>2018-05-05T14:50:49.471Z</updated>
-  <id>http://james20141606.github.io/</id>
+  <id>https://www.cmwonderland.com/</id>
   
   <author>
     <name>James Chen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Snakemake初步</title>
-    <link href="http://james20141606.github.io/2018/05/05/snakemake/"/>
-    <id>http://james20141606.github.io/2018/05/05/snakemake/</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/snakemake/"/>
+    <id>https://www.cmwonderland.com/2018/05/05/snakemake/</id>
     <published>2018-05-05T14:39:51.000Z</published>
     <updated>2018-05-05T14:50:49.471Z</updated>
     
@@ -31,23 +31,23 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
-      <category term="bioinformatics" scheme="http://james20141606.github.io/categories/techniques/bioinformatics/"/>
+      <category term="bioinformatics" scheme="https://www.cmwonderland.com/categories/techniques/bioinformatics/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="bioinformatics" scheme="http://james20141606.github.io/tags/bioinformatics/"/>
+      <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
     
   </entry>
   
   <entry>
     <title>搜索引擎收录</title>
-    <link href="http://james20141606.github.io/2018/05/05/search-engine/"/>
-    <id>http://james20141606.github.io/2018/05/05/search-engine/</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/search-engine/"/>
+    <id>https://www.cmwonderland.com/2018/05/05/search-engine/</id>
     <published>2018-05-05T04:45:08.000Z</published>
     <updated>2018-05-05T04:57:26.648Z</updated>
     
@@ -59,47 +59,47 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="website" scheme="http://james20141606.github.io/tags/website/"/>
+      <category term="website" scheme="https://www.cmwonderland.com/tags/website/"/>
     
   </entry>
   
   <entry>
     <title>神器分享</title>
-    <link href="http://james20141606.github.io/2018/05/05/tools/"/>
-    <id>http://james20141606.github.io/2018/05/05/tools/</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/tools/"/>
+    <id>https://www.cmwonderland.com/2018/05/05/tools/</id>
     <published>2018-05-04T16:35:09.000Z</published>
     <updated>2018-05-04T16:41:18.186Z</updated>
     
-    <content type="html"><![CDATA[<p>分享一些想到的觉得好用的工具和软件，挂一漏万，这个文章后续可以不断更新。</p><h2 id="Mathpix"><a href="#Mathpix" class="headerlink" title="Mathpix"></a>Mathpix</h2><p><a href="https://mathpix.com/" target="_blank" rel="noopener">Mathpix: convert images to LaTex.</a><br>可以截图将公式转成latex代码</p><p>在排版的文章里讲过<a href="https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/">论文与排版 | James Chen’s Blogs</a></p><a id="more"></a><h2 id="iTERM-oh-my-zsh"><a href="#iTERM-oh-my-zsh" class="headerlink" title="iTERM oh my zsh"></a>iTERM oh my zsh</h2><p>酷炫命令行<br><a href="https://www.jianshu.com/p/7de00c73a2bb" target="_blank" rel="noopener">iTerm 2 &amp;&amp; Oh My Zsh【DIY教程——亲身体验过程】 - 简书</a><br>[image:B8E2F4B7-70CB-4EC5-88B5-DA515F88DFFA-354-00002982DF7A8359/屏幕快照 2018-04-28 下午10.12.58.png]</p><p>而且oh my zsh配置了快速提交github的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ga . &amp;&amp; gcmsg <span class="string">'update'</span> &amp;&amp; gp</span><br><span class="line"><span class="built_in">alias</span> gitp=<span class="string">'ga . &amp;&amp; gcmsg '</span>update<span class="string">' &amp;&amp; gp'</span></span><br></pre></td></tr></table></figure></p><p>讲过一系列的写在~/.zshrc中的快捷方式<a href="https://james20141606.github.io/2018/05/05/alias-setting/">Alias Setting | James Chen’s Blogs</a></p><h2 id="每个人都爱的VSCODE"><a href="#每个人都爱的VSCODE" class="headerlink" title="每个人都爱的VSCODE"></a>每个人都爱的VSCODE</h2><p>神器，插件扩展太多了<br>一开始看人用各种IDE，包括pycharm，但是我一直不喜欢，很卡，xcode太臃肿，苹果塞了一堆用不上的东西，github的atom实在是垃圾，对mac的适配很差，很容易崩，最后发现还是良心的微软好，vscode用的很顺滑，看到各种人都在用，甚至还有用latex插件的，扩展性真的非常好<br>包括workspace，和git的配合，终端用起来都很顺。</p><p>排版的博客里讲过VSCode和LaTeX结合<a href="https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/">论文与排版 | James Chen’s Blogs</a></p><h2 id="Unclutter"><a href="#Unclutter" class="headerlink" title="Unclutter"></a>Unclutter</h2><p>你一定会爱上它，用过的人都说好，对于一个几乎电脑不离手的人来说，unclutter让你的人生变得无比的从容和有条理，每天用几百遍，强迫症必备。<br><a href="https://unclutterapp.com/" target="_blank" rel="noopener">Unclutter - Files, Notes and Clipboard Manager for Mac</a></p><h2 id="net-tsinghua"><a href="#net-tsinghua" class="headerlink" title="net.tsinghua"></a>net.tsinghua</h2><p>清华的学生可以试试net.stinghua。 <a href="https://github.com/ThomasLee969/net.tsinghua" target="_blank" rel="noopener">GitHub - ThomasLee969/net.tsinghua: A cross-platform auto-login utility for Tsinghua students</a>，比学校提供的校园网客户端好看很多。</p><h2 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h2><p>Chrome的插件，实在是太强，翻墙，多个服务器的jupyter、Rstudio远程使用，绝对离不开的，甚至有非校园网环境下继续用清华用户身份找各种数据库的能力（感谢万能斌）。</p><h2 id="Aria2，破解百度云限速"><a href="#Aria2，破解百度云限速" class="headerlink" title="Aria2，破解百度云限速"></a>Aria2，破解百度云限速</h2><p>一个强大的下载工具，甚至有linux版本，当然主要是为了对付百度云限速的。有GUI版本的，自行搜索Aria2GUI即可。</p><p>当然这是不够的，需要配合一个神奇的插件，在github有，每次都要找一会儿才能找到，放这里了<a href="https://github.com/acgotaku/BaiduExporter" target="_blank" rel="noopener">GitHub - acgotaku/BaiduExporter: Assistant for Baidu to export download links to aria2/aria2-rpc</a>。当然在Github搜baiduyun能搜到一堆各路神仙的破解办法。这个是使用很久觉得很靠谱的，装好chrome的插件之后，每次百度云分享的页面都会有一个导出下载的按钮，可以用aria2下载，更好的是可以导出下载链接，用迅雷下也很爽（仅限mac，mac版的有些软件实在良心，比如校园网下我的迅雷下载经常2M以上，流畅情况可以10M/s，还有爱奇艺，没广告）</p><h2 id="mindnode"><a href="#mindnode" class="headerlink" title="mindnode"></a>mindnode</h2><p>很适合做思维导图</p><h2 id="notability"><a href="#notability" class="headerlink" title="notability"></a>notability</h2><p>用过的最好的录音加记笔记的软件，记笔记一般，录音功能真心好用</p><h2 id="分享过的"><a href="#分享过的" class="headerlink" title="分享过的"></a>分享过的</h2><p>Bear，提过几次了，强烈推荐的markdown记笔记软件。</p><p>Jupyter，提了N次了，用python的人一定要用，其他的IDE真的弱爆了，虽然其实不是一个概念的东西。</p>]]></content>
+    <content type="html"><![CDATA[<p>分享一些想到的觉得好用的工具和软件，挂一漏万，这个文章后续可以不断更新。</p><h2 id="Mathpix"><a href="#Mathpix" class="headerlink" title="Mathpix"></a>Mathpix</h2><p><a href="https://mathpix.com/" target="_blank" rel="noopener">Mathpix: convert images to LaTex.</a><br>可以截图将公式转成latex代码</p><p>在排版的文章里讲过<a href="https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/" target="_blank" rel="noopener">论文与排版 | James Chen’s Blogs</a></p><a id="more"></a><h2 id="iTERM-oh-my-zsh"><a href="#iTERM-oh-my-zsh" class="headerlink" title="iTERM oh my zsh"></a>iTERM oh my zsh</h2><p>酷炫命令行<br><a href="https://www.jianshu.com/p/7de00c73a2bb" target="_blank" rel="noopener">iTerm 2 &amp;&amp; Oh My Zsh【DIY教程——亲身体验过程】 - 简书</a><br>[image:B8E2F4B7-70CB-4EC5-88B5-DA515F88DFFA-354-00002982DF7A8359/屏幕快照 2018-04-28 下午10.12.58.png]</p><p>而且oh my zsh配置了快速提交github的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ga . &amp;&amp; gcmsg <span class="string">'update'</span> &amp;&amp; gp</span><br><span class="line"><span class="built_in">alias</span> gitp=<span class="string">'ga . &amp;&amp; gcmsg '</span>update<span class="string">' &amp;&amp; gp'</span></span><br></pre></td></tr></table></figure></p><p>讲过一系列的写在~/.zshrc中的快捷方式<a href="https://james20141606.github.io/2018/05/05/alias-setting/" target="_blank" rel="noopener">Alias Setting | James Chen’s Blogs</a></p><h2 id="每个人都爱的VSCODE"><a href="#每个人都爱的VSCODE" class="headerlink" title="每个人都爱的VSCODE"></a>每个人都爱的VSCODE</h2><p>神器，插件扩展太多了<br>一开始看人用各种IDE，包括pycharm，但是我一直不喜欢，很卡，xcode太臃肿，苹果塞了一堆用不上的东西，github的atom实在是垃圾，对mac的适配很差，很容易崩，最后发现还是良心的微软好，vscode用的很顺滑，看到各种人都在用，甚至还有用latex插件的，扩展性真的非常好<br>包括workspace，和git的配合，终端用起来都很顺。</p><p>排版的博客里讲过VSCode和LaTeX结合<a href="https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/" target="_blank" rel="noopener">论文与排版 | James Chen’s Blogs</a></p><h2 id="Unclutter"><a href="#Unclutter" class="headerlink" title="Unclutter"></a>Unclutter</h2><p>你一定会爱上它，用过的人都说好，对于一个几乎电脑不离手的人来说，unclutter让你的人生变得无比的从容和有条理，每天用几百遍，强迫症必备。<br><a href="https://unclutterapp.com/" target="_blank" rel="noopener">Unclutter - Files, Notes and Clipboard Manager for Mac</a></p><h2 id="net-tsinghua"><a href="#net-tsinghua" class="headerlink" title="net.tsinghua"></a>net.tsinghua</h2><p>清华的学生可以试试net.stinghua。 <a href="https://github.com/ThomasLee969/net.tsinghua" target="_blank" rel="noopener">GitHub - ThomasLee969/net.tsinghua: A cross-platform auto-login utility for Tsinghua students</a>，比学校提供的校园网客户端好看很多。</p><h2 id="SwitchyOmega"><a href="#SwitchyOmega" class="headerlink" title="SwitchyOmega"></a>SwitchyOmega</h2><p>Chrome的插件，实在是太强，翻墙，多个服务器的jupyter、Rstudio远程使用，绝对离不开的，甚至有非校园网环境下继续用清华用户身份找各种数据库的能力（感谢万能斌）。</p><h2 id="Aria2，破解百度云限速"><a href="#Aria2，破解百度云限速" class="headerlink" title="Aria2，破解百度云限速"></a>Aria2，破解百度云限速</h2><p>一个强大的下载工具，甚至有linux版本，当然主要是为了对付百度云限速的。有GUI版本的，自行搜索Aria2GUI即可。</p><p>当然这是不够的，需要配合一个神奇的插件，在github有，每次都要找一会儿才能找到，放这里了<a href="https://github.com/acgotaku/BaiduExporter" target="_blank" rel="noopener">GitHub - acgotaku/BaiduExporter: Assistant for Baidu to export download links to aria2/aria2-rpc</a>。当然在Github搜baiduyun能搜到一堆各路神仙的破解办法。这个是使用很久觉得很靠谱的，装好chrome的插件之后，每次百度云分享的页面都会有一个导出下载的按钮，可以用aria2下载，更好的是可以导出下载链接，用迅雷下也很爽（仅限mac，mac版的有些软件实在良心，比如校园网下我的迅雷下载经常2M以上，流畅情况可以10M/s，还有爱奇艺，没广告）</p><h2 id="mindnode"><a href="#mindnode" class="headerlink" title="mindnode"></a>mindnode</h2><p>很适合做思维导图</p><h2 id="notability"><a href="#notability" class="headerlink" title="notability"></a>notability</h2><p>用过的最好的录音加记笔记的软件，记笔记一般，录音功能真心好用</p><h2 id="分享过的"><a href="#分享过的" class="headerlink" title="分享过的"></a>分享过的</h2><p>Bear，提过几次了，强烈推荐的markdown记笔记软件。</p><p>Jupyter，提了N次了，用python的人一定要用，其他的IDE真的弱爆了，虽然其实不是一个概念的东西。</p>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;分享一些想到的觉得好用的工具和软件，挂一漏万，这个文章后续可以不断更新。&lt;/p&gt;
 &lt;h2 id=&quot;Mathpix&quot;&gt;&lt;a href=&quot;#Mathpix&quot; class=&quot;headerlink&quot; title=&quot;Mathpix&quot;&gt;&lt;/a&gt;Mathpix&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://mathpix.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Mathpix: convert images to LaTex.&lt;/a&gt;&lt;br&gt;可以截图将公式转成latex代码&lt;/p&gt;
-&lt;p&gt;在排版的文章里讲过&lt;a href=&quot;https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/&quot;&gt;论文与排版 | James Chen’s Blogs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在排版的文章里讲过&lt;a href=&quot;https://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;论文与排版 | James Chen’s Blogs&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
+      <category term="setup" scheme="https://www.cmwonderland.com/tags/setup/"/>
     
-      <category term="software" scheme="http://james20141606.github.io/tags/software/"/>
+      <category term="software" scheme="https://www.cmwonderland.com/tags/software/"/>
     
   </entry>
   
   <entry>
     <title>Alias Setting</title>
-    <link href="http://james20141606.github.io/2018/05/05/alias-setting/"/>
-    <id>http://james20141606.github.io/2018/05/05/alias-setting/</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/alias-setting/"/>
+    <id>https://www.cmwonderland.com/2018/05/05/alias-setting/</id>
     <published>2018-05-04T16:17:18.000Z</published>
     <updated>2018-05-04T16:22:13.364Z</updated>
     
@@ -112,80 +112,80 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="zsh" scheme="http://james20141606.github.io/tags/zsh/"/>
+      <category term="zsh" scheme="https://www.cmwonderland.com/tags/zsh/"/>
     
-      <category term="alias" scheme="http://james20141606.github.io/tags/alias/"/>
+      <category term="alias" scheme="https://www.cmwonderland.com/tags/alias/"/>
     
-      <category term="setup" scheme="http://james20141606.github.io/tags/setup/"/>
+      <category term="setup" scheme="https://www.cmwonderland.com/tags/setup/"/>
     
   </entry>
   
   <entry>
     <title>Conda详细配置指南</title>
-    <link href="http://james20141606.github.io/2018/05/05/conda/"/>
-    <id>http://james20141606.github.io/2018/05/05/conda/</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/conda/"/>
+    <id>https://www.cmwonderland.com/2018/05/05/conda/</id>
     <published>2018-05-04T16:08:12.000Z</published>
     <updated>2018-05-04T16:20:57.356Z</updated>
     
-    <content type="html"><![CDATA[<p>Conda是个好东西，以前的文章介绍过<a href="https://james20141606.github.io/2018/04/12/setup/">Setup and Linux | James Chen’s Blogs</a>，因为好几台机器，因为某些库，以及python2和3的问题，重装倒腾过N次，于是倒腾出来一个标准流程，记录如下。</p><a id="more"></a><h2 id="安装conda2与conda3"><a href="#安装conda2与conda3" class="headerlink" title="安装conda2与conda3"></a>安装conda2与conda3</h2><p>安装当然用清华开源镜像站的装啦，校园网下每秒几十兆，不用是傻子<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">Index of /_legacy_index/anaconda/archive/</a><br>分别找到2和3的最新版本，wget .sh脚本，然后运行，按顺序来，最后添加环境变量到bashrc中即可。</p><h3 id="使用tuna的镜像库"><a href="#使用tuna的镜像库" class="headerlink" title="使用tuna的镜像库"></a>使用tuna的镜像库</h3><p>如下配置，以后conda install的时候用tuna的镜像，告别龟速(当然实验室的服务器本身已经很给力了，不过对于不能翻墙的人来说实在是福音)</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/free/</span><br><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="keyword">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure><h3 id="Anaconda2-和3兼容性"><a href="#Anaconda2-和3兼容性" class="headerlink" title="Anaconda2 和3兼容性"></a>Anaconda2 和3兼容性</h3><ul><li>首先修改bashrc或者zshrc，加入两个路径</li><li>然后cd 到anaconda3下的bin，将conda和pip改成conda3和pip3<br>这样可以分别管理，pip，conda对应2，pip3，conda3对应3，可以顺便把anaconda2下面的pip和conda加上2（我记得一年多以前就是这样的，谁知道现在conda都统一写成不带数字了，让用两个版本的人很难受的）</li></ul><p>可以用which pip(pip3)来看一下自己的pip是不是用的正确的位置的</p><h3 id="check是否完全删除以前的anaconda"><a href="#check是否完全删除以前的anaconda" class="headerlink" title="check是否完全删除以前的anaconda"></a>check是否完全删除以前的anaconda</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean <span class="params">--yes</span></span><br><span class="line">rm -rf ~<span class="string">/anaconda2</span></span><br><span class="line">~<span class="string">/.anaconda_backup/</span>&lt;timestamp&gt;</span><br></pre></td></tr></table></figure><h3 id="把以前的依赖删除的方法"><a href="#把以前的依赖删除的方法" class="headerlink" title="把以前的依赖删除的方法"></a>把以前的依赖删除的方法</h3><p>加到bashrc里，尤其是去除服务器统一配置的anaconda的好方法</p><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">unset COND<span class="built_in">A_DEFAULT</span>_ENV</span><br><span class="line">unset COND<span class="built_in">A_PREFIX</span></span><br><span class="line">unset OND<span class="built_in">A_PROMPT</span>_MODIFIER</span><br><span class="line">unset COND<span class="built_in">A_PYTHON</span>_EXE</span><br><span class="line">unset COND<span class="built_in">A_SHLVL</span></span><br></pre></td></tr></table></figure><h3 id="可能的jupyter的kernel问题"><a href="#可能的jupyter的kernel问题" class="headerlink" title="可能的jupyter的kernel问题"></a>可能的jupyter的kernel问题</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> ipykernel</span><br><span class="line">python3 -m ipykernel <span class="keyword">install</span> <span class="comment">--user</span></span><br><span class="line">pip <span class="keyword">install</span> ipykernel</span><br><span class="line">python2 -m ipykernel <span class="keyword">install</span> <span class="comment">--user</span></span><br></pre></td></tr></table></figure><p><strong>需要额外装的package</strong>（待不断补充），其实conda自带的常见package真的越来越多了，tensorflow不得不用低版本的主要还是cuda的版本和其他的一些小问题。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">tensorflow</span></span><br><span class="line">pip install tensorflow-gpu==1.2.1</span><br><span class="line"><span class="meta">#</span><span class="bash">pytorch</span></span><br><span class="line"><span class="meta">#</span><span class="bash">plotly</span></span><br><span class="line"><span class="meta">#</span><span class="bash">concise</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>Conda是个好东西，以前的文章介绍过<a href="https://james20141606.github.io/2018/04/12/setup/" target="_blank" rel="noopener">Setup and Linux | James Chen’s Blogs</a>，因为好几台机器，因为某些库，以及python2和3的问题，重装倒腾过N次，于是倒腾出来一个标准流程，记录如下。</p><a id="more"></a><h2 id="安装conda2与conda3"><a href="#安装conda2与conda3" class="headerlink" title="安装conda2与conda3"></a>安装conda2与conda3</h2><p>安装当然用清华开源镜像站的装啦，校园网下每秒几十兆，不用是傻子<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">Index of /_legacy_index/anaconda/archive/</a><br>分别找到2和3的最新版本，wget .sh脚本，然后运行，按顺序来，最后添加环境变量到bashrc中即可。</p><h3 id="使用tuna的镜像库"><a href="#使用tuna的镜像库" class="headerlink" title="使用tuna的镜像库"></a>使用tuna的镜像库</h3><p>如下配置，以后conda install的时候用tuna的镜像，告别龟速(当然实验室的服务器本身已经很给力了，不过对于不能翻墙的人来说实在是福音)</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/free/</span><br><span class="line">conda config --<span class="built_in">add</span> channels http<span class="variable">s:</span>//mirrors.tuna.tsinghua.edu.<span class="keyword">cn</span>/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="keyword">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure><h3 id="Anaconda2-和3兼容性"><a href="#Anaconda2-和3兼容性" class="headerlink" title="Anaconda2 和3兼容性"></a>Anaconda2 和3兼容性</h3><ul><li>首先修改bashrc或者zshrc，加入两个路径</li><li>然后cd 到anaconda3下的bin，将conda和pip改成conda3和pip3<br>这样可以分别管理，pip，conda对应2，pip3，conda3对应3，可以顺便把anaconda2下面的pip和conda加上2（我记得一年多以前就是这样的，谁知道现在conda都统一写成不带数字了，让用两个版本的人很难受的）</li></ul><p>可以用which pip(pip3)来看一下自己的pip是不是用的正确的位置的</p><h3 id="check是否完全删除以前的anaconda"><a href="#check是否完全删除以前的anaconda" class="headerlink" title="check是否完全删除以前的anaconda"></a>check是否完全删除以前的anaconda</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean <span class="params">--yes</span></span><br><span class="line">rm -rf ~<span class="string">/anaconda2</span></span><br><span class="line">~<span class="string">/.anaconda_backup/</span>&lt;timestamp&gt;</span><br></pre></td></tr></table></figure><h3 id="把以前的依赖删除的方法"><a href="#把以前的依赖删除的方法" class="headerlink" title="把以前的依赖删除的方法"></a>把以前的依赖删除的方法</h3><p>加到bashrc里，尤其是去除服务器统一配置的anaconda的好方法</p><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">unset COND<span class="built_in">A_DEFAULT</span>_ENV</span><br><span class="line">unset COND<span class="built_in">A_PREFIX</span></span><br><span class="line">unset OND<span class="built_in">A_PROMPT</span>_MODIFIER</span><br><span class="line">unset COND<span class="built_in">A_PYTHON</span>_EXE</span><br><span class="line">unset COND<span class="built_in">A_SHLVL</span></span><br></pre></td></tr></table></figure><h3 id="可能的jupyter的kernel问题"><a href="#可能的jupyter的kernel问题" class="headerlink" title="可能的jupyter的kernel问题"></a>可能的jupyter的kernel问题</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip3 <span class="keyword">install</span> ipykernel</span><br><span class="line">python3 -m ipykernel <span class="keyword">install</span> <span class="comment">--user</span></span><br><span class="line">pip <span class="keyword">install</span> ipykernel</span><br><span class="line">python2 -m ipykernel <span class="keyword">install</span> <span class="comment">--user</span></span><br></pre></td></tr></table></figure><p><strong>需要额外装的package</strong>（待不断补充），其实conda自带的常见package真的越来越多了，tensorflow不得不用低版本的主要还是cuda的版本和其他的一些小问题。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">tensorflow</span></span><br><span class="line">pip install tensorflow-gpu==1.2.1</span><br><span class="line"><span class="meta">#</span><span class="bash">pytorch</span></span><br><span class="line"><span class="meta">#</span><span class="bash">plotly</span></span><br><span class="line"><span class="meta">#</span><span class="bash">concise</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Conda是个好东西，以前的文章介绍过&lt;a href=&quot;https://james20141606.github.io/2018/04/12/setup/&quot;&gt;Setup and Linux | James Chen’s Blogs&lt;/a&gt;，因为好几台机器，因为某些库，以及python2和3的问题，重装倒腾过N次，于是倒腾出来一个标准流程，记录如下。&lt;/p&gt;
+      &lt;p&gt;Conda是个好东西，以前的文章介绍过&lt;a href=&quot;https://james20141606.github.io/2018/04/12/setup/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Setup and Linux | James Chen’s Blogs&lt;/a&gt;，因为好几台机器，因为某些库，以及python2和3的问题，重装倒腾过N次，于是倒腾出来一个标准流程，记录如下。&lt;/p&gt;
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="software" scheme="http://james20141606.github.io/tags/software/"/>
+      <category term="software" scheme="https://www.cmwonderland.com/tags/software/"/>
     
-      <category term="python" scheme="http://james20141606.github.io/tags/python/"/>
+      <category term="python" scheme="https://www.cmwonderland.com/tags/python/"/>
     
-      <category term="bioinformatics" scheme="http://james20141606.github.io/tags/bioinformatics/"/>
+      <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
     
   </entry>
   
   <entry>
     <title>Jupyter自定义设置详解</title>
-    <link href="http://james20141606.github.io/2018/05/04/jupyter/"/>
-    <id>http://james20141606.github.io/2018/05/04/jupyter/</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/jupyter/"/>
+    <id>https://www.cmwonderland.com/2018/05/04/jupyter/</id>
     <published>2018-05-04T07:09:56.000Z</published>
     <updated>2018-05-04T16:04:27.763Z</updated>
     
-    <content type="html"><![CDATA[<p>今天专门花时间总结梳理一下jupyter的一些高级设置，jupyter我已经介绍过一次基本内容了,<a href="https://james20141606.github.io/2018/04/12/setup/">Setup and Linux | James Chen’s Blogs</a>，尤其是如何在服务器运行jupyter并且在本地浏览器显示，简直是使用python进行机器学习、深度学习、大数据的工作者的巨大福音。作为一个重度python&amp;jupyter使用者，我已经习惯于在jupyter上进行大量的实验以及一次性的小工作、作业，需要跑很久的代码才会在运行通过后用VSCode编辑一下提交上去跑。用jupyter写了很多脚本，尤其适合可视化、展示和教学。可以在我的<a href="https://github.com/james20141606/" target="_blank" rel="noopener">GitHub</a>找到很多用jupyter写的代码，事实上很多教程和实验大家也都习惯于jupyter做了，比如我在这篇<a href="https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/">Deep Learning Practice</a>介绍的资源中就有大量用jupyter写的。</p><p>下面就讲一下jupyter的一些高级玩法。<br><a id="more"></a></p><h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p><a href="https://github.com/dunovank/jupyter-themes" target="_blank" rel="noopener">https://github.com/dunovank/jupyter-themes</a><br><img src="http://i4.fuimg.com/640680/6dd3179b5d60eccb.png" alt="Markdown"></p><h2 id="jupyter-extension"><a href="#jupyter-extension" class="headerlink" title="jupyter  extension"></a>jupyter  extension</h2><p><strong>相见恨晚，用着非常非常爽，强烈推荐</strong><br><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="noopener">https://github.com/ipython-contrib/jupyter_contrib_nbextensions</a></p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br><span class="line">pip3 <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br></pre></td></tr></table></figure><h3 id="推荐使用的插件"><a href="#推荐使用的插件" class="headerlink" title="推荐使用的插件"></a>推荐使用的插件</h3><h4 id="table-of-contents"><a href="#table-of-contents" class="headerlink" title="table of contents"></a>table of contents</h4><p>设置着很简单，找到后打个对勾就行了，<strong>效果很棒</strong>：<br><img src="http://i4.fuimg.com/640680/5bfe6a9b5a48e822.png" alt="Markdown"></p><h4 id="freeze"><a href="#freeze" class="headerlink" title="freeze"></a>freeze</h4><p><img src="http://i4.fuimg.com/640680/a6412152652237a6.png" alt="Markdown"></p><h4 id="highlighter"><a href="#highlighter" class="headerlink" title="highlighter"></a>highlighter</h4><p><img src="http://i4.fuimg.com/640680/5cf4c30a3f01295d.png" alt="Markdown"></p><h4 id="Gist-it"><a href="#Gist-it" class="headerlink" title="Gist-it"></a>Gist-it</h4><p>Adds a button to publish the current notebook as a gist</p><h4 id="Snippets-menu"><a href="#Snippets-menu" class="headerlink" title="Snippets menu"></a>Snippets menu</h4><p>帮助懒人插入一些经典库的经典方法的代码块，感觉很不错哦，比去Stack Overflow搜要快一些~不过支持的还是比较少的。<br><img src="http://i4.fuimg.com/640680/7fc861662f88de4a.png" alt="Markdown"></p><h4 id="Snippet"><a href="#Snippet" class="headerlink" title="Snippet:"></a>Snippet:</h4><p><strong>强烈强烈推荐！</strong>感觉有望帮助节约不少写代码的时间</p><p><img src="http://i4.fuimg.com/640680/5a2fe35422f87b5e.png" alt="Markdown"></p><p>This extension adds a drop-down menu to the IPython toolbar that allows easy insertion of code snippet cells into the current notebook. The code snippets are defined in a JSON file in nbextensions/snippets/snippets.json and an example snippet is included with this extension</p><p>Snippets are specified by adding a new JSON block to the list of existing snippets in $(jupyter —data-dir)/nbextensions/snippets/snippets.json. <strong>(I put my customized json file in jupyter-notebooks directory in /Users/james/)</strong> For example, to add a new snippet that imports numpy, matplotlib, and a print statement, the JSON file should be modified。</p><p>先分别列一下各种情景下需要导入哪些库：</p><h5 id="Basic-science"><a href="#Basic-science" class="headerlink" title="Basic science"></a>Basic science</h5><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse, sys, os, errno</span><br><span class="line">%pylab inline</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.style.use(<span class="string">'ggplot'</span>)</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> h5py</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">from tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> sklearn</span><br><span class="line">from scipy.stats <span class="keyword">import</span> pearsonr</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure><h5 id="Highlevel-plot"><a href="#Highlevel-plot" class="headerlink" title="Highlevel plot"></a>Highlevel plot</h5><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.animation <span class="keyword">as</span> animation</span><br><span class="line">from matplotlib <span class="keyword">import</span> rc</span><br><span class="line">from IPython.display <span class="keyword">import</span> HTML, Image</span><br><span class="line">rc(<span class="string">'animation'</span>, html=<span class="string">'html5'</span>)</span><br><span class="line"><span class="keyword">import</span> plotly</span><br><span class="line"><span class="keyword">import</span> plotly.offline <span class="keyword">as</span> off</span><br><span class="line"><span class="keyword">import</span> plotly.plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br></pre></td></tr></table></figure><h5 id="Deeplearning-keras"><a href="#Deeplearning-keras" class="headerlink" title="Deeplearning  keras"></a>Deeplearning  keras</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import keras</span><br><span class="line">from keras import backend as K</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import TensorBoard</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import EarlyStopping</span><br><span class="line">from keras<span class="selector-class">.optimizers</span> import Adam</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import ModelCheckpoint</span><br><span class="line">import tensorflow as tf</span><br><span class="line">from keras<span class="selector-class">.models</span> import Model</span><br><span class="line">from keras<span class="selector-class">.layers</span> import Input, Conv2D, MaxPooling2D, UpSampling2D,Lambda, Dot,average,add, concatenate</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.normalization</span> import BatchNormalization</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.core</span> import Dropout, Activation,Reshape</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.merge</span> import concatenate</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import TensorBoard, EarlyStopping, ModelCheckpoint</span><br><span class="line">from keras<span class="selector-class">.initializers</span> import RandomNormal</span><br><span class="line">import os</span><br><span class="line">os<span class="selector-class">.environ</span>[<span class="string">'CUDA_DEVICE_ORDER'</span>] = <span class="string">'PCI_BUS_ID'</span> </span><br><span class="line">os<span class="selector-class">.environ</span>[<span class="string">'CUDA_VISIBLE_DEVICES'</span>] = <span class="string">'4'</span></span><br><span class="line">from keras<span class="selector-class">.backend</span><span class="selector-class">.tensorflow_backend</span> import set_session</span><br><span class="line">config = tf.ConfigProto()</span><br><span class="line">config<span class="selector-class">.gpu_options</span><span class="selector-class">.per_process_gpu_memory_fraction</span> = <span class="number">0.99</span></span><br><span class="line"><span class="function"><span class="title">set_session</span><span class="params">(tf.Session(config=config)</span></span>)</span><br></pre></td></tr></table></figure><h5 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h5><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br></pre></td></tr></table></figure><p>总结起来就是下面这样，注意语法别错，东西一多看着还是很头疼的，配置好就可以用了。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"snippets"</span> : [</span><br><span class="line">&#123;</span><br><span class="line"><span class="attr">"name"</span> : <span class="string">"science basic"</span>,</span><br><span class="line"><span class="attr">"code"</span> : [</span><br><span class="line"><span class="string">"import argparse, sys, os, errno"</span>,</span><br><span class="line"><span class="string">"%pylab inline"</span>,</span><br><span class="line"><span class="string">"import numpy as np"</span>,</span><br><span class="line"><span class="string">"import pandas as pd"</span>,</span><br><span class="line"><span class="string">"import matplotlib.pyplot as plt"</span>,</span><br><span class="line"><span class="string">"plt.style.use('ggplot')"</span>,</span><br><span class="line"><span class="string">"import seaborn as sns"</span>,</span><br><span class="line"><span class="string">"import h5py"</span>,</span><br><span class="line"><span class="string">"import os"</span>,</span><br><span class="line"><span class="string">"from tqdm import tqdm"</span>,</span><br><span class="line"><span class="string">"import scipy"</span>,</span><br><span class="line"><span class="string">"import sklearn"</span>,</span><br><span class="line"><span class="string">"from scipy.stats import pearsonr"</span>,</span><br><span class="line"><span class="string">"import warnings"</span>,</span><br><span class="line"><span class="string">"warnings.filterwarnings('ignore')"</span></span><br><span class="line">]</span><br><span class="line">        &#125;,</span><br><span class="line">&#123;</span><br><span class="line">        <span class="attr">"name"</span> : <span class="string">"high level plot"</span>,</span><br><span class="line">        <span class="attr">"code"</span> : [</span><br><span class="line">                    <span class="string">"import matplotlib.animation as animation"</span>,</span><br><span class="line">    <span class="string">"from matplotlib import rc"</span>,</span><br><span class="line">    <span class="string">"from IPython.display import HTML, Image"</span>,</span><br><span class="line">    <span class="string">"rc('animation', html='html5')"</span>,</span><br><span class="line">    <span class="string">"import plotly"</span>,</span><br><span class="line">    <span class="string">"import plotly.offline as off"</span>,</span><br><span class="line">    <span class="string">"import plotly.plotly as py"</span>,</span><br><span class="line">    <span class="string">"import plotly.graph_objs as go"</span></span><br><span class="line">                ]</span><br><span class="line">        &#125;,</span><br><span class="line">&#123;</span><br><span class="line"><span class="attr">"name"</span> : <span class="string">"deep learning"</span>,</span><br><span class="line"><span class="attr">"code"</span> : [</span><br><span class="line"><span class="string">"import keras"</span>,</span><br><span class="line"><span class="string">"from keras import backend as K"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import TensorBoard"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import EarlyStopping"</span>,</span><br><span class="line"><span class="string">"from keras.optimizers import Adam"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import ModelCheckpoint"</span>,</span><br><span class="line"><span class="string">"import tensorflow as tf"</span>,</span><br><span class="line"><span class="string">"from keras.models import Model"</span>,</span><br><span class="line"><span class="string">"from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D,Lambda, Dot,average,add, concatenate"</span>,</span><br><span class="line"><span class="string">"from keras.layers.normalization import BatchNormalization"</span>,</span><br><span class="line"><span class="string">"from keras.layers.core import Dropout, Activation,Reshape"</span>,</span><br><span class="line"><span class="string">"from keras.layers.merge import concatenate"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import TensorBoard, EarlyStopping, ModelCheckpoint"</span>,</span><br><span class="line"><span class="string">"from keras.initializers import RandomNormal"</span>,</span><br><span class="line"><span class="string">"import os"</span>,</span><br><span class="line"><span class="string">"os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'"</span>,</span><br><span class="line"><span class="string">"os.environ['CUDA_VISIBLE_DEVICES'] = '4'"</span>,</span><br><span class="line"><span class="string">"from keras.backend.tensorflow_backend import set_session"</span>,</span><br><span class="line"><span class="string">"config = tf.ConfigProto()"</span>,</span><br><span class="line"><span class="string">"config.gpu_options.per_process_gpu_memory_fraction = 0.99"</span>,</span><br><span class="line"><span class="string">"set_session(tf.Session(config=config))"</span></span><br><span class="line">]</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">        <span class="attr">"name"</span> : <span class="string">"pytorch"</span>,</span><br><span class="line">        <span class="attr">"code"</span> : [</span><br><span class="line">                    <span class="string">"import torch"</span>,</span><br><span class="line">    <span class="string">"import math"</span>,</span><br><span class="line">    <span class="string">"import torch.nn as nn"</span>,</span><br><span class="line">    <span class="string">"import torch.nn.functional as F"</span></span><br><span class="line">                ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个配置这里坑了我很久，主要是snippets不会显示错误信息，debug得很仔细一个一个找，因此花了很久发现是keras部分的几个破双引号冲突了，还有一个注释竟然也忘删了，折腾了很久才配置好。用sublime text是可以很容易发现语法错误的，可惜最开始没在意</p><p>本地的snippets.json在：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>james<span class="regexp">/Library/</span>Jupyter<span class="regexp">/nbextensions/</span>snippets<span class="regexp">/snippets.json</span></span><br></pre></td></tr></table></figure><p>我在james目录下也放了一份，因为最近估计需要不断更新完善，所以就放一份在：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>james<span class="regexp">/snippets.json</span></span><br></pre></td></tr></table></figure><p>每次修改后，需要同步到本地以及ibme、cnode、hpc1几个机器上面，这样<strong>不用我几个地方都各自改一遍</strong>，费事。</p><p>首先找到各个机器上的json文件在哪儿</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(jupyter --data-<span class="built_in">dir</span>)</span>/nbextensions/snippets/snippets.json</span><br></pre></td></tr></table></figure><p>然后写个同步的脚本syncsnip.sh</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json /</span>Users<span class="regexp">/james/</span>Library<span class="regexp">/Jupyter/</span>nbextensions<span class="regexp">/snippets/</span>snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json ibme:/</span>Share<span class="regexp">/home/</span>chenxupeng<span class="regexp">/.local/</span>share<span class="regexp">/jupyter/</span>nbextensions<span class="regexp">/snippets/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json cnode:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json hpc1:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/</span><br></pre></td></tr></table></figure><p>然后做个同步快捷方式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> snip=<span class="string">'bash syncsnip.sh'</span></span><br></pre></td></tr></table></figure><p>测试几个机器的配置均通过</p><p>配置好了还是很美的：</p><p><img src="http://i1.fuimg.com/640680/c493f72487089e34.png" alt="Markdown"></p>]]></content>
+    <content type="html"><![CDATA[<p>今天专门花时间总结梳理一下jupyter的一些高级设置，jupyter我已经介绍过一次基本内容了,<a href="https://james20141606.github.io/2018/04/12/setup/" target="_blank" rel="noopener">Setup and Linux | James Chen’s Blogs</a>，尤其是如何在服务器运行jupyter并且在本地浏览器显示，简直是使用python进行机器学习、深度学习、大数据的工作者的巨大福音。作为一个重度python&amp;jupyter使用者，我已经习惯于在jupyter上进行大量的实验以及一次性的小工作、作业，需要跑很久的代码才会在运行通过后用VSCode编辑一下提交上去跑。用jupyter写了很多脚本，尤其适合可视化、展示和教学。可以在我的<a href="https://github.com/james20141606/" target="_blank" rel="noopener">GitHub</a>找到很多用jupyter写的代码，事实上很多教程和实验大家也都习惯于jupyter做了，比如我在这篇<a href="https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/" target="_blank" rel="noopener">Deep Learning Practice</a>介绍的资源中就有大量用jupyter写的。</p><p>下面就讲一下jupyter的一些高级玩法。<br><a id="more"></a></p><h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><p><a href="https://github.com/dunovank/jupyter-themes" target="_blank" rel="noopener">https://github.com/dunovank/jupyter-themes</a><br><img src="http://i4.fuimg.com/640680/6dd3179b5d60eccb.png" alt="Markdown"></p><h2 id="jupyter-extension"><a href="#jupyter-extension" class="headerlink" title="jupyter  extension"></a>jupyter  extension</h2><p><strong>相见恨晚，用着非常非常爽，强烈推荐</strong><br><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="noopener">https://github.com/ipython-contrib/jupyter_contrib_nbextensions</a></p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br><span class="line">pip3 <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br></pre></td></tr></table></figure><h3 id="推荐使用的插件"><a href="#推荐使用的插件" class="headerlink" title="推荐使用的插件"></a>推荐使用的插件</h3><h4 id="table-of-contents"><a href="#table-of-contents" class="headerlink" title="table of contents"></a>table of contents</h4><p>设置着很简单，找到后打个对勾就行了，<strong>效果很棒</strong>：<br><img src="http://i4.fuimg.com/640680/5bfe6a9b5a48e822.png" alt="Markdown"></p><h4 id="freeze"><a href="#freeze" class="headerlink" title="freeze"></a>freeze</h4><p><img src="http://i4.fuimg.com/640680/a6412152652237a6.png" alt="Markdown"></p><h4 id="highlighter"><a href="#highlighter" class="headerlink" title="highlighter"></a>highlighter</h4><p><img src="http://i4.fuimg.com/640680/5cf4c30a3f01295d.png" alt="Markdown"></p><h4 id="Gist-it"><a href="#Gist-it" class="headerlink" title="Gist-it"></a>Gist-it</h4><p>Adds a button to publish the current notebook as a gist</p><h4 id="Snippets-menu"><a href="#Snippets-menu" class="headerlink" title="Snippets menu"></a>Snippets menu</h4><p>帮助懒人插入一些经典库的经典方法的代码块，感觉很不错哦，比去Stack Overflow搜要快一些~不过支持的还是比较少的。<br><img src="http://i4.fuimg.com/640680/7fc861662f88de4a.png" alt="Markdown"></p><h4 id="Snippet"><a href="#Snippet" class="headerlink" title="Snippet:"></a>Snippet:</h4><p><strong>强烈强烈推荐！</strong>感觉有望帮助节约不少写代码的时间</p><p><img src="http://i4.fuimg.com/640680/5a2fe35422f87b5e.png" alt="Markdown"></p><p>This extension adds a drop-down menu to the IPython toolbar that allows easy insertion of code snippet cells into the current notebook. The code snippets are defined in a JSON file in nbextensions/snippets/snippets.json and an example snippet is included with this extension</p><p>Snippets are specified by adding a new JSON block to the list of existing snippets in $(jupyter —data-dir)/nbextensions/snippets/snippets.json. <strong>(I put my customized json file in jupyter-notebooks directory in /Users/james/)</strong> For example, to add a new snippet that imports numpy, matplotlib, and a print statement, the JSON file should be modified。</p><p>先分别列一下各种情景下需要导入哪些库：</p><h5 id="Basic-science"><a href="#Basic-science" class="headerlink" title="Basic science"></a>Basic science</h5><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse, sys, os, errno</span><br><span class="line">%pylab inline</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.style.use(<span class="string">'ggplot'</span>)</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line"><span class="keyword">import</span> h5py</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">from tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="keyword">import</span> scipy</span><br><span class="line"><span class="keyword">import</span> sklearn</span><br><span class="line">from scipy.stats <span class="keyword">import</span> pearsonr</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">'ignore'</span>)</span><br></pre></td></tr></table></figure><h5 id="Highlevel-plot"><a href="#Highlevel-plot" class="headerlink" title="Highlevel plot"></a>Highlevel plot</h5><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.animation <span class="keyword">as</span> animation</span><br><span class="line">from matplotlib <span class="keyword">import</span> rc</span><br><span class="line">from IPython.display <span class="keyword">import</span> HTML, Image</span><br><span class="line">rc(<span class="string">'animation'</span>, html=<span class="string">'html5'</span>)</span><br><span class="line"><span class="keyword">import</span> plotly</span><br><span class="line"><span class="keyword">import</span> plotly.offline <span class="keyword">as</span> off</span><br><span class="line"><span class="keyword">import</span> plotly.plotly <span class="keyword">as</span> py</span><br><span class="line"><span class="keyword">import</span> plotly.graph_objs <span class="keyword">as</span> go</span><br></pre></td></tr></table></figure><h5 id="Deeplearning-keras"><a href="#Deeplearning-keras" class="headerlink" title="Deeplearning  keras"></a>Deeplearning  keras</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import keras</span><br><span class="line">from keras import backend as K</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import TensorBoard</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import EarlyStopping</span><br><span class="line">from keras<span class="selector-class">.optimizers</span> import Adam</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import ModelCheckpoint</span><br><span class="line">import tensorflow as tf</span><br><span class="line">from keras<span class="selector-class">.models</span> import Model</span><br><span class="line">from keras<span class="selector-class">.layers</span> import Input, Conv2D, MaxPooling2D, UpSampling2D,Lambda, Dot,average,add, concatenate</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.normalization</span> import BatchNormalization</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.core</span> import Dropout, Activation,Reshape</span><br><span class="line">from keras<span class="selector-class">.layers</span><span class="selector-class">.merge</span> import concatenate</span><br><span class="line">from keras<span class="selector-class">.callbacks</span> import TensorBoard, EarlyStopping, ModelCheckpoint</span><br><span class="line">from keras<span class="selector-class">.initializers</span> import RandomNormal</span><br><span class="line">import os</span><br><span class="line">os<span class="selector-class">.environ</span>[<span class="string">'CUDA_DEVICE_ORDER'</span>] = <span class="string">'PCI_BUS_ID'</span> </span><br><span class="line">os<span class="selector-class">.environ</span>[<span class="string">'CUDA_VISIBLE_DEVICES'</span>] = <span class="string">'4'</span></span><br><span class="line">from keras<span class="selector-class">.backend</span><span class="selector-class">.tensorflow_backend</span> import set_session</span><br><span class="line">config = tf.ConfigProto()</span><br><span class="line">config<span class="selector-class">.gpu_options</span><span class="selector-class">.per_process_gpu_memory_fraction</span> = <span class="number">0.99</span></span><br><span class="line"><span class="function"><span class="title">set_session</span><span class="params">(tf.Session(config=config)</span></span>)</span><br></pre></td></tr></table></figure><h5 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h5><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br></pre></td></tr></table></figure><p>总结起来就是下面这样，注意语法别错，东西一多看着还是很头疼的，配置好就可以用了。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"snippets"</span> : [</span><br><span class="line">&#123;</span><br><span class="line"><span class="attr">"name"</span> : <span class="string">"science basic"</span>,</span><br><span class="line"><span class="attr">"code"</span> : [</span><br><span class="line"><span class="string">"import argparse, sys, os, errno"</span>,</span><br><span class="line"><span class="string">"%pylab inline"</span>,</span><br><span class="line"><span class="string">"import numpy as np"</span>,</span><br><span class="line"><span class="string">"import pandas as pd"</span>,</span><br><span class="line"><span class="string">"import matplotlib.pyplot as plt"</span>,</span><br><span class="line"><span class="string">"plt.style.use('ggplot')"</span>,</span><br><span class="line"><span class="string">"import seaborn as sns"</span>,</span><br><span class="line"><span class="string">"import h5py"</span>,</span><br><span class="line"><span class="string">"import os"</span>,</span><br><span class="line"><span class="string">"from tqdm import tqdm"</span>,</span><br><span class="line"><span class="string">"import scipy"</span>,</span><br><span class="line"><span class="string">"import sklearn"</span>,</span><br><span class="line"><span class="string">"from scipy.stats import pearsonr"</span>,</span><br><span class="line"><span class="string">"import warnings"</span>,</span><br><span class="line"><span class="string">"warnings.filterwarnings('ignore')"</span></span><br><span class="line">]</span><br><span class="line">        &#125;,</span><br><span class="line">&#123;</span><br><span class="line">        <span class="attr">"name"</span> : <span class="string">"high level plot"</span>,</span><br><span class="line">        <span class="attr">"code"</span> : [</span><br><span class="line">                    <span class="string">"import matplotlib.animation as animation"</span>,</span><br><span class="line">    <span class="string">"from matplotlib import rc"</span>,</span><br><span class="line">    <span class="string">"from IPython.display import HTML, Image"</span>,</span><br><span class="line">    <span class="string">"rc('animation', html='html5')"</span>,</span><br><span class="line">    <span class="string">"import plotly"</span>,</span><br><span class="line">    <span class="string">"import plotly.offline as off"</span>,</span><br><span class="line">    <span class="string">"import plotly.plotly as py"</span>,</span><br><span class="line">    <span class="string">"import plotly.graph_objs as go"</span></span><br><span class="line">                ]</span><br><span class="line">        &#125;,</span><br><span class="line">&#123;</span><br><span class="line"><span class="attr">"name"</span> : <span class="string">"deep learning"</span>,</span><br><span class="line"><span class="attr">"code"</span> : [</span><br><span class="line"><span class="string">"import keras"</span>,</span><br><span class="line"><span class="string">"from keras import backend as K"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import TensorBoard"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import EarlyStopping"</span>,</span><br><span class="line"><span class="string">"from keras.optimizers import Adam"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import ModelCheckpoint"</span>,</span><br><span class="line"><span class="string">"import tensorflow as tf"</span>,</span><br><span class="line"><span class="string">"from keras.models import Model"</span>,</span><br><span class="line"><span class="string">"from keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D,Lambda, Dot,average,add, concatenate"</span>,</span><br><span class="line"><span class="string">"from keras.layers.normalization import BatchNormalization"</span>,</span><br><span class="line"><span class="string">"from keras.layers.core import Dropout, Activation,Reshape"</span>,</span><br><span class="line"><span class="string">"from keras.layers.merge import concatenate"</span>,</span><br><span class="line"><span class="string">"from keras.callbacks import TensorBoard, EarlyStopping, ModelCheckpoint"</span>,</span><br><span class="line"><span class="string">"from keras.initializers import RandomNormal"</span>,</span><br><span class="line"><span class="string">"import os"</span>,</span><br><span class="line"><span class="string">"os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'"</span>,</span><br><span class="line"><span class="string">"os.environ['CUDA_VISIBLE_DEVICES'] = '4'"</span>,</span><br><span class="line"><span class="string">"from keras.backend.tensorflow_backend import set_session"</span>,</span><br><span class="line"><span class="string">"config = tf.ConfigProto()"</span>,</span><br><span class="line"><span class="string">"config.gpu_options.per_process_gpu_memory_fraction = 0.99"</span>,</span><br><span class="line"><span class="string">"set_session(tf.Session(config=config))"</span></span><br><span class="line">]</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">        <span class="attr">"name"</span> : <span class="string">"pytorch"</span>,</span><br><span class="line">        <span class="attr">"code"</span> : [</span><br><span class="line">                    <span class="string">"import torch"</span>,</span><br><span class="line">    <span class="string">"import math"</span>,</span><br><span class="line">    <span class="string">"import torch.nn as nn"</span>,</span><br><span class="line">    <span class="string">"import torch.nn.functional as F"</span></span><br><span class="line">                ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个配置这里坑了我很久，主要是snippets不会显示错误信息，debug得很仔细一个一个找，因此花了很久发现是keras部分的几个破双引号冲突了，还有一个注释竟然也忘删了，折腾了很久才配置好。用sublime text是可以很容易发现语法错误的，可惜最开始没在意</p><p>本地的snippets.json在：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>james<span class="regexp">/Library/</span>Jupyter<span class="regexp">/nbextensions/</span>snippets<span class="regexp">/snippets.json</span></span><br></pre></td></tr></table></figure><p>我在james目录下也放了一份，因为最近估计需要不断更新完善，所以就放一份在：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/Users/</span>james<span class="regexp">/snippets.json</span></span><br></pre></td></tr></table></figure><p>每次修改后，需要同步到本地以及ibme、cnode、hpc1几个机器上面，这样<strong>不用我几个地方都各自改一遍</strong>，费事。</p><p>首先找到各个机器上的json文件在哪儿</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(jupyter --data-<span class="built_in">dir</span>)</span>/nbextensions/snippets/snippets.json</span><br></pre></td></tr></table></figure><p>然后写个同步的脚本syncsnip.sh</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json /</span>Users<span class="regexp">/james/</span>Library<span class="regexp">/Jupyter/</span>nbextensions<span class="regexp">/snippets/</span>snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json ibme:/</span>Share<span class="regexp">/home/</span>chenxupeng<span class="regexp">/.local/</span>share<span class="regexp">/jupyter/</span>nbextensions<span class="regexp">/snippets/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json cnode:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json hpc1:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/</span><br></pre></td></tr></table></figure><p>然后做个同步快捷方式：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> snip=<span class="string">'bash syncsnip.sh'</span></span><br></pre></td></tr></table></figure><p>测试几个机器的配置均通过</p><p>配置好了还是很美的：</p><p><img src="http://i1.fuimg.com/640680/c493f72487089e34.png" alt="Markdown"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;今天专门花时间总结梳理一下jupyter的一些高级设置，jupyter我已经介绍过一次基本内容了,&lt;a href=&quot;https://james20141606.github.io/2018/04/12/setup/&quot;&gt;Setup and Linux | James Chen’s Blogs&lt;/a&gt;，尤其是如何在服务器运行jupyter并且在本地浏览器显示，简直是使用python进行机器学习、深度学习、大数据的工作者的巨大福音。作为一个重度python&amp;amp;jupyter使用者，我已经习惯于在jupyter上进行大量的实验以及一次性的小工作、作业，需要跑很久的代码才会在运行通过后用VSCode编辑一下提交上去跑。用jupyter写了很多脚本，尤其适合可视化、展示和教学。可以在我的&lt;a href=&quot;https://github.com/james20141606/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;找到很多用jupyter写的代码，事实上很多教程和实验大家也都习惯于jupyter做了，比如我在这篇&lt;a href=&quot;https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/&quot;&gt;Deep Learning Practice&lt;/a&gt;介绍的资源中就有大量用jupyter写的。&lt;/p&gt;
+      &lt;p&gt;今天专门花时间总结梳理一下jupyter的一些高级设置，jupyter我已经介绍过一次基本内容了,&lt;a href=&quot;https://james20141606.github.io/2018/04/12/setup/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Setup and Linux | James Chen’s Blogs&lt;/a&gt;，尤其是如何在服务器运行jupyter并且在本地浏览器显示，简直是使用python进行机器学习、深度学习、大数据的工作者的巨大福音。作为一个重度python&amp;amp;jupyter使用者，我已经习惯于在jupyter上进行大量的实验以及一次性的小工作、作业，需要跑很久的代码才会在运行通过后用VSCode编辑一下提交上去跑。用jupyter写了很多脚本，尤其适合可视化、展示和教学。可以在我的&lt;a href=&quot;https://github.com/james20141606/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;找到很多用jupyter写的代码，事实上很多教程和实验大家也都习惯于jupyter做了，比如我在这篇&lt;a href=&quot;https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Deep Learning Practice&lt;/a&gt;介绍的资源中就有大量用jupyter写的。&lt;/p&gt;
 &lt;p&gt;下面就讲一下jupyter的一些高级玩法。&lt;br&gt;
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
   </entry>
   
   <entry>
     <title>论文与排版</title>
-    <link href="http://james20141606.github.io/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/"/>
-    <id>http://james20141606.github.io/2018/05/04/论文与排版/</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/"/>
+    <id>https://www.cmwonderland.com/2018/05/04/论文与排版/</id>
     <published>2018-05-04T06:58:25.000Z</published>
     <updated>2018-05-04T11:43:45.552Z</updated>
     
-    <content type="html"><![CDATA[<p>三年前当我还是个什么都不懂的小屁孩的时候，就听闻了高大上的LaTeX，还去听了图书馆某工科博士开的LaTeX入门讲解，听的天花乱坠毫无头绪，回去兴冲冲地装上，运行，出现bug，然后傻眼了，解决不了，我现在还记得当时在百度文科搜到一篇讲解文章，教人一点点开始，第一次生成出来一句话（真是愚蠢的却又不得不这么教的教程）。然后放弃了这个大坑。</p><p>后来慢慢发现，其实就是个简单的工具而已，适应了基本的思维方式，命令熟练，特别是搜索能力变强可以快速debug之后，latex和markdown真的是完美的排版神器，尤其是在mac版的word经常崩而且公式极其丑陋且卡顿且长篇文章格式会让人非常恶心的情况下，我已经放弃了word，这一年除了老师要求必须交word的作业以及让人毫无兴趣的作业，基本都是用latex或markdown写的，这两个东西极大的方便了我的生活。</p><p>在这里分享一下各种相关资源和知识</p><a id="more"></a><h1 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h1><h2 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h2><p>下面列一下使用场景，这些场景有的是基本工具，有的是完成某些任务（如博客、README）所需要的。</p><h3 id="Bear"><a href="#Bear" class="headerlink" title="Bear"></a>Bear</h3><p>神器，我现在所有的笔记都在上面，非常完美兼容markdown各语法，并有快捷键，非常简洁清爽的让人变得无比有条理的程序员风格笔记管理软件。<strong>一个巨大的好处是，平时什么东西都放在bear上，再转移到下面的各个工具上就直接复制粘贴好了，再没有排版的困扰。</strong>另外备份所有笔记也很方便，对于害怕东西丢失的强迫症来说非常有意义。（话说经常手动备份在电脑端，且使用time machine直接备份和间接备份，并且最近清华云盘也每天备份，应该不会丢了吧，这些笔记确实非常宝贵，如果丢了我会心痛死的）</p><p>Markdown方便到最近都不怎么愿意用latex了，很多作业先随手写在bear上，然后本来想再用latex写，后来觉得直接导出到pdf也能看，起码比word强，也就懒得用latex再排版一遍了。</p><h3 id="Gitbook"><a href="#Gitbook" class="headerlink" title="Gitbook"></a>Gitbook</h3><p>Gitbook，这部分内容比较多，专门写了一篇文章：<br><a href="https://james20141606.github.io/2018/05/04/gitbook/">GitBook intro &amp; Grandpa’s Bio | James Chen’s Blogs</a></p><h3 id="MWeb"><a href="#MWeb" class="headerlink" title="MWeb"></a>MWeb</h3><p><a href="http://www.mweb.co.za/" target="_blank" rel="noopener">MWEB Homepage</a>，某个开发者开发的，功能强悍，可以一边写一边看效果，替代gitbook桌面版，代价是预览会有些卡顿抖动。但是实在是很好用，<strong>必备工具</strong></p><h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><p>各种README、Wiki都会用到。注意GitHub的wiki页面还可以有特殊的排版技巧，可以编辑一个特殊的_Sidebar页面来组织wiki的板式，比如实验室training项目的wiki：<a href="https://github.com/lulab/training/wiki/_Sidebar/_edit" target="_blank" rel="noopener">Home · lulab/training Wiki · GitHub</a></p><h3 id="BLOG"><a href="#BLOG" class="headerlink" title="BLOG"></a>BLOG</h3><p>这个博客的博文都是markdown写的，相当好用便捷。因为目前完全转向bear记笔记，所以写博客实在是非常轻松，基本hexo new “newblog”，然后把bear上的内容搬过去就行了，用MWEB编辑一下，图片用图片库做个外链，pdf用google drive加上插件展示，相当自动化了。</p><h3 id="Rmarkdown"><a href="#Rmarkdown" class="headerlink" title="Rmarkdown"></a>Rmarkdown</h3><p>统计学作业都用它，最开始用了两次latex简直要吐，后来发现这种公式太多的东西还是所见即所得的Rmarkdown最完美，用Rstutio排版，谁用谁知道，而且还可以无缝嵌入R代码，用来写统辅作业必备。</p><p><strong>展示如何用Rstudio插入公式、代码：</strong><br><img src="http://i4.fuimg.com/640680/a7923414b1e9f50e.png" alt="Markdown"></p><h3 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h3><p>貌似是很强大的格式转换工具，可以把markdown转latex之类的，不过我觉得意义不大，有这功夫还是直接用latex吧，怎么可能完美转换，之前看过一个强行转的论文，说实话并没有纯粹的latex漂亮</p><h3 id="Jupyter-markdown"><a href="#Jupyter-markdown" class="headerlink" title="Jupyter markdown"></a>Jupyter markdown</h3><p>这个还是蛮有趣的，写代码的时候注释很有用，而且最近发现了一个很好的插件，在另一篇文章中我也写了，叫nbextensions，其中一个功能就是可以直接把jupyter的markdown注释收集起来，根据标题层级生成目录。安装如下，具体内容可自行搜索或者看我的jupyter配置的文章</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br></pre></td></tr></table></figure><p><strong>效果</strong></p><p><img src="http://i4.fuimg.com/640680/b3489af920c29d1e.png" alt="Markdown"></p><h2 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h2><p>论文排版、作业必需工具，完美替代word，尤其略微复杂的带有公式和格式要求的，秒杀word无疑问。从数学建模课作业第一次在感冒时吃了过量的药什么命令都不会打一点儿搜一个到排版emaize报告，ANN作业，模式识别作业，各种汇报，统辅课的各种作业（后来转用配合R的Rmarkdown）</p><p>安装latex太简单了，网上教程很多，就不废话了，介绍几个编辑器：</p><h3 id="TexStudio"><a href="#TexStudio" class="headerlink" title="TexStudio"></a>TexStudio</h3><p>预览更容易，但是界面真的奇丑无比受不了，功能过于繁杂，不过有一些常用公式可以点击挺不错。</p><h3 id="TexWork"><a href="#TexWork" class="headerlink" title="TexWork"></a>TexWork</h3><p>最简陋也就最轻便，用的最多，坏处：什么都得自己手动输入，好像回到了九十年代</p><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><p>最近老是路过一些人的电脑前发现他们在用VSCode，更神奇的是发现了几个人在用vscode排latex，觉得十分有趣，所以这部分是边学边写的，主要是为了自己学。</p><p>首先是为啥要用VSCode编辑LaTeX？已经有专用编辑器了，为什么要用通用编辑器？</p><p>因为不只写LaTeX，极简主义好。</p><p>相比传统『神级』编辑器(vim, emacs等)，新一代编辑器(VSCode, Atom)有何优势？</p><ul><li>效率：传统编辑器高</li><li>难度：新编辑器上手简单</li><li>颜值：新编辑器高</li></ul><p>顺便比对Atom和VSCode，其实Atom不是我不想用，而是它很神奇的在我的电脑上总是崩溃，让我留下了很差的印象，，</p><ul><li>支持：Atom插件多且好，包括且不局限于LaTeX范围，但是现在VSCode的插件也非常非常多了。</li><li>性能：VSCode好，启动快，不卡，Atom就不提了，，</li><li>难度：VSCode上手难度略高。</li></ul><p>VSCode所有的配置都在settings.json中，使用者会更加明白发生了什么，包括默认设置做了什么。</p><p>综上所述，VSCode的适合人群：同时具有编程和LaTeX需求，且对编辑器性能要求较高，有一定动手能力的人们。</p><h4 id="接下来配置环境"><a href="#接下来配置环境" class="headerlink" title="接下来配置环境"></a>接下来配置环境</h4><h5 id="测试样本：THUthesis"><a href="#测试样本：THUthesis" class="headerlink" title="测试样本：THUthesis"></a>测试样本：THUthesis</h5><p>用THUthesis测试一下，去GitHub下载最新版的<a href="https://github.com/xueruini/thuthesis/blob/master/main.tex" target="_blank" rel="noopener">thuthesis/main.tex at master · xueruini/thuthesis · GitHub</a>。就当是为写毕业论文预习一下吧，看起来THUthesis一直在改进，字体似乎也支持Mac了，虽然还是有一些坑要踩一踩，首先要注意在main.tex把以下选项选填到documentclass里<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[degree=master, tocarialchapter]&#123;thuthesis&#125;</span><br><span class="line"><span class="meta">%</span><span class="bash"> 选项</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   degree=[bachelor|master|doctor|postdoctor], % 必选，学位类型</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   secret,                % 可选（默认：关闭），是否有密级</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapter,       % 可选（默认：关闭），章目录中使用黑体（这项表示同时打开下面两项）</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapterentry,  % 可选（默认：关闭），单独控制章标题在目录中使用黑体</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapterpage,   % 可选（默认：关闭），单独控制章页码在目录中使用黑体</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   pifootnote,            % 可选（默认：关闭），页脚编号采用 pifont 字体符号，建议打开</span></span><br></pre></td></tr></table></figure></p><p>对于本科生来说，选填</p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">[degree=bachelor, tocarialchapter，pifootnote]</span><span class="string">&#123;thuthesis&#125;</span></span></span><br></pre></td></tr></table></figure><p>用Texworks可以编译通过，下面尝试VSCode</p><h5 id="默认TeX-Live套装和VSCode都装好了"><a href="#默认TeX-Live套装和VSCode都装好了" class="headerlink" title="默认TeX Live套装和VSCode都装好了"></a>默认TeX Live套装和VSCode都装好了</h5><p>安装 LaTeX Workshop 并配置用户设置</p><p>打开 VS Code 的插件页面，并搜索 LaTeX Workshop 插件，并选择安装。然后打开 “文件”-“首选项”-“设置”，或者直接使用 快捷键（Ctrl+逗号）打开。在搜索框中搜索“toolchain”，找到设置（新版是tool），在“右侧”粘贴配置的设置，保存，并退出 VS Code。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        <span class="attr">"latex-workshop.latex.toolchain"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">            <span class="string">"-synctex=1"</span>,</span><br><span class="line">            <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">            <span class="string">"-file-line-error"</span>,</span><br><span class="line">            <span class="string">"-pdf"</span>,</span><br><span class="line">            <span class="string">"%DOC%"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>快捷键<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. Ctrl+Alt+<span class="keyword">B </span>编译，<span class="keyword">Build </span>LaTeX project。</span><br><span class="line"><span class="number">2</span>. Ctrl+Alt+T 分栏预览生成的 PDF。</span><br></pre></td></tr></table></figure></p><p>放一些资源：</p><p><a href="https://www.jianshu.com/p/57f8d1e026f5" target="_blank" rel="noopener">VS Code 与 LaTeX 真乃天作之合 - 简书</a>，<a href="https://zhuanlan.zhihu.com/p/31883018" target="_blank" rel="noopener">配置VSCode为LaTeX集成开发环境(IDE) - 初级版</a>，<a href="https://blog.csdn.net/u010751257/article/details/54615563" target="_blank" rel="noopener">VS Code神用法之一：如何用VS Code在Mac环境下优雅地编写latex文档 - CSDN博客</a></p><h3 id="小插件"><a href="#小插件" class="headerlink" title="小插件"></a>小插件</h3><h4 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h4><p>Chrome下（也许其他浏览器也可以），在遇到网页中用mathjax编辑的公式时，右键可选show math as，点击tex commands，直接蹦出来latex命令（第一次发现是在cross validated上找统计推断一道题的解答时候发现的），谁用谁说好。</p><p><img src="http://i4.fuimg.com/640680/e7de5ce7e69e471b.png" alt="Markdown"></p><h4 id="Mathpix-Snipping-Tool"><a href="#Mathpix-Snipping-Tool" class="headerlink" title="Mathpix Snipping Tool"></a>Mathpix Snipping Tool</h4><p>最近发现的，基于先进的 <del>人工智能</del>图像识别技术，截图，识别出公式，然后提供latex 命令，谁用谁说好。</p><h1 id="论文管理"><a href="#论文管理" class="headerlink" title="论文管理"></a>论文管理</h1><p>排版部分的话上面已经讲得很清楚了，正儿八经的论文不用LaTeX写真的合适嘛？当然不合适，CS和EE应该没有人不用LaTeX了吧，也就公式少、不喜欢折腾的人还愿意面对着几十页word动不动卡死崩溃却不愿意学点新东西了。话说现在各种资源这么多，THU的本科论文博士论文LaTeX模板都有，拿过来往里面填充运行就行了，孟孟不会LaTeX都能在美赛的时候边问边摸索用美赛的LaTeX模板把文章排出来，可见现在成本真的很低了。</p><h2 id="Zotero"><a href="#Zotero" class="headerlink" title="Zotero"></a>Zotero</h2><p>论文管理强烈推荐zotero，貌似略小众，但是功能很强，索引很强，管理很细致，尤其是chrome插件简直无敌，什么都能推过去。</p><p><a href="https://zhuanlan.zhihu.com/p/31852030" target="_blank" rel="noopener">Zotero开箱指南</a></p><p>这个资源还是讲了很多东西的，包括一些插件，如何插文献，包括修改引文样式<a href="https://www.zotero.org/support/zh/styles" target="_blank" rel="noopener">zh:styles    Zotero Documentation</a>，<a href="https://zhuanlan.zhihu.com/p/31326415" target="_blank" rel="noopener">四步实现自定义Zotero参考文献格式</a>等等，支持word插入以及LaTeX插入。</p><p>比如<a href="https://retorque.re/zotero-better-bibtex/" target="_blank" rel="noopener">Better BibTeX for Zotero</a>，看起来可以更好管理LaTeX的文献插入，以后再折腾。</p><p><a href="https://zhuanlan.zhihu.com/reftools" target="_blank" rel="noopener">RefTools</a><br><a href="https://www.jianshu.com/p/68f0e4134b04" target="_blank" rel="noopener">参考文献管理——简易Zotero教程 - 简书</a></p>]]></content>
+    <content type="html"><![CDATA[<p>三年前当我还是个什么都不懂的小屁孩的时候，就听闻了高大上的LaTeX，还去听了图书馆某工科博士开的LaTeX入门讲解，听的天花乱坠毫无头绪，回去兴冲冲地装上，运行，出现bug，然后傻眼了，解决不了，我现在还记得当时在百度文科搜到一篇讲解文章，教人一点点开始，第一次生成出来一句话（真是愚蠢的却又不得不这么教的教程）。然后放弃了这个大坑。</p><p>后来慢慢发现，其实就是个简单的工具而已，适应了基本的思维方式，命令熟练，特别是搜索能力变强可以快速debug之后，latex和markdown真的是完美的排版神器，尤其是在mac版的word经常崩而且公式极其丑陋且卡顿且长篇文章格式会让人非常恶心的情况下，我已经放弃了word，这一年除了老师要求必须交word的作业以及让人毫无兴趣的作业，基本都是用latex或markdown写的，这两个东西极大的方便了我的生活。</p><p>在这里分享一下各种相关资源和知识</p><a id="more"></a><h1 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h1><h2 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h2><p>下面列一下使用场景，这些场景有的是基本工具，有的是完成某些任务（如博客、README）所需要的。</p><h3 id="Bear"><a href="#Bear" class="headerlink" title="Bear"></a>Bear</h3><p>神器，我现在所有的笔记都在上面，非常完美兼容markdown各语法，并有快捷键，非常简洁清爽的让人变得无比有条理的程序员风格笔记管理软件。<strong>一个巨大的好处是，平时什么东西都放在bear上，再转移到下面的各个工具上就直接复制粘贴好了，再没有排版的困扰。</strong>另外备份所有笔记也很方便，对于害怕东西丢失的强迫症来说非常有意义。（话说经常手动备份在电脑端，且使用time machine直接备份和间接备份，并且最近清华云盘也每天备份，应该不会丢了吧，这些笔记确实非常宝贵，如果丢了我会心痛死的）</p><p>Markdown方便到最近都不怎么愿意用latex了，很多作业先随手写在bear上，然后本来想再用latex写，后来觉得直接导出到pdf也能看，起码比word强，也就懒得用latex再排版一遍了。</p><h3 id="Gitbook"><a href="#Gitbook" class="headerlink" title="Gitbook"></a>Gitbook</h3><p>Gitbook，这部分内容比较多，专门写了一篇文章：<br><a href="https://james20141606.github.io/2018/05/04/gitbook/" target="_blank" rel="noopener">GitBook intro &amp; Grandpa’s Bio | James Chen’s Blogs</a></p><h3 id="MWeb"><a href="#MWeb" class="headerlink" title="MWeb"></a>MWeb</h3><p><a href="http://www.mweb.co.za/" target="_blank" rel="noopener">MWEB Homepage</a>，某个开发者开发的，功能强悍，可以一边写一边看效果，替代gitbook桌面版，代价是预览会有些卡顿抖动。但是实在是很好用，<strong>必备工具</strong></p><h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><p>各种README、Wiki都会用到。注意GitHub的wiki页面还可以有特殊的排版技巧，可以编辑一个特殊的_Sidebar页面来组织wiki的板式，比如实验室training项目的wiki：<a href="https://github.com/lulab/training/wiki/_Sidebar/_edit" target="_blank" rel="noopener">Home · lulab/training Wiki · GitHub</a></p><h3 id="BLOG"><a href="#BLOG" class="headerlink" title="BLOG"></a>BLOG</h3><p>这个博客的博文都是markdown写的，相当好用便捷。因为目前完全转向bear记笔记，所以写博客实在是非常轻松，基本hexo new “newblog”，然后把bear上的内容搬过去就行了，用MWEB编辑一下，图片用图片库做个外链，pdf用google drive加上插件展示，相当自动化了。</p><h3 id="Rmarkdown"><a href="#Rmarkdown" class="headerlink" title="Rmarkdown"></a>Rmarkdown</h3><p>统计学作业都用它，最开始用了两次latex简直要吐，后来发现这种公式太多的东西还是所见即所得的Rmarkdown最完美，用Rstutio排版，谁用谁知道，而且还可以无缝嵌入R代码，用来写统辅作业必备。</p><p><strong>展示如何用Rstudio插入公式、代码：</strong><br><img src="http://i4.fuimg.com/640680/a7923414b1e9f50e.png" alt="Markdown"></p><h3 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h3><p>貌似是很强大的格式转换工具，可以把markdown转latex之类的，不过我觉得意义不大，有这功夫还是直接用latex吧，怎么可能完美转换，之前看过一个强行转的论文，说实话并没有纯粹的latex漂亮</p><h3 id="Jupyter-markdown"><a href="#Jupyter-markdown" class="headerlink" title="Jupyter markdown"></a>Jupyter markdown</h3><p>这个还是蛮有趣的，写代码的时候注释很有用，而且最近发现了一个很好的插件，在另一篇文章中我也写了，叫nbextensions，其中一个功能就是可以直接把jupyter的markdown注释收集起来，根据标题层级生成目录。安装如下，具体内容可自行搜索或者看我的jupyter配置的文章</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br></pre></td></tr></table></figure><p><strong>效果</strong></p><p><img src="http://i4.fuimg.com/640680/b3489af920c29d1e.png" alt="Markdown"></p><h2 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h2><p>论文排版、作业必需工具，完美替代word，尤其略微复杂的带有公式和格式要求的，秒杀word无疑问。从数学建模课作业第一次在感冒时吃了过量的药什么命令都不会打一点儿搜一个到排版emaize报告，ANN作业，模式识别作业，各种汇报，统辅课的各种作业（后来转用配合R的Rmarkdown）</p><p>安装latex太简单了，网上教程很多，就不废话了，介绍几个编辑器：</p><h3 id="TexStudio"><a href="#TexStudio" class="headerlink" title="TexStudio"></a>TexStudio</h3><p>预览更容易，但是界面真的奇丑无比受不了，功能过于繁杂，不过有一些常用公式可以点击挺不错。</p><h3 id="TexWork"><a href="#TexWork" class="headerlink" title="TexWork"></a>TexWork</h3><p>最简陋也就最轻便，用的最多，坏处：什么都得自己手动输入，好像回到了九十年代</p><h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><p>最近老是路过一些人的电脑前发现他们在用VSCode，更神奇的是发现了几个人在用vscode排latex，觉得十分有趣，所以这部分是边学边写的，主要是为了自己学。</p><p>首先是为啥要用VSCode编辑LaTeX？已经有专用编辑器了，为什么要用通用编辑器？</p><p>因为不只写LaTeX，极简主义好。</p><p>相比传统『神级』编辑器(vim, emacs等)，新一代编辑器(VSCode, Atom)有何优势？</p><ul><li>效率：传统编辑器高</li><li>难度：新编辑器上手简单</li><li>颜值：新编辑器高</li></ul><p>顺便比对Atom和VSCode，其实Atom不是我不想用，而是它很神奇的在我的电脑上总是崩溃，让我留下了很差的印象，，</p><ul><li>支持：Atom插件多且好，包括且不局限于LaTeX范围，但是现在VSCode的插件也非常非常多了。</li><li>性能：VSCode好，启动快，不卡，Atom就不提了，，</li><li>难度：VSCode上手难度略高。</li></ul><p>VSCode所有的配置都在settings.json中，使用者会更加明白发生了什么，包括默认设置做了什么。</p><p>综上所述，VSCode的适合人群：同时具有编程和LaTeX需求，且对编辑器性能要求较高，有一定动手能力的人们。</p><h4 id="接下来配置环境"><a href="#接下来配置环境" class="headerlink" title="接下来配置环境"></a>接下来配置环境</h4><h5 id="测试样本：THUthesis"><a href="#测试样本：THUthesis" class="headerlink" title="测试样本：THUthesis"></a>测试样本：THUthesis</h5><p>用THUthesis测试一下，去GitHub下载最新版的<a href="https://github.com/xueruini/thuthesis/blob/master/main.tex" target="_blank" rel="noopener">thuthesis/main.tex at master · xueruini/thuthesis · GitHub</a>。就当是为写毕业论文预习一下吧，看起来THUthesis一直在改进，字体似乎也支持Mac了，虽然还是有一些坑要踩一踩，首先要注意在main.tex把以下选项选填到documentclass里<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass[degree=master, tocarialchapter]&#123;thuthesis&#125;</span><br><span class="line"><span class="meta">%</span><span class="bash"> 选项</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   degree=[bachelor|master|doctor|postdoctor], % 必选，学位类型</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   secret,                % 可选（默认：关闭），是否有密级</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapter,       % 可选（默认：关闭），章目录中使用黑体（这项表示同时打开下面两项）</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapterentry,  % 可选（默认：关闭），单独控制章标题在目录中使用黑体</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   tocarialchapterpage,   % 可选（默认：关闭），单独控制章页码在目录中使用黑体</span></span><br><span class="line"><span class="meta">%</span><span class="bash">   pifootnote,            % 可选（默认：关闭），页脚编号采用 pifont 字体符号，建议打开</span></span><br></pre></td></tr></table></figure></p><p>对于本科生来说，选填</p><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">\<span class="name">documentclass</span><span class="string">[degree=bachelor, tocarialchapter，pifootnote]</span><span class="string">&#123;thuthesis&#125;</span></span></span><br></pre></td></tr></table></figure><p>用Texworks可以编译通过，下面尝试VSCode</p><h5 id="默认TeX-Live套装和VSCode都装好了"><a href="#默认TeX-Live套装和VSCode都装好了" class="headerlink" title="默认TeX Live套装和VSCode都装好了"></a>默认TeX Live套装和VSCode都装好了</h5><p>安装 LaTeX Workshop 并配置用户设置</p><p>打开 VS Code 的插件页面，并搜索 LaTeX Workshop 插件，并选择安装。然后打开 “文件”-“首选项”-“设置”，或者直接使用 快捷键（Ctrl+逗号）打开。在搜索框中搜索“toolchain”，找到设置（新版是tool），在“右侧”粘贴配置的设置，保存，并退出 VS Code。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">        <span class="attr">"latex-workshop.latex.toolchain"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"command"</span>: <span class="string">"latexmk"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [</span><br><span class="line">            <span class="string">"-synctex=1"</span>,</span><br><span class="line">            <span class="string">"-interaction=nonstopmode"</span>,</span><br><span class="line">            <span class="string">"-file-line-error"</span>,</span><br><span class="line">            <span class="string">"-pdf"</span>,</span><br><span class="line">            <span class="string">"%DOC%"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>快捷键<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. Ctrl+Alt+<span class="keyword">B </span>编译，<span class="keyword">Build </span>LaTeX project。</span><br><span class="line"><span class="number">2</span>. Ctrl+Alt+T 分栏预览生成的 PDF。</span><br></pre></td></tr></table></figure></p><p>放一些资源：</p><p><a href="https://www.jianshu.com/p/57f8d1e026f5" target="_blank" rel="noopener">VS Code 与 LaTeX 真乃天作之合 - 简书</a>，<a href="https://zhuanlan.zhihu.com/p/31883018" target="_blank" rel="noopener">配置VSCode为LaTeX集成开发环境(IDE) - 初级版</a>，<a href="https://blog.csdn.net/u010751257/article/details/54615563" target="_blank" rel="noopener">VS Code神用法之一：如何用VS Code在Mac环境下优雅地编写latex文档 - CSDN博客</a></p><h3 id="小插件"><a href="#小插件" class="headerlink" title="小插件"></a>小插件</h3><h4 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h4><p>Chrome下（也许其他浏览器也可以），在遇到网页中用mathjax编辑的公式时，右键可选show math as，点击tex commands，直接蹦出来latex命令（第一次发现是在cross validated上找统计推断一道题的解答时候发现的），谁用谁说好。</p><p><img src="http://i4.fuimg.com/640680/e7de5ce7e69e471b.png" alt="Markdown"></p><h4 id="Mathpix-Snipping-Tool"><a href="#Mathpix-Snipping-Tool" class="headerlink" title="Mathpix Snipping Tool"></a>Mathpix Snipping Tool</h4><p>最近发现的，基于先进的 <del>人工智能</del>图像识别技术，截图，识别出公式，然后提供latex 命令，谁用谁说好。</p><h1 id="论文管理"><a href="#论文管理" class="headerlink" title="论文管理"></a>论文管理</h1><p>排版部分的话上面已经讲得很清楚了，正儿八经的论文不用LaTeX写真的合适嘛？当然不合适，CS和EE应该没有人不用LaTeX了吧，也就公式少、不喜欢折腾的人还愿意面对着几十页word动不动卡死崩溃却不愿意学点新东西了。话说现在各种资源这么多，THU的本科论文博士论文LaTeX模板都有，拿过来往里面填充运行就行了，孟孟不会LaTeX都能在美赛的时候边问边摸索用美赛的LaTeX模板把文章排出来，可见现在成本真的很低了。</p><h2 id="Zotero"><a href="#Zotero" class="headerlink" title="Zotero"></a>Zotero</h2><p>论文管理强烈推荐zotero，貌似略小众，但是功能很强，索引很强，管理很细致，尤其是chrome插件简直无敌，什么都能推过去。</p><p><a href="https://zhuanlan.zhihu.com/p/31852030" target="_blank" rel="noopener">Zotero开箱指南</a></p><p>这个资源还是讲了很多东西的，包括一些插件，如何插文献，包括修改引文样式<a href="https://www.zotero.org/support/zh/styles" target="_blank" rel="noopener">zh:styles    Zotero Documentation</a>，<a href="https://zhuanlan.zhihu.com/p/31326415" target="_blank" rel="noopener">四步实现自定义Zotero参考文献格式</a>等等，支持word插入以及LaTeX插入。</p><p>比如<a href="https://retorque.re/zotero-better-bibtex/" target="_blank" rel="noopener">Better BibTeX for Zotero</a>，看起来可以更好管理LaTeX的文献插入，以后再折腾。</p><p><a href="https://zhuanlan.zhihu.com/reftools" target="_blank" rel="noopener">RefTools</a><br><a href="https://www.jianshu.com/p/68f0e4134b04" target="_blank" rel="noopener">参考文献管理——简易Zotero教程 - 简书</a></p>]]></content>
     
     <summary type="html">
     
@@ -195,25 +195,25 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
-      <category term="research" scheme="http://james20141606.github.io/categories/techniques/research/"/>
+      <category term="research" scheme="https://www.cmwonderland.com/categories/techniques/research/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="research" scheme="http://james20141606.github.io/tags/research/"/>
+      <category term="research" scheme="https://www.cmwonderland.com/tags/research/"/>
     
-      <category term="paper" scheme="http://james20141606.github.io/tags/paper/"/>
+      <category term="paper" scheme="https://www.cmwonderland.com/tags/paper/"/>
     
-      <category term="formatting" scheme="http://james20141606.github.io/tags/formatting/"/>
+      <category term="formatting" scheme="https://www.cmwonderland.com/tags/formatting/"/>
     
   </entry>
   
   <entry>
     <title>GitBook intro &amp; Grandpa&#39;s Bio</title>
-    <link href="http://james20141606.github.io/2018/05/04/gitbook/"/>
-    <id>http://james20141606.github.io/2018/05/04/gitbook/</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/gitbook/"/>
+    <id>https://www.cmwonderland.com/2018/05/04/gitbook/</id>
     <published>2018-05-03T18:01:38.000Z</published>
     <updated>2018-05-04T16:07:17.261Z</updated>
     
@@ -230,23 +230,23 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="techniques" scheme="http://james20141606.github.io/tags/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
-      <category term="markdown" scheme="http://james20141606.github.io/tags/markdown/"/>
+      <category term="markdown" scheme="https://www.cmwonderland.com/tags/markdown/"/>
     
-      <category term="syntax" scheme="http://james20141606.github.io/tags/syntax/"/>
+      <category term="syntax" scheme="https://www.cmwonderland.com/tags/syntax/"/>
     
-      <category term="composing" scheme="http://james20141606.github.io/tags/composing/"/>
+      <category term="composing" scheme="https://www.cmwonderland.com/tags/composing/"/>
     
   </entry>
   
   <entry>
     <title>On Wittgenstein&#39;s Picture Theory of Meaning</title>
-    <link href="http://james20141606.github.io/2018/05/03/tlp/"/>
-    <id>http://james20141606.github.io/2018/05/03/tlp/</id>
+    <link href="https://www.cmwonderland.com/2018/05/03/tlp/"/>
+    <id>https://www.cmwonderland.com/2018/05/03/tlp/</id>
     <published>2018-05-03T15:19:27.000Z</published>
     <updated>2018-05-03T15:30:24.771Z</updated>
     
@@ -266,21 +266,21 @@
     
     </summary>
     
-      <category term="thoughts" scheme="http://james20141606.github.io/categories/thoughts/"/>
+      <category term="thoughts" scheme="https://www.cmwonderland.com/categories/thoughts/"/>
     
     
-      <category term="philosophy" scheme="http://james20141606.github.io/tags/philosophy/"/>
+      <category term="philosophy" scheme="https://www.cmwonderland.com/tags/philosophy/"/>
     
-      <category term="Wittgenstein" scheme="http://james20141606.github.io/tags/Wittgenstein/"/>
+      <category term="Wittgenstein" scheme="https://www.cmwonderland.com/tags/Wittgenstein/"/>
     
-      <category term="thoughts" scheme="http://james20141606.github.io/tags/thoughts/"/>
+      <category term="thoughts" scheme="https://www.cmwonderland.com/tags/thoughts/"/>
     
   </entry>
   
   <entry>
     <title>记一下人生第一次GRE</title>
-    <link href="http://james20141606.github.io/2018/04/28/gre/"/>
-    <id>http://james20141606.github.io/2018/04/28/gre/</id>
+    <link href="https://www.cmwonderland.com/2018/04/28/gre/"/>
+    <id>https://www.cmwonderland.com/2018/04/28/gre/</id>
     <published>2018-04-28T11:49:36.000Z</published>
     <updated>2018-04-29T02:28:36.118Z</updated>
     
@@ -292,21 +292,21 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="school" scheme="http://james20141606.github.io/tags/school/"/>
+      <category term="school" scheme="https://www.cmwonderland.com/tags/school/"/>
     
-      <category term="language" scheme="http://james20141606.github.io/tags/language/"/>
+      <category term="language" scheme="https://www.cmwonderland.com/tags/language/"/>
     
-      <category term="exam" scheme="http://james20141606.github.io/tags/exam/"/>
+      <category term="exam" scheme="https://www.cmwonderland.com/tags/exam/"/>
     
   </entry>
   
   <entry>
     <title>Solution of MCM Problem C</title>
-    <link href="http://james20141606.github.io/2018/04/21/mcm/"/>
-    <id>http://james20141606.github.io/2018/04/21/mcm/</id>
+    <link href="https://www.cmwonderland.com/2018/04/21/mcm/"/>
+    <id>https://www.cmwonderland.com/2018/04/21/mcm/</id>
     <published>2018-04-21T01:15:19.000Z</published>
     <updated>2018-05-03T18:05:17.519Z</updated>
     
@@ -326,21 +326,21 @@
     
     </summary>
     
-      <category term="projects" scheme="http://james20141606.github.io/categories/projects/"/>
+      <category term="projects" scheme="https://www.cmwonderland.com/categories/projects/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="contest" scheme="http://james20141606.github.io/tags/contest/"/>
+      <category term="contest" scheme="https://www.cmwonderland.com/tags/contest/"/>
     
-      <category term="math model" scheme="http://james20141606.github.io/tags/math-model/"/>
+      <category term="math model" scheme="https://www.cmwonderland.com/tags/math-model/"/>
     
   </entry>
   
   <entry>
     <title>Linear Regression Assignment 8</title>
-    <link href="http://james20141606.github.io/2018/04/20/line3/"/>
-    <id>http://james20141606.github.io/2018/04/20/line3/</id>
+    <link href="https://www.cmwonderland.com/2018/04/20/line3/"/>
+    <id>https://www.cmwonderland.com/2018/04/20/line3/</id>
     <published>2018-04-20T02:01:19.000Z</published>
     <updated>2018-04-20T02:53:27.442Z</updated>
     
@@ -352,25 +352,25 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="linear regression" scheme="http://james20141606.github.io/tags/linear-regression/"/>
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
   </entry>
   
   <entry>
     <title>Reading Notes of Wittgenstein&#39;s Bio</title>
-    <link href="http://james20141606.github.io/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/"/>
-    <id>http://james20141606.github.io/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/</id>
+    <link href="https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/"/>
+    <id>https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/</id>
     <published>2018-04-17T14:37:17.000Z</published>
     <updated>2018-04-20T02:56:36.088Z</updated>
     
@@ -382,21 +382,21 @@
     
     </summary>
     
-      <category term="thoughts" scheme="http://james20141606.github.io/categories/thoughts/"/>
+      <category term="thoughts" scheme="https://www.cmwonderland.com/categories/thoughts/"/>
     
     
-      <category term="philosophy" scheme="http://james20141606.github.io/tags/philosophy/"/>
+      <category term="philosophy" scheme="https://www.cmwonderland.com/tags/philosophy/"/>
     
-      <category term="Wittgenstein" scheme="http://james20141606.github.io/tags/Wittgenstein/"/>
+      <category term="Wittgenstein" scheme="https://www.cmwonderland.com/tags/Wittgenstein/"/>
     
-      <category term="thoughts" scheme="http://james20141606.github.io/tags/thoughts/"/>
+      <category term="thoughts" scheme="https://www.cmwonderland.com/tags/thoughts/"/>
     
   </entry>
   
   <entry>
     <title>Assignments of Statistic Inferences</title>
-    <link href="http://james20141606.github.io/2018/04/16/Statistic-Inferences/"/>
-    <id>http://james20141606.github.io/2018/04/16/Statistic-Inferences/</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/Statistic-Inferences/"/>
+    <id>https://www.cmwonderland.com/2018/04/16/Statistic-Inferences/</id>
     <published>2018-04-16T06:33:06.000Z</published>
     <updated>2018-04-16T06:46:36.287Z</updated>
     
@@ -408,23 +408,23 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
   </entry>
   
   <entry>
     <title>Linear Regression Assignment 7</title>
-    <link href="http://james20141606.github.io/2018/04/16/line2/"/>
-    <id>http://james20141606.github.io/2018/04/16/line2/</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line2/"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line2/</id>
     <published>2018-04-16T06:01:19.000Z</published>
     <updated>2018-04-20T02:59:10.467Z</updated>
     
@@ -436,25 +436,25 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="linear regression" scheme="http://james20141606.github.io/tags/linear-regression/"/>
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
   </entry>
   
   <entry>
     <title>Linear Regression Assignment 6</title>
-    <link href="http://james20141606.github.io/2018/04/16/line1/"/>
-    <id>http://james20141606.github.io/2018/04/16/line1/</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line1/"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line1/</id>
     <published>2018-04-16T05:59:19.000Z</published>
     <updated>2018-04-20T02:52:25.194Z</updated>
     
@@ -466,25 +466,25 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="linear regression" scheme="http://james20141606.github.io/tags/linear-regression/"/>
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
   </entry>
   
   <entry>
     <title>Multivariate Statistics Assignment 3</title>
-    <link href="http://james20141606.github.io/2018/04/16/multi0/"/>
-    <id>http://james20141606.github.io/2018/04/16/multi0/</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/multi0/"/>
+    <id>https://www.cmwonderland.com/2018/04/16/multi0/</id>
     <published>2018-04-16T04:59:19.000Z</published>
     <updated>2018-04-20T02:55:01.954Z</updated>
     
@@ -496,25 +496,25 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="linear regression" scheme="http://james20141606.github.io/tags/linear-regression/"/>
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
   </entry>
   
   <entry>
     <title>Linear Regression Assignment 4</title>
-    <link href="http://james20141606.github.io/2018/04/16/line0/"/>
-    <id>http://james20141606.github.io/2018/04/16/line0/</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line0/"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line0/</id>
     <published>2018-04-16T04:59:19.000Z</published>
     <updated>2018-04-20T02:51:21.420Z</updated>
     
@@ -526,25 +526,25 @@
     
     </summary>
     
-      <category term="school work" scheme="http://james20141606.github.io/categories/school-work/"/>
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="R" scheme="http://james20141606.github.io/tags/R/"/>
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
-      <category term="assignment" scheme="http://james20141606.github.io/tags/assignment/"/>
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="linear regression" scheme="http://james20141606.github.io/tags/linear-regression/"/>
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
   </entry>
   
   <entry>
     <title>春日の恋想</title>
-    <link href="http://james20141606.github.io/2018/04/15/peomofmeng/"/>
-    <id>http://james20141606.github.io/2018/04/15/peomofmeng/</id>
+    <link href="https://www.cmwonderland.com/2018/04/15/peomofmeng/"/>
+    <id>https://www.cmwonderland.com/2018/04/15/peomofmeng/</id>
     <published>2018-04-15T05:54:30.000Z</published>
     <updated>2018-04-16T06:20:20.616Z</updated>
     
@@ -556,21 +556,21 @@
     
     </summary>
     
-      <category term="life" scheme="http://james20141606.github.io/categories/life/"/>
+      <category term="life" scheme="https://www.cmwonderland.com/categories/life/"/>
     
     
-      <category term="life" scheme="http://james20141606.github.io/tags/life/"/>
+      <category term="life" scheme="https://www.cmwonderland.com/tags/life/"/>
     
-      <category term="girl friend" scheme="http://james20141606.github.io/tags/girl-friend/"/>
+      <category term="girl friend" scheme="https://www.cmwonderland.com/tags/girl-friend/"/>
     
-      <category term="poem" scheme="http://james20141606.github.io/tags/poem/"/>
+      <category term="poem" scheme="https://www.cmwonderland.com/tags/poem/"/>
     
   </entry>
   
   <entry>
     <title>Data Mining of Deng Era</title>
-    <link href="http://james20141606.github.io/2018/04/15/datamining/"/>
-    <id>http://james20141606.github.io/2018/04/15/datamining/</id>
+    <link href="https://www.cmwonderland.com/2018/04/15/datamining/"/>
+    <id>https://www.cmwonderland.com/2018/04/15/datamining/</id>
     <published>2018-04-14T16:55:43.000Z</published>
     <updated>2018-04-15T08:26:50.362Z</updated>
     
@@ -582,18 +582,18 @@
     
     </summary>
     
-      <category term="techniques" scheme="http://james20141606.github.io/categories/techniques/"/>
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
-      <category term="data science" scheme="http://james20141606.github.io/categories/techniques/data-science/"/>
+      <category term="data science" scheme="https://www.cmwonderland.com/categories/techniques/data-science/"/>
     
     
-      <category term="codes" scheme="http://james20141606.github.io/tags/codes/"/>
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
-      <category term="statistics" scheme="http://james20141606.github.io/tags/statistics/"/>
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
-      <category term="data mining" scheme="http://james20141606.github.io/tags/data-mining/"/>
+      <category term="data mining" scheme="https://www.cmwonderland.com/tags/data-mining/"/>
     
-      <category term="matplotlib" scheme="http://james20141606.github.io/tags/matplotlib/"/>
+      <category term="matplotlib" scheme="https://www.cmwonderland.com/tags/matplotlib/"/>
     
   </entry>
   
