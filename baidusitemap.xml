@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/05/05/conda/</loc>
+    <lastmod>2018-05-08T11:51:44.046Z</lastmod>
+    <data>
+        <display>
+        <title>Conda详细配置指南</title>
+        <pubTime>2018-05-04T16:08:12.000Z</pubTime>
+        
+        <tag>techniques</tag>
+         
+        <tag>software</tag>
+         
+        <tag>python</tag>
+         
+        <tag>bioinformatics</tag>
+         
+         
+           
+             
+              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/08/autobio/</loc>
     <lastmod>2018-05-08T11:51:05.526Z</lastmod>
     <data>
@@ -113,32 +139,6 @@
         <tag>alias</tag>
          
         <tag>setup</tag>
-         
-         
-           
-             
-              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/05/conda/</loc>
-    <lastmod>2018-05-04T16:20:57.356Z</lastmod>
-    <data>
-        <display>
-        <title>Conda详细配置指南</title>
-        <pubTime>2018-05-04T16:08:12.000Z</pubTime>
-        
-        <tag>techniques</tag>
-         
-        <tag>software</tag>
-         
-        <tag>python</tag>
-         
-        <tag>bioinformatics</tag>
          
          
            
