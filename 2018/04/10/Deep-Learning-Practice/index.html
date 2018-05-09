@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="deep learning," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
+<meta name="keywords" content="deep learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deep Learning Practice">
+<meta property="og:url" content="https://www.cmwonderland.com/2018/04/10/Deep-Learning-Practice/index.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://i2.bvimg.com/640680/fefc8e3a01a27627.jpg">
+<meta property="og:image" content="http://i2.bvimg.com/640680/989124bdbb83b921.jpg">
+<meta property="og:image" content="http://i2.bvimg.com/640680/af93d6a2daaba726.png">
+<meta property="og:image" content="http://i2.bvimg.com/640680/58bc934f371dcd6f.jpg">
+<meta property="og:image" content="http://i2.bvimg.com/640680/71440c6ba2a94251.jpg">
+<meta property="og:image" content="http://i2.bvimg.com/640680/35dfa92b54debbe6.png">
+<meta property="og:image" content="http://i2.bvimg.com/640680/acf000d769f49e4f.png">
+<meta property="og:updated_time" content="2018-04-14T17:20:25.227Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Deep Learning Practice">
+<meta name="twitter:description" content="这是在实验室Learning Club上的分享，整理到这里。 前言这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都">
+<meta name="twitter:image" content="http://i2.bvimg.com/640680/fefc8e3a01a27627.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/2018/04/10/Deep-Learning-Practice/"/>
+
+
+
+
+
+  <title>Deep Learning Practice | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/10/Deep-Learning-Practice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Deep Learning Practice</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T21:23:55+08:00">
+                2018-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/machine-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">machine learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/10/Deep-Learning-Practice/" class="leancloud_visitors" data-flag-title="Deep Learning Practice">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  7,512
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  27
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是在实验室Learning Club上的分享，整理到这里。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这次learning club希望和大家分享一下如何更好地通过实践来踏进深度学习的领域，深度学习是个快速发展的、牛人云集、前景广阔的领域，深入的研究需要深厚的数学功底和工程实现能力，但是踏入深度学习的领地也绝不那么困哪，大多数的深度学习算法都使用基于python的平台写成，易读性很强，而且相关的资源和原理及代码实现过程中的问题解答都十分充分，很适合快速地学习。<br><a id="more"></a></p>
+<p>也许大家也都有这样的经历：到处看到关于人工智能解决了某某问题的报道，对神经网络、卷积等概念有粗浅的印象，知道深度学习很强大，探讨着和深度学习相关的话题，却是否没有真正去试图学一学，正所谓Talk is Cheap, Show Me the Code. 其实最好的入门方法就是动手试一试。<br>仅仅从入门的角度来看，在现在这个时间节点，搭建起一个基本的神经网络，乃至应用深度学习解决一个自己正在研究的问题，都比以往任何时候简单很多。</p>
+<p>在这个分享中我主要简单介绍了深度学习相关的资源、平台、教程，通过几个例子展示如何利用深度学习平台搭建模型解决一个具体的问题。</p>
+<h2 id="深度学习"><a href="#深度学习" class="headerlink" title="深度学习"></a>深度学习</h2><h3 id="什么是深度学习"><a href="#什么是深度学习" class="headerlink" title="什么是深度学习"></a>什么是深度学习</h3><p><strong>深度学习（deep learning）</strong>是机器学习的分支，是一种试图使用包含复杂结构或由多重非线性变换构成的多个处理层对数据进行高层抽象的算法。<br>深度学习是机器学习中一种基于对数据进行表征学习的算法。观测值（例如一幅图像）可以使用多种方式来表示，如每个像素强度值的向量，或者更抽象地表示成一系列边、特定形状的区域等。而使用某些特定的表示方法更容易从实例中学习任务（例如，人脸识别或面部表情识别）。深度学习的好处是用<strong>非监督式或半监督式的特征学习和分层特征提取高效算法来替代手工获取特征</strong>。</p>
+<p>深度学习是一个框架，包含多个重要算法: </p>
+<ul>
+<li>Convolutional Neural Networks (CNN) 卷积神经网络</li>
+<li>Recurrent neural Network (RNN)  循环神经网络</li>
+<li>AutoEncoder 自动编码器，包括Deep Auto Encoder (DAE) Variational Auto Encoder (VAE)等</li>
+</ul>
+<p>增强学习(Reinforcement Learning)与深度学习的结合也创造了许多了不起的成果，如AlphaGo。</p>
+<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><h4 id="书籍资源"><a href="#书籍资源" class="headerlink" title="书籍资源"></a>书籍资源</h4><p><a href="https://www.gitbook.com/book/hit-scir/neural-networks-and-deep-learning-zh_cn/details" target="_blank" rel="noopener">神经网络与深度学习电子书</a><br><a href="http://www.deeplearningbook.org/" target="_blank" rel="noopener">Deep Learning</a>  <strong>(Recommend)</strong><br><a href="https://github.com/exacity/deeplearningbook-chinese" target="_blank" rel="noopener">深度学习中文版</a></p>
+<h4 id="课程资源"><a href="#课程资源" class="headerlink" title="课程资源"></a>课程资源</h4><p><a href="http://cs229.stanford.edu/" target="_blank" rel="noopener">CS229: Machine Learning</a> <strong>(Recommend)</strong></p>
+<p><a href="http://cs231n.stanford.edu/" target="_blank" rel="noopener">Stanford University CS231n: Convolutional Neural Networks for Visual Recognition</a> <strong>(Recommend)</strong></p>
+<p><a href="http://cs224d.stanford.edu/" target="_blank" rel="noopener">CS224d: Deep Learning for Natural Language Processing</a></p>
+<h2 id="快速实践入门"><a href="#快速实践入门" class="headerlink" title="快速实践入门"></a>快速实践入门</h2><h3 id="为什么从实践开始"><a href="#为什么从实践开始" class="headerlink" title="为什么从实践开始"></a>为什么从实践开始</h3><h4 id="内力和剑法哪个更重要"><a href="#内力和剑法哪个更重要" class="headerlink" title="内力和剑法哪个更重要"></a>内力和剑法哪个更重要</h4><p>深度学习新手的入门路径问题：了解模型的内部原理，和快速实现模型解决问题，哪个更重要呢？这篇文章就是关于入门的两种方式的争论：</p>
+<p><a href="https://mp.weixin.qq.com/s/R-29UGMvHyBp8OkWk7zdpw" target="_blank" rel="noopener">深度学习究竟怎么入门？两位Google大神掀起剑气之争</a></p>
+<p>这篇文章讲的非常好，我认为其中的很多大牛的争论和思想已经远远超出深度学习，适用于非常广泛的领域。下面列一下两派人士的观点：</p>
+<h5 id="“气宗”"><a href="#“气宗”" class="headerlink" title="“气宗”"></a>“气宗”</h5><p>代表人物：谷歌大脑的研究员David Ha，<a href="https://arxiv.org/pdf/1704.03477.pdf" target="_blank" rel="noopener">SketchRNN</a>之父。</p>
+<p>观点：从零开始（<strong>用纯Python、numpy</strong>、甚至JS）实现全连接网络、卷积神经网络、RNN、反向传播、SGD，然后用小训练集来训练这些模型是一种学习神经网络如何工作的好方法。在跳到框架上之前，应该花时间从这里收获宝贵的直觉力。</p>
+<h5 id="“剑宗”"><a href="#“剑宗”" class="headerlink" title="“剑宗”"></a>“剑宗”</h5><p>代表人物：谷歌研究员François Chollet，<a href="https://keras.io/" target="_blank" rel="noopener">Keras</a> 之父。</p>
+<p>观点：实现神经网络能教你怎样实现神经网络，让你从算法上理解它们的工作原理。<strong>但这不能教会你它们是做什么的，或者说能否实现哪些功能</strong>。要学习这些，你应该把它们应用到一系列真实问题上去。</p>
+<h5 id="以气驭剑？"><a href="#以气驭剑？" class="headerlink" title="以气驭剑？"></a>以气驭剑？</h5><p>徒手搭模型，显然不是速成之法。那么，花这么多时间“打坐练气”的意义何在？追求的，当然是一个以气驭剑。<br>David Ha说，深度学习框架都是些样板化的模型，入门就用框架，会限制眼界，让你泯然众人。从零开始徒手搭模型就不一样了，对于那些跨行业入门深度学习的人来说，<strong>有机会从自己的独特视角，看到大多数人忽略的东西。</strong></p>
+<p>在斯坦福CS231n课上就要求学生将神经网络的向前和向后传递都用numpy实现一遍（清华大学的人工神经网络课程也选择了这样的教学方式）。学生有意见：拿个框架（tensorflow、keras等）就能自动算的东西，我为什么要徒手来搭？<br>最重要的原因是，徒手将向前和向后传递都实现一遍才能真正理解其中的工作原理。如果单纯依赖框架的自动计算，在反向传播出现问题时就无法应对。</p>
+<p>一些资深码农在入行深度学习时，选择的就是这样的方式，比如闭关花一周时间用C++实现了神经网络的前向、反向传播算法和各种细节，以及故意什么课程文献都不看，自己思考几个月。</p>
+<p><strong>但是</strong>，这对“学生”本身的基础要求非常高：名校计算机系的高材生或者资深码农可以在练气中获得很大的收获。未必适合普通人用来入门</p>
+<h5 id="一招制敌？"><a href="#一招制敌？" class="headerlink" title="一招制敌？"></a>一招制敌？</h5><p>对于上面这种学习方法，Fast.ai创始人Jeremy Howard路过参与到话题中来，吐槽了“气宗”的最强大势力：高校里的计算机专业。他说，计算机学位教育非要让人先从底层开始构建一堆东西，然后才能学习那些抽象的东西，结果他有很多朋友大一没读完就退学了。</p>
+<p>枯燥，确实是徒手搭建神经网络的一大缺陷。而Keras之父Chollet对这种方法的反对是出于别的原因。他觉得这种方法，实在不够学以致用。<strong>招式内部原理分析得再清楚，不知道该用在哪儿，也是白搭。</strong></p>
+<p>Chollet举了很多例子来说明这一观点：<br>练习手写奇异值分解（SVD）有什么用？写完还是不知道SVD能干什么，<strong>把它用到各种数据集上看结果，才能获得直观的印象</strong>。<br>研究生们2000年就会用C语言写神经网络了，可是他们对神经网络的理解，可能还不如一名只会鼓捣框架的2018年高中生，毕竟现在有更多的应用环境。</p>
+<p>现在很多人从没动手实现过神经网络的底层，但是对使用神经网络挺熟练的，知道这个东西如何工作。10年后，这样的人可能会占90%，就像现在的软件工程师了解操作系统，但基本都没开发过操作一样。</p>
+<p>他还来了一段现身说法：“我2009年念书的时候，第一次用C语言写了神经网络，<strong>从中学到的C比神经网络多</strong>。后来又过了好几年我才开始理解神经网络能干什么，为什么有用。关键在于更好的工具+现实世界数据集上的应用。”</p>
+<p>总之，时代在进步，下一代学的东西就是更抽象，不该拿老一套方法来要求学生们了。<strong>他建议学生们去参加Kaggle竞赛，除了神经网络之外也用一用其他的机器学习模型，再通过可视化方法来探索其中的特征。</strong></p>
+<p>“剑招”（tensorflow、keras、pytorch等平台）已经打包好了。Chollet希望未来的学生们知道什么时候该出哪一招，对于内部的原理，其实不必深究。</p>
+<p>搞清细节未必是一开始就必须做的，我们可以折中一下，懂基本概念，平台使用，参数调整，读懂并会用别人代码，懂结果的基本分析，就已经可以算入门了。</p>
+<h3 id="用jupyter-notebook学习各种入门教程"><a href="#用jupyter-notebook学习各种入门教程" class="headerlink" title="用jupyter notebook学习各种入门教程"></a>用jupyter notebook学习各种入门教程</h3><p>Jupyter notebook是适合python以及其他语言的开发环境，非常适合快速地进行实验以及学习。</p>
+<p>Jupyter官方提供的的一些范例  <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks" target="_blank" rel="noopener">A gallery of interesting Jupyter Notebooks</a>，涵盖了很多用jupyter展示的不同的学科、语言、以及机器学习、数据科学等问题的入门教程。用这些教程可以更加可视化、更加方便地学习python和一些具体的python实践项目。</p>
+<p>在服务器运行jupyter并在本地浏览器打开的设置在这里。<a href="https://lulab.gitbooks.io/bioinfo-training-2018/content/19-xupeng-chen-linux.html" target="_blank" rel="noopener">jupyter服务器配置</a></p>
+<p><a href="https://github.com/kuleshov/cs228-material/blob/master/tutorials/python/cs228-python-tutorial.ipynb" target="_blank" rel="noopener">CS228 python and numpy tutorial</a></p>
+<p>这是著名的CS231n和CS228课程给学生共同准备的，<strong>入门深度学习必备的python和numpy的知识</strong>，可以让读者快速了解如何使用numpy对矩阵和张量进行操作。而且是用jupyter写的，可读性非常好，基本一个命令一个代码框，非常方便反复的尝试和理解。</p>
+<h4 id="动手实践理解卷积："><a href="#动手实践理解卷积：" class="headerlink" title="动手实践理解卷积："></a>动手实践理解卷积：</h4><h5 id="神经网络在做什么"><a href="#神经网络在做什么" class="headerlink" title="神经网络在做什么"></a>神经网络在做什么</h5><p>这是一个很google的研究院制作的，给初学者体验神经网络是如何work的网页。非常有意思，可以让读者一下子就可视化地明白神经网络究竟在做什么。可以有很多选项来调试你的网络：</p>
+<ul>
+<li>不同的函数对图案有不同的分割方式</li>
+<li>通过增加隐藏层的数量，增加每层神经元数量</li>
+<li>挑选不同的激活函数，如ReLU，tanh，Sigmoid</li>
+<li>调整学习率、Bacth size，Cross validation的比例</li>
+</ul>
+<p>可以直观地看到随着训练轮数增加损失函数在训练集和测试集上的变化，如果遇到了过拟合现象，还可以增加正则化项。可以看到这个全连接网络相邻层神经元之间的连接权重，甚至还可以自己手动调整权重。还可以看到每个神经元在“做什么”，即把图案分成了什么样子，你可以直观的看到通过线性和非线性组合，一个多层的简单神经网络就可以把一个分类或回归问题做的相当好。<br><a href="https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=6,5,5,4&amp;seed=0.88851&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=true&amp;xSquared=true&amp;ySquared=true&amp;cosX=false&amp;sinX=true&amp;cosY=false&amp;sinY=true&amp;collectStats=false&amp;problem=regression&amp;initZero=false&amp;hideText=false" target="_blank" rel="noopener">A Neural Network Playground</a>. <strong>(Recommend)</strong></p>
+<h5 id="卷积神经网络为什么有效？"><a href="#卷积神经网络为什么有效？" class="headerlink" title="卷积神经网络为什么有效？"></a>卷积神经网络为什么有效？</h5><p>卷积神经网络可以看做是对视觉神经系统的一种简单模拟<br>1981 年的诺贝尔医学奖，颁发给了 David Hubel（出生于加拿大的美国神经生物学家） 和TorstenWiesel，以及 Roger Sperry。前两位的主要贡献，是<strong>“发现了视觉系统的信息处理”，视觉皮层是分级的。</strong></p>
+<p>对于不同的物体，人类视觉是通过逐层分级，来进行认知的：<br><img src="http://i2.bvimg.com/640680/fefc8e3a01a27627.jpg" alt="Markdown"><br><br><br>在最底层特征基本上是类似的，即各种物体的非常抽象的边缘，越往上，越能提取出此类物体的一些<strong>特征</strong>（轮子、眼睛、躯干等），到更高级的层，不同的高级特征最终组合成相应的图像，从而能够让人类准确的区分不同的物体。</p>
+<p>可不可以模仿人类大脑的这个特点，构造多层的神经网络，较低层的识别初级的图像特征，若干底层特征组成更上一层特征，最终通过多个层级的组合，最终在顶层做出分类呢？<br>这是许多深度学习算法（包括CNN）的灵感来源。其中非常重要的一步就是对图像从低级到高级的特征提取，Lecun等人发现了一种非常好的提取特征的方法，即卷积操作。</p>
+<p>卷积网络通过一系列方法，成功将数据量庞大的图像识别问题不断降维，最终使其能够被训练。CNN最早由Yann LeCun提出并应用在手写字体识别上（MINST）。LeCun提出的网络称为LeNet，其网络结构如下：<br><img src="http://i2.bvimg.com/640680/989124bdbb83b921.jpg" alt="Markdown"></p>
+<p>这是一个最典型的卷积网络，由卷积层、池化层、全连接层组成。其中卷积层与池化层配合，组成多个卷积组，逐层提取特征，最终通过若干个全连接层完成分类。</p>
+<p>卷积核(filter)，感受野，卷积核越小总参数量越小计算量也越小，但是能看到的区域小（折中：Dilated CNN）。<br>Feature map：每一层输入都是一系列叠在一起的二维feature map，与该层的不同卷积核相乘形成新的feature map。<br>此外还有pooling、padding等概念大家可以自行搜索。</p>
+<h5 id="使用opencv中的卷积函数对图像进行变换"><a href="#使用opencv中的卷积函数对图像进行变换" class="headerlink" title="使用opencv中的卷积函数对图像进行变换"></a>使用opencv中的卷积函数对图像进行变换</h5><p>接下来就通过<strong>代码</strong>展示一下卷积是如何实际起作用的，通过opencv中的卷积函数可以对一张计算机视觉领域的经典图片进行一系列的操作。<br><br><br><img src="http://i2.bvimg.com/640680/af93d6a2daaba726.png" alt="Markdown"></p>
+<p><a href="https://pan.baidu.com/s/1L1Wf6tMuA49JtW3yiPDbhQ" target="_blank" rel="noopener">代码在这里</a>  密码: qecg</p>
+<p>代码参考了<a href="https://blog.csdn.net/zouxy09/article/details/49080029" target="_blank" rel="noopener">这篇文章</a>，可以发现通过简单的卷积操作（通过卷积核对原图像矩阵做线性变换）就可以实现边缘检测、锐化、浮雕等多种操作。<br>卷积操作天然地模拟了人眼对物体轮廓的检测，通过多个卷积、池化层的组合，可以解决深度学习领域不同的问题。目前除了图像识别、检测、分割会用到卷积，其他很多需要对数据特征进行抽象和提取的深度学习方法都会广泛的用到卷积操作，甚至包括自然语言处理、结构预测等等。</p>
+<h3 id="深度学习平台介绍"><a href="#深度学习平台介绍" class="headerlink" title="深度学习平台介绍"></a>深度学习平台介绍</h3><p>动手实践深度学习，重要的就是选择一个合适的平台，一个好的深度学习平台会把一些底层的组件实现完毕供人调用，比如卷积核、RNN cell，以及经过优化的反向传播必备的求梯度的方法，如果你手工用numpy实现以下CNN的反向传播，和Tensorflow之类的平台比一下训练的速度，就会发现这些平台在底层做了很多优化，大大提高的训练效率，这在深度学习中非常重要。</p>
+<h4 id="Tensorflow-amp-Keras-Recommend"><a href="#Tensorflow-amp-Keras-Recommend" class="headerlink" title="Tensorflow &amp; Keras.  (Recommend)"></a>Tensorflow &amp; Keras.  (Recommend)</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>目前应用最广泛的是谷歌家开发的Tensorflow，但是代码较为复杂，实现起来不是很容易。有很多基于tensorflow的高层库，其中最广受欢迎的是<a href="https://mp.weixin.qq.com/s/R-29UGMvHyBp8OkWk7zdpw" target="_blank" rel="noopener">剑气之争</a>中的剑宗代表人物Chollet开发的Keras。</p>
+<p>安装起来颇为简单<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Tensorflow安装</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install tensorflow      <span class="comment"># Python 2.7; CPU support (no GPU support)</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip3 install tensorflow     <span class="comment"># Python 3.n; CPU support (no GPU support)</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip install tensorflow-gpu  <span class="comment"># Python 2.7;  GPU support</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> pip3 install tensorflow-gpu <span class="comment"># Python 3.n; GPU support </span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">Keras安装</span></span><br><span class="line">pip install keras</span><br></pre></td></tr></table></figure></p>
+<p>还有其他的安装方式，参考：<br><a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="noopener">Tensorflow 安装</a><br><a href="https://keras.io/#installation" target="_blank" rel="noopener">Keras 安装</a></p>
+<h5 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h5><p>Tensorflow和Keras都有很详细的文档支持，包括热心用户翻译的中文文档（已经成文官方中文文档）和社区。比如<a href="https://keras-cn.readthedocs.io/en/latest/" target="_blank" rel="noopener">Keras中文文档</a>,<a href="http://www.tensorfly.cn/" target="_blank" rel="noopener">TensorFlow中文社区-首页</a></p>
+<p>因为两个库还处于快速迭代更新的阶段，所以有的时候去它们的github仓库搜索相关的代码也是个解决问题的方式。</p>
+<p><a href="https://github.com/keras-team/keras" target="_blank" rel="noopener">Keras github</a> 该项目共有接近30,000 star</p>
+<p><a href="https://github.com/tensorflow/tensorflow" target="_blank" rel="noopener">Tensorflow github</a>  该项目共有超过90,000 star</p>
+<p>更推荐入门和简单使用时选择Keras，可以和Tensorflow无缝衔接，但是语法简单很多。</p>
+<h5 id="Tensorboard监控学习情况"><a href="#Tensorboard监控学习情况" class="headerlink" title="Tensorboard监控学习情况"></a>Tensorboard监控学习情况</h5><p>Tensorboard是Tensorflow的一大利器，Keras也可以无缝使用Tensorboard，而且在Keras中的使用要简单得多。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">model.fit(images_train, y_train, <span class="attribute">batch_size</span>=32,nb_epoch=150,validation_split=0.2,</span><br><span class="line">callbacks[model_checkpoint,EarlyStopping(<span class="attribute">monitor</span>=<span class="string">'CrossEntropyLoss'</span>, <span class="attribute">patience</span>=10),TensorBoard(log_dir='path)])</span><br><span class="line"></span><br><span class="line"><span class="comment">#训练完成后，输入：</span></span><br><span class="line">tensorboard <span class="attribute">--logdir</span>=path</span><br><span class="line"><span class="comment">#即可在本地浏览器打开查看训练情况</span></span><br></pre></td></tr></table></figure></p>
+<p>Tensorboard可以帮助可视化loss曲线的变化，各项指标的变化，重要参数的分布，计算图的图像等，可以清楚地看到整个网络的逻辑，这些对于分析训练的过程，调整参数都非常有用。</p>
+<p>参考链接：<a href="https://blog.csdn.net/sinat_33761963/article/details/62433234" target="_blank" rel="noopener">06：Tensorflow的可视化工具Tensorboard的初步使用 - CSDN博客</a></p>
+<h4 id="Pytorch-Recommend"><a href="#Pytorch-Recommend" class="headerlink" title="Pytorch  (Recommend)"></a>Pytorch  (Recommend)</h4><p>作为深度学习平台的后起之秀，被Facebook接管的pytorch虽然发布不是很久，但是极受推崇</p>
+<p>在Pytorch发布不到三个月的时候，CS231n课程上已经把作业的实现平台列为Tensorflow和Pytorch二选一，而且在评价各个平台时认为‘<strong>Pytorch is Best</strong>’</p>
+<p>深度学习领域的大神贾扬清说：“如果你想认真学machine learning，那请不要用keras，我一般收到的反馈是，keras做简单的东西容易，一旦你要做点真research，就很难改，因为包装太多。”<br>而Tensorflow虽然可以用来做真正的research，但是它的的问题在于其对于代码水平要求非常高，整个系统抽象层次比较高，有些臃肿，其静态图的构建方式使得更改网络结构很不方便。因此在考虑了模型构建和调试时间的情况下，Pytorch反而效率更高，对人类友好得多。CS231n的著名讲师、Tesla的AI主管Karpathy就这样评价Pytorch:</p>
+<p><img src="http://i2.bvimg.com/640680/58bc934f371dcd6f.jpg" alt="Markdown"></p>
+<p>Pytorch优点：</p>
+<ul>
+<li>入门简单，上手快，堪比Keras。</li>
+<li>代码清晰，设计直观，符合人类直觉。</li>
+<li>Facebook托管，质量不需担心，迭代很快。</li>
+<li>定位是快速实验研究，使用动态图设计，构建新层很迅速</li>
+<li>社区友好，问题解答迅速<br><img src="http://i2.bvimg.com/640680/71440c6ba2a94251.jpg" alt="Markdown"><br>可以看到，pytorch的代码的简洁性已经和numpy做普通的科学计算差不多了，比Tensorflow要简洁许多。</li>
+</ul>
+<p><strong>安装pytorch</strong>：</p>
+<p>打开页面<a href="http://pytorch.org/" target="_blank" rel="noopener">PyTorch</a> ，选择所需要的配置即可，最简单的方法是使用conda安装，非常简介，如linux，python2.7，CUDA8.0，运行下面命令即可：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda <span class="keyword">install</span> pytorch torchvision -c pytorch</span><br></pre></td></tr></table></figure></p>
+<p>最后用Pytorch创始人的话结束：<br>PyTorch，就让学生们能充分利用普通Python代码的灵活性和能力，来构建、训练神经网络。这样，他们就能解决更广泛的问题。<br>PyTorch的另一个好处是，它能让学生们更深入地了解每个算法中发生了什么。用TensorFlow那样的静态计算图库，你一旦声明性地表达了你的计算，就把它发送到了GPU，整个处理过程就是一个黑箱。<br>但是通过动态的方法，你可以完全进入计算的每一层，清楚地看到正在发生的情况。我们认为学习深度学习的最佳途径就是通过编程、实验，动态的方法正是我们的学生所需要的。</p>
+<h4 id="高层库"><a href="#高层库" class="headerlink" title="高层库"></a>高层库</h4><p>包括<a href="https://zh.gluon.ai/" target="_blank" rel="noopener">Gluon</a>、<a href="https://github.com/deepmind/sonnet" target="_blank" rel="noopener">Sonnet</a>、<a href="http://tflearn.org/" target="_blank" rel="noopener">TFLearn</a>、<a href="https://github.com/tensorlayer/tensorlayer" target="_blank" rel="noopener">TensorLayer</a>等<br>代码一般更加简洁，适合快速上手学习，但是可能不方便进行深入的研究。</p>
+<h4 id="关于平台的一些教程"><a href="#关于平台的一些教程" class="headerlink" title="关于平台的一些教程"></a>关于平台的一些教程</h4><p>这里推荐的教程都是用jupyter notebook写的，这样非常适合自己一步一步运行代码，尤其适合学习pytorch和keras</p>
+<h5 id="深度学习框架PyTorch：入门与实践"><a href="#深度学习框架PyTorch：入门与实践" class="headerlink" title="深度学习框架PyTorch：入门与实践"></a>深度学习框架PyTorch：入门与实践</h5><p>这个github仓库是<a href="https://github.com/chenyuntc/pytorch-book" target="_blank" rel="noopener">深度学习框架PyTorch的相关代码</a>，也可以作为一个独立的PyTorch入门指南和教程。也是用jupyter notebook教学的，而且Pytorch的特性导致在学习的过程中可以方便地查看变量，很适合初学者，而且该教程用Pytorch实现了几个非常有趣的例子，比如用这两年很火的生成对抗网络(GAN)做了一个生成动漫头像的模型，对图片进行风格迁移以及用神经网络写诗，虽然这不是作者的原创，但是作者的讲解稍微完善，本身就是为了向读者讲解用的，因此更加易于学习</p>
+<h5 id="Keras-Tutorials-Recommend"><a href="#Keras-Tutorials-Recommend" class="headerlink" title="Keras Tutorials   (Recommend)"></a>Keras Tutorials   (Recommend)</h5><p><a href="https://github.com/xingkongliang/Keras-Tutorials" target="_blank" rel="noopener">Keras-Tutorials</a><br>中国人用jupyter notebook写的教程，利用几个经典问题和模型教授Keras相关知识。</p>
+<h4 id="几个不错的基于深度学习平台的学习资源"><a href="#几个不错的基于深度学习平台的学习资源" class="headerlink" title="几个不错的基于深度学习平台的学习资源"></a>几个不错的基于深度学习平台的学习资源</h4><h5 id="动手学深度学习（基于GLUON）-Recommend"><a href="#动手学深度学习（基于GLUON）-Recommend" class="headerlink" title="动手学深度学习（基于GLUON） (Recommend)"></a>动手学深度学习（基于GLUON） (Recommend)</h5><p><a href="https://zh.gluon.ai/" target="_blank" rel="noopener">动手学深度学习 — GLUON</a></p>
+<p>Gluon是基于MXNet的接口，我认为Gluon虽然比较小众，但是代码的清新简洁程度和Pytorch差不多，也很适合用来学习深度学习中的基本概念。</p>
+<p>这个教程是GLUON的开发者亲自完成的，我认为写的非常漂亮，讲解的非常清晰又不乏深度，因此把这个教程排到了第一位。它从线性回归、逻辑回归、感知机开始一路讲到CNN、RNN这样的基础网络，再到计算机视觉和自然语言处理两大经典领域，而且非常注重实践，比如它有一个章节专门讲了个如何用Gluon实战Kaggle上的一个对狗的图片进行分类的问题<a href="https://zh.gluon.ai/chapter_computer-vision/kaggle-gluon-dog.html" target="_blank" rel="noopener">实战Kaggle比赛——使用Gluon识别120种狗</a></p>
+<p>该文档还在不断更新，最近几个月增加了很多新内容，是一个很好的可以跟着学的教程。</p>
+<p>该教程还有视频教学<a href="https://discuss.gluon.ai/t/topic/753" target="_blank" rel="noopener">《动手学深度学习》第一季课程汇总 - 课程信息 - MXNet/Gluon论坛</a></p>
+<h5 id="DeepLearningProject"><a href="#DeepLearningProject" class="headerlink" title="DeepLearningProject"></a>DeepLearningProject</h5><p>一个比较受欢迎的原Harvard TA的对机器学习和深度学习的介绍，每个部分都不是很长，讲解的文字部分比较多，也很适合入门学习。<br><a href="https://spandan-madan.github.io/DeepLearningProject/" target="_blank" rel="noopener">DeepLearning Project</a></p>
+<p>Github:<a href="https://github.com/Spandan-Madan/DeepLearningProject" target="_blank" rel="noopener">An in-depth machine learning tutorial introducing readers to a whole machine learning pipeline from scratch.</a></p>
+<h5 id="DeepSchool-io"><a href="#DeepSchool-io" class="headerlink" title="DeepSchool.io"></a>DeepSchool.io</h5><p><a href="https://github.com/sachinruk/deepschool.io" target="_blank" rel="noopener">deepschool.io: Deep Learning tutorials in jupyter notebooks.</a></p>
+<p>也是个比较受欢迎的深度学习入门教学，也是用jupyter notebook写的，而且顺带讲了一些机器学习的概念，所以也很适合初学者来学习，包括带正则化的线性回归，如何调超参数，XGBoost和sklearn的使用，同时还有一些高级的模型和应用，比如迁移学习，强化学习、对抗网络、语义分析等等。</p>
+<h5 id="其他类似的学习资源"><a href="#其他类似的学习资源" class="headerlink" title="其他类似的学习资源"></a>其他类似的学习资源</h5><ul>
+<li>Fastai出的深度学习教学课程也十分好</li>
+</ul>
+<p><a href="https://github.com/fastai/fastai" target="_blank" rel="noopener">The fast.ai deep learning library, lessons, and tutorials</a></p>
+<ul>
+<li>一个讲了keras和Tensorflow的教程，从MLP到RNN的实现都讲了</li>
+</ul>
+<p><a href="https://github.com/leriomaggio/deep-learning-keras-tensorflow" target="_blank" rel="noopener">Introduction to Deep Neural Networks with Keras and Tensorflow</a></p>
+<ul>
+<li>DeepLearningZeroToAll，这个教程还有视频，用了mxnet、Pytorch、keras在内的多个平台，也很受欢迎。</li>
+</ul>
+<p><a href="https://github.com/hunkim/DeepLearningZeroToAll" target="_blank" rel="noopener">DeepLearningZeroToAll: TensorFlow Basic Tutorial Labs</a></p>
+<h2 id="动手实践部分"><a href="#动手实践部分" class="headerlink" title="动手实践部分"></a>动手实践部分</h2><h3 id="气宗派：徒手实现simple-neural-network"><a href="#气宗派：徒手实现simple-neural-network" class="headerlink" title="气宗派：徒手实现simple neural network"></a>气宗派：徒手实现simple neural network</h3><p><a href="https://github.com/zotroneneis/machine_learning_basics" target="_blank" rel="noopener">这个系列</a>是一个女程序员做的，笔记写的相当好，有详细的公式推导，有很多基础的机器学习的算法和讲解。如果想深入理解诸如前向与反向传播的梯度计算等细节的话可以仔细研究，同样是用jupyter notebook写的，在能够讲解数学原理比较深入的那些教程中应该算是比较友好易学的一个。</p>
+<h3 id="MNIST手写数据识别问题-level-1"><a href="#MNIST手写数据识别问题-level-1" class="headerlink" title="MNIST手写数据识别问题 level 1"></a>MNIST手写数据识别问题 level 1</h3><p>使用Keras方便地搭建MLP和CNN等神经网络解决一个具体的图像识别问题<br><img src="http://i2.bvimg.com/640680/35dfa92b54debbe6.png" alt="Markdown"></p>
+<p>MNIST是一个手写数据集，被誉为机器学习的果蝇(Geofrrey Hinton)，几乎是每一个入门者会尝试的数据集。</p>
+<p>这里使用了两种网络<strong>MLP和CNN</strong>来解决手写数据的分类问题，从载入数据、可视化数据、one hot coding、搭建网络、训练以及测试都有展示。</p>
+<p>还可以使用<strong>Tensorboard</strong>可视化训练过程。</p>
+<p><a href="https://pan.baidu.com/s/1L1Wf6tMuA49JtW3yiPDbhQ" target="_blank" rel="noopener">代码在这里</a>  密码: qecg</p>
+<h3 id="MNIST手写识别及语义分析-level-2"><a href="#MNIST手写识别及语义分析-level-2" class="headerlink" title="MNIST手写识别及语义分析 level 2"></a>MNIST手写识别及语义分析 level 2</h3><p>这是清华大学人工神经网络课程的四次作业：使用numpy实现MLP和CNN，以及使用Tensorflow实现CNN和RNN并用于解决手写数字识别以及语义分割问题，这四个任务的详细要求、数据集和解答已经上传到百度网盘，可以作为一个练习。<a href="https://pan.baidu.com/s/1L1Wf6tMuA49JtW3yiPDbhQ" target="_blank" rel="noopener">代码在这里</a>  密码: qecg。注意在作业中，大多数的代码是写好的，只有少量代码需要自己添加</p>
+<ul>
+<li>用numpy实现MLP解决手写识别</li>
+<li>用numpy实现CNN解决手写识别</li>
+<li>用tensorflow基本函数实现CNN模块与其他结构解决手写识别</li>
+<li>用tensorflow基本函数实现RNN基本模块解决语义分析</li>
+</ul>
+<p>同时这个作业和CS231n的作业十分相像，大家也可以参考这个github仓库：<br><a href="https://github.com/bruceoutdoors/CS231n" target="_blank" rel="noopener">一个学生的CS231n作业</a>  </p>
+<p>它的代码是用jupyter notebook记录的。用numpy实现MLP和CNN的过程相当繁琐，因此用jupyter notebook来学习应该更容易一些。</p>
+<h3 id="使用U-net探索Deepshape问题基本介绍"><a href="#使用U-net探索Deepshape问题基本介绍" class="headerlink" title="使用U-net探索Deepshape问题基本介绍"></a>使用U-net探索Deepshape问题基本介绍</h3><p><a href="https://pan.baidu.com/s/1L1Wf6tMuA49JtW3yiPDbhQ" target="_blank" rel="noopener">代码在这里</a>  密码: qecg</p>
+<h4 id="数据形式"><a href="#数据形式" class="headerlink" title="数据形式"></a>数据形式</h4><p>将同一个序列片段重复128次，用16维one hot向量编码，每个片段形成128<em>128</em>16通道的图片</p>
+<h4 id="U-net"><a href="#U-net" class="headerlink" title="U-net"></a>U-net</h4><p>U-net属于一种全卷积网络（FCN），是解决图像分割尤其是医疗图像问题的非常经典和有用的网络，因为全卷积的设计，可以最终输出图像每个像素点的预测值，而不仅仅是一个或几个数值.<br>一个经典的U-net如图所示<br><img src="http://i2.bvimg.com/640680/acf000d769f49e4f.png" alt="Markdown"></p>
+<p><a href="https://blog.csdn.net/hduxiejun/article/details/71107285" target="_blank" rel="noopener">U-Net 简介</a><br><a href="https://arxiv.org/abs/1505.04597" target="_blank" rel="noopener">U-Net: Convolutional Networks for Biomedical Image Segmentation</a></p>
+<h4 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h4><p>经典的U-net、VGG、Resnet等网络框架，网络上不但有大量的代码，而且还提供了预训练的模型，即在一些公开的数据集，比如ImageNet上预训练过的网络，将其权重存储下来，Keras提供了model. load_model以及load_weights方便用户导入他人提供的模型权重，还可以通过save存储自己的训练好的模型，以备预测或者以后使用。<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">model</span> = UNET_128()</span><br><span class="line"><span class="attr">optim</span> = Adam()</span><br><span class="line">model.compile(<span class="attr">optimizer=optim,</span> <span class="attr">loss=CrossEntropyLoss(model,10),</span> <span class="attr">metrics=[binary_accuracy_with_nan,binary_crossentropy_with_nan,MSE(model)])</span></span><br></pre></td></tr></table></figure></p>
+<p>这里我们采取了Adam作为优化器，它是一种比普通的梯度下降更为有用的方法，Keras在这里列出了多种优化器供选择<a href="https://keras-cn.readthedocs.io/en/latest/other/optimizers/" target="_blank" rel="noopener">优化器Optimizer - Keras中文文档</a><br>Loss function我们使用了自己定义的交叉熵，这是因为我们需要对网络进行一些额外的设计：根据我们所生成的图像，其必然是<strong>对称的</strong>，但是在开始尝试时，模型并不能顾及到这一点，因此我们对模型进行了一些额外的设计：<br>（要注意一点，为了模型能够顺利地进行求梯度以便进行训练，Keras、Tensorflow都要求相关的损失函数和网络层定义必须使用其自己提供的相关函数，而不能用numpy直接做矩阵操作。比如用K.sum()代替np.sum()进行求和。）</p>
+<h5 id="使用Lambda函数按列对图像求平均值"><a href="#使用Lambda函数按列对图像求平均值" class="headerlink" title="使用Lambda函数按列对图像求平均值"></a>使用Lambda函数按列对图像求平均值</h5><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">final = Lambda(<span class="name">lambda</span> x: K.sum(<span class="name">x</span>, axis=1), output_shape=(<span class="number">128</span>,))(<span class="name">conv_final</span>)</span><br><span class="line">#sum by columns output a vector of <span class="number">128</span> elements</span><br><span class="line">final_ = Reshape((<span class="number">128</span>,), input_shape=(<span class="number">128</span>,<span class="number">1</span>))(<span class="name">final</span>)</span><br><span class="line">final =Lambda(<span class="name">lambda</span> x: x/128.<span class="number">0</span>, output_shape=(<span class="number">128</span>,))(<span class="name">final_</span>)</span><br></pre></td></tr></table></figure>
+<p>因为虽然最终预测结果依然是图像，但是我们的y是一维的向量，我们需要讲对整幅图像的预测值做按行或者按列的平均，再和true value比较。</p>
+<h5 id="维持对称性设计"><a href="#维持对称性设计" class="headerlink" title="维持对称性设计"></a>维持对称性设计</h5><p>这里我们使用了特殊的交叉熵函数，交叉熵是一种经典的衡量分类准确率的损失函数，Keras同样提供了很多种损失函数可供选择<a href="https://keras.io/losses/" target="_blank" rel="noopener">Losses - Keras Documentation</a>，这里要特别注意的是数据中的y有很多NaN值，因此不考虑缺失值点。<br>在我们定义的CrossEntropyLoss损失函数中，我们额外增加了一项用MSE来衡量对称性。通过Keras提供的函数model.get_layer，我们可以方便的操作对网络内部的某层进行操作，我们对网络的最后一个卷积层进行对角线对称性的衡量，添加进损失函数中，在接下来的训练中，预测出的结果的对称性得到了很好的改善。这里也可以体现出深度学习通过损失函数的设计来约束模型的训练就可以达到自己的某种目的“方便”。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_crossentropy_with_nan</span><span class="params">(y_true, y_pred)</span></span><span class="symbol">:</span></span><br><span class="line">    not_nan = tf.logical_not(tf.is_nan(y_true))</span><br><span class="line">    y_true = tf.boolean_mask(y_true, not_nan)</span><br><span class="line">    y_pred = tf.boolean_mask(y_pred, not_nan)</span><br><span class="line">    <span class="keyword">return</span> K.mean(K.binary_crossentropy(y_pred, y_true), axis=-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#define new loss using output layer and hidden layer</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CrossEntropyLoss</span>(<span class="title">object</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(<span class="keyword">self</span>, model,alpha)</span></span><span class="symbol">:</span></span><br><span class="line">        <span class="keyword">self</span>.layer = model.get_layer(index = -<span class="number">8</span>).output</span><br><span class="line">        <span class="keyword">self</span>.__name_<span class="number">_</span> = <span class="string">'CrossEntropyLoss'</span></span><br><span class="line">        <span class="keyword">self</span>.alpha = alpha</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(<span class="keyword">self</span>,y_true, y_pred)</span></span><span class="symbol">:</span></span><br><span class="line">        <span class="keyword">return</span> binary_crossentropy_with_nan(y_true, y_pred) + <span class="keyword">self</span>.alpha * mean_squared_error(<span class="keyword">self</span>.layer,tf.transpose(<span class="keyword">self</span>.layer, perm=[<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>]))</span><br></pre></td></tr></table></figure></p>
+<p>使用model.summary还可以查看网络的结构，每层的数据的维度。</p>
+<h5 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h5><p>接下来就是用数据训练数据，可以定义的参数包括每批投入的样本量，轮数，是否混合，cross validation的比例，是否需要提前中止训练，训练过程保存到Tensorboard，模型权重的保存等等<br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">model_checkpoint = ModelCheckpoint<span class="params">('newunet__row_col_weights_mse.hdf5', <span class="attr">monitor</span>='binary_accuracy_with_nan', <span class="attr">save_best_only</span>=True)</span></span><br><span class="line"></span><br><span class="line">def Model<span class="params">(images_train,y_train,cv,seq_counts)</span>:</span><br><span class="line">    model.fit<span class="params">(images_train, y_train, <span class="attr">batch_size</span>=32, <span class="attr">nb_epoch</span>=150,<span class="attr">verbose</span>=1,<span class="attr">shuffle</span>=True,<span class="attr">validation_split</span>=0.2,<span class="attr">callbacks</span>=[model_checkpoint,EarlyStopping(<span class="attr">monitor</span>='CrossEntropyLoss',<span class="attr">patience</span>=10,<span class="attr">verbose</span>=0)</span>,TensorBoard<span class="params">(<span class="attr">log_dir</span>=path)</span>])</span><br><span class="line">    model.save<span class="params">(path)</span></span><br></pre></td></tr></table></figure></p>
+<p>使用K.function函数，可以查看一个输入数据每一层的输出情况，再通过画图可视化之后，非常适合对模型做进一步的分析。<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">inp = model.input                                           <span class="comment"># input placeholder</span></span><br><span class="line">outputs = [layer.output for layer in model.layers]          <span class="comment"># all layer outputs</span></span><br><span class="line">functor = K.function([inp]+ [K.learning_phase()], outputs ) <span class="comment"># evaluation function</span></span><br><span class="line"><span class="comment"># Testing</span></span><br><span class="line">layer_outs = functor([images_train[80], 1.])</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/deep-learning/" rel="tag"><i class="fa fa-tag"></i> deep learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/11/auto12/" rel="prev" title="回忆录 年表">
+                回忆录 年表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习"><span class="nav-number">2.</span> <span class="nav-text">深度学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是深度学习"><span class="nav-number">2.1.</span> <span class="nav-text">什么是深度学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源"><span class="nav-number">2.2.</span> <span class="nav-text">资源</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#书籍资源"><span class="nav-number">2.2.1.</span> <span class="nav-text">书籍资源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#课程资源"><span class="nav-number">2.2.2.</span> <span class="nav-text">课程资源</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速实践入门"><span class="nav-number">3.</span> <span class="nav-text">快速实践入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么从实践开始"><span class="nav-number">3.1.</span> <span class="nav-text">为什么从实践开始</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内力和剑法哪个更重要"><span class="nav-number">3.1.1.</span> <span class="nav-text">内力和剑法哪个更重要</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#“气宗”"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">“气宗”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#“剑宗”"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">“剑宗”</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#以气驭剑？"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">以气驭剑？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一招制敌？"><span class="nav-number">3.1.1.4.</span> <span class="nav-text">一招制敌？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用jupyter-notebook学习各种入门教程"><span class="nav-number">3.2.</span> <span class="nav-text">用jupyter notebook学习各种入门教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动手实践理解卷积："><span class="nav-number">3.2.1.</span> <span class="nav-text">动手实践理解卷积：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#神经网络在做什么"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">神经网络在做什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#卷积神经网络为什么有效？"><span class="nav-number">3.2.1.2.</span> <span class="nav-text">卷积神经网络为什么有效？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用opencv中的卷积函数对图像进行变换"><span class="nav-number">3.2.1.3.</span> <span class="nav-text">使用opencv中的卷积函数对图像进行变换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度学习平台介绍"><span class="nav-number">3.3.</span> <span class="nav-text">深度学习平台介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tensorflow-amp-Keras-Recommend"><span class="nav-number">3.3.1.</span> <span class="nav-text">Tensorflow &amp; Keras.  (Recommend)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">3.3.1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文档"><span class="nav-number">3.3.1.2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Tensorboard监控学习情况"><span class="nav-number">3.3.1.3.</span> <span class="nav-text">Tensorboard监控学习情况</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pytorch-Recommend"><span class="nav-number">3.3.2.</span> <span class="nav-text">Pytorch  (Recommend)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高层库"><span class="nav-number">3.3.3.</span> <span class="nav-text">高层库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于平台的一些教程"><span class="nav-number">3.3.4.</span> <span class="nav-text">关于平台的一些教程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#深度学习框架PyTorch：入门与实践"><span class="nav-number">3.3.4.1.</span> <span class="nav-text">深度学习框架PyTorch：入门与实践</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Keras-Tutorials-Recommend"><span class="nav-number">3.3.4.2.</span> <span class="nav-text">Keras Tutorials   (Recommend)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#几个不错的基于深度学习平台的学习资源"><span class="nav-number">3.3.5.</span> <span class="nav-text">几个不错的基于深度学习平台的学习资源</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动手学深度学习（基于GLUON）-Recommend"><span class="nav-number">3.3.5.1.</span> <span class="nav-text">动手学深度学习（基于GLUON） (Recommend)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DeepLearningProject"><span class="nav-number">3.3.5.2.</span> <span class="nav-text">DeepLearningProject</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DeepSchool-io"><span class="nav-number">3.3.5.3.</span> <span class="nav-text">DeepSchool.io</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他类似的学习资源"><span class="nav-number">3.3.5.4.</span> <span class="nav-text">其他类似的学习资源</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动手实践部分"><span class="nav-number">4.</span> <span class="nav-text">动手实践部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#气宗派：徒手实现simple-neural-network"><span class="nav-number">4.1.</span> <span class="nav-text">气宗派：徒手实现simple neural network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MNIST手写数据识别问题-level-1"><span class="nav-number">4.2.</span> <span class="nav-text">MNIST手写数据识别问题 level 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MNIST手写识别及语义分析-level-2"><span class="nav-number">4.3.</span> <span class="nav-text">MNIST手写识别及语义分析 level 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用U-net探索Deepshape问题基本介绍"><span class="nav-number">4.4.</span> <span class="nav-text">使用U-net探索Deepshape问题基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据形式"><span class="nav-number">4.4.1.</span> <span class="nav-text">数据形式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#U-net"><span class="nav-number">4.4.2.</span> <span class="nav-text">U-net</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计"><span class="nav-number">4.4.3.</span> <span class="nav-text">设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用Lambda函数按列对图像求平均值"><span class="nav-number">4.4.3.1.</span> <span class="nav-text">使用Lambda函数按列对图像求平均值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#维持对称性设计"><span class="nav-number">4.4.3.2.</span> <span class="nav-text">维持对称性设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#训练"><span class="nav-number">4.4.3.3.</span> <span class="nav-text">训练</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共73.2k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>
