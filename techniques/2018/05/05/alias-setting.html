@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="techniques,zsh,alias,setup," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Alias is a very good way to save time and reduce non necessary memory. Since I use zsh, I set the alias in ~/.zshrc.  For example, I even set one alias: srczsh=’source ~/.zshrc’ to enable source more">
+<meta name="keywords" content="techniques,zsh,alias,setup">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alias Setting">
+<meta property="og:url" content="https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="Alias is a very good way to save time and reduce non necessary memory. Since I use zsh, I set the alias in ~/.zshrc.  For example, I even set one alias: srczsh=’source ~/.zshrc’ to enable source more">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-04T16:22:13.364Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alias Setting">
+<meta name="twitter:description" content="Alias is a very good way to save time and reduce non necessary memory. Since I use zsh, I set the alias in ~/.zshrc.  For example, I even set one alias: srczsh=’source ~/.zshrc’ to enable source more">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html"/>
+
+
+
+
+
+  <title>Alias Setting | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Alias Setting</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-05T00:17:18+08:00">
+                2018-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/techniques/2018/05/05/alias-setting.html" class="leancloud_visitors" data-flag-title="Alias Setting">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,050
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Alias is a very good way to save time and reduce non necessary memory. Since I use zsh, I set the alias in ~/.zshrc. </p>
+<p>For example, I even set one alias: srczsh=’source ~/.zshrc’ to enable source more convienient.</p>
+<a id="more"></a>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br></pre></td><td class="code"><pre><span class="line">source /Users/james/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</span><br><span class="line">plugins=(zsh-syntax-highlighting)</span><br><span class="line">alias github='cd /Users/james/Desktop/website/github'</span><br><span class="line">alias web='cd /Users/james/Desktop/website/jamesblog/james20141606.github.io'</span><br><span class="line">alias gitp='ga . &amp;&amp; gcmsg 'update' &amp;&amp; gp'</span><br><span class="line">alias srczsh='source ~/.zshrc'</span><br><span class="line">alias deep='cd /Users/james/Desktop/Deepshape_whole/Deepshape/'</span><br><span class="line">alias gitbookbp='gitbook build &amp;&amp; gitbook pdf .'</span><br><span class="line">alias jp='jupyter notebook'</span><br><span class="line">alias snip='bash syncsnip.sh'</span><br><span class="line">alias hgd='hexo g &amp;&amp; hexo d'</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">zsh配置好的：</span><br><span class="line">-='cd -'</span><br><span class="line">...=../..</span><br><span class="line">....=../../..</span><br><span class="line">.....=../../../..</span><br><span class="line">......=../../../../..</span><br><span class="line">1='cd -'</span><br><span class="line">2='cd -2'</span><br><span class="line">3='cd -3'</span><br><span class="line">4='cd -4'</span><br><span class="line">5='cd -5'</span><br><span class="line">6='cd -6'</span><br><span class="line">7='cd -7'</span><br><span class="line">8='cd -8'</span><br><span class="line">9='cd -9'</span><br><span class="line">_=sudo</span><br><span class="line">afind='ack -il'</span><br><span class="line">d='dirs -v | head -10'</span><br><span class="line">g=git</span><br><span class="line">ga='git add'</span><br><span class="line">gaa='git add --all'</span><br><span class="line">gap='git apply'</span><br><span class="line">gapa='git add --patch'</span><br><span class="line">gau='git add --update'</span><br><span class="line">gb='git branch'</span><br><span class="line">gba='git branch -a'</span><br><span class="line">gbd='git branch -d'</span><br><span class="line">gbda='git branch --no-color --merged | command grep -vE <span class="string">"^(\*|\s*(master|develop|dev)\s*$)"</span> | command xargs -n 1 git branch -d'</span><br><span class="line">gbl='git blame -b -w'</span><br><span class="line">gbnm='git branch --no-merged'</span><br><span class="line">gbr='git branch --remote'</span><br><span class="line">gbs='git bisect'</span><br><span class="line">gbsb='git bisect bad'</span><br><span class="line">gbsg='git bisect good'</span><br><span class="line">gbsr='git bisect reset'</span><br><span class="line">gbss='git bisect start'</span><br><span class="line">gc='git commit -v'</span><br><span class="line">'gc!'='git commit -v --amend'</span><br><span class="line">gca='git commit -v -a'</span><br><span class="line">'gca!'='git commit -v -a --amend'</span><br><span class="line">gcam='git commit -a -m'</span><br><span class="line">'gcan!'='git commit -v -a --no-edit --amend'</span><br><span class="line">'gcans!'='git commit -v -a -s --no-edit --amend'</span><br><span class="line">gcb='git checkout -b'</span><br><span class="line">gcd='git checkout develop'</span><br><span class="line">gcf='git config --list'</span><br><span class="line">gcl='git clone --recursive'</span><br><span class="line">gclean='git clean -fd'</span><br><span class="line">gcm='git checkout master'</span><br><span class="line">gcmsg='git commit -m'</span><br><span class="line">'gcn!'='git commit -v --no-edit --amend'</span><br><span class="line">gco='git checkout'</span><br><span class="line">gcount='git shortlog -sn'</span><br><span class="line">gcp='git cherry-pick'</span><br><span class="line">gcpa='git cherry-pick --abort'</span><br><span class="line">gcpc='git cherry-pick --continue'</span><br><span class="line">gcs='git commit -S'</span><br><span class="line">gcsm='git commit -s -m'</span><br><span class="line">gd='git diff'</span><br><span class="line">gdca='git diff --cached'</span><br><span class="line">gdct='git describe --tags `git rev-list --tags --max-count=1`'</span><br><span class="line">gdcw='git diff --cached --word-diff'</span><br><span class="line">gdt='git diff-tree --no-commit-id --name-only -r'</span><br><span class="line">gdw='git diff --word-diff'</span><br><span class="line">gf='git fetch'</span><br><span class="line">gfa='git fetch --all --prune'</span><br><span class="line">gfo='git fetch origin'</span><br><span class="line">gg='git gui citool'</span><br><span class="line">gga='git gui citool --amend'</span><br><span class="line">ggpull='git pull origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ggpur=ggu</span><br><span class="line">ggpush='git push origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ggsup='git branch --set-upstream-to=origin/<span class="variable">$(git_current_branch)</span>'</span><br><span class="line">ghh='git help'</span><br><span class="line">gignore='git update-index --assume-unchanged'</span><br><span class="line">gignored='git ls-files -v | grep <span class="string">"^[[:lower:]]"</span>'</span><br><span class="line">git-svn-dcommit-push='git svn dcommit &amp;&amp; git push github master:svntrunk'</span><br><span class="line">gk='\gitk --all --branches'</span><br><span class="line">gke='\gitk --all <span class="variable">$(git log -g --pretty=%h)</span>'</span><br><span class="line">gl='git pull'</span><br><span class="line">glg='git log --stat'</span><br><span class="line">glgg='git log --graph'</span><br><span class="line">glgga='git log --graph --decorate --all'</span><br><span class="line">glgm='git log --graph --max-count=10'</span><br><span class="line">glgp='git log --stat -p'</span><br><span class="line">glo='git log --oneline --decorate'</span><br><span class="line">globurl='noglob urlglobber '</span><br><span class="line">glog='git log --oneline --decorate --graph'</span><br><span class="line">gloga='git log --oneline --decorate --graph --all'</span><br><span class="line">glol='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'\'</span><br><span class="line">glola='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset'\'' --all'</span><br><span class="line">glp=_git_log_prettily</span><br><span class="line">glum='git pull upstream master'</span><br><span class="line">gm='git merge'</span><br><span class="line">gma='git merge --abort'</span><br><span class="line">gmom='git merge origin/master'</span><br><span class="line">gmt='git mergetool --no-prompt'</span><br><span class="line">gmtvim='git mergetool --no-prompt --tool=vimdiff'</span><br><span class="line">gmum='git merge upstream/master'</span><br><span class="line">gp='git push'</span><br><span class="line">gpd='git push --dry-run'</span><br><span class="line">gpoat='git push origin --all &amp;&amp; git push origin --tags'</span><br><span class="line">gpristine='git reset --hard &amp;&amp; git clean -dfx'</span><br><span class="line">gpsup='git push --set-upstream origin <span class="variable">$(git_current_branch)</span>'</span><br><span class="line">gpu='git push upstream'</span><br><span class="line">gpv='git push -v'</span><br><span class="line">gr='git remote'</span><br><span class="line">gra='git remote add'</span><br><span class="line">grb='git rebase'</span><br><span class="line">grba='git rebase --abort'</span><br><span class="line">grbc='git rebase --continue'</span><br><span class="line">grbi='git rebase -i'</span><br><span class="line">grbm='git rebase master'</span><br><span class="line">grbs='git rebase --skip'</span><br><span class="line">grep='grep  --color=auto --exclude-dir=&#123;.bzr,CVS,.git,.hg,.svn&#125;'</span><br><span class="line">grh='git reset HEAD'</span><br><span class="line">grhh='git reset HEAD --hard'</span><br><span class="line">grmv='git remote rename'</span><br><span class="line">grrm='git remote remove'</span><br><span class="line">grset='git remote set-url'</span><br><span class="line">grt='cd <span class="variable">$(git rev-parse --show-toplevel || echo ".")</span>'</span><br><span class="line">gru='git reset --'</span><br><span class="line">grup='git remote update'</span><br><span class="line">grv='git remote -v'</span><br><span class="line">gsb='git status -sb'</span><br><span class="line">gsd='git svn dcommit'</span><br><span class="line">gsi='git submodule init'</span><br><span class="line">gsps='git show --pretty=short --show-signature'</span><br><span class="line">gsr='git svn rebase'</span><br><span class="line">gss='git status -s'</span><br><span class="line">gst='git status'</span><br><span class="line">gsta='git stash save'</span><br><span class="line">gstaa='git stash apply'</span><br><span class="line">gstc='git stash clear'</span><br><span class="line">gstd='git stash drop'</span><br><span class="line">gstl='git stash list'</span><br><span class="line">gstp='git stash pop'</span><br><span class="line">gsts='git stash show --text'</span><br><span class="line">gsu='git submodule update'</span><br><span class="line">gts='git tag -s'</span><br><span class="line">gtv='git tag | sort -V'</span><br><span class="line">gunignore='git update-index --no-assume-unchanged'</span><br><span class="line">gunwip='git log -n 1 | grep -q -c <span class="string">"\-\-wip\-\-"</span> &amp;&amp; git reset HEAD~1'</span><br><span class="line">gup='git pull --rebase'</span><br><span class="line">gupv='git pull --rebase -v'</span><br><span class="line">gwch='git whatchanged -p --abbrev-commit --pretty=medium'</span><br><span class="line">gwip='git add -A; git rm <span class="variable">$(git ls-files --deleted)</span> 2&gt; /dev/null; git commit --no-verify -m <span class="string">"--wip-- [skip ci]"</span>'</span><br><span class="line">history=omz_history</span><br><span class="line">l='ls -lah'</span><br><span class="line">la='ls -lAh'</span><br><span class="line">ll='ls -lh'</span><br><span class="line">ls='ls -G'</span><br><span class="line">lsa='ls -lah'</span><br><span class="line">md='mkdir -p'</span><br><span class="line">please=sudo</span><br><span class="line">po=popd</span><br><span class="line">pu=pushd</span><br><span class="line">rd=rmdir</span><br><span class="line">run-help=man</span><br><span class="line">which-command=whence</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/techniques/" rel="tag"><i class="fa fa-tag"></i> techniques</a>
+          
+            <a href="/tags/zsh/" rel="tag"><i class="fa fa-tag"></i> zsh</a>
+          
+            <a href="/tags/alias/" rel="tag"><i class="fa fa-tag"></i> alias</a>
+          
+            <a href="/tags/setup/" rel="tag"><i class="fa fa-tag"></i> setup</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/techniques/2018/05/05/conda.html" rel="next" title="Conda详细配置指南">
+                <i class="fa fa-chevron-left"></i> Conda详细配置指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/techniques/2018/05/05/tools.html" rel="prev" title="神器分享">
+                神器分享 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="footer-custom">A Dreamer Must Have Big Dreams</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共73.2k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>

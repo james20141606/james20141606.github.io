@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="codes,statistics,techniques,bioinformatics,machine learning," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="这是为实验室写的，借由eMaize问题帮助大家简单了解机器学习基本方法和基础代码的教程。也可以在这里看到 由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在这里,欢迎取用。在这里我简单介绍了如何配置jupyter，在Deep Learning tutorial中我也强烈推荐了jupyter，并且介绍了很多基于j">
+<meta name="keywords" content="codes,statistics,techniques,bioinformatics,machine learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="eMaize_Tutorial">
+<meta property="og:url" content="https://www.cmwonderland.com/techniques/machine-learning/2018/04/12/emaize-tutorial.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="这是为实验室写的，借由eMaize问题帮助大家简单了解机器学习基本方法和基础代码的教程。也可以在这里看到 由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在这里,欢迎取用。在这里我简单介绍了如何配置jupyter，在Deep Learning tutorial中我也强烈推荐了jupyter，并且介绍了很多基于j">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://i1.bvimg.com/640680/30af897795c31338.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/b8b10e4aac94c22f.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/53ed95bc3fc879c9.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/3a9fec1a694dc533.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/f9198785ddd4e809.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/18e028db8839992e.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/dc071479d62b84c7.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/b514a9c8b7cc7943.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/bbe789a8598188da.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/19a5441ffb4534eb.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/839f4f607631b772.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/4c1eb79af4bbb5fb.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/bea286d0f130d044.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/17df0a3dcaa71ada.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/50adb2cb87536a3d.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/48ee63cf0c78d296.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/d3bb77a76c162d53.png">
+<meta property="og:image" content="http://i1.bvimg.com/640680/818f1d13de885240.png">
+<meta property="og:updated_time" content="2018-04-16T12:30:23.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="eMaize_Tutorial">
+<meta name="twitter:description" content="这是为实验室写的，借由eMaize问题帮助大家简单了解机器学习基本方法和基础代码的教程。也可以在这里看到 由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在这里,欢迎取用。在这里我简单介绍了如何配置jupyter，在Deep Learning tutorial中我也强烈推荐了jupyter，并且介绍了很多基于j">
+<meta name="twitter:image" content="http://i1.bvimg.com/640680/30af897795c31338.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/techniques/machine-learning/2018/04/12/emaize-tutorial.html"/>
+
+
+
+
+
+  <title>eMaize_Tutorial | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/techniques/machine-learning/2018/04/12/emaize-tutorial.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">eMaize_Tutorial</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T23:30:17+08:00">
+                2018-04-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/techniques/machine-learning/" itemprop="url" rel="index">
+                    <span itemprop="name">machine learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/techniques/machine-learning/2018/04/12/emaize-tutorial.html" class="leancloud_visitors" data-flag-title="eMaize_Tutorial">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  6,268
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  28
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这是为实验室写的，借由eMaize问题帮助大家简单了解机器学习基本方法和基础代码的教程。也可以在<a href="https://lulab.gitbooks.io/bioinfo/content/5%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%95%B4%E5%90%88----%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/51.html" target="_blank" rel="noopener">这里</a>看到</p>
+<p>由于jupyter notebook的强大的展示功能，本教程还用jupyter notebook组织且运行，可以获得更好的学习效果，代码在<a href="https://github.com/james20141606/somethingmore/blob/master/bioinfo.ipynb" target="_blank" rel="noopener">这里</a>,欢迎取用。<a href="http://localhost:4000/2018/04/12/setup/" target="_blank" rel="noopener">在这里</a>我简单介绍了如何配置jupyter，在<a href="https://james20141606.github.io/2018/04/10/Deep-Learning-Practice/" target="_blank" rel="noopener">Deep Learning tutorial</a>中我也强烈推荐了jupyter，并且介绍了很多基于jupyter的资源，强烈建议尝试一下。<br><a id="more"></a></p>
+<h2 id="0-背景简介"><a href="#0-背景简介" class="headerlink" title="0.背景简介"></a>0.背景简介</h2><p>该通过基因型预测表型的实例来自<a href="http://emaize.imaze.org" target="_blank" rel="noopener">eMaize challenge</a>:<br>eMaize问题要求我们以SNP作为特征，通过训练一个模型，对玉米的三个性状进行预测。<br>接下来的教程会展示从原始数据开始，如何对数据进行转换，存取，特征选择以及回归和后续分析的整个过程。本问题最基本的目标是使用6210个样本中的前4754个样本作为训练集，预测其他样本的性状<br></p>
+<h2 id="I-上机指南"><a href="#I-上机指南" class="headerlink" title="I.上机指南"></a>I.上机指南</h2><p>本任务依赖于python语言及jupyter notebook，所需工具已安装到虚拟机。以下指南的所有代码均可在4.Emaize/jupyter_notebook/basic_tutorial.ipynb 中找到。</p>
+<p>使用方法：</p>
+<ul>
+<li><p>打开终端，进入Bioinfo_Lab/4.Emaize/ 文件夹</p>
+</li>
+<li><p>输入jupyter notebook，等待弹出窗口，或者手动复制粘贴终端显示的网址到浏览器。</p>
+</li>
+<li><p>点击jupyter_notebook,再点击basic_tutorial.ipynb,即可看到本部分的教程。按照相关指南一步一步运行即可。本部分接下来的内容与basic_tutorial.ipynb中的内容一致。</p>
+</li>
+</ul>
+<h4 id="jupyter-notebook基本使用指南："><a href="#jupyter-notebook基本使用指南：" class="headerlink" title="jupyter notebook基本使用指南："></a>jupyter notebook基本使用指南：</h4><p>本教程使用jupyter notebook，可以让使用者获得更好的体验，方便对代码进行修改，以及对结果进行查看和分析</p>
+<ul>
+<li>一段相关的代码在同一个代码框中书写 <br></li>
+<li>同时按住shift与enter即可运行选中的代码框的代码<br></li>
+<li>仅仅按enter键具有回车的效果</li>
+<li><h5 id="使用上方的编辑栏："><a href="#使用上方的编辑栏：" class="headerlink" title="使用上方的编辑栏："></a>使用上方的编辑栏：</h5>点击加号在两个代码框中间插入新的代码框，删除代码框点击剪刀，中止程序点击方框</li>
+</ul>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#导入必需的库</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">'ignore'</span>)</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">from sklearn.random_projection <span class="keyword">import</span> SparseRandomProjection</span><br><span class="line">from scipy.sparse <span class="keyword">import</span> load_npz, save_npz</span><br><span class="line"><span class="keyword">import</span> scipy.stats</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> sklearn</span><br><span class="line"><span class="keyword">import</span> h5py</span><br><span class="line">from sklearn.metrics <span class="keyword">import</span> r2_score</span><br><span class="line">from scipy.stats.stats <span class="keyword">import</span> pearsonr</span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line">from sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">#<span class="keyword">import</span> xgboost</span><br><span class="line">#from xgboost.sklearn <span class="keyword">import</span> XGBRegressor</span><br><span class="line">from sklearn.linear_model <span class="keyword">import</span> Ridge</span><br><span class="line">from sklearn.kernel_ridge <span class="keyword">import</span> KernelRidge</span><br><span class="line">from sklearn <span class="keyword">import</span> neighbors</span><br><span class="line">from sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor</span><br><span class="line">from sklearn.gaussian_process <span class="keyword">import</span> GaussianProcessRegressor</span><br><span class="line">from sklearn.gaussian_process.kernels <span class="keyword">import</span> DotProduct</span><br><span class="line">from tqdm <span class="keyword">import</span> tqdm_notebook <span class="keyword">as</span> tqdm</span><br><span class="line">from IPython.display <span class="keyword">import</span> display, Image</span><br><span class="line">%pylab inline</span><br></pre></td></tr></table></figure>
+<h3 id="1-查看原始数据"><a href="#1-查看原始数据" class="headerlink" title="1.查看原始数据"></a>1.查看原始数据</h3><h4 id="1-1-数据种类"><a href="#1-1-数据种类" class="headerlink" title="1.1 数据种类"></a>1.1 数据种类</h4><ul>
+<li>genotype：SNP数据，每个位点可能有三种情况，如AA，AT，TT <br></li>
+<li>trait：共三种，trait1开花期，trait2株高，trait3产量，为连续值 <br></li>
+<li>原始数据中有6210个样本，每个样本SNP位点约为190万个,<br>因为计算资源的原因，这里仅仅选取其中的5000个SNP作为示例,因为数据量的原因，结果肯定不够理想</li>
+</ul>
+<h4 id="1-2-数据格式"><a href="#1-2-数据格式" class="headerlink" title="1.2 数据格式"></a>1.2 数据格式</h4><p>txt存储格式不适合大数据读取的问题，对内存的占用过多。对于结构化的、能够存储为矩阵的数据，可以使用HDF5格式存取，内存占用小，读取速度快</p>
+<h5 id="读取SNP数据"><a href="#读取SNP数据" class="headerlink" title="读取SNP数据"></a>读取SNP数据</h5><p>数据格式为HDF5</p>
+<h5 id="在命令行查看数据shape"><a href="#在命令行查看数据shape" class="headerlink" title="在命令行查看数据shape"></a>在命令行查看数据shape</h5><p>方法为：</p>
+<ul>
+<li>cd至文件路径下，输入：h5ls snp_5000 <br></li>
+<li>若使用了新版h5py，可能出现无法打开的情况，此时输入HDF5_USE_FILE_LOCKING=FALSE h5ls snp_5000</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#使用h5py读取5000个SNP：</span></span><br><span class="line">with h5py.File('data/snp_5000') as f:</span><br><span class="line">snps = f[<span class="string">'snp'</span>][<span class="symbol">:</span>]</span><br><span class="line"><span class="section">#查看数据shape,h5py读取出的snps是一个矩阵，可以用.shape查看其shape</span></span><br><span class="line">snps.shape</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看数据内容</span></span><br><span class="line">snps</span><br></pre></td></tr></table></figure>
+<h5 id="读取性状数据"><a href="#读取性状数据" class="headerlink" title="读取性状数据"></a>读取性状数据</h5><p>使用numpy/pandas均可读取性状数据并显示，这里用pandas展示，真正计算时一般用numpy</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">traits</span> = pd.read_csv(<span class="string">'data/pheno_emaize.txt'</span>,delimiter=<span class="string">'\t'</span>)</span><br><span class="line"><span class="comment">#仅显示前五个,4754之后的样本的性状是未知的</span></span><br><span class="line">traits.head()</span><br></pre></td></tr></table></figure>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#pandas dataframe也可查看<span class="built_in">shape</span></span><br><span class="line"><span class="built_in">print</span> traits.<span class="built_in">shape</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#查看性状的分布情况</span><br><span class="line">trait1 = np.array(traits[<span class="string">'trait1'</span>])[:<span class="number">4754</span>]</span><br><span class="line">trait2 = np.array(traits[<span class="string">'trait2'</span>])[:<span class="number">4754</span>]</span><br><span class="line">trait3 = np.array(traits[<span class="string">'trait3'</span>])[:<span class="number">4754</span>]</span><br><span class="line">fig, ax = plt.subplots(<span class="number">1</span>,<span class="number">3</span>, figsize=(<span class="number">15</span>,<span class="number">3</span>))</span><br><span class="line">ax[<span class="number">0</span>].hist(trait1,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">0</span>].set_title(<span class="string">'normalized trait1 value distribution'</span>)</span><br><span class="line">ax[<span class="number">1</span>].hist(trait2,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">1</span>].set_title(<span class="string">'normalized trait2 value distribution'</span>)</span><br><span class="line">ax[<span class="number">2</span>].hist(trait3,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">2</span>].set_title(<span class="string">'normalized trait3 value distribution'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="http://i1.bvimg.com/640680/30af897795c31338.png" alt="Markdown"></p>
+<h5 id="查看训练集与测试集的划分"><a href="#查看训练集与测试集的划分" class="headerlink" title="查看训练集与测试集的划分"></a>查看训练集与测试集的划分</h5><p>下图中彩色部分为训练集性状，白色部分为待预测性状 <br><br>可以发现其划分方式并不随机，这会导致常规的机器学习方法出现一些问题，由于是基础介绍，这里不讨论如何解决这个问题。</p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def generate_parent_table(phenotype_file):</span><br><span class="line">phenotypes = pd.read_table(phenotype_file)</span><br><span class="line">pedigree = phenotypes[<span class="string">'pedigree'</span>].str.split(<span class="string">'_'</span>, expand=<span class="symbol">True</span>)</span><br><span class="line">pedigree.columns = [<span class="string">'f'</span>, <span class="string">'X'</span>, <span class="string">'m'</span>]</span><br><span class="line">phenotypes = pd.concat([phenotypes, pedigree], axis=<span class="number">1</span>)</span><br><span class="line">phenotypes[<span class="string">'number'</span>] = np.arange(phenotypes.shape[<span class="number">0</span>])</span><br><span class="line">parent_table = phenotypes.pivot_table(values=<span class="string">'number'</span>, index=[<span class="string">'m'</span>], columns=[<span class="string">'f'</span>], dropna=<span class="symbol">False</span>)</span><br><span class="line">male_ids = [<span class="string">'m%d'</span> <span class="comment">% i for i in range(1, parent_table.shape[0] + 1)]</span></span><br><span class="line">female_ids = [<span class="string">'f%d'</span> <span class="comment">% i for i in range(1, parent_table.shape[1] + 1)]</span></span><br><span class="line">parent_table = parent_table.loc[male_ids, female_ids]</span><br><span class="line">return parent_table</span><br><span class="line">phenotype_file = <span class="string">'data/pheno_emaize.txt'</span></span><br><span class="line">parent_table = generate_parent_table(phenotype_file)</span><br><span class="line">phenotypes = pd.read_table(<span class="string">'data/pheno_emaize.txt'</span>)</span><br><span class="line">fig, ax = subplots(<span class="number">3</span>,<span class="number">1</span>, figsize=(<span class="number">20</span>, <span class="number">10</span>))</span><br><span class="line">for i in range(<span class="number">3</span>):</span><br><span class="line">trait = [<span class="string">'trait1'</span>,<span class="string">'trait2'</span>,<span class="string">'trait3'</span>][i]</span><br><span class="line">ax[i].matshow(np.take(np.ravel(phenotypes[trait].values), parent_table), cmap=cm.<span class="symbol">RdBu</span>)</span><br><span class="line">ax[i].set_title(<span class="string">'Phenotypes of training data (%s)'</span><span class="comment">%trait)</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-将SNP数据编码为向量"><a href="#2-将SNP数据编码为向量" class="headerlink" title="2. 将SNP数据编码为向量"></a>2. 将SNP数据编码为向量</h3><p>每个位点的碱基只有三种情况，不会出现更多碱基组合的可能，比如某位点仅有AA，AT，TT三种可能的情况<br><br>我们可以采取三种方式对其编码：</p>
+<ul>
+<li>转化为0、1、2。找到minor allele frequency（MAF），即两种碱基（如A、T）中出现频率低的那个，以A作为MAF为例，则TT为0，AT为1，AA为2，这样可以突出MAF</li>
+<li>转化为3-bit one hot vector,$[1,0,0]^T,[0,1,0]^T,[0,0,1]^T$这样可以保持三种向量在空间距离的一致</li>
+<li>转化为2-bit vector,则AA，AT，TT分别编为$[1,0]^T,[1,1]^T,[0,1]^T$,不需要考虑MAF<br>我们采取第三种方式<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def convert_2bit(seq):</span><br><span class="line">genotypes = np.zeros([6210,2])</span><br><span class="line">a = seq[1].split('/')</span><br><span class="line">for i in range(6210):</span><br><span class="line">if seq[<span class="string">4:</span>][<span class="symbol">i</span>] == a[0] + a[0]:</span><br><span class="line">genotypes[i] = np.array([0,1])</span><br><span class="line">if seq[<span class="string">4:</span>][<span class="symbol">i</span>] == a[0] + a[1]:</span><br><span class="line">genotypes[i] = np.array([1,0])</span><br><span class="line">if seq[<span class="string">4:</span>][<span class="symbol">i</span>] == a[1] + a[1]:</span><br><span class="line">genotypes[i] = np.array([1,1])</span><br><span class="line">genotypes = genotypes.astype('int').T</span><br><span class="line">return genotypes</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>注意，接下来的步骤耗时14min</strong><br>真实计算时此步骤使用C加速计算，这里为了连贯性仅仅展示python的方法 <br><br>可以跳过接下来的代码框步骤，直接使用处理好的结果，结果放在 /data/2bit_geno<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#该代码框可跳过以节约时间，直接运行下一个代码框</span></span><br><span class="line">geno_conv = convert_2bit(snps[1])</span><br><span class="line">for i in tqdm(range(4999)):</span><br><span class="line">geno_conv = np.concatenate((geno_conv,convert_2bit(snps[i+2])),axis =0)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#读取处理成2bit格式的SNP</span></span><br><span class="line">with h5py.File('data/2bit_geno') as f:</span><br><span class="line">geno_conv = f[<span class="string">'data'</span>][<span class="symbol">:</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看SNP的大致情况</span></span><br><span class="line">fig, <span class="attr">ax</span> = plt.subplots(<span class="attr">figsize=(5,10))</span></span><br><span class="line">ax.matshow(geno_conv[:<span class="number">300</span>,:<span class="number">200</span>],<span class="attr">cmap</span> = cm.binary_r)</span><br></pre></td></tr></table></figure>
+<h3 id="3-特征提取与降维"><a href="#3-特征提取与降维" class="headerlink" title="3. 特征提取与降维"></a>3. 特征提取与降维</h3><ul>
+<li>原数据每个样本有190万个SNP，转化为2bit coding后有大约380万个feature，大多数的feature可能是冗余的 <br></li>
+<li>过多的feature使得机器学习模型无法承受，一个考虑时间开销及效果的feature数量应该在几千至几万量级 <br></li>
+</ul>
+<h4 id="特征选择："><a href="#特征选择：" class="headerlink" title="特征选择："></a>特征选择：</h4><p>特征选择的方法包括filter，wrapper和embedding三大类 <br><br>我们使用过如下方法： <br></p>
+<ul>
+<li>Mutual information:劣势在于需要将连续的性状值离散化，损失信息<br></li>
+<li>ANOVA:通过p-value筛选feature，速度较慢，我们设计了加速ANOVA计算的算法。<br></li>
+<li>基于模型的方法:基于广义线性模型或其他带有feature权重的机器学习模型，根据权重挑选feature<br></li>
+</ul>
+<h4 id="降维："><a href="#降维：" class="headerlink" title="降维："></a>降维：</h4><ul>
+<li>PCA、SVD：劣势在于降维后的feature数量不能超过样本数量，一次性损失的feature过多<br></li>
+<li>Random projection:基于LSH的降维方式，速度较快<br></li>
+</ul>
+<p>通过对问题的后续分析，我们发现对于预测绝大多数样本，基本的降维方法就已经够用<br><br>但是对于部分很难预测的样本，简单的特征选择方法也无法取得好的效果<br><br>我们根据后续开发的针对性的模型，设计了基于模型的特征选择方法，因为内容限制，不在这里使用。</p>
+<p><strong>接下来分别使用ANOVA和Random projection演示特征选择和降维，对于后续的计算来说，选择其中一种就可以，也可以把不同的方法拼起来使用</strong></p>
+<p><strong>我们会提供ANOVA、Random projection处理上面5000个snps后的数据，以及在完整数据集上用Random projection降维至10000个feature的数据。用于送入下一部分的回归模型。下面的三种方法的处理后的数据可以在feature_selection文件夹下找到，存储格式为HDF5，可用h5py打开</strong></p>
+<h5 id="ANOVA数据："><a href="#ANOVA数据：" class="headerlink" title="ANOVA数据："></a>ANOVA数据：</h5><p>feature_selection/anova 包含三个性状各自的feature，大小为4000*6210</p>
+<h5 id="Random-projection-5000-数据："><a href="#Random-projection-5000-数据：" class="headerlink" title="Random projection(5000)数据："></a>Random projection(5000)数据：</h5><p>feature_selection/randomproj_5000 从5000个SNPs降维得到，三个性状使用同一组feature,大小为1000*6210</p>
+<h5 id="Random-projection-whole-SNPs-数据："><a href="#Random-projection-whole-SNPs-数据：" class="headerlink" title="Random projection(whole SNPs)数据："></a>Random projection(whole SNPs)数据：</h5><p>feature_selection/randomproj_whole 从所有SNPs降维得到，三个性状使用同一组feature，大小为10000*6210</p>
+<h4 id="3-1-ANOVA"><a href="#3-1-ANOVA" class="headerlink" title="3.1 ANOVA"></a>3.1 ANOVA</h4><p>方差分析方法可以利用p值挑选feature <br><br>调用scipy.stats.f_oneway,利用SNPs和性状可以很容易地计算出p-value，但是对于大量数据来说速度较慢 <br><br>这里我们使用一种加速ANOVA计算的方法完成计算，相比于scipy.stats的方法可以提升计算速度数百倍。<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#加速ANOVA算法</span></span><br><span class="line">def fast_anova_2bit(X, y):</span><br><span class="line">y = y - y.mean()</span><br><span class="line">y2 = y*y</span><br><span class="line">N = X.shape[0]</span><br><span class="line">SS_tot = np.sum(y2)</span><br><span class="line"><span class="comment"># 10, 01, 11</span></span><br><span class="line">masks = [np.logical_and(X[:, 0::2], np.logical_not(X[:, 1::2])),</span><br><span class="line"><span class="section">np.logical_and(np.logical_not(X[:, 0::2]), X[:, 1::2]),</span></span><br><span class="line"><span class="section">np.logical_and(X[:, 0::2], X[:, 1::2])]</span></span><br><span class="line">Ni = np.concatenate([np.sum(mask, axis=0) for mask in masks]).reshape((3, -1))</span><br><span class="line">at_least_one = Ni &gt; 0</span><br><span class="line">SS_bn = [np.sum(y.reshape((-1, 1))*mask, axis=0) for mask in masks]</span><br><span class="line">SS_bn = np.concatenate(SS_bn).reshape((3, -1))</span><br><span class="line">SS_bn **= 2</span><br><span class="line">SS_bn = np.where(at_least_one, SS_bn/Ni, 0)</span><br><span class="line">SS_bn = np.sum(SS_bn, axis=0)</span><br><span class="line">SS_wn = SS_tot - SS_bn</span><br><span class="line">M = np.sum(at_least_one, axis=0)</span><br><span class="line">DF_bn = M - 1</span><br><span class="line">DF_wn = N - M</span><br><span class="line">SS_bn /= DF_bn</span><br><span class="line">SS_wn /= DF_wn</span><br><span class="line">F = SS_bn/SS_wn</span><br><span class="line">p_vals = np.ones(F.shape[0])</span><br><span class="line">ind = np.nonzero(M == 2)[0]</span><br><span class="line">if ind.shape[0] &gt; 0:</span><br><span class="line">p_vals[ind] = scipy.stats.f.sf(F[ind], 1, N - 2)</span><br><span class="line">ind = np.nonzero(M == 3)[0]</span><br><span class="line">if ind.shape[0] &gt; 0:</span><br><span class="line">p_vals[ind] = scipy.stats.f.sf(F[ind], 2, N - 3)</span><br><span class="line">return F, p_vals</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意X和y分别是什么</strong><br>我们需要输入进 fast_anova_2bit(X, y)的X是处理过的SNPs中前4754个样本的，y是trait1、trait2、trait3<br>因为需要分别预测三个性状，我们需要针对三个性状分别挑选特征</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">geno_conv_train = geno_conv[:,:<span class="number">4754</span>]</span><br><span class="line">geno_conv_test = geno_conv[:,<span class="number">4754</span>:]</span><br><span class="line"><span class="built_in">print</span> geno_conv_train.<span class="built_in">shape</span></span><br><span class="line"><span class="built_in">print</span> geno_conv_test.<span class="built_in">shape</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#分别计算三种性状下<span class="number">5000</span>个SNPs做完ANOVA的p-value</span><br><span class="line"><span class="built_in">F,</span>pval_1 = fast_anov<span class="built_in">a_2bit</span>(geno_conv_train.T,trait1)</span><br><span class="line"><span class="built_in">F,</span>pval_2 = fast_anov<span class="built_in">a_2bit</span>(geno_conv_train.T,trait2)</span><br><span class="line"><span class="built_in">F,</span>pval_3 = fast_anov<span class="built_in">a_2bit</span>(geno_conv_train.T,trait3)</span><br><span class="line">pval_1.shape</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots(<span class="number">1</span>,<span class="number">3</span>, figsize=(<span class="number">15</span>,<span class="number">3</span>))</span><br><span class="line">ax[<span class="number">0</span>].hist(pval_1,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">0</span>].set_title('<span class="number">5000</span> SNPs p-value for trait1 distribution')</span><br><span class="line">ax[<span class="number">1</span>].hist(pval_2,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">1</span>].set_title('<span class="number">5000</span> SNPs p-value for trait2 distribution')</span><br><span class="line">ax[<span class="number">2</span>].hist(pval_3,bins = <span class="number">50</span>)</span><br><span class="line">ax[<span class="number">2</span>].set_title('<span class="number">5000</span> SNPs p-value for trait3 distribution')</span><br></pre></td></tr></table></figure>
+<p><img src="http://i1.bvimg.com/640680/b8b10e4aac94c22f.png" alt="Markdown"><br>可以设定一个阈值，比如留下p-value前百分之四十的SNPs,根据index选取留下的SNPs<br><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">threshold1 = np.percentile(pval_1,<span class="number">40</span>)</span><br><span class="line">threshold2 = np.percentile(pval_2,<span class="number">40</span>)</span><br><span class="line">threshold3 = np.percentile(pval_3,<span class="number">40</span>)</span><br><span class="line"><span class="keyword">print</span> 'threshold1: <span class="built_in">%f</span>' <span class="built_in">%threshold</span>1</span><br><span class="line"><span class="keyword">print</span> 'threshold2: <span class="built_in">%f</span>' <span class="built_in">%threshold</span>2</span><br><span class="line"><span class="keyword">print</span> 'threshold3: <span class="built_in">%f</span>' <span class="built_in">%threshold</span>3</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#返回符合条件的p-value的坐标，即可找到需要留下的SNPs的位置，注意每个SNPs占据两行</span></span><br><span class="line"><span class="attr">anova_index_1</span> = np.where(pval_1&lt;threshold1)[<span class="number">0</span>]</span><br><span class="line"><span class="attr">anova_index_1</span> = np.sort(np.concatenate((anova_index_1,anova_index_1 +<span class="number">1</span>)))</span><br><span class="line"><span class="attr">anova_index_2</span> = np.where(pval_2&lt;threshold2)[<span class="number">0</span>]</span><br><span class="line"><span class="attr">anova_index_2</span> = np.sort(np.concatenate((anova_index_2,anova_index_2 +<span class="number">1</span>)))</span><br><span class="line"><span class="attr">anova_index_3</span> = np.where(pval_3&lt;threshold3)[<span class="number">0</span>]</span><br><span class="line"><span class="attr">anova_index_3</span> = np.sort(np.concatenate((anova_index_3,anova_index_3 +<span class="number">1</span>)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#根据p-value选取保留的SNPs，注意这一步要在所有的6210个样本上做</span></span><br><span class="line"><span class="attr">feature1_anova</span> = np.take(geno_conv,anova_index_1,axis=<span class="number">0</span>)</span><br><span class="line"><span class="attr">feature2_anova</span> = np.take(geno_conv,anova_index_2,axis=<span class="number">0</span>)</span><br><span class="line"><span class="attr">feature3_anova</span> = np.take(geno_conv,anova_index_3,axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="3-2-Random-projection"><a href="#3-2-Random-projection" class="headerlink" title="3.2 Random projection"></a>3.2 Random projection</h4><p>Random projection 不依赖于性状，仅仅在原SNPs数据进行降维 <br><br>Random projection可以使用scikit-learn下的sklearn.random_projection模块计算 <br><br>包括generate，transform和normalize等步骤 <br><br>这里演示从5000个feature（10000行）降维</p>
+<h5 id="3-2-1-generate"><a href="#3-2-1-generate" class="headerlink" title="3.2.1 generate"></a>3.2.1 generate</h5><p>产生一个稀疏矩阵</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#<span class="number">10000</span>为操作前的feature个数：<span class="number">2</span>*<span class="number">5000</span></span><br><span class="line">X = np.zeros((<span class="number">2</span>, <span class="number">10000</span>))</span><br><span class="line">#确定降维后的个数，这里定为<span class="number">1000</span>，使用sklearn random_projection 模块下的 SparseRandomProjection 函数</span><br><span class="line">proj = SparseRandomProjection(<span class="number">1000</span>)</span><br><span class="line">proj.fit(X)</span><br><span class="line">print proj.components_.shape</span><br></pre></td></tr></table></figure>
+<h5 id="3-2-2-transform"><a href="#3-2-2-transform" class="headerlink" title="3.2.2 transform"></a>3.2.2 transform</h5><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">X</span>= geno_conv.T</span><br><span class="line"><span class="attr">X_</span> = proj.transform(X)</span><br></pre></td></tr></table></figure>
+<h5 id="3-2-3-normalize"><a href="#3-2-3-normalize" class="headerlink" title="3.2.3 normalize"></a>3.2.3 normalize</h5><p>对每个feature进行normalize，避免出现过大的值<br><figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">normalized_feeature = StandardScaler().fit_transform(X_).T</span><br></pre></td></tr></table></figure></p>
+<p>最终大小为1000*6210，结果在feature_selection/randomproj_5000</p>
+<h3 id="4-回归模型"><a href="#4-回归模型" class="headerlink" title="4. 回归模型"></a>4. 回归模型</h3><p>这部分通过几个常用的机器学习模型对上一部处理过的feature进行拟合和预测<br>这里使用sklearn和xgboost提供的模块，这些模块具有很好的封装，使用风格统一，使用时可以查看其官方文档<br><br>这里不介绍具体的机器学习模型的算法原理，可以参考周志华老师的《机器学习》等书进行学习。</p>
+<h4 id="4-1-机器学习模型"><a href="#4-1-机器学习模型" class="headerlink" title="4.1 机器学习模型"></a>4.1 机器学习模型</h4><p>接下来会使用一些常用的可以用于回归的机器学习模型，可以选择其中的一种或几种对feature_selection/文件夹下的三种数据进行回归和预测。下面我们将几个模型列出，并且选择其中的一种作为示例，其他的模型可同理调用。 <br></p>
+<h4 id="4-2-评价指标"><a href="#4-2-评价指标" class="headerlink" title="4.2 评价指标"></a>4.2 评价指标</h4><p>我们使用<script type="math/tex">r^2,pcc</script>作为衡量预测结果的指标</p>
+<p>$r^2 = 1-\frac{SS<em>{res}}{SS</em>{tot}}$</p>
+<p>$pcc = \frac{cov(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X-\mu_X)(Y-\mu_Y)]}{\sigma_X \sigma_Y} $</p>
+<p>我们可以绘制结果的heatmap图，散点图等进行可视化。</p>
+<h4 id="4-3-交叉验证"><a href="#4-3-交叉验证" class="headerlink" title="4.3 交叉验证"></a>4.3 交叉验证</h4><p>交叉验证(Cross validation)可以帮助调参，寻找机器学习模型中的超参数 <br><br>一般可以使用10折或者5折交叉验证，注意在最终预测时，使用调参后的模型在整个训练集上训练，这时不再交叉验证 <br><br>因为交叉验证需要额外增加计算时间，因此这里只在整个训练集上训练一次，不再展示交叉验证的过程。</p>
+<p><strong>如果深究的话，本问题还有其特殊性，可以设计特殊的交叉验证方式</strong><br>不同的样本具有关联性CV，有的样本可能来自同一亲本，而且训练集和测试集的划分并不是随机的<br>因此在真正解决这个问题的时候，需要考虑不同的抽样方式下的调参与训练，我们可以使用下图所示的几种抽样方式<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="function"><span class="keyword">method</span> <span class="title">in</span> <span class="params">(<span class="string">'random'</span>, <span class="string">'by_female'</span>, <span class="string">'by_male'</span>, <span class="string">'cross'</span>)</span>:</span></span><br><span class="line"><span class="keyword">with</span> h5py.File(<span class="string">'data/cv_index.%s'</span>%<span class="function"><span class="keyword">method</span>, '<span class="title">r</span>') <span class="title">as</span> <span class="title">f</span>:</span></span><br><span class="line">index_train = f[<span class="string">'0/train'</span>][:]</span><br><span class="line">index_test = f[<span class="string">'0/test'</span>][:]</span><br><span class="line">fig, ax = subplots(<span class="number">2</span>, <span class="number">1</span>, figsize=(<span class="number">16</span>, <span class="number">6</span>))</span><br><span class="line">sampling_table = np.zeros(np.prod(parent_table.shape))</span><br><span class="line">sampling_table[index_train] = <span class="number">1</span></span><br><span class="line">sampling_table = np.take(sampling_table, parent_table)</span><br><span class="line">ax[<span class="number">0</span>].matshow(sampling_table, cmap=cm.Greys)</span><br><span class="line">ax[<span class="number">0</span>].set_title(<span class="string">'Training samples (%s)'</span>%<span class="function"><span class="keyword">method</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">sampling_table</span> = <span class="title">np</span>.<span class="title">zeros</span><span class="params">(np.prod(parent_table.shape)</span>)</span></span><br><span class="line"><span class="function"><span class="title">sampling_table</span>[<span class="title">index_test</span>] = 1</span></span><br><span class="line"><span class="function"><span class="title">sampling_table</span> = <span class="title">np</span>.<span class="title">take</span><span class="params">(sampling_table, parent_table)</span></span></span><br><span class="line"><span class="function"><span class="title">ax</span>[1].<span class="title">matshow</span><span class="params">(sampling_table, cmap=cm.Greys)</span></span></span><br><span class="line"><span class="function"><span class="title">ax</span>[1].<span class="title">set_title</span><span class="params">(<span class="string">'Test samples (%s)'</span>%<span class="keyword">method</span>)</span></span></span><br><span class="line"><span class="function"><span class="title">plt</span>.<span class="title">tight_layout</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://i1.bvimg.com/640680/53ed95bc3fc879c9.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/3a9fec1a694dc533.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/f9198785ddd4e809.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/18e028db8839992e.png" alt="Markdown"></p>
+<h4 id="4-4-准备数据"><a href="#4-4-准备数据" class="headerlink" title="4.4 准备数据"></a>4.4 准备数据</h4><p>sklearn的机器学习模型一般需要提供X和y以供模型训练，然后提供新的X，模型就可以预测新的y <br><br>通过前面的工作，我们获得了三种不同的X(ANOVA、random projection(5000/whole))，我们还需要将X和y划分为训练集和测试集 <br><br>注意我们需要分别对三个性状进行预测，因此ANOVA的X是三种 <br><br><strong>评价模型的时候要注意，y_true的部分值缺失</strong></p>
+<h5 id="4-4-1-准备y"><a href="#4-4-1-准备y" class="headerlink" title="4.4.1 准备y"></a>4.4.1 准备y</h5><p>先处理y，y 的train和test是统一的，不受方法影响<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#y 的train和test的统一的，不受方法影响</span></span><br><span class="line">pheno<span class="emphasis">_whole = pd.read_</span>csv('data/emaize<span class="emphasis">_pheno_</span>whole',delimiter=',')</span><br><span class="line">wholepheno = &#123;&#125;</span><br><span class="line">for trait in ['trait1','trait2','trait3']:</span><br><span class="line">wholepheno[trait] = np.array(pheno_whole[trait])</span><br><span class="line">y_train = &#123;&#125;</span><br><span class="line">y_test = &#123;&#125;</span><br><span class="line">for trait in ['trait1','trait2','trait3']:</span><br><span class="line">y_train[<span class="string">trait</span>] = wholepheno[<span class="string">trait</span>][<span class="symbol">:4754</span>]</span><br><span class="line">y_test[<span class="string">trait</span>] = wholepheno[<span class="string">trait</span>][<span class="symbol">4754:</span>]</span><br></pre></td></tr></table></figure></p>
+<h5 id="4-4-2-准备X"><a href="#4-4-2-准备X" class="headerlink" title="4.4.2 准备X"></a>4.4.2 准备X</h5><p>再处理X，使用ANOVA时X要区分不同性状，Random projection由于是与性状无关的降维方法，三种性状下的feature都一样 <br><br>因为机器学习模型要求一般数据形式为sample*feature，因此需要对结果转置<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">def prepare_data(method):</span><br><span class="line">if method == 'randomproj_5000':</span><br><span class="line">with h5py.File('feature<span class="emphasis">_selection/randomproj_</span>5000') as f:</span><br><span class="line">X_train = f[<span class="string">'data'</span>][<span class="symbol">:</span>][<span class="string">:,:4754</span>].T</span><br><span class="line">X_test = f[<span class="string">'data'</span>][<span class="symbol">:</span>][<span class="string">:,4754:</span>].T</span><br><span class="line">if method == 'randomproj_whole':</span><br><span class="line">with h5py.File('feature<span class="emphasis">_selection/randomproj_</span>whole') as f:</span><br><span class="line">X_train = f[<span class="string">'X'</span>][<span class="symbol">:</span>][<span class="string">:4754,:</span>]</span><br><span class="line">X_test = f[<span class="string">'X'</span>][<span class="symbol">:</span>][<span class="string">4754:,:</span>]</span><br><span class="line">if method == 'anova':</span><br><span class="line">X_train = &#123;&#125;</span><br><span class="line">X_test = &#123;&#125;</span><br><span class="line">with h5py.File('feature_selection/anova') as f:</span><br><span class="line">X_train[<span class="string">'trait1'</span>] = f[<span class="string">'feature1'</span>][<span class="symbol">:</span>][<span class="string">:,:4754</span>].T</span><br><span class="line">X_test[<span class="string">'trait1'</span>] = f[<span class="string">'feature1'</span>][<span class="symbol">:</span>][<span class="string">:,4754:</span>].T</span><br><span class="line">X_train[<span class="string">'trait2'</span>] = f[<span class="string">'feature2'</span>][<span class="symbol">:</span>][<span class="string">:,:4754</span>].T</span><br><span class="line">X_test[<span class="string">'trait2'</span>] = f[<span class="string">'feature2'</span>][<span class="symbol">:</span>][<span class="string">:,4754:</span>].T</span><br><span class="line">X_train[<span class="string">'trait3'</span>] = f[<span class="string">'feature3'</span>][<span class="symbol">:</span>][<span class="string">:,:4754</span>].T</span><br><span class="line">X_test[<span class="string">'trait3'</span>] = f[<span class="string">'feature3'</span>][<span class="symbol">:</span>][<span class="string">:,4754:</span>].T</span><br><span class="line">return X<span class="emphasis">_train,X_</span>test</span><br></pre></td></tr></table></figure></p>
+<p>选择三种方法之一作为X,注意ANOVA方法返回的X需要指明性状</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查看anova方法的X_train X_test</span><br><span class="line">X_train, X_test = prepare_data(<span class="string">'anova'</span>)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'anova method X_train shape: %s'</span> %(X_train[<span class="string">'trait1'</span>].shape,)</span><br><span class="line"><span class="keyword">print</span> <span class="string">'anova method X_test shape: %s'</span> %(X_test[<span class="string">'trait1'</span>].shape,)</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#查看<span class="built_in">random</span> projection方法的X_train X_test</span><br><span class="line">X_train, X_test = prepare_data('randomproj_5000')</span><br><span class="line"><span class="built_in">print</span> '<span class="built_in">random</span> projection <span class="built_in">method</span> X_train shape: <span class="built_in">%s</span>' <span class="symbol">%</span>(X_train.shape,)</span><br><span class="line"><span class="built_in">print</span> '<span class="built_in">random</span> projection <span class="built_in">method</span> X_test shape: <span class="built_in">%s</span>' <span class="symbol">%</span>(X_test.shape,)</span><br></pre></td></tr></table></figure>
+<h4 id="4-5-选择需要的机器学习模型"><a href="#4-5-选择需要的机器学习模型" class="headerlink" title="4.5 选择需要的机器学习模型"></a>4.5 选择需要的机器学习模型</h4><p>接下来会提供多种机器学习模型，并且讲解其使用方法，可以选择自己喜欢的模型进行回归，也可以用sklearn或其他package提供的模型<br>模型包括：</p>
+<ul>
+<li>lr: Linear regression</li>
+<li>ridge: Ridge regression</li>
+<li>kr: Kernel Ridge regression</li>
+<li>rfr: Random Forest regression</li>
+<li>xgbr: XGBoost regression</li>
+<li>knr: K-nearest neigbour regression</li>
+<li>gpr: Gaussian Process regression<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def Model(model):</span><br><span class="line"><span class="keyword">if</span> <span class="attr">model=='lr':</span></span><br><span class="line"><span class="attr">reg</span> = LinearRegression()</span><br><span class="line"><span class="comment">#elif model=='xgbr':</span></span><br><span class="line"><span class="comment"># reg = XGBRegressor()</span></span><br><span class="line">elif <span class="attr">model=='ridge':</span></span><br><span class="line"><span class="attr">reg</span> = Ridge()</span><br><span class="line">elif <span class="attr">model=='kr':</span></span><br><span class="line"><span class="attr">reg</span> = KernelRidge(<span class="attr">alpha</span> = <span class="number">10000</span>, <span class="attr">kernel</span> = 'polynomial',<span class="attr">degree</span> = <span class="number">3</span>)</span><br><span class="line">elif <span class="attr">model=='knr':</span></span><br><span class="line"><span class="attr">reg</span> = neighbors.KNeighborsRegressor(<span class="attr">n_neighbors=4,</span> <span class="attr">algorithm='brute')</span></span><br><span class="line">elif <span class="attr">model=='rfr':</span></span><br><span class="line"><span class="attr">reg</span> = RandomForestRegressor(<span class="attr">n_estimators=10,</span> <span class="attr">criterion='mse',</span> <span class="attr">max_depth=12,</span> <span class="attr">n_jobs=5)</span></span><br><span class="line">elif <span class="attr">model=='gpr':</span></span><br><span class="line"><span class="attr">kernel</span> = <span class="number">1.0</span> * DotProduct(<span class="attr">sigma_0=1.0)**4</span></span><br><span class="line"><span class="attr">reg</span> = GaussianProcessRegressor(<span class="attr">kernel</span> = kernel, <span class="attr">optimizer=None)</span></span><br><span class="line">return reg</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>接下来可以使用三种特征（X）中的一种以及七种方法中的一种进行训练和预测 <br><br>这里我们以randomproj_5000作为特征，用Ridge作为回归模型演示 <br><br>如果用anova得到的feature，需要注意不同性状的feature不一样 <br></p>
+<h5 id="某个机器学习模型的使用方法如下：reg-fit-X-y-用于拟合，reg-predict-X-用于预测。更多用法可以参考sklearn官方文档"><a href="#某个机器学习模型的使用方法如下：reg-fit-X-y-用于拟合，reg-predict-X-用于预测。更多用法可以参考sklearn官方文档" class="headerlink" title="某个机器学习模型的使用方法如下：reg.fit(X,y)用于拟合，reg.predict(X)用于预测。更多用法可以参考sklearn官方文档"></a>某个机器学习模型的使用方法如下：reg.fit(X,y)用于拟合，reg.predict(X)用于预测。更多用法可以参考sklearn官方文档</h5><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">X_train, X_test = prepare_data(<span class="string">'randomproj_whole'</span>)</span><br><span class="line">reg = Model(<span class="string">'gpr'</span>)</span><br><span class="line">y_predict = &#123;&#125;</span><br><span class="line">y_predict_train = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> <span class="class"><span class="keyword">trait</span> <span class="title">in</span> <span class="title">tqdm</span></span>([<span class="string">'trait1'</span>,<span class="string">'trait2'</span>,<span class="string">'trait3'</span>]):</span><br><span class="line">reg.fit(X_train,y_train[<span class="class"><span class="keyword">trait</span>])</span></span><br><span class="line">y_predict[<span class="class"><span class="keyword">trait</span>] = <span class="title">reg</span>.<span class="title">predict</span></span>(X_test)</span><br><span class="line">y_predict_train[<span class="class"><span class="keyword">trait</span>] = <span class="title">reg</span>.<span class="title">predict</span></span>(X_train)</span><br><span class="line"></span><br><span class="line">X_test.shape</span><br></pre></td></tr></table></figure>
+<p>计算预测结果与真实值的<script type="math/tex">r^2,pcc</script><br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">test_nonan = np.where(np.isnan(np.array(pheno_whole[<span class="string">'trait1'</span>])[<span class="number">4754</span>:]) ==<span class="number">0</span>)</span><br><span class="line">pcc_train = &#123;&#125;</span><br><span class="line">pcc_test = &#123;&#125;</span><br><span class="line">r2_train = &#123;&#125;</span><br><span class="line">r2_test = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> <span class="class"><span class="keyword">trait</span> <span class="title">in</span> ['<span class="title">trait1</span>',<span class="type">'trait2'</span>,<span class="type">'trait3']:</span></span></span><br><span class="line">pcc_test[<span class="class"><span class="keyword">trait</span>] = <span class="title">pearsonr</span></span>(y_predict[<span class="class"><span class="keyword">trait</span>][<span class="title">test_nonan</span>],<span class="type">np.array</span></span>(pheno_whole[<span class="class"><span class="keyword">trait</span>])[4754:<span class="type">][test_nonan])</span></span></span><br><span class="line">pcc_train[<span class="class"><span class="keyword">trait</span>] = <span class="title">pearsonr</span></span>(y_predict_train[<span class="class"><span class="keyword">trait</span>],<span class="type">y_train[trait])</span></span></span><br><span class="line">r2_test[<span class="class"><span class="keyword">trait</span>] = <span class="title">r2_score</span></span>(y_predict[<span class="class"><span class="keyword">trait</span>][<span class="title">test_nonan</span>],<span class="type">np.array</span></span>(pheno_whole[<span class="class"><span class="keyword">trait</span>])[4754:<span class="type">][test_nonan])</span></span></span><br><span class="line">r2_train[<span class="class"><span class="keyword">trait</span>] = <span class="title">r2_score</span></span>(y_predict_train[<span class="class"><span class="keyword">trait</span>],<span class="type">y_train[trait])</span></span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcc_test</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pcc_train</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r2_test</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">r2_train</span><br></pre></td></tr></table></figure>
+<p>可以看到预测结果并不是很好，在测试集上的pcc只有0.5左右。后续的分析可以发现，这是因为样本之间具有相关性导致的<br><br>具体的原因分析比较复杂，简单来说，因为这组测试集与训练集的样本的亲本之间亲缘关系较远，模型难以从SNPs得到的feature推断出亲本信息，导致预测结果较差。</p>
+<p>绘制heatmap图观察预测结果 <br><br>GPR具有很强的拟合能力，总可以在训练集上得到接近1的PCC<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fig, ax = plt.subplots(<span class="number">2</span>,<span class="number">3</span>, figsize=(<span class="number">15</span>,<span class="number">10</span>))</span><br><span class="line">for i in range(<span class="number">3</span>):</span><br><span class="line">traits = [<span class="string">'trait1'</span>,<span class="string">'trait2'</span>,<span class="string">'trait3'</span>]</span><br><span class="line">ax[<span class="number">0</span>,i].scatter(y_predict[traits[i]][test_nonan],np.array(pheno_whole[traits[i]])[<span class="number">4754</span>:][test_nonan])</span><br><span class="line">ax[<span class="number">0</span>,i].set_title(<span class="string">'%s test set predict &amp; true value plot'</span> <span class="comment">%traits[i])</span></span><br><span class="line">line1 = [(<span class="number">-4</span>, <span class="number">-4</span>), (<span class="number">4</span>, <span class="number">4</span>)]</span><br><span class="line">(line1_xs, line1_ys) = zip(*line1)</span><br><span class="line">ax[<span class="number">0</span>,i].add_line(<span class="symbol">Line2D</span>(line1_xs, line1_ys, linewidth=<span class="number">1</span>, color=<span class="string">'red'</span>))</span><br><span class="line">ax[<span class="number">0</span>,i].set_xlim(left=<span class="number">-4</span>, right=<span class="number">4</span>)</span><br><span class="line">ax[<span class="number">0</span>,i].set_ylim(bottom=<span class="number">-4</span>, top=<span class="number">4</span>)</span><br><span class="line">ax[<span class="number">1</span>,i].scatter(y_predict_train[traits[i]],y_train[traits[i]])</span><br><span class="line">ax[<span class="number">1</span>,i].set_title(<span class="string">'%s train set predict &amp; true value plot'</span> <span class="comment">%traits[i])</span></span><br><span class="line">ax[<span class="number">1</span>,i].add_line(<span class="symbol">Line2D</span>(line1_xs, line1_ys, linewidth=<span class="number">1</span>, color=<span class="string">'red'</span>))</span><br><span class="line">ax[<span class="number">1</span>,i].set_xlim(left=<span class="number">-4</span>, right=<span class="number">4</span>)</span><br><span class="line">ax[<span class="number">1</span>,i].set_ylim(bottom=<span class="number">-4</span>, top=<span class="number">4</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://i1.bvimg.com/640680/dc071479d62b84c7.png" alt="Markdown"></p>
+<p>绘制完整真实值与预测值的heatmap图 <br><br>从图中我们可以清晰地看出一个基本的模型的问题： <br><br>模型强烈地依赖已有信息进行预测，当未知样本的父本与已知训练集的亲缘关系较远时，模型只能依赖母本（横坐标）进行预测 <br><br>导致预测的heatmap图有明显的与母本相关的特征，而实际上子代的性状更容易被父本主导 <br></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">wholepre = np.concatenate((y_predict[<span class="string">'trait1'</span>],y_predict[<span class="string">'trait2'</span>],y_predict[<span class="string">'trait3'</span>])).reshape(<span class="number">3</span>,<span class="number">-1</span>)</span><br><span class="line">predictions = pd.DataFrame(wholepre.T)</span><br><span class="line">predictions.columns = [<span class="string">'trait1'</span>, <span class="string">'trait2'</span>, <span class="string">'trait3'</span>]</span><br><span class="line">predictions = predictions.set_index(np.arange(<span class="number">4754</span>,<span class="number">6210</span>))</span><br><span class="line">def normalize_phenotype(x, range_pheno=<span class="number">4.0</span>):</span><br><span class="line"><span class="keyword">return</span> (np.clip(x, -range_pheno, range_pheno) + range_pheno)/<span class="number">2.0</span>/range_pheno</span><br><span class="line"><span class="keyword">for</span> <span class="class"><span class="keyword">trait</span> <span class="title">in</span> <span class="title">traits</span>:<span class="type"></span></span></span><br><span class="line">fig, ax = subplots(<span class="number">2</span>, <span class="number">1</span>, figsize=(<span class="number">16</span>, <span class="number">6</span>))</span><br><span class="line">ax[<span class="number">0</span>].matshow(np.take(np.ravel(normalize_phenotype(pheno_whole[<span class="class"><span class="keyword">trait</span>].<span class="title">values</span>)), <span class="type">parent_table)</span>, <span class="type">cmap=cm.RdBu_r)</span></span></span><br><span class="line">ax[<span class="number">0</span>].set_title(<span class="string">'Phenotypes of whole true data (%s)'</span>%<span class="class"><span class="keyword">trait</span>)</span></span><br><span class="line"></span><br><span class="line">trait_pred = np.full(phenotypes.shape[<span class="number">0</span>], np.nan)</span><br><span class="line">trait_pred[predictions.index.tolist()] = normalize_phenotype(predictions[<span class="class"><span class="keyword">trait</span>].<span class="title">values</span>)</span></span><br><span class="line">ax[<span class="number">1</span>].matshow(np.take(trait_pred, parent_table), cmap=cm.RdBu)</span><br><span class="line">ax[<span class="number">1</span>].set_title(<span class="string">'Prediction on test data (%s 1)'</span>%traits)</span><br></pre></td></tr></table></figure>
+<p><img src="http://i1.bvimg.com/640680/b514a9c8b7cc7943.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/bbe789a8598188da.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/19a5441ffb4534eb.png" alt="Markdown"></p>
+<h3 id="后续分析"><a href="#后续分析" class="headerlink" title="后续分析"></a>后续分析</h3><h4 id="不同样本具有不同的预测难度"><a href="#不同样本具有不同的预测难度" class="headerlink" title="不同样本具有不同的预测难度"></a>不同样本具有不同的预测难度</h4><p>普通的机器学习模型在测试集上表现结果不好，但是通过多次的十字交叉抽样模拟，可以发现不同样本的预测难度不同，在大多数样本上，不需要专门设计的机器学习模型就足够表现很好</p>
+<h4 id="样本之间具有关联性"><a href="#样本之间具有关联性" class="headerlink" title="样本之间具有关联性"></a>样本之间具有关联性</h4><p>不服从一些基本的假设，比如线性模型下，残差并不是独立的，需要考虑问题的特殊性进行额外的设计。<br><br>由于存储空间和计算时间的限制，无法展示其他有效的方法，有兴趣的同学可以查找育种领域的其他模型进行尝试。</p>
+<h4 id="复杂的机器学习模型并不一定有效"><a href="#复杂的机器学习模型并不一定有效" class="headerlink" title="复杂的机器学习模型并不一定有效"></a>复杂的机器学习模型并不一定有效</h4><p>育种领域目前最好的模型依然是线性模型，通过特殊的设计，可以考虑到亲缘关系、显著相关的SNP(causal)以及随机效应部分<br>而寻找合适的feature是预测结果好坏的决定性因素，至今没有非常好的方法。</p>
+<p>我们通过模拟特殊的十字交叉抽样方式发现，虽然测试集的样本不好预测，但是大多数的样本使用简单的机器学习方法就可以在大多数样本上取得较好的结果 <br><br>由于计算资源限制，下面直接展示模拟结果</p>
+<p>我们使用一种特殊的十字交叉抽样，在训练集上抽样1000次，用来测试基本的机器学习模型结果 <br><br>我们使用了2bit coding编码的SNPs,通过random projection降维至80000 <br><br>然后使用Gaussian Process Regression作为回归模型 <br><br><img src="http://i1.bvimg.com/640680/839f4f607631b772.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/4c1eb79af4bbb5fb.png" alt="Markdown"><br>可以看到一千次抽样的测试结果，大多数测试的PCC都比较高</p>
+<p><img src="http://i1.bvimg.com/640680/bea286d0f130d044.png" alt="Markdown"><br>按照样本查看每个样本多次抽样的平均PCC，注意这里是有bias没有消除的<br><img src="http://i1.bvimg.com/640680/17df0a3dcaa71ada.png" alt="Markdown"></p>
+<p>这里绘制了每个样本的平均PCC heatmap图像,可以发现大多数的样本是很好预测的，样本性状基本由父本性状主导(纵坐标为父本),但是少数亲缘关系较远的父本（图中蓝色线）就很难预测。<br><img src="http://i1.bvimg.com/640680/50adb2cb87536a3d.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/48ee63cf0c78d296.png" alt="Markdown"><br><img src="http://i1.bvimg.com/640680/d3bb77a76c162d53.png" alt="Markdown"></p>
+<p>不同父本的性状有显著差别，而子代的性状由于设计原因，主要由父本控制。<br><br>我们可以通过绘图查看不同父本的性状的变化<br><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">male_index = np.ndarray([<span class="number">6210</span>,]).astype(<span class="string">'int'</span>)</span><br><span class="line">for i in range(<span class="number">6210</span>):</span><br><span class="line">male_index[i] = int(np.array(phenotypes[<span class="string">'pedigree'</span>])[i].split(<span class="string">'_'</span>)[<span class="number">2</span>][<span class="number">1</span>:])</span><br><span class="line">male_trait1 = np.concatenate((male_index.reshape(<span class="number">1</span>,<span class="number">-1</span>),np.array(pheno_whole[<span class="string">'trait1'</span>]).reshape(<span class="number">1</span>,<span class="number">-1</span>))).<span class="symbol">T</span></span><br><span class="line">male_trait1_bysort = male_trait1[male_trait1[:,<span class="number">0</span>].argsort()]</span><br><span class="line">fig, ax = plt.subplots(figsize=(<span class="number">16</span>,<span class="number">8</span>))</span><br><span class="line">ax.plot(male_trait1_bysort[:,<span class="number">1</span>])</span><br><span class="line">ax.set_title(<span class="string">'different males have varied values'</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://i1.bvimg.com/640680/818f1d13de885240.png" alt="Markdown"><br>以上内容简要地介绍了eMaize问题使用的一些基本的常用的机器学习方法，包括数据预处理、特征选择、降维、回归以及分析。本教程还顺便展示了一些python常用的工具包的使用，读者有时间可以慢慢体会其中的具体操作，因为jupyter notebook的可视化与交互性很强，读者可以方便地查看中间步骤的数据情况，更好地理解代码所进行的操作。<br><br>由于实际工作的步骤、数据量、变量等问题，还需要慎重考虑计算时间、任务管理等工作 <br><br>想要预测较难预测的样本仅仅靠常规的机器学习方法并不够用，将机器学习应用于生物学问题时，不能简单套用模型，还需要根据问题进行针对性的设计，才有可能取得更好的结果。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/codes/" rel="tag"><i class="fa fa-tag"></i> codes</a>
+          
+            <a href="/tags/statistics/" rel="tag"><i class="fa fa-tag"></i> statistics</a>
+          
+            <a href="/tags/techniques/" rel="tag"><i class="fa fa-tag"></i> techniques</a>
+          
+            <a href="/tags/bioinformatics/" rel="tag"><i class="fa fa-tag"></i> bioinformatics</a>
+          
+            <a href="/tags/machine-learning/" rel="tag"><i class="fa fa-tag"></i> machine learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/爷爷回忆录/2018/04/11/auto0.html" rel="next" title="陈炳林回忆录 序言">
+                <i class="fa fa-chevron-left"></i> 陈炳林回忆录 序言
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/techniques/linux/2018/04/12/setup.html" rel="prev" title="Setup and Linux">
+                Setup and Linux <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-背景简介"><span class="nav-number">1.</span> <span class="nav-text">0.背景简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-上机指南"><span class="nav-number">2.</span> <span class="nav-text">I.上机指南</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jupyter-notebook基本使用指南："><span class="nav-number">2.0.1.</span> <span class="nav-text">jupyter notebook基本使用指南：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用上方的编辑栏："><span class="nav-number">2.0.1.1.</span> <span class="nav-text">使用上方的编辑栏：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-查看原始数据"><span class="nav-number">2.1.</span> <span class="nav-text">1.查看原始数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-数据种类"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 数据种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-数据格式"><span class="nav-number">2.1.2.</span> <span class="nav-text">1.2 数据格式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#读取SNP数据"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">读取SNP数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在命令行查看数据shape"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">在命令行查看数据shape</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#读取性状数据"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">读取性状数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看训练集与测试集的划分"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">查看训练集与测试集的划分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-将SNP数据编码为向量"><span class="nav-number">2.2.</span> <span class="nav-text">2. 将SNP数据编码为向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-特征提取与降维"><span class="nav-number">2.3.</span> <span class="nav-text">3. 特征提取与降维</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特征选择："><span class="nav-number">2.3.1.</span> <span class="nav-text">特征选择：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#降维："><span class="nav-number">2.3.2.</span> <span class="nav-text">降维：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#ANOVA数据："><span class="nav-number">2.3.2.1.</span> <span class="nav-text">ANOVA数据：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Random-projection-5000-数据："><span class="nav-number">2.3.2.2.</span> <span class="nav-text">Random projection(5000)数据：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Random-projection-whole-SNPs-数据："><span class="nav-number">2.3.2.3.</span> <span class="nav-text">Random projection(whole SNPs)数据：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-ANOVA"><span class="nav-number">2.3.3.</span> <span class="nav-text">3.1 ANOVA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-Random-projection"><span class="nav-number">2.3.4.</span> <span class="nav-text">3.2 Random projection</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-1-generate"><span class="nav-number">2.3.4.1.</span> <span class="nav-text">3.2.1 generate</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-2-transform"><span class="nav-number">2.3.4.2.</span> <span class="nav-text">3.2.2 transform</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-2-3-normalize"><span class="nav-number">2.3.4.3.</span> <span class="nav-text">3.2.3 normalize</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-回归模型"><span class="nav-number">2.4.</span> <span class="nav-text">4. 回归模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-机器学习模型"><span class="nav-number">2.4.1.</span> <span class="nav-text">4.1 机器学习模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-评价指标"><span class="nav-number">2.4.2.</span> <span class="nav-text">4.2 评价指标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-交叉验证"><span class="nav-number">2.4.3.</span> <span class="nav-text">4.3 交叉验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-准备数据"><span class="nav-number">2.4.4.</span> <span class="nav-text">4.4 准备数据</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-4-1-准备y"><span class="nav-number">2.4.4.1.</span> <span class="nav-text">4.4.1 准备y</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-4-2-准备X"><span class="nav-number">2.4.4.2.</span> <span class="nav-text">4.4.2 准备X</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-选择需要的机器学习模型"><span class="nav-number">2.4.5.</span> <span class="nav-text">4.5 选择需要的机器学习模型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#某个机器学习模型的使用方法如下：reg-fit-X-y-用于拟合，reg-predict-X-用于预测。更多用法可以参考sklearn官方文档"><span class="nav-number">2.4.5.1.</span> <span class="nav-text">某个机器学习模型的使用方法如下：reg.fit(X,y)用于拟合，reg.predict(X)用于预测。更多用法可以参考sklearn官方文档</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续分析"><span class="nav-number">2.5.</span> <span class="nav-text">后续分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不同样本具有不同的预测难度"><span class="nav-number">2.5.1.</span> <span class="nav-text">不同样本具有不同的预测难度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#样本之间具有关联性"><span class="nav-number">2.5.2.</span> <span class="nav-text">样本之间具有关联性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂的机器学习模型并不一定有效"><span class="nav-number">2.5.3.</span> <span class="nav-text">复杂的机器学习模型并不一定有效</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="footer-custom">A Dreamer Must Have Big Dreams</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共73.2k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>

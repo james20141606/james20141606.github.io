@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>James Chen&#39;s Blogs</title>
+  <title>WonderLand</title>
   
-  
+  <subtitle>Somnium &amp; Somniator</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cmwonderland.com/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>爷爷回忆录总结</title>
-    <link href="https://www.cmwonderland.com/2018/05/08/autobio/"/>
-    <id>https://www.cmwonderland.com/2018/05/08/autobio/</id>
+    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/05/08/autobio.html"/>
+    <id>https://www.cmwonderland.com/爷爷回忆录/2018/05/08/autobio.html</id>
     <published>2018-05-08T11:47:25.000Z</published>
     <updated>2018-05-08T12:06:33.121Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>Snakemake初步</title>
-    <link href="https://www.cmwonderland.com/2018/05/05/snakemake/"/>
-    <id>https://www.cmwonderland.com/2018/05/05/snakemake/</id>
+    <link href="https://www.cmwonderland.com/techniques/bioinformatics/2018/05/05/snakemake.html"/>
+    <id>https://www.cmwonderland.com/techniques/bioinformatics/2018/05/05/snakemake.html</id>
     <published>2018-05-05T14:39:51.000Z</published>
     <updated>2018-05-05T14:50:49.471Z</updated>
     
@@ -71,8 +71,8 @@
   
   <entry>
     <title>搜索引擎收录</title>
-    <link href="https://www.cmwonderland.com/2018/05/05/search-engine/"/>
-    <id>https://www.cmwonderland.com/2018/05/05/search-engine/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/05/search-engine.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/05/search-engine.html</id>
     <published>2018-05-05T04:45:08.000Z</published>
     <updated>2018-05-05T04:57:26.648Z</updated>
     
@@ -95,8 +95,8 @@
   
   <entry>
     <title>神器分享</title>
-    <link href="https://www.cmwonderland.com/2018/05/05/tools/"/>
-    <id>https://www.cmwonderland.com/2018/05/05/tools/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/05/tools.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/05/tools.html</id>
     <published>2018-05-04T16:35:09.000Z</published>
     <updated>2018-05-04T16:41:18.186Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>Alias Setting</title>
-    <link href="https://www.cmwonderland.com/2018/05/05/alias-setting/"/>
-    <id>https://www.cmwonderland.com/2018/05/05/alias-setting/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html</id>
     <published>2018-05-04T16:17:18.000Z</published>
     <updated>2018-05-04T16:22:13.364Z</updated>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>Conda详细配置指南</title>
-    <link href="https://www.cmwonderland.com/2018/05/05/conda/"/>
-    <id>https://www.cmwonderland.com/2018/05/05/conda/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/05/conda.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/05/conda.html</id>
     <published>2018-05-04T16:08:12.000Z</published>
     <updated>2018-05-08T11:54:09.620Z</updated>
     
@@ -180,8 +180,8 @@
   
   <entry>
     <title>Jupyter自定义设置详解</title>
-    <link href="https://www.cmwonderland.com/2018/05/04/jupyter/"/>
-    <id>https://www.cmwonderland.com/2018/05/04/jupyter/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/04/jupyter.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/04/jupyter.html</id>
     <published>2018-05-04T07:09:56.000Z</published>
     <updated>2018-05-04T16:04:27.763Z</updated>
     
@@ -205,8 +205,8 @@
   
   <entry>
     <title>论文与排版</title>
-    <link href="https://www.cmwonderland.com/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/"/>
-    <id>https://www.cmwonderland.com/2018/05/04/论文与排版/</id>
+    <link href="https://www.cmwonderland.com/techniques/research/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88.html"/>
+    <id>https://www.cmwonderland.com/techniques/research/2018/05/04/论文与排版.html</id>
     <published>2018-05-04T06:58:25.000Z</published>
     <updated>2018-05-04T11:43:45.552Z</updated>
     
@@ -237,8 +237,8 @@
   
   <entry>
     <title>GitBook intro &amp; Grandpa&#39;s Bio</title>
-    <link href="https://www.cmwonderland.com/2018/05/04/gitbook/"/>
-    <id>https://www.cmwonderland.com/2018/05/04/gitbook/</id>
+    <link href="https://www.cmwonderland.com/techniques/2018/05/04/gitbook.html"/>
+    <id>https://www.cmwonderland.com/techniques/2018/05/04/gitbook.html</id>
     <published>2018-05-03T18:01:38.000Z</published>
     <updated>2018-05-04T16:07:17.261Z</updated>
     
@@ -270,8 +270,8 @@
   
   <entry>
     <title>On Wittgenstein&#39;s Picture Theory of Meaning</title>
-    <link href="https://www.cmwonderland.com/2018/05/03/tlp/"/>
-    <id>https://www.cmwonderland.com/2018/05/03/tlp/</id>
+    <link href="https://www.cmwonderland.com/thoughts/2018/05/03/tlp.html"/>
+    <id>https://www.cmwonderland.com/thoughts/2018/05/03/tlp.html</id>
     <published>2018-05-03T15:19:27.000Z</published>
     <updated>2018-05-03T15:30:24.771Z</updated>
     
@@ -304,8 +304,8 @@
   
   <entry>
     <title>记一下人生第一次GRE</title>
-    <link href="https://www.cmwonderland.com/2018/04/28/gre/"/>
-    <id>https://www.cmwonderland.com/2018/04/28/gre/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/28/gre.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/28/gre.html</id>
     <published>2018-04-28T11:49:36.000Z</published>
     <updated>2018-04-29T02:28:36.118Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>Solution of MCM Problem C</title>
-    <link href="https://www.cmwonderland.com/2018/04/21/mcm/"/>
-    <id>https://www.cmwonderland.com/2018/04/21/mcm/</id>
+    <link href="https://www.cmwonderland.com/projects/2018/04/21/mcm.html"/>
+    <id>https://www.cmwonderland.com/projects/2018/04/21/mcm.html</id>
     <published>2018-04-21T01:15:19.000Z</published>
     <updated>2018-05-03T18:05:17.519Z</updated>
     
@@ -364,8 +364,8 @@
   
   <entry>
     <title>Linear Regression Assignment 8</title>
-    <link href="https://www.cmwonderland.com/2018/04/20/line3/"/>
-    <id>https://www.cmwonderland.com/2018/04/20/line3/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/20/line3.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/20/line3.html</id>
     <published>2018-04-20T02:01:19.000Z</published>
     <updated>2018-04-20T02:53:27.442Z</updated>
     
@@ -394,8 +394,8 @@
   
   <entry>
     <title>Reading Notes of Wittgenstein&#39;s Bio</title>
-    <link href="https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/"/>
-    <id>https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/</id>
+    <link href="https://www.cmwonderland.com/thoughts/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio.html"/>
+    <id>https://www.cmwonderland.com/thoughts/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio.html</id>
     <published>2018-04-17T14:37:17.000Z</published>
     <updated>2018-04-20T02:56:36.088Z</updated>
     
@@ -420,8 +420,8 @@
   
   <entry>
     <title>Assignments of Statistic Inferences</title>
-    <link href="https://www.cmwonderland.com/2018/04/16/Statistic-Inferences/"/>
-    <id>https://www.cmwonderland.com/2018/04/16/Statistic-Inferences/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/16/Statistic-Inferences.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/16/Statistic-Inferences.html</id>
     <published>2018-04-16T06:33:06.000Z</published>
     <updated>2018-04-16T06:46:36.287Z</updated>
     
@@ -448,8 +448,8 @@
   
   <entry>
     <title>Linear Regression Assignment 7</title>
-    <link href="https://www.cmwonderland.com/2018/04/16/line2/"/>
-    <id>https://www.cmwonderland.com/2018/04/16/line2/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line2.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/16/line2.html</id>
     <published>2018-04-16T06:01:19.000Z</published>
     <updated>2018-04-20T02:59:10.467Z</updated>
     
@@ -478,8 +478,8 @@
   
   <entry>
     <title>Linear Regression Assignment 6</title>
-    <link href="https://www.cmwonderland.com/2018/04/16/line1/"/>
-    <id>https://www.cmwonderland.com/2018/04/16/line1/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line1.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/16/line1.html</id>
     <published>2018-04-16T05:59:19.000Z</published>
     <updated>2018-04-20T02:52:25.194Z</updated>
     
@@ -508,8 +508,8 @@
   
   <entry>
     <title>Multivariate Statistics Assignment 3</title>
-    <link href="https://www.cmwonderland.com/2018/04/16/multi0/"/>
-    <id>https://www.cmwonderland.com/2018/04/16/multi0/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/16/multi0.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/16/multi0.html</id>
     <published>2018-04-16T04:59:19.000Z</published>
     <updated>2018-04-20T02:55:01.954Z</updated>
     
@@ -538,8 +538,8 @@
   
   <entry>
     <title>Linear Regression Assignment 4</title>
-    <link href="https://www.cmwonderland.com/2018/04/16/line0/"/>
-    <id>https://www.cmwonderland.com/2018/04/16/line0/</id>
+    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line0.html"/>
+    <id>https://www.cmwonderland.com/school-work/2018/04/16/line0.html</id>
     <published>2018-04-16T04:59:19.000Z</published>
     <updated>2018-04-20T02:51:21.420Z</updated>
     
@@ -568,8 +568,8 @@
   
   <entry>
     <title>春日の恋想</title>
-    <link href="https://www.cmwonderland.com/2018/04/15/peomofmeng/"/>
-    <id>https://www.cmwonderland.com/2018/04/15/peomofmeng/</id>
+    <link href="https://www.cmwonderland.com/life/2018/04/15/peomofmeng.html"/>
+    <id>https://www.cmwonderland.com/life/2018/04/15/peomofmeng.html</id>
     <published>2018-04-15T05:54:30.000Z</published>
     <updated>2018-04-16T06:20:20.616Z</updated>
     
