@@ -18,8 +18,8 @@
   
   <entry>
     <title>爷爷回忆录总结</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/05/08/autobio.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/05/08/autobio.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/08/autobio"/>
+    <id>https://www.cmwonderland.com/2018/05/08/autobio</id>
     <published>2018-05-08T11:47:25.000Z</published>
     <updated>2018-05-08T12:06:33.121Z</updated>
     
@@ -43,8 +43,8 @@
   
   <entry>
     <title>Snakemake初步</title>
-    <link href="https://www.cmwonderland.com/techniques/bioinformatics/2018/05/05/snakemake.html"/>
-    <id>https://www.cmwonderland.com/techniques/bioinformatics/2018/05/05/snakemake.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/snakemake"/>
+    <id>https://www.cmwonderland.com/2018/05/05/snakemake</id>
     <published>2018-05-05T14:39:51.000Z</published>
     <updated>2018-05-05T14:50:49.471Z</updated>
     
@@ -61,9 +61,9 @@
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/categories/techniques/bioinformatics/"/>
     
     
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
     
@@ -71,8 +71,8 @@
   
   <entry>
     <title>搜索引擎收录</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/05/search-engine.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/05/search-engine.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/search-engine"/>
+    <id>https://www.cmwonderland.com/2018/05/05/search-engine</id>
     <published>2018-05-05T04:45:08.000Z</published>
     <updated>2018-05-05T04:57:26.648Z</updated>
     
@@ -95,8 +95,8 @@
   
   <entry>
     <title>神器分享</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/05/tools.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/05/tools.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/tools"/>
+    <id>https://www.cmwonderland.com/2018/05/05/tools</id>
     <published>2018-05-04T16:35:09.000Z</published>
     <updated>2018-05-04T16:41:18.186Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>Alias Setting</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/05/alias-setting.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/alias-setting"/>
+    <id>https://www.cmwonderland.com/2018/05/05/alias-setting</id>
     <published>2018-05-04T16:17:18.000Z</published>
     <updated>2018-05-04T16:22:13.364Z</updated>
     
@@ -152,8 +152,8 @@
   
   <entry>
     <title>Conda详细配置指南</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/05/conda.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/05/conda.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/05/conda"/>
+    <id>https://www.cmwonderland.com/2018/05/05/conda</id>
     <published>2018-05-04T16:08:12.000Z</published>
     <updated>2018-05-08T11:54:09.620Z</updated>
     
@@ -180,8 +180,8 @@
   
   <entry>
     <title>Jupyter自定义设置详解</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/04/jupyter.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/04/jupyter.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/jupyter"/>
+    <id>https://www.cmwonderland.com/2018/05/04/jupyter</id>
     <published>2018-05-04T07:09:56.000Z</published>
     <updated>2018-05-04T16:04:27.763Z</updated>
     
@@ -197,16 +197,16 @@
       <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
   </entry>
   
   <entry>
     <title>论文与排版</title>
-    <link href="https://www.cmwonderland.com/techniques/research/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88.html"/>
-    <id>https://www.cmwonderland.com/techniques/research/2018/05/04/论文与排版.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88"/>
+    <id>https://www.cmwonderland.com/2018/05/04/论文与排版</id>
     <published>2018-05-04T06:58:25.000Z</published>
     <updated>2018-05-04T11:43:45.552Z</updated>
     
@@ -237,8 +237,8 @@
   
   <entry>
     <title>GitBook intro &amp; Grandpa&#39;s Bio</title>
-    <link href="https://www.cmwonderland.com/techniques/2018/05/04/gitbook.html"/>
-    <id>https://www.cmwonderland.com/techniques/2018/05/04/gitbook.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/04/gitbook"/>
+    <id>https://www.cmwonderland.com/2018/05/04/gitbook</id>
     <published>2018-05-03T18:01:38.000Z</published>
     <updated>2018-05-04T16:07:17.261Z</updated>
     
@@ -270,8 +270,8 @@
   
   <entry>
     <title>On Wittgenstein&#39;s Picture Theory of Meaning</title>
-    <link href="https://www.cmwonderland.com/thoughts/2018/05/03/tlp.html"/>
-    <id>https://www.cmwonderland.com/thoughts/2018/05/03/tlp.html</id>
+    <link href="https://www.cmwonderland.com/2018/05/03/tlp"/>
+    <id>https://www.cmwonderland.com/2018/05/03/tlp</id>
     <published>2018-05-03T15:19:27.000Z</published>
     <updated>2018-05-03T15:30:24.771Z</updated>
     
@@ -304,8 +304,8 @@
   
   <entry>
     <title>记一下人生第一次GRE</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/28/gre.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/28/gre.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/28/gre"/>
+    <id>https://www.cmwonderland.com/2018/04/28/gre</id>
     <published>2018-04-28T11:49:36.000Z</published>
     <updated>2018-04-29T02:28:36.118Z</updated>
     
@@ -330,8 +330,8 @@
   
   <entry>
     <title>Solution of MCM Problem C</title>
-    <link href="https://www.cmwonderland.com/projects/2018/04/21/mcm.html"/>
-    <id>https://www.cmwonderland.com/projects/2018/04/21/mcm.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/21/mcm"/>
+    <id>https://www.cmwonderland.com/2018/04/21/mcm</id>
     <published>2018-04-21T01:15:19.000Z</published>
     <updated>2018-05-03T18:05:17.519Z</updated>
     
@@ -364,8 +364,8 @@
   
   <entry>
     <title>Linear Regression Assignment 8</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/20/line3.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/20/line3.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/20/line3"/>
+    <id>https://www.cmwonderland.com/2018/04/20/line3</id>
     <published>2018-04-20T02:01:19.000Z</published>
     <updated>2018-04-20T02:53:27.442Z</updated>
     
@@ -394,8 +394,8 @@
   
   <entry>
     <title>Reading Notes of Wittgenstein&#39;s Bio</title>
-    <link href="https://www.cmwonderland.com/thoughts/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio.html"/>
-    <id>https://www.cmwonderland.com/thoughts/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio"/>
+    <id>https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio</id>
     <published>2018-04-17T14:37:17.000Z</published>
     <updated>2018-04-20T02:56:36.088Z</updated>
     
@@ -420,8 +420,8 @@
   
   <entry>
     <title>Assignments of Statistic Inferences</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/16/Statistic-Inferences.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/16/Statistic-Inferences.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/Statistic-Inferences"/>
+    <id>https://www.cmwonderland.com/2018/04/16/Statistic-Inferences</id>
     <published>2018-04-16T06:33:06.000Z</published>
     <updated>2018-04-16T06:46:36.287Z</updated>
     
@@ -448,8 +448,8 @@
   
   <entry>
     <title>Linear Regression Assignment 7</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line2.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/16/line2.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line2"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line2</id>
     <published>2018-04-16T06:01:19.000Z</published>
     <updated>2018-04-20T02:59:10.467Z</updated>
     
@@ -478,8 +478,8 @@
   
   <entry>
     <title>Linear Regression Assignment 6</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line1.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/16/line1.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line1"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line1</id>
     <published>2018-04-16T05:59:19.000Z</published>
     <updated>2018-04-20T02:52:25.194Z</updated>
     
@@ -507,39 +507,9 @@
   </entry>
   
   <entry>
-    <title>Multivariate Statistics Assignment 3</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/16/multi0.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/16/multi0.html</id>
-    <published>2018-04-16T04:59:19.000Z</published>
-    <updated>2018-04-20T02:55:01.954Z</updated>
-    
-    <content type="html"><![CDATA[<p>The third assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a><br>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended. <strong>Or here</strong>:<br><div class="row"><iframe src="https://drive.google.com/file/d/128itrGhENm_IZbs-si0gkS4X5NHdDfMU/preview" style="width:100%; height:550px"></iframe></div></p><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>density function for the multivariate normal distribution:</p><script type="math/tex; mode=display">f(x; \mu, \Sigma) =\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(x-\mu)^{'}\Sigma^{-1}(x-\mu)}</script><p>the likelihood function for the two independent sample:</p><script type="math/tex; mode=display">L(\mu_1,\mu_2,\Sigma) = \Pi_{i=1}^{n_1}f(X_i;\mu_1,\Sigma)\Pi_{j=1}^{n_2}f(X_j;\mu_2,\Sigma) \\=L(\mu_1,\Sigma)L(\mu_2,\Sigma)</script><p>So the likelihood function can be defined as:</p><script type="math/tex; mode=display">L(\mu_1,\mu_2,\Sigma) = \frac{1}{(2\pi)^{Np/2}|\Sigma|^{N/2}}exp(  -\frac{1}{2}tr[  \Sigma^{-1} (\sum_{i=1}^{n_1}\Phi_1(X_i)+\sum_{j=1}^{n_2}\Phi_2(X_j))  ]   ) \\\Phi_i(x) = (x-\mu_i)(x-\mu_i)^{'}</script><p>Using MLE, the maximum is:</p><script type="math/tex; mode=display">\hat \Sigma = \frac{1}{n_1+n_2} (\sum_{i=1}^{n_1} \Phi_1(X_i)+\sum_{j=1}^{n_2}\Phi_2(X_j)) \\=\frac{1}{n_1+n_2}[(n_1-1)S_1+(n_2-1)S_2] = \frac{n_1+n_2-1}{n_1+n_2}S_{pooled}</script><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><h2 id="a"><a href="#a" class="headerlink" title="(a)"></a>(a)</h2><p>It can be calculated that:</p><script type="math/tex; mode=display">\bar x=[4.64,45.4,9.965]^{T}\\S=\left[\begin{matrix}2.879 &10.01 &-1.81 \\10.01&199.788&-5.64 \\-1.81&-5.64&3.682\end{matrix}\right]</script><p>we can calculate S’s eigen value and its respective eigen vector:</p><script type="math/tex; mode=display">value = [ 200.46209264,    1.31804876,    4.56885859]\\e_1^{'} = [-0.05084165, -0.82194341, -0.56729548] \\e_2^{'} = [-0.99828327,  0.02528569,  0.0528313 ] \\e_3^{'} = [ 0.02907988, -0.56900761,  0.82181792] \\</script><p>The axes of the region are:</p><script type="math/tex; mode=display">\sqrt \lambda_i \sqrt {\frac{p(n-1)}{n(n-p)}F_{p,n-p}(\alpha)} \\\frac{p(n-1)}{n(n-p)}F_{p,n-p}(\alpha) = \frac{19 \times 3}{17 \times 20} \times F_{3,17}(0.1) = 0.167 \times 2.44 = 0.409</script><p>so the axes’ lengths are:</p><script type="math/tex; mode=display">\sqrt {200.46209264} \times \sqrt {0.409} = 9.055 \\\sqrt {1.31804876} \times \sqrt {0.409} = 0.734 \\\sqrt {4.56885859} \times \sqrt {0.409} = 1.367</script><p>The directions of each aixs is determined by its corresponding eigen vector shown above.</p><h2 id="b"><a href="#b" class="headerlink" title="(b)"></a>(b)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># read the data</span><br><span class="line">setwd(&apos;~/Desktop/三春/3多元统计分析/作业/作业3-1,3-2/&apos;)</span><br><span class="line">dat&lt;-read.csv(&quot;data.csv&quot;)</span><br><span class="line">x1&lt;-dat$x1</span><br><span class="line">x2&lt;-dat$x2</span><br><span class="line">x3&lt;-dat$x3</span><br><span class="line">qqnorm(x1, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x1)</span><br><span class="line">qqnorm(x2, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x2)</span><br><span class="line">qqnorm(x3, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x3)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plot(x1,x2)</span><br><span class="line">plot(x1,x3)</span><br><span class="line">plot(x2,x3)</span><br></pre></td></tr></table></figure><p>It seems that each variable’s normality is fine and they don’t have a significant relationship with each other, so the multivariate normal assumption seems justied.</p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><script type="math/tex; mode=display">T^2 = \sqrt n (\bar X -\mu_0)^{'}{(\frac{\sum_{j=1}^{n}(X_j-\bar X)(X_j-\bar X)^{'}}{n-1})^{-1}} \sqrt n (\bar X -\mu_0)\\\text{So it can be calculated that }T^2 = 9.74 \\\frac{p(n-1)}{(n-p)}F_{p,n-p}(\alpha) = \frac{19 \times 3}{17} \times F_{3,17}(0.05) = \frac{19 \times 3}{17} \times 3.20 = 10.729\</script><p>the confidence region is defined as :</p><script type="math/tex; mode=display">(\bar x_i - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{ii}}{n}},\bar x_i + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{ii}}{n}}) \\F_{p,n-p}(\alpha) = F_{3,17}(0.05) =3.20,  \ \bar x_1 = 4.64, \ \bar x_2 = 45.4,\ \bar x_3 =9.965 \\s_{11} = 2.879, \ s_{22} = 199.788, \  s_{33} = 3.628</script><p>so the three regions are:</p><script type="math/tex; mode=display">(\bar x_1 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{11}}{n}},\bar x_1 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{11}}{n}}) \\= [3.397, 5.882]\\(\bar x_2 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}},\bar x_2 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}}) \\= [35.047, 55.752]\\(\bar x_3 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}},\bar x_3 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{33}}{n}}) \\= [8.569, 11.360]\\</script><h2 id="b-1"><a href="#b-1" class="headerlink" title="(b)"></a>(b)</h2><p>The Bonferroni region is defined as :</p><script type="math/tex; mode=display">[\bar x_p -t_{n-1}(\frac{\alpha}{2p})\sqrt{\frac{s_{pp}}{n}}, \ \bar x_p +t_{n-1}(\frac{\alpha}{2p})\sqrt{\frac{s_{pp}}{n}}] \\t_{19}(0.0083) = 2.625106</script><p>so the Bonferroni regions are:</p><script type="math/tex; mode=display">[3.644, 5.635] \\[37.103, 53.696] \\[8.846, 11.083]</script><p>which are smaller than $T^2$ confidence region because it focus on single confidence interval.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;The third assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.&lt;br&gt;
-    
-    </summary>
-    
-      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
-    
-    
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
-      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
-    
-      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
-    
-      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
-    
-      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linear Regression Assignment 4</title>
-    <link href="https://www.cmwonderland.com/school-work/2018/04/16/line0.html"/>
-    <id>https://www.cmwonderland.com/school-work/2018/04/16/line0.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/16/line0"/>
+    <id>https://www.cmwonderland.com/2018/04/16/line0</id>
     <published>2018-04-16T04:59:19.000Z</published>
     <updated>2018-04-20T02:51:21.420Z</updated>
     
@@ -567,9 +537,39 @@
   </entry>
   
   <entry>
+    <title>Multivariate Statistics Assignment 3</title>
+    <link href="https://www.cmwonderland.com/2018/04/16/multi0"/>
+    <id>https://www.cmwonderland.com/2018/04/16/multi0</id>
+    <published>2018-04-16T04:59:19.000Z</published>
+    <updated>2018-04-20T02:55:01.954Z</updated>
+    
+    <content type="html"><![CDATA[<p>The third assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a><br>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended. <strong>Or here</strong>:<br><div class="row"><iframe src="https://drive.google.com/file/d/128itrGhENm_IZbs-si0gkS4X5NHdDfMU/preview" style="width:100%; height:550px"></iframe></div></p><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><p>density function for the multivariate normal distribution:</p><script type="math/tex; mode=display">f(x; \mu, \Sigma) =\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}e^{-\frac{1}{2}(x-\mu)^{'}\Sigma^{-1}(x-\mu)}</script><p>the likelihood function for the two independent sample:</p><script type="math/tex; mode=display">L(\mu_1,\mu_2,\Sigma) = \Pi_{i=1}^{n_1}f(X_i;\mu_1,\Sigma)\Pi_{j=1}^{n_2}f(X_j;\mu_2,\Sigma) \\=L(\mu_1,\Sigma)L(\mu_2,\Sigma)</script><p>So the likelihood function can be defined as:</p><script type="math/tex; mode=display">L(\mu_1,\mu_2,\Sigma) = \frac{1}{(2\pi)^{Np/2}|\Sigma|^{N/2}}exp(  -\frac{1}{2}tr[  \Sigma^{-1} (\sum_{i=1}^{n_1}\Phi_1(X_i)+\sum_{j=1}^{n_2}\Phi_2(X_j))  ]   ) \\\Phi_i(x) = (x-\mu_i)(x-\mu_i)^{'}</script><p>Using MLE, the maximum is:</p><script type="math/tex; mode=display">\hat \Sigma = \frac{1}{n_1+n_2} (\sum_{i=1}^{n_1} \Phi_1(X_i)+\sum_{j=1}^{n_2}\Phi_2(X_j)) \\=\frac{1}{n_1+n_2}[(n_1-1)S_1+(n_2-1)S_2] = \frac{n_1+n_2-1}{n_1+n_2}S_{pooled}</script><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><h2 id="a"><a href="#a" class="headerlink" title="(a)"></a>(a)</h2><p>It can be calculated that:</p><script type="math/tex; mode=display">\bar x=[4.64,45.4,9.965]^{T}\\S=\left[\begin{matrix}2.879 &10.01 &-1.81 \\10.01&199.788&-5.64 \\-1.81&-5.64&3.682\end{matrix}\right]</script><p>we can calculate S’s eigen value and its respective eigen vector:</p><script type="math/tex; mode=display">value = [ 200.46209264,    1.31804876,    4.56885859]\\e_1^{'} = [-0.05084165, -0.82194341, -0.56729548] \\e_2^{'} = [-0.99828327,  0.02528569,  0.0528313 ] \\e_3^{'} = [ 0.02907988, -0.56900761,  0.82181792] \\</script><p>The axes of the region are:</p><script type="math/tex; mode=display">\sqrt \lambda_i \sqrt {\frac{p(n-1)}{n(n-p)}F_{p,n-p}(\alpha)} \\\frac{p(n-1)}{n(n-p)}F_{p,n-p}(\alpha) = \frac{19 \times 3}{17 \times 20} \times F_{3,17}(0.1) = 0.167 \times 2.44 = 0.409</script><p>so the axes’ lengths are:</p><script type="math/tex; mode=display">\sqrt {200.46209264} \times \sqrt {0.409} = 9.055 \\\sqrt {1.31804876} \times \sqrt {0.409} = 0.734 \\\sqrt {4.56885859} \times \sqrt {0.409} = 1.367</script><p>The directions of each aixs is determined by its corresponding eigen vector shown above.</p><h2 id="b"><a href="#b" class="headerlink" title="(b)"></a>(b)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># read the data</span><br><span class="line">setwd(&apos;~/Desktop/三春/3多元统计分析/作业/作业3-1,3-2/&apos;)</span><br><span class="line">dat&lt;-read.csv(&quot;data.csv&quot;)</span><br><span class="line">x1&lt;-dat$x1</span><br><span class="line">x2&lt;-dat$x2</span><br><span class="line">x3&lt;-dat$x3</span><br><span class="line">qqnorm(x1, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x1)</span><br><span class="line">qqnorm(x2, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x2)</span><br><span class="line">qqnorm(x3, main=&quot;Normal Probability Plot&quot;, pch=19)</span><br><span class="line">qqline(x3)</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plot(x1,x2)</span><br><span class="line">plot(x1,x3)</span><br><span class="line">plot(x2,x3)</span><br></pre></td></tr></table></figure><p>It seems that each variable’s normality is fine and they don’t have a significant relationship with each other, so the multivariate normal assumption seems justied.</p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><script type="math/tex; mode=display">T^2 = \sqrt n (\bar X -\mu_0)^{'}{(\frac{\sum_{j=1}^{n}(X_j-\bar X)(X_j-\bar X)^{'}}{n-1})^{-1}} \sqrt n (\bar X -\mu_0)\\\text{So it can be calculated that }T^2 = 9.74 \\\frac{p(n-1)}{(n-p)}F_{p,n-p}(\alpha) = \frac{19 \times 3}{17} \times F_{3,17}(0.05) = \frac{19 \times 3}{17} \times 3.20 = 10.729\</script><p>the confidence region is defined as :</p><script type="math/tex; mode=display">(\bar x_i - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{ii}}{n}},\bar x_i + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{ii}}{n}}) \\F_{p,n-p}(\alpha) = F_{3,17}(0.05) =3.20,  \ \bar x_1 = 4.64, \ \bar x_2 = 45.4,\ \bar x_3 =9.965 \\s_{11} = 2.879, \ s_{22} = 199.788, \  s_{33} = 3.628</script><p>so the three regions are:</p><script type="math/tex; mode=display">(\bar x_1 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{11}}{n}},\bar x_1 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{11}}{n}}) \\= [3.397, 5.882]\\(\bar x_2 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}},\bar x_2 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}}) \\= [35.047, 55.752]\\(\bar x_3 - \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{22}}{n}},\bar x_3 + \sqrt {\frac{p(n-1)}{n(n-p)} F_{p,n-p}(\alpha)} \sqrt{\frac{s_{33}}{n}}) \\= [8.569, 11.360]\\</script><h2 id="b-1"><a href="#b-1" class="headerlink" title="(b)"></a>(b)</h2><p>The Bonferroni region is defined as :</p><script type="math/tex; mode=display">[\bar x_p -t_{n-1}(\frac{\alpha}{2p})\sqrt{\frac{s_{pp}}{n}}, \ \bar x_p +t_{n-1}(\frac{\alpha}{2p})\sqrt{\frac{s_{pp}}{n}}] \\t_{19}(0.0083) = 2.625106</script><p>so the Bonferroni regions are:</p><script type="math/tex; mode=display">[3.644, 5.635] \\[37.103, 53.696] \\[8.846, 11.083]</script><p>which are smaller than $T^2$ confidence region because it focus on single confidence interval.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The third assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
+    
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
+    
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
+    
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
+    
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
+    
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
+    
+  </entry>
+  
+  <entry>
     <title>春日の恋想</title>
-    <link href="https://www.cmwonderland.com/life/2018/04/15/peomofmeng.html"/>
-    <id>https://www.cmwonderland.com/life/2018/04/15/peomofmeng.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/15/peomofmeng"/>
+    <id>https://www.cmwonderland.com/2018/04/15/peomofmeng</id>
     <published>2018-04-15T05:54:30.000Z</published>
     <updated>2018-04-16T06:20:20.616Z</updated>
     
@@ -594,8 +594,8 @@
   
   <entry>
     <title>Data Mining of Deng Era</title>
-    <link href="https://www.cmwonderland.com/techniques/data-science/2018/04/15/datamining.html"/>
-    <id>https://www.cmwonderland.com/techniques/data-science/2018/04/15/datamining.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/15/datamining"/>
+    <id>https://www.cmwonderland.com/2018/04/15/datamining</id>
     <published>2018-04-14T16:55:43.000Z</published>
     <updated>2018-04-15T08:26:50.362Z</updated>
     
@@ -624,8 +624,8 @@
   
   <entry>
     <title>Extract Countries&#39; Commercial Data</title>
-    <link href="https://www.cmwonderland.com/interestings/2018/04/12/economics.html"/>
-    <id>https://www.cmwonderland.com/interestings/2018/04/12/economics.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/12/economics"/>
+    <id>https://www.cmwonderland.com/2018/04/12/economics</id>
     <published>2018-04-12T15:49:57.000Z</published>
     <updated>2018-04-12T16:10:43.156Z</updated>
     
@@ -654,8 +654,8 @@
   
   <entry>
     <title>Setup and Linux</title>
-    <link href="https://www.cmwonderland.com/techniques/linux/2018/04/12/setup.html"/>
-    <id>https://www.cmwonderland.com/techniques/linux/2018/04/12/setup.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/12/setup"/>
+    <id>https://www.cmwonderland.com/2018/04/12/setup</id>
     <published>2018-04-12T15:39:17.000Z</published>
     <updated>2018-04-14T17:20:41.471Z</updated>
     
@@ -680,8 +680,8 @@
   
   <entry>
     <title>eMaize_Tutorial</title>
-    <link href="https://www.cmwonderland.com/techniques/machine-learning/2018/04/12/emaize-tutorial.html"/>
-    <id>https://www.cmwonderland.com/techniques/machine-learning/2018/04/12/emaize-tutorial.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/12/emaize-tutorial"/>
+    <id>https://www.cmwonderland.com/2018/04/12/emaize-tutorial</id>
     <published>2018-04-12T15:30:17.000Z</published>
     <updated>2018-04-16T12:30:23.114Z</updated>
     
@@ -699,11 +699,11 @@
       <category term="machine learning" scheme="https://www.cmwonderland.com/categories/techniques/machine-learning/"/>
     
     
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
       <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
       <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
-    
-      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
     
@@ -713,8 +713,8 @@
   
   <entry>
     <title>陈炳林回忆录 序言</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto0.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto0.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto0"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto0</id>
     <published>2018-04-11T02:10:01.000Z</published>
     <updated>2018-04-12T15:22:53.537Z</updated>
     
@@ -738,8 +738,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅰ  我的童年</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto1.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto1.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto1"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto1</id>
     <published>2018-04-11T02:10:00.000Z</published>
     <updated>2018-04-12T07:56:57.045Z</updated>
     
@@ -762,8 +762,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅱ  初中生活</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto2.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto2.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto2"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto2</id>
     <published>2018-04-11T02:09:59.000Z</published>
     <updated>2018-04-12T07:57:06.487Z</updated>
     
@@ -786,8 +786,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅲ  难忘的一九五八</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto3.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto3.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto3"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto3</id>
     <published>2018-04-11T02:09:57.000Z</published>
     <updated>2018-04-12T07:57:23.193Z</updated>
     
@@ -810,8 +810,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅳ  新的篇章</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto4.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto4.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto4"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto4</id>
     <published>2018-04-11T02:09:55.000Z</published>
     <updated>2018-04-12T08:11:41.163Z</updated>
     
@@ -834,8 +834,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅴ 休学的日子</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto5.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto5.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto5"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto5</id>
     <published>2018-04-11T02:09:53.000Z</published>
     <updated>2018-04-12T08:11:53.357Z</updated>
     
@@ -858,8 +858,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅵ  婚后的生活</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto6.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto6.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto6"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto6</id>
     <published>2018-04-11T02:09:51.000Z</published>
     <updated>2018-04-12T08:11:58.734Z</updated>
     
@@ -884,8 +884,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto7.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto7.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto7"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto7</id>
     <published>2018-04-11T02:09:49.000Z</published>
     <updated>2018-04-12T08:12:06.547Z</updated>
     
@@ -908,8 +908,8 @@
   
   <entry>
     <title>回忆录 CHAPTER Ⅷ 工作,崭新的篇章</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto8.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto8.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto8"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto8</id>
     <published>2018-04-11T02:09:47.000Z</published>
     <updated>2018-04-12T08:12:12.567Z</updated>
     
@@ -933,8 +933,8 @@
   
   <entry>
     <title>回忆录 短文数篇</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto9.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto9.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto9"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto9</id>
     <published>2018-04-11T02:09:45.000Z</published>
     <updated>2018-04-12T08:12:18.675Z</updated>
     
@@ -957,8 +957,8 @@
   
   <entry>
     <title>回忆录 童年的诗</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto10.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto10.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto10"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto10</id>
     <published>2018-04-11T02:09:42.000Z</published>
     <updated>2018-04-12T08:12:26.086Z</updated>
     
@@ -987,8 +987,8 @@
   
   <entry>
     <title>回忆录 关于正义的故事</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto11.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto11.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto11"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto11</id>
     <published>2018-04-11T02:09:40.000Z</published>
     <updated>2018-04-12T08:12:32.736Z</updated>
     
@@ -1011,8 +1011,8 @@
   
   <entry>
     <title>回忆录 年表</title>
-    <link href="https://www.cmwonderland.com/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/2018/04/11/auto12.html"/>
-    <id>https://www.cmwonderland.com/爷爷回忆录/2018/04/11/auto12.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/11/auto12"/>
+    <id>https://www.cmwonderland.com/2018/04/11/auto12</id>
     <published>2018-04-11T02:09:38.000Z</published>
     <updated>2018-05-04T07:04:42.498Z</updated>
     
@@ -1041,8 +1041,8 @@
   
   <entry>
     <title>Deep Learning Practice</title>
-    <link href="https://www.cmwonderland.com/techniques/machine-learning/2018/04/10/Deep-Learning-Practice.html"/>
-    <id>https://www.cmwonderland.com/techniques/machine-learning/2018/04/10/Deep-Learning-Practice.html</id>
+    <link href="https://www.cmwonderland.com/2018/04/10/Deep-Learning-Practice"/>
+    <id>https://www.cmwonderland.com/2018/04/10/Deep-Learning-Practice</id>
     <published>2018-04-10T13:23:55.000Z</published>
     <updated>2018-04-14T17:20:25.227Z</updated>
     
