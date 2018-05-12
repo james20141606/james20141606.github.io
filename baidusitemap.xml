@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>https://www.cmwonderland.com/2018/05/12/mom/</loc>
+    <lastmod>2018-05-12T15:59:29.743Z</lastmod>
+    <data>
+        <display>
+        <title>母爱是一弯柔缓的河流</title>
+        <pubTime>2018-05-12T15:58:06.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="https://www.cmwonderland.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://www.cmwonderland.com/2018/05/08/autobio/</loc>
@@ -111,9 +131,9 @@
         
         <tag>techniques</tag>
          
-        <tag>setup</tag>
-         
         <tag>software</tag>
+         
+        <tag>setup</tag>
          
          
            
@@ -135,11 +155,11 @@
         
         <tag>techniques</tag>
          
+        <tag>setup</tag>
+         
         <tag>zsh</tag>
          
         <tag>alias</tag>
-         
-        <tag>setup</tag>
          
          
            
