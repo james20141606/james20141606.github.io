@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2018-05-15T14:56:46.018Z</lastmod>
+    <data>
+        <display>
+        <title>论文与排版</title>
+        <pubTime>2018-05-04T06:58:25.000Z</pubTime>
+        
+        <tag>research</tag>
+         
+        <tag>techniques</tag>
+         
+        <tag>paper</tag>
+         
+        <tag>formatting</tag>
+         
+         
+           
+             
+              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
+          
+             
+              <breadCrumb title="research" url="https://www.cmwonderland.com/categories/techniques/research/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/15/J-1-Visa/</loc>
     <lastmod>2018-05-15T14:49:04.295Z</lastmod>
     <data>
@@ -237,35 +266,6 @@
            
              
               <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/04/%E8%AE%BA%E6%96%87%E4%B8%8E%E6%8E%92%E7%89%88/</loc>
-    <lastmod>2018-05-04T11:43:45.552Z</lastmod>
-    <data>
-        <display>
-        <title>论文与排版</title>
-        <pubTime>2018-05-04T06:58:25.000Z</pubTime>
-        
-        <tag>research</tag>
-         
-        <tag>techniques</tag>
-         
-        <tag>paper</tag>
-         
-        <tag>formatting</tag>
-         
-         
-           
-             
-              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
-          
-             
-              <breadCrumb title="research" url="https://www.cmwonderland.com/categories/techniques/research/"/>
           
         </display>
     </data>
