@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cmwonderland.com/"/>
-  <updated>2018-05-20T16:51:49.956Z</updated>
+  <updated>2018-05-20T16:55:02.955Z</updated>
   <id>https://www.cmwonderland.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.cmwonderland.com/2018/05/21/death-and-dream/"/>
     <id>https://www.cmwonderland.com/2018/05/21/death-and-dream/</id>
     <published>2018-05-20T16:49:39.000Z</published>
-    <updated>2018-05-20T16:51:49.956Z</updated>
+    <updated>2018-05-20T16:55:02.955Z</updated>
     
     <content type="html"><![CDATA[<p>I have the feeling that it will be the hardest passage I ever write. My life is filled with these two strong words, but it seems so painful to organize them into words.</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=449818741&auto=1&height=66"></iframe>]]></content>
     
@@ -34,6 +34,14 @@
     
     </summary>
     
+      <category term="thoughts" scheme="https://www.cmwonderland.com/categories/thoughts/"/>
+    
+    
+      <category term="thoughts" scheme="https://www.cmwonderland.com/tags/thoughts/"/>
+    
+      <category term="life" scheme="https://www.cmwonderland.com/tags/life/"/>
+    
+      <category term="dream" scheme="https://www.cmwonderland.com/tags/dream/"/>
     
   </entry>
   
