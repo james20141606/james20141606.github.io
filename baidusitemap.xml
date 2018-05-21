@@ -5,15 +5,15 @@
     
   <url>
     <loc>https://www.cmwonderland.com/2018/05/20/diffexpress/</loc>
-    <lastmod>2018-05-21T13:04:56.451Z</lastmod>
+    <lastmod>2018-05-21T13:08:07.966Z</lastmod>
     <data>
         <display>
         <title>Differential Expression&作业</title>
         <pubTime>2018-05-19T16:08:12.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>assignment</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
@@ -224,9 +224,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-16T13:13:27.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -315,11 +315,11 @@
         
         <tag>techniques</tag>
          
+        <tag>bioinformatics</tag>
+         
         <tag>software</tag>
          
         <tag>python</tag>
-         
-        <tag>bioinformatics</tag>
          
          
            
@@ -339,9 +339,9 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-05T14:39:51.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
@@ -390,9 +390,9 @@
         
         <tag>techniques</tag>
          
-        <tag>setup</tag>
-         
         <tag>software</tag>
+         
+        <tag>setup</tag>
          
          
            
@@ -464,9 +464,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -744,11 +744,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
          
         <tag>statistics</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
