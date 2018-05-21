@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/05/21/death-and-dream/</loc>
+    <lastmod>2018-05-21T16:32:30.900Z</lastmod>
+    <data>
+        <display>
+        <title>Death & Dream</title>
+        <pubTime>2018-05-20T16:49:39.000Z</pubTime>
+        
+        <tag>thoughts</tag>
+         
+        <tag>life</tag>
+         
+        <tag>dream</tag>
+         
+         
+           
+             
+              <breadCrumb title="thoughts" url="https://www.cmwonderland.com/categories/thoughts/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/08/dailythoughts/</loc>
-    <lastmod>2018-05-21T16:14:28.833Z</lastmod>
+    <lastmod>2018-05-21T16:31:18.349Z</lastmod>
     <data>
         <display>
         <title>混沌之思</title>
@@ -281,9 +305,9 @@
         <title>Differential Expression&作业</title>
         <pubTime>2018-05-19T16:08:12.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>assignment</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
@@ -298,30 +322,6 @@
 
     
   <url>
-    <loc>https://www.cmwonderland.com/2018/05/21/death-and-dream/</loc>
-    <lastmod>2018-05-21T12:23:01.250Z</lastmod>
-    <data>
-        <display>
-        <title>Death & Dream</title>
-        <pubTime>2018-05-20T16:49:39.000Z</pubTime>
-        
-        <tag>thoughts</tag>
-         
-        <tag>life</tag>
-         
-        <tag>dream</tag>
-         
-         
-           
-             
-              <breadCrumb title="thoughts" url="https://www.cmwonderland.com/categories/thoughts/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.cmwonderland.com/2018/05/04/formatting/</loc>
     <lastmod>2018-05-21T02:50:18.663Z</lastmod>
     <data>
@@ -329,9 +329,9 @@
         <title>论文与排版</title>
         <pubTime>2018-05-04T06:58:25.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>research</tag>
+         
+        <tag>techniques</tag>
          
         <tag>paper</tag>
          
@@ -382,9 +382,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-16T13:13:27.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -473,9 +473,9 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-05T14:39:51.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
@@ -598,9 +598,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
+         
+        <tag>techniques</tag>
          
          
            
@@ -738,11 +738,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>techniques</tag>
-         
         <tag>codes</tag>
          
         <tag>statistics</tag>
+         
+        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
@@ -876,9 +876,9 @@
          
         <tag>statistics</tag>
          
-        <tag>girl friend</tag>
-         
         <tag>economics</tag>
+         
+        <tag>girl friend</tag>
          
          
            
