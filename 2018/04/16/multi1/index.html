@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="codes,R,assignment,statistics,linear regression," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="The fourth assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
+<meta name="keywords" content="codes,R,assignment,statistics,linear regression">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multivariate Statistics Assignment 4">
+<meta property="og:url" content="https://www.cmwonderland.com/2018/04/16/multi1/index.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="The fourth assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-21T12:20:48.021Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Multivariate Statistics Assignment 4">
+<meta name="twitter:description" content="The fourth assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/2018/04/16/multi1/"/>
+
+
+
+
+
+  <title>Multivariate Statistics Assignment 4 | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/16/multi1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Multivariate Statistics Assignment 4</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-16T12:59:19+08:00">
+                2018-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/school-work/" itemprop="url" rel="index">
+                    <span itemprop="name">school work</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/16/multi1/" class="leancloud_visitors" data-flag-title="Multivariate Statistics Assignment 4">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  523
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>The fourth assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a><br>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended. <strong>Or here</strong>:<br>
+
+	<div class="row">
+		<iframe src="https://drive.google.com/file/d/1w9ByeBbuVBKFxahOIrwu2oZFuFXydeKa/preview" style="width:100%; height:550px"></iframe>
+	</div>
+
+
+</p>
+<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mp &lt;- matrix(c(5,2,2,2),2,2,byrow=T) </span><br><span class="line">eigen(mp)</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\text{The eigenvalue-eigenvector pairs are } \lambda_1 =6, e_1 =  [\frac{2}{\sqrt5},\frac{1}{\sqrt5}]; \lambda_2 =1, e_2 =  [-\frac{1}{\sqrt5},\frac{2}{\sqrt5}].\\
+\text{Therefore, the principle componenets become: }\\
+Y_1 = e_1^T X = \frac{2}{\sqrt5}X_1 +\frac{1}{\sqrt5}X_2\\
+Y_1 = e_2^T X = -\frac{1}{\sqrt5}X_1 +\frac{2}{\sqrt5}X_2\\
+\text{The total population variance explained by first principal component is:}\\
+\frac{var(Y_1)}{var(Y_1)+var(Y_2)} = \frac{\lambda_1}{\lambda_1+\lambda_2} = \frac{6}{1+6} \approx 85.71\%</script><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cov2cor(mp)</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\text{The correlation matrix } \rho = \left[
+\begin{matrix}
+1 & \sqrt\frac{2}{5} \\
+\sqrt\frac{2}{5}&1
+\end{matrix}\right]\\
+\text{The eigenvalue-eigenvector pairs are }\\
+\lambda_1
+= \frac{5+\sqrt {10}}{5}, \ e_1=\left[
+\begin{matrix}
+\frac{1}{\sqrt 2} \\
+\frac{1}{\sqrt 2}
+\end{matrix}\right]\\
+\lambda_1
+= \frac{5-\sqrt {10}}{5}, \ e_1=\left[
+\begin{matrix}
+-\frac{1}{\sqrt 2} \\
+\frac{1}{\sqrt 2}
+\end{matrix}\right]</script><script type="math/tex; mode=display">
+Let \ \mathbf{Z_i} = \frac{\mathbf{X_i}-\mu_i}{\sqrt {\sigma_{ii}}}, i =1,...,p. \text{The principal components become:}\\
+Y_1 = e_1^T Z = \frac{1}{\sqrt2}Z_1 +\frac{1}{\sqrt2}Z_2\\
+Y_1 = e_2^T Z = -\frac{1}{\sqrt2}Z_1 +\frac{1}{\sqrt2}Z_2\\
+\text{The total population variance explained by first principal component is:}\\
+\frac{var(Y_1)}{var(Y_1)+var(Y_2)} = \frac{\lambda_1}{\lambda_1+\lambda_2} = \frac{5+\sqrt{10}}{10} \approx 81.6\%</script><h2 id="b"><a href="#b" class="headerlink" title="b"></a>b</h2><p>The principal components of Z obtained from the eigenvectors of the correlation<br>matrix ρ of X is different from those calculated from covariance matrix $\Sigma$. Because<br>the eigen pairs derived from $\Sigma$, in general not the same as the ones derived from $\rho$</p>
+<h2 id="c"><a href="#c" class="headerlink" title="c"></a>c</h2><p>THe correlations between $Y_j$ and $Z_i$ are:</p>
+<script type="math/tex; mode=display">
+\rho_{Y_1,Z_1} = e_{11}\sqrt {\lambda_1} = \frac{1}{\sqrt2}\sqrt \frac{5+\sqrt {10}}{5} \approx0.903 \\
+\rho_{Y_1,Z_2} = e_{12}\sqrt {\lambda_1} = \frac{1}{\sqrt2}\sqrt \frac{5+\sqrt {10}}{5} \approx0.903 \\
+\rho_{Y_2,Z_1} = e_{21}\sqrt {\lambda_2} = - \frac{1}{\sqrt2}\sqrt \frac{5-\sqrt {10}}{5} \approx -0.429</script><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><h2 id="a-1"><a href="#a-1" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># read the data</span><br><span class="line">setwd(&apos;~/Desktop/三春/3多元统计分析/作业/作业4/&apos;)</span><br><span class="line">dat&lt;-read.csv(&quot;table8.4.csv&quot;)</span><br><span class="line">X1&lt;-dat$x1</span><br><span class="line">X2&lt;-dat$x2</span><br><span class="line">X3&lt;-dat$x3</span><br><span class="line">X4&lt;-dat$x4</span><br><span class="line">X5&lt;-dat$x5</span><br><span class="line">covar &lt;- cov(dat)</span><br><span class="line">covar</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eigen(cov(dat))</span><br><span class="line">prcomp(dat)</span><br><span class="line">summary(prcomp(dat))</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+Y_1 = e_1^T X= -0.2228228 X_1  -0.3072900 X_2 -0.1548103 X_3 -0.6389680 X_4 -0.6509044 X_5\\
+Y_2 = e_2^T X = 0.6252260 X_1 + 0.5703900 X_2 +0.3445049 X_3 -0.2479475 X_4 -0.3218478 X_5\\
+Y_3 = e_3^T X= -0.32611218 X_1 +  0.24959014 X_2 +0.03763929 X_3 +0.64249741 X_4 -0.64586064 X_5\\
+Y_4 = e_4^T X=  0.6627590 X_1 -0.4140935X_2 -0.4970499 X_3 +0.3088689 X_4 -0.2163758 X_5\\
+Y_5 = e_5^T X=-0.11765952 X_1 +0.58860803 X_2 -0.78030428 X_3 -0.14845546 X_4 +0.09371777 X_5</script><h2 id="b-1"><a href="#b-1" class="headerlink" title="b"></a>b</h2><p>From the summary above, the proportion of the total sample variance explained by the rst<br>three principal components is: 89.881%. It means that the first three explain almost all<br>variance.</p>
+<h2 id="c-1"><a href="#c-1" class="headerlink" title="c"></a>c</h2><p>From 8-33, we have the CI of m $\lambda_i$:</p>
+<script type="math/tex; mode=display">
+[\frac{\hat \lambda_i}{1+z(\alpha/2m)\sqrt{2/n}},\frac{\hat \lambda_i}{1-z(\alpha/2m)\sqrt{2/n}}]</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">z &lt;-qnorm(1-1/6)</span><br><span class="line">cical &lt;-function(lambda)&#123;</span><br><span class="line">  c(lambda/(1+z*(1/103)**0.5),lambda/(1-z*(1/103)**0.5))</span><br><span class="line">&#125;</span><br><span class="line">cical(0.0013676780)</span><br><span class="line">cical(0.0007011596) </span><br><span class="line">cical(0.0002538024)</span><br></pre></td></tr></table></figure>
+<p>CIs are: [0.001248653 0.001511786], [0.0006401396 0.0007750385], [0.0002317147 0.0002805447]</p>
+<h2 id="d"><a href="#d" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(c(0.52926, 0.80059, 0.89881, 0.95399, 1.00000),ylab=&quot;Cumulative proportion&quot;,xlab=&quot;Component number&quot;,type=&apos;b&apos;)</span><br></pre></td></tr></table></figure>
+<p>From the cumulative proportion plot, it seems that three dimensions’ PC are enough.</p>
+<h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><h2 id="a-2"><a href="#a-2" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">library(bootstrap)</span><br><span class="line">data(scor)</span><br><span class="line">plot(scor)</span><br></pre></td></tr></table></figure>
+<h2 id="b-2"><a href="#b-2" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cor(scor)</span><br></pre></td></tr></table></figure>
+<h2 id="c-2"><a href="#c-2" class="headerlink" title="c"></a>c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">prcomp(scor)</span><br><span class="line">summary(prcomp(scor))</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+Y_1 = e_1^T X= -0.5054457 X_1  -0.3683486 X_2 -0.3456612 X_3 -0.4511226 X_4 -0.5346501 X_5\\
+Y_2 = e_2^T X = -0.74874751 X_1 -0.20740314 X_2 + 0.07590813 X_3 +0.30088849 X_4 +0.54778205 X_5\\
+Y_3 = e_3^T X= 0.2997888 X_1   -0.4155900 X_2 -0.1453182 X_3 -0.5966265 X_4 +0.6002758 X_5\\
+Y_4 = e_4^T X=  -0.296184264 X_1 + 0.78288817X_2 +0.003236339 X_3 -0.518139724 X_4 +0.175732020 X_5\\
+Y_5 = e_5^T X= -0.07939388 X_1 -0.18887639 X_2 +0.92392015 X_3 -0.28552169 X_4 -0.15123239 X_5</script><h2 id="d-1"><a href="#d-1" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(c( 0.6191,0.8013 ,0.8948 ,0.97102, 1.00000),ylab=&quot;Cumulative proportion&quot;,xlab=&quot;Component number&quot;,type=&apos;b&apos;)</span><br></pre></td></tr></table></figure>
+<p>I will choose the first too for these three PCs take almost 80% of total variance.</p>
+<h2 id="e"><a href="#e" class="headerlink" title="e"></a>e</h2><p>PC1 may stand for the indicator of scores on all subjects. PC2 has more straightforward mearning: it is related to closed or open rules.</p>
+<h2 id="f"><a href="#f" class="headerlink" title="f"></a>f</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">library(&apos;ggfortify&apos;)</span><br><span class="line">autoplot(prcomp(scor,scale=TRUE),colour=&apos;green&apos;,label=TRUE)</span><br></pre></td></tr></table></figure>
+<h2 id="g"><a href="#g" class="headerlink" title="g"></a>g</h2><p>$\chi^2_2(0.05) = 5.99$<br>I use python to check the outlier:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert</span><span class="params">(strr)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.array(strr.split(<span class="string">' '</span>)).astype(<span class="string">'float'</span>).reshape(<span class="number">-1</span>,<span class="number">1</span>)</span><br><span class="line">pca = PCA(n_components=<span class="number">2</span>, svd_solver=<span class="string">'full'</span>)</span><br><span class="line">dat = pca.fit_transform(data)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ellipse</span><span class="params">(i)</span>:</span></span><br><span class="line">    x,y = dat[i,<span class="number">0</span>],dat[i,<span class="number">1</span>]</span><br><span class="line">    a =  (x/<span class="number">26.2105</span>)**<span class="number">2</span> + (y/<span class="number">14.2166</span>)**<span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> a &gt;=<span class="number">5.99</span>:</span><br><span class="line">        <span class="keyword">print</span> (i,a)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(data.shape[<span class="number">0</span>]):</span><br><span class="line">    ellipse(i)</span><br></pre></td></tr></table></figure></p>
+<p>And we can find eight outliers: 1,2,23,28,66,76,81,87</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/codes/" rel="tag"><i class="fa fa-tag"></i> codes</a>
+          
+            <a href="/tags/R/" rel="tag"><i class="fa fa-tag"></i> R</a>
+          
+            <a href="/tags/assignment/" rel="tag"><i class="fa fa-tag"></i> assignment</a>
+          
+            <a href="/tags/statistics/" rel="tag"><i class="fa fa-tag"></i> statistics</a>
+          
+            <a href="/tags/linear-regression/" rel="tag"><i class="fa fa-tag"></i> linear regression</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/16/line0/" rel="next" title="Linear Regression Assignment 4">
+                <i class="fa fa-chevron-left"></i> Linear Regression Assignment 4
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/16/line1/" rel="prev" title="Linear Regression Assignment 6">
+                Linear Regression Assignment 6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1"><span class="nav-number">1.</span> <span class="nav-text">1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2"><span class="nav-number">2.</span> <span class="nav-text">2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a"><span class="nav-number">2.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b"><span class="nav-number">2.2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">2.3.</span> <span class="nav-text">c</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3"><span class="nav-number">3.</span> <span class="nav-text">3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-1"><span class="nav-number">3.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-1"><span class="nav-number">3.2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-1"><span class="nav-number">3.3.</span> <span class="nav-text">c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-number">3.4.</span> <span class="nav-text">d</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4"><span class="nav-number">4.</span> <span class="nav-text">4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-2"><span class="nav-number">4.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-2"><span class="nav-number">4.2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-2"><span class="nav-number">4.3.</span> <span class="nav-text">c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-1"><span class="nav-number">4.4.</span> <span class="nav-text">d</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e"><span class="nav-number">4.5.</span> <span class="nav-text">e</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f"><span class="nav-number">4.6.</span> <span class="nav-text">f</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g"><span class="nav-number">4.7.</span> <span class="nav-text">g</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共80.7k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>
