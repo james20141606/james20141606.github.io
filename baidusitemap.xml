@@ -5,15 +5,15 @@
     
   <url>
     <loc>https://www.cmwonderland.com/2018/05/20/diffexpress/</loc>
-    <lastmod>2018-05-21T12:59:12.797Z</lastmod>
+    <lastmod>2018-05-21T13:04:56.451Z</lastmod>
     <data>
         <display>
         <title>Differential Expression&作业</title>
         <pubTime>2018-05-19T16:08:12.000Z</pubTime>
         
-        <tag>assignment</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>assignment</tag>
          
         <tag>bioinformatics</tag>
          
@@ -119,9 +119,9 @@
         <title>Death & Dream</title>
         <pubTime>2018-05-20T16:49:39.000Z</pubTime>
         
-        <tag>life</tag>
-         
         <tag>thoughts</tag>
+         
+        <tag>life</tag>
          
         <tag>dream</tag>
          
@@ -224,9 +224,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-16T13:13:27.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -339,9 +339,9 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-05T14:39:51.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
         <tag>bioinformatics</tag>
          
@@ -464,9 +464,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -744,11 +744,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
+        <tag>techniques</tag>
+         
         <tag>codes</tag>
          
         <tag>statistics</tag>
-         
-        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
