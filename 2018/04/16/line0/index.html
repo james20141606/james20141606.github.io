@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="WonderLand">
 <meta property="og:description" content="The fourth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-20T02:51:21.420Z">
+<meta property="og:updated_time" content="2018-05-21T14:01:14.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linear Regression Assignment 4">
 <meta name="twitter:description" content="The fourth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.">
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  829
+                  842
                 </span>
               
 
@@ -416,7 +416,11 @@
       
 
       
-        <p>The fourth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a><br>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended. <strong>Or here</strong>:<br>
+        <p>The fourth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.<br><a id="more"></a></p>
+<blockquote>
+<p><strong>recommend:</strong> <a href="https://www.cmwonderland.com/linearweek4.html">click here</a> for <strong>html version</strong> of assignment, you can see codes as well as plots.</p>
+</blockquote>
+<p>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment. Which is more recommended. <strong>Or here</strong>:<br>
 
 	<div class="row">
 		<iframe src="https://drive.google.com/file/d/1opWnMpCRo6zNydUWgrIrpeBQenV_tB04/preview" style="width:100%; height:550px"></iframe>
@@ -424,8 +428,7 @@
 
 
 </p>
-<figure class="highlight plain"><figcaption><span>setup, include</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">knitr::opts_chunk$set(echo = TRUE)</span><br></pre></td></tr></table></figure>
-<h1 id="3-6"><a href="#3-6" class="headerlink" title="3.6"></a>3.6</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hardness&lt;- read.table(&apos;CH01PR22_947709365.txt&apos;)</span><br><span class="line">names(hardness) &lt;- c(&quot;y&quot;,&quot;x&quot;)</span><br><span class="line">is.data.frame(hardness)</span><br><span class="line">hardness.fit &lt;- lm(y~x,data=hardness)</span><br><span class="line">sumtable&lt;-summary(hardness.fit)</span><br><span class="line">sumtable</span><br></pre></td></tr></table></figure>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta"># 3.6</span></span><br><span class="line">```&#123;r&#125;</span><br><span class="line"><span class="title">hardness</span>&lt;- read.table('<span class="type">CH01PR22_947709365</span>.txt')</span><br><span class="line"><span class="title">names</span>(hardness) &lt;- c(<span class="string">"y"</span>,<span class="string">"x"</span>)</span><br><span class="line"><span class="title">is</span>.<span class="class"><span class="keyword">data</span>.frame(<span class="title">hardness</span>)</span></span><br><span class="line"><span class="title">hardness</span>.fit &lt;- lm(y~x,<span class="class"><span class="keyword">data</span>=hardness)</span></span><br><span class="line"><span class="title">sumtable</span>&lt;-summary(hardness.fit)</span><br><span class="line"><span class="title">sumtable</span></span><br></pre></td></tr></table></figure>
 <h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boxplot(resid(hardness.fit),main=&quot;Box Plot of Hardness Data&quot;, ylab=&quot;Residuals&quot;)</span><br></pre></td></tr></table></figure>
 <p>The mean of residuals is zero</p>
 <h2 id="b"><a href="#b" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yhat &lt;- fitted(hardness.fit); resid &lt;- resid(hardness.fit)</span><br><span class="line">plot(yhat,resid,main=&quot;Plot of residuals against the fitted values Yhat&quot;, </span><br><span class="line">     ylab=&quot;Residuals&quot;,xlab=&apos;yhat&apos;)</span><br></pre></td></tr></table></figure>
@@ -508,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/16/multi0/" rel="next" title="Multivariate Statistics Assignment 3">
-                <i class="fa fa-chevron-left"></i> Multivariate Statistics Assignment 3
+              <a href="/2018/04/15/peomofmeng/" rel="next" title="春日の恋想">
+                <i class="fa fa-chevron-left"></i> 春日の恋想
               </a>
             
           </div>
@@ -518,8 +521,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/16/line1/" rel="prev" title="Linear Regression Assignment 6">
-                Linear Regression Assignment 6 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/16/multi0/" rel="prev" title="Multivariate Statistics Assignment 3">
+                Multivariate Statistics Assignment 3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -601,7 +604,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -679,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#3-6"><span class="nav-number">1.</span> <span class="nav-text">3.6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a"><span class="nav-number">1.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b"><span class="nav-number">1.2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">1.3.</span> <span class="nav-text">c</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-5"><span class="nav-number">2.</span> <span class="nav-text">4.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-1"><span class="nav-number">2.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-1"><span class="nav-number">2.2.</span> <span class="nav-text">c</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-9"><span class="nav-number">3.</span> <span class="nav-text">4.9</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-2"><span class="nav-number">3.1.</span> <span class="nav-text">a</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12"><span class="nav-number">4.</span> <span class="nav-text">4.12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-3"><span class="nav-number">4.1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-1"><span class="nav-number">4.2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-2"><span class="nav-number">4.3.</span> <span class="nav-text">c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-number">4.4.</span> <span class="nav-text">d</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#a"><span class="nav-number">1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b"><span class="nav-number">2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">3.</span> <span class="nav-text">c</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-5"><span class="nav-number"></span> <span class="nav-text">4.5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-1"><span class="nav-number">1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-1"><span class="nav-number">2.</span> <span class="nav-text">c</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-9"><span class="nav-number"></span> <span class="nav-text">4.9</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-2"><span class="nav-number">1.</span> <span class="nav-text">a</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-12"><span class="nav-number"></span> <span class="nav-text">4.12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#a-3"><span class="nav-number">1.</span> <span class="nav-text">a</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-1"><span class="nav-number">2.</span> <span class="nav-text">b</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-2"><span class="nav-number">3.</span> <span class="nav-text">c</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d"><span class="nav-number">4.</span> <span class="nav-text">d</span></a></li></ol></div>
             
 
           </div>
@@ -717,7 +720,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共82.3k字</span>
+  <span class="post-count">博客全站共81.7k字</span>
 </div>
 
         

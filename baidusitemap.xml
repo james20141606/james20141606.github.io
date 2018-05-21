@@ -4,64 +4,12 @@
 
     
   <url>
-    <loc>https://www.cmwonderland.com/2018/05/20/diffexpress/</loc>
-    <lastmod>2018-05-21T13:08:07.966Z</lastmod>
+    <loc>https://www.cmwonderland.com/2018/04/16/multi0/</loc>
+    <lastmod>2018-05-21T14:03:50.280Z</lastmod>
     <data>
         <display>
-        <title>Differential Expression&作业</title>
-        <pubTime>2018-05-19T16:08:12.000Z</pubTime>
-        
-        <tag>assignment</tag>
-         
-        <tag>techniques</tag>
-         
-        <tag>bioinformatics</tag>
-         
-         
-           
-             
-              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/20/line5/</loc>
-    <lastmod>2018-05-21T12:25:48.003Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 10</title>
-        <pubTime>2018-05-20T02:01:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/20/line6/</loc>
-    <lastmod>2018-05-21T12:25:37.297Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 12</title>
-        <pubTime>2018-05-20T02:01:19.000Z</pubTime>
+        <title>Multivariate Statistics Assignment 3</title>
+        <pubTime>2018-04-16T04:59:19.000Z</pubTime>
         
         <tag>codes</tag>
          
@@ -85,7 +33,7 @@
     
   <url>
     <loc>https://www.cmwonderland.com/2018/05/16/multi1/</loc>
-    <lastmod>2018-05-21T12:25:28.687Z</lastmod>
+    <lastmod>2018-05-21T14:03:38.225Z</lastmod>
     <data>
         <display>
         <title>Multivariate Statistics Assignment 4</title>
@@ -112,6 +60,198 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/05/20/line6/</loc>
+    <lastmod>2018-05-21T14:02:56.340Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 12</title>
+        <pubTime>2018-05-20T02:01:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/05/20/line5/</loc>
+    <lastmod>2018-05-21T14:02:47.096Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 10</title>
+        <pubTime>2018-05-20T02:01:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/04/20/line3/</loc>
+    <lastmod>2018-05-21T14:02:17.458Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 8</title>
+        <pubTime>2018-04-20T02:01:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/04/16/line2/</loc>
+    <lastmod>2018-05-21T14:02:06.446Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 7</title>
+        <pubTime>2018-04-16T06:01:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/04/16/line1/</loc>
+    <lastmod>2018-05-21T14:01:53.847Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 6</title>
+        <pubTime>2018-04-16T05:59:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/04/16/line0/</loc>
+    <lastmod>2018-05-21T14:01:14.338Z</lastmod>
+    <data>
+        <display>
+        <title>Linear Regression Assignment 4</title>
+        <pubTime>2018-04-16T04:59:19.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>R</tag>
+         
+        <tag>assignment</tag>
+         
+        <tag>statistics</tag>
+         
+        <tag>linear regression</tag>
+         
+         
+           
+             
+              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/05/20/diffexpress/</loc>
+    <lastmod>2018-05-21T13:08:07.966Z</lastmod>
+    <data>
+        <display>
+        <title>Differential Expression&作业</title>
+        <pubTime>2018-05-19T16:08:12.000Z</pubTime>
+        
+        <tag>assignment</tag>
+         
+        <tag>techniques</tag>
+         
+        <tag>bioinformatics</tag>
+         
+         
+           
+             
+              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/21/death-and-dream/</loc>
     <lastmod>2018-05-21T12:23:01.250Z</lastmod>
     <data>
@@ -129,34 +269,6 @@
            
              
               <breadCrumb title="thoughts" url="https://www.cmwonderland.com/categories/thoughts/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/20/line4/</loc>
-    <lastmod>2018-05-21T12:22:34.346Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 9</title>
-        <pubTime>2018-05-20T02:01:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
           
         </display>
     </data>
@@ -315,11 +427,11 @@
         
         <tag>techniques</tag>
          
-        <tag>bioinformatics</tag>
-         
         <tag>software</tag>
          
         <tag>python</tag>
+         
+        <tag>bioinformatics</tag>
          
          
            
@@ -390,9 +502,9 @@
         
         <tag>techniques</tag>
          
-        <tag>software</tag>
-         
         <tag>setup</tag>
+         
+        <tag>software</tag>
          
          
            
@@ -573,34 +685,6 @@
 
     
   <url>
-    <loc>https://www.cmwonderland.com/2018/04/16/line2/</loc>
-    <lastmod>2018-04-20T02:59:10.467Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 7</title>
-        <pubTime>2018-04-16T06:01:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.cmwonderland.com/2018/04/17/Reading-Notes-of-Wittgenstein-s-Bio/</loc>
     <lastmod>2018-04-20T02:56:36.088Z</lastmod>
     <data>
@@ -618,118 +702,6 @@
            
              
               <breadCrumb title="thoughts" url="https://www.cmwonderland.com/categories/thoughts/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/04/16/multi0/</loc>
-    <lastmod>2018-04-20T02:55:01.954Z</lastmod>
-    <data>
-        <display>
-        <title>Multivariate Statistics Assignment 3</title>
-        <pubTime>2018-04-16T04:59:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/04/20/line3/</loc>
-    <lastmod>2018-04-20T02:53:27.442Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 8</title>
-        <pubTime>2018-04-20T02:01:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/04/16/line1/</loc>
-    <lastmod>2018-04-20T02:52:25.194Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 6</title>
-        <pubTime>2018-04-16T05:59:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/04/16/line0/</loc>
-    <lastmod>2018-04-20T02:51:21.420Z</lastmod>
-    <data>
-        <display>
-        <title>Linear Regression Assignment 4</title>
-        <pubTime>2018-04-16T04:59:19.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>R</tag>
-         
-        <tag>assignment</tag>
-         
-        <tag>statistics</tag>
-         
-        <tag>linear regression</tag>
-         
-         
-           
-             
-              <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
           
         </display>
     </data>
