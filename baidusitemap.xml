@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/04/15/peomofmeng/</loc>
+    <lastmod>2018-05-21T02:34:02.381Z</lastmod>
+    <data>
+        <display>
+        <title>春日の恋想</title>
+        <pubTime>2018-04-15T05:54:30.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+        <tag>girl friend</tag>
+         
+        <tag>poem</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="https://www.cmwonderland.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/21/death-and-dream/</loc>
     <lastmod>2018-05-20T17:03:23.941Z</lastmod>
     <data>
@@ -64,9 +88,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-16T13:13:27.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -179,11 +203,11 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-05T14:39:51.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -304,9 +328,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T07:09:56.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -422,11 +446,11 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
         <tag>linear regression</tag>
          
@@ -474,11 +498,11 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
         <tag>linear regression</tag>
          
@@ -502,11 +526,11 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
         <tag>linear regression</tag>
          
@@ -530,11 +554,11 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
         <tag>linear regression</tag>
          
@@ -558,11 +582,11 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
         <tag>linear regression</tag>
          
@@ -584,13 +608,13 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-12T15:30:17.000Z</pubTime>
         
-        <tag>codes</tag>
-         
-        <tag>statistics</tag>
-         
         <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
+         
+        <tag>codes</tag>
+         
+        <tag>statistics</tag>
          
         <tag>machine learning</tag>
          
@@ -617,40 +641,16 @@
         
         <tag>codes</tag>
          
+        <tag>statistics</tag>
+         
         <tag>R</tag>
          
         <tag>assignment</tag>
-         
-        <tag>statistics</tag>
          
          
            
              
               <breadCrumb title="school work" url="https://www.cmwonderland.com/categories/school-work/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/04/15/peomofmeng/</loc>
-    <lastmod>2018-04-16T06:20:20.616Z</lastmod>
-    <data>
-        <display>
-        <title>春日の恋想</title>
-        <pubTime>2018-04-15T05:54:30.000Z</pubTime>
-        
-        <tag>life</tag>
-         
-        <tag>girl friend</tag>
-         
-        <tag>poem</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="https://www.cmwonderland.com/categories/life/"/>
           
         </display>
     </data>
@@ -742,11 +742,11 @@
         <title>Extract Countries' Commercial Data</title>
         <pubTime>2018-04-12T15:49:57.000Z</pubTime>
         
+        <tag>economics</tag>
+         
         <tag>codes</tag>
          
         <tag>statistics</tag>
-         
-        <tag>economics</tag>
          
         <tag>girl friend</tag>
          
