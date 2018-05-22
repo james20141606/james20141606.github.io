@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="life,autobiograpy," />
+  <meta name="keywords" content="techniques,setup,mac," />
 
 
 
@@ -90,18 +90,23 @@
 
 
 
-<meta name="description" content="我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。">
-<meta name="keywords" content="life,autobiograpy">
+<meta name="description" content="本来是要解决mac一个很蠢的问题的：无法新建文件。 之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。 这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。 显然既然还可以用shell，能做的东西还是很多的。 &amp;lt;!—more—&amp;gt;   STEPSopen au">
+<meta name="keywords" content="techniques,setup,mac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧">
-<meta property="og:url" content="https://www.cmwonderland.com/2018/04/11/auto7/index.html">
+<meta property="og:title" content="MAC用automator创建小应用解决一些简单需求">
+<meta property="og:url" content="https://www.cmwonderland.com/2018/05/22/customizeapp/index.html">
 <meta property="og:site_name" content="WonderLand">
-<meta property="og:description" content="我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。">
+<meta property="og:description" content="本来是要解决mac一个很蠢的问题的：无法新建文件。 之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。 这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。 显然既然还可以用shell，能做的东西还是很多的。 &amp;lt;!—more—&amp;gt;   STEPSopen au">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-12T08:12:06.547Z">
+<meta property="og:image" content="http://i4.fuimg.com/640680/f7023d7d9b64c7a6.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/a26d9176d1204015.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/8d684b37c5e1ad34.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/4c85f5ca77cab348.png">
+<meta property="og:updated_time" content="2018-05-22T09:43:27.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧">
-<meta name="twitter:description" content="我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。">
+<meta name="twitter:title" content="MAC用automator创建小应用解决一些简单需求">
+<meta name="twitter:description" content="本来是要解决mac一个很蠢的问题的：无法新建文件。 之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。 这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。 显然既然还可以用shell，能做的东西还是很多的。 &amp;lt;!—more—&amp;gt;   STEPSopen au">
+<meta name="twitter:image" content="http://i4.fuimg.com/640680/f7023d7d9b64c7a6.png">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://www.cmwonderland.com/2018/04/11/auto7/"/>
+  <link rel="canonical" href="https://www.cmwonderland.com/2018/05/22/customizeapp/"/>
 
 
 
 
 
-  <title>回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧 | WonderLand</title>
+  <title>MAC用automator创建小应用解决一些简单需求 | WonderLand</title>
   
 
 
@@ -285,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/11/auto7/">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/05/22/customizeapp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Chen">
@@ -302,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧</h1>
+          <h1 class="post-title" itemprop="name headline">MAC用automator创建小应用解决一些简单需求</h1>
         
 
         <div class="post-meta">
@@ -314,8 +319,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T10:09:49+08:00">
-                2018-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-22T17:35:37+08:00">
+                2018-05-22
               </time>
             
 
@@ -337,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/爷爷回忆录/" itemprop="url" rel="index">
-                    <span itemprop="name">爷爷回忆录</span>
+                  <a href="/categories/techniques/" itemprop="url" rel="index">
+                    <span itemprop="name">techniques</span>
                   </a>
                 </span>
 
@@ -354,7 +359,7 @@
 
           
           
-             <span id="/2018/04/11/auto7/" class="leancloud_visitors" data-flag-title="回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧">
+             <span id="/2018/05/22/customizeapp/" class="leancloud_visitors" data-flag-title="MAC用automator创建小应用解决一些简单需求">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -379,7 +384,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,697
+                  355
                 </span>
               
 
@@ -395,7 +400,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  6
+                  2
                 </span>
               
             </div>
@@ -416,19 +421,23 @@
       
 
       
-        <p>我和若平两人背景相同，志同道合，结婚后朝夕相处，可以永不分离，两个人形影不离，生活觉得甜蜜极了，结伴扛着农具干活去，在乡下的生活倒也过得有滋有味。我的长子陈大军出生后，全家都高兴坏了。父亲说，长子得了长孙，家里人丁兴旺了起来，再困难也得办几桌酒席，让亲朋好友齐聚一堂，共享快乐。父亲是非常能干厉害的人，在那么困难的条件下（三年灾害刚刚过去），操办了全席酒宴，我由衷地感激父亲。<br><a id="more"></a><br>开席了，村里面很多年没有人家办全席了，男女老幼满庭院，孩童们将白馒头偷偷揣进怀里，大人们猜枚行令，真是热闹非凡。</p>
-<p>两点多啦，酒宴临近撤席，有的亲戚朋友到院外互相问候、攀谈，准备道别。女人们争相到妻子床边亲眼看一看儿子的容貌。为了准备这十几桌酒席，我忙活了好几天，这会是个空隙，我搬个小凳子坐在大门外左侧池塘边那棵桃树下稍事休息，成家啦，得子啦，还是个小子呢！我忍不住开心地笑着。这棵桃树桃儿满枝头，硕果累累，这树是我亲手所栽，一点点培育长大的呢！农家人的快乐、幸福与满足一齐涌上心头，多久都没有这么快乐过了呢！</p>
-<p>正想着心里的事，有两个推着自行车的人朝大门口走去，询问陈炳林、王若平两人是否住在这里。我抬头望去，两个人的面孔好生熟悉，这是哪里来的客人呢，怎么这个时候才到，我该怎么招待呀。再仔细一看，原来是郑州学校的班主任何老师和教汽托课的邢仁军老师，我赶忙跑步过去迎接。我心里震惊得说话都语无伦次了，我说，老师您吃饭了没有，您咋知道我和王若平的家在这里？在校时我俩是他们的学生，现在我们已经成为了夫妻，孩子都出生了，正好赶上办酒席，真的有点尴尬。</p>
-<p>邢仁军老师教汽车拖拉机课，他语言精练易懂实践经验丰富，实习课上他经常让我操作示范给大家看，对我器重有加，青眼相看，我也非常喜欢他，他是我心中的偶像。班主任和我最喜欢的老师来到家里，自然是非常激动。</p>
-<p>接下来的消息更是让人激动不已，老师说：祝贺你们双喜临门，学校也要复课啦，这是入学通知书，交给你们。我双手接住了两份沉甸甸的通知书。</p>
-<p>事前没有任何的讯息，二位老师又千里迢迢将入学通知书递到了手里，我既惊喜又感激。我说：老师，我和王若平已经结婚生子了，学校还会要我们吗？老师的回答是坚定的：这个问题是国家造成的，你们没有过错，学校会接收你们的。你们在校时的表现我是知道的，王若平还是班干部，学生会的学习委员哩，放心吧，学校一定会收你们的！</p>
-<p>我校能复课开学，乃是占了“农”字的光。因着毛主席提出“农业的根本出路在机械化”的批示得以率先复课，其他的院校都还没消息呢。</p>
-<p>瞬间，地道的农民又可以上学啦，可以重新当城里人，读书人了。做了爸妈的人要去上学啦，儿子怎么办呢？在农村出了这样的新鲜事，你说稀奇不稀奇？</p>
-<p>距离开学只剩下两个月了，谁去谁留？都去都留？欣喜之后是烦恼，这个问题始终困扰着我俩，萦绕在我们心头。全家人也争论不休，我们征求了岳父母的意见，也和内兄写信联系，大家的意见是，都去上学。岳父母资助了一些费用，内兄也汇来了钱款。再难也得坚持下去啊，妻子也强调，不管谁去谁留都可能给婚姻和家庭带来变故，而我们都极其渴望重新上学，改变命运，因此最终我们达成了一致，一起复课学习。</p>
-<p>两个月飞速过去，我俩要离开这个家了，要离开儿子了，儿子虽然个头不小，可是因为他母亲怀他时严重营养不良，这时竟然连头也直不起来。儿子让我们割舍不下，心疼不已，后来在沽沱村找到奶妈，草草安置后，含泪依依不舍地离开了家，我们重新踏上了求学之路。</p>
-<p>可怜天下父母心，儿子是母亲身上掉下来的肉，儿行千里母担忧，如今是母行千里，留儿子在家里。在最后一年的学生生涯里，儿子的身影时刻萦绕在她的心头，她上课经常走神，清净时甚至能隐约听到儿子啼哭的声音，身边没人时她就经常把自己为儿子做的一身小衣服，连同帽子摆在自己床上，摆弄摆弄看是否合身。她只要听到楼上女教师儿子的啼哭声就会不由自主地流眼泪。这一年应该说是短暂的，对我们来说却是无比漫长的。春节到了，本来是个千载难逢的探望家人的机会，团聚一堂的机会，可以和家人还有儿子团聚了，可是因为没有经费，我俩只能回去一个人，于是妻子回家，我一人留在学校，我会情愿吗，实在是无奈之举啊。妻子为了既能探望婆家人，又能见到父母，拉着架子车把婆婆和儿子拉到外婆家，以达到和儿子分秒不离的目的。留在学校的我心中是什么滋味，就让各位读者自己品味吧！</p>
-<p>在这最后的学生生活里，因为精神压力大，我曾多次生病，眼睛患结膜炎、角膜炎，还有胸膜炎，胃病，失眠等疾病。由于视力极度下降，怕光、怕风、流泪，我无法进行毕业笔试考试，后来经校方特批，部分课程改成口述答题。坚持就是胜利，最后我竟然以优异的成绩顺利完成考试，毕业了。</p>
+        <p>本来是要解决mac一个很蠢的问题的：无法新建文件。</p>
+<p>之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。</p>
+<p>这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。</p>
+<p>显然既然还可以用shell，能做的东西还是很多的。</p>
+<p>&lt;!—more—&gt;</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=21224493&auto=1&height=66"></iframe>
 
+<h2 id="STEPS"><a href="#STEPS" class="headerlink" title="STEPS"></a>STEPS</h2><h3 id="open-automator"><a href="#open-automator" class="headerlink" title="open automator"></a>open automator</h3><h4 id="select-application"><a href="#select-application" class="headerlink" title="select application"></a>select application</h4><p><img src="http://i4.fuimg.com/640680/f7023d7d9b64c7a6.png" alt="Markdown"></p>
+<h4 id="select-AppleScript-on-left-bar"><a href="#select-AppleScript-on-left-bar" class="headerlink" title="select AppleScript on left bar"></a>select AppleScript on left bar</h4><p><strong>WRITE</strong><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Finder"</span></span><br><span class="line">	<span class="keyword">set</span> selection <span class="keyword">to</span> make new <span class="built_in">file</span> <span class="keyword">at</span> (<span class="keyword">get</span> insertion location)</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">	return</span> input</span><br><span class="line"><span class="keyword">end</span> <span class="built_in">run</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="save-as-file-app-in-somewhere"><a href="#save-as-file-app-in-somewhere" class="headerlink" title="save as file.app in somewhere"></a>save as file.app in somewhere</h3><h3 id="customize-toolbar"><a href="#customize-toolbar" class="headerlink" title="customize toolbar"></a>customize toolbar</h3><h4 id="drug-your-new-application-to-toolbar"><a href="#drug-your-new-application-to-toolbar" class="headerlink" title="drug your new application to toolbar"></a>drug your new application to toolbar</h4><p><img src="http://i4.fuimg.com/640680/a26d9176d1204015.png" alt="Markdown"></p>
+<p><strong>DONE</strong></p>
+<p><img src="http://i4.fuimg.com/640680/8d684b37c5e1ad34.png" alt="Markdown"></p>
+<p><strong>NEXT TIME click the button above to enjoy your design</strong></p>
+<p>As you can see, I design another one to sync my scripts, contents:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>website<span class="regexp">/jamesblog /</span>Volumes<span class="regexp">/New\ Drive/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>bear <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>爷爷回忆录gitbook <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>三春 <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh --max-size=<span class="string">'5M'</span> --exclude-from=<span class="string">'exclude_me.txt'</span> <span class="string">hpc1:</span><span class="regexp">~/projects/</span> <span class="regexp">/Volumes/</span>New\ Drive/hpc1backup</span><br><span class="line">rsync -avzh --max-size=<span class="string">'5M'</span> --exclude-from=<span class="string">'exclude_me.txt'</span> <span class="string">ibme:</span><span class="regexp">~/projects/</span> <span class="regexp">/Volumes/</span>New\ Drive/ibmebackup</span><br><span class="line">cp <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json /</span>Users<span class="regexp">/james/</span>Library<span class="regexp">/Jupyter/</span>nbextensions<span class="regexp">/snippets/</span>snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json ibme:/</span>Share<span class="regexp">/home/</span>chenxupeng<span class="regexp">/.local/</span>share<span class="regexp">/jupyter/</span>nbextensions<span class="regexp">/snippets/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json cnode:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json hpc1:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/</span><br></pre></td></tr></table></figure>
+<p><img src="http://i4.fuimg.com/640680/4c85f5ca77cab348.png" alt="Markdown"></p>
+<h1 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h1>
       
     </div>
     
@@ -456,9 +465,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/life/" rel="tag"><i class="fa fa-tag"></i> life</a>
+            <a href="/tags/techniques/" rel="tag"><i class="fa fa-tag"></i> techniques</a>
           
-            <a href="/tags/autobiograpy/" rel="tag"><i class="fa fa-tag"></i> autobiograpy</a>
+            <a href="/tags/setup/" rel="tag"><i class="fa fa-tag"></i> setup</a>
+          
+            <a href="/tags/mac/" rel="tag"><i class="fa fa-tag"></i> mac</a>
           
         </div>
       
@@ -471,8 +482,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/11/auto8/" rel="next" title="回忆录 CHAPTER Ⅷ 工作,崭新的篇章">
-                <i class="fa fa-chevron-left"></i> 回忆录 CHAPTER Ⅷ 工作,崭新的篇章
+              <a href="/2018/05/21/death-and-dream/" rel="next" title="Death & Dream">
+                <i class="fa fa-chevron-left"></i> Death & Dream
               </a>
             
           </div>
@@ -480,10 +491,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/11/auto6/" rel="prev" title="回忆录 CHAPTER Ⅵ  婚后的生活">
-                回忆录 CHAPTER Ⅵ  婚后的生活 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -623,6 +639,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#STEPS"><span class="nav-number">1.</span> <span class="nav-text">STEPS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#open-automator"><span class="nav-number">1.1.</span> <span class="nav-text">open automator</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#select-application"><span class="nav-number">1.1.1.</span> <span class="nav-text">select application</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#select-AppleScript-on-left-bar"><span class="nav-number">1.1.2.</span> <span class="nav-text">select AppleScript on left bar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#save-as-file-app-in-somewhere"><span class="nav-number">1.2.</span> <span class="nav-text">save as file.app in somewhere</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#customize-toolbar"><span class="nav-number">1.3.</span> <span class="nav-text">customize toolbar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#drug-your-new-application-to-toolbar"><span class="nav-number">1.3.1.</span> <span class="nav-text">drug your new application to toolbar</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网站"><span class="nav-number"></span> <span class="nav-text">网站</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

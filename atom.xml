@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cmwonderland.com/"/>
-  <updated>2018-05-21T17:17:53.425Z</updated>
+  <updated>2018-05-22T09:43:27.794Z</updated>
   <id>https://www.cmwonderland.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC用automator创建小应用解决一些简单需求</title>
+    <link href="https://www.cmwonderland.com/2018/05/22/customizeapp/"/>
+    <id>https://www.cmwonderland.com/2018/05/22/customizeapp/</id>
+    <published>2018-05-22T09:35:37.000Z</published>
+    <updated>2018-05-22T09:43:27.794Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来是要解决mac一个很蠢的问题的：无法新建文件。</p><p>之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。</p><p>这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。</p><p>显然既然还可以用shell，能做的东西还是很多的。</p><p>&lt;!—more—&gt;</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=21224493&auto=1&height=66"></iframe><h2 id="STEPS"><a href="#STEPS" class="headerlink" title="STEPS"></a>STEPS</h2><h3 id="open-automator"><a href="#open-automator" class="headerlink" title="open automator"></a>open automator</h3><h4 id="select-application"><a href="#select-application" class="headerlink" title="select application"></a>select application</h4><p><img src="http://i4.fuimg.com/640680/f7023d7d9b64c7a6.png" alt="Markdown"></p><h4 id="select-AppleScript-on-left-bar"><a href="#select-AppleScript-on-left-bar" class="headerlink" title="select AppleScript on left bar"></a>select AppleScript on left bar</h4><p><strong>WRITE</strong><br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Finder"</span></span><br><span class="line"><span class="keyword">set</span> selection <span class="keyword">to</span> make new <span class="built_in">file</span> <span class="keyword">at</span> (<span class="keyword">get</span> insertion location)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">return</span> input</span><br><span class="line"><span class="keyword">end</span> <span class="built_in">run</span></span><br></pre></td></tr></table></figure></p><h3 id="save-as-file-app-in-somewhere"><a href="#save-as-file-app-in-somewhere" class="headerlink" title="save as file.app in somewhere"></a>save as file.app in somewhere</h3><h3 id="customize-toolbar"><a href="#customize-toolbar" class="headerlink" title="customize toolbar"></a>customize toolbar</h3><h4 id="drug-your-new-application-to-toolbar"><a href="#drug-your-new-application-to-toolbar" class="headerlink" title="drug your new application to toolbar"></a>drug your new application to toolbar</h4><p><img src="http://i4.fuimg.com/640680/a26d9176d1204015.png" alt="Markdown"></p><p><strong>DONE</strong></p><p><img src="http://i4.fuimg.com/640680/8d684b37c5e1ad34.png" alt="Markdown"></p><p><strong>NEXT TIME click the button above to enjoy your design</strong></p><p>As you can see, I design another one to sync my scripts, contents:</p><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>website<span class="regexp">/jamesblog /</span>Volumes<span class="regexp">/New\ Drive/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>bear <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>爷爷回忆录gitbook <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/Desktop/</span>三春 <span class="regexp">/Volumes/</span>New\ Drive/</span><br><span class="line">rsync -avzh --max-size=<span class="string">'5M'</span> --exclude-from=<span class="string">'exclude_me.txt'</span> <span class="string">hpc1:</span><span class="regexp">~/projects/</span> <span class="regexp">/Volumes/</span>New\ Drive/hpc1backup</span><br><span class="line">rsync -avzh --max-size=<span class="string">'5M'</span> --exclude-from=<span class="string">'exclude_me.txt'</span> <span class="string">ibme:</span><span class="regexp">~/projects/</span> <span class="regexp">/Volumes/</span>New\ Drive/ibmebackup</span><br><span class="line">cp <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json /</span>Users<span class="regexp">/james/</span>Library<span class="regexp">/Jupyter/</span>nbextensions<span class="regexp">/snippets/</span>snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json ibme:/</span>Share<span class="regexp">/home/</span>chenxupeng<span class="regexp">/.local/</span>share<span class="regexp">/jupyter/</span>nbextensions<span class="regexp">/snippets/</span></span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json cnode:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/snippets.json</span><br><span class="line">rsync -avzh <span class="regexp">/Users/</span>james<span class="regexp">/snippets.json hpc1:/</span>home<span class="regexp">/chenxupeng/</span>.local<span class="regexp">/share/</span>jupyter<span class="regexp">/nbextensions/</span>snippets/</span><br></pre></td></tr></table></figure><p><img src="http://i4.fuimg.com/640680/4c85f5ca77cab348.png" alt="Markdown"></p><h1 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本来是要解决mac一个很蠢的问题的：无法新建文件。&lt;/p&gt;
+&lt;p&gt;之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。&lt;/p&gt;
+&lt;p&gt;这次用了Mac自带的automator自己
+      
+    
+    </summary>
+    
+      <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
+    
+    
+      <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
+      <category term="setup" scheme="https://www.cmwonderland.com/tags/setup/"/>
+    
+      <category term="mac" scheme="https://www.cmwonderland.com/tags/mac/"/>
+    
+  </entry>
   
   <entry>
     <title>Death &amp; Dream</title>
@@ -46,36 +77,6 @@
   </entry>
   
   <entry>
-    <title>Linear Regression Assignment 12</title>
-    <link href="https://www.cmwonderland.com/2018/05/20/line6/"/>
-    <id>https://www.cmwonderland.com/2018/05/20/line6/</id>
-    <published>2018-05-20T02:01:19.000Z</published>
-    <updated>2018-05-21T14:14:32.125Z</updated>
-    
-    <content type="html"><![CDATA[<p>The twelveth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.</p><a id="more"></a><blockquote><p><strong>most recommend:</strong> <a href="https://www.cmwonderland.com/linearweek12.html"><strong>click here</strong></a> for <strong>html version</strong> of assignment, you can see codes as well as plots.</p></blockquote><p>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment from github. <strong>Or if you can cross the fire wall, just see below</strong>:<br><div class="row"><iframe src="https://drive.google.com/file/d/1TV_5cYmIUSdir6iIdjqZsDHVsWejGBpE/preview" style="width:100%; height:550px"></iframe></div></p><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- seq(-5, 18, length=1000)</span><br><span class="line">y1 &lt;- dnorm(x, mean=5.1, sd=2.8)</span><br><span class="line">y2 &lt;- dnorm(x, mean=6.3, sd=2.8)</span><br><span class="line">y3 &lt;- dnorm(x, mean=7.9, sd=2.8)</span><br><span class="line">y4 &lt;- dnorm(x, mean=9.5, sd=2.8)</span><br><span class="line">plot(x, y1, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y2, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y3, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y4, type=&quot;l&quot;, lwd=1)</span><br><span class="line">abline(v=5.1)</span><br><span class="line">abline(v=6.3)</span><br><span class="line">abline(v=7.9)</span><br><span class="line">abline(v=9.5)</span><br></pre></td></tr></table></figure><h2 id="b"><a href="#b" class="headerlink" title="b"></a>b</h2><script type="math/tex; mode=display">E(MSE) = \sigma^2 = 7.84 \\E(MSTR) = \sigma^2 + \frac{\sum _i(\mu_i-\mu  )^2}{\gamma -1} \\=7.84+\frac{100[(5.1-7.2)^2+(6.3-7.2)^2+(7.9-7.2)^2+(9.5-7.2)^2]}{3} \approx 374</script><p>It suggests that the different treatments have substantially impact on Y</p><h2 id="c"><a href="#c" class="headerlink" title="c"></a>c</h2><script type="math/tex; mode=display">\text{Use same equation as b, we have: }E(MSTR) = \sigma^2 + \frac{\sum _i(\mu_i-\mu  )^2}{\gamma -1} \\=7.84+\frac{100[(5.1-7.2)^2+(5.6-7.2)^2+(9-7.2)^2+(9.5-7.2)^2]}{3} \approx 523</script><p>It is because the points distribution are more scattered compared to b.</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dat&lt;-read.table(&quot;CH16PR10.txt&quot;)</span><br><span class="line">names(dat)&lt;-c(&quot;x&quot;,&quot;age&quot;,&quot;num&quot;)</span><br></pre></td></tr></table></figure><h2 id="a-1"><a href="#a-1" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(x=dat$age, y=dat$x)</span><br></pre></td></tr></table></figure><p>The factor level means seem to differ, at least the middle ge group differs from the other two.<br>The variability within each factor level seems to be constant.</p><h2 id="b-1"><a href="#b-1" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">code &lt;- rbind(diag(1,3),-1)</span><br><span class="line">xx &lt;- code[dat$age,]</span><br><span class="line">dat$x1 &lt;- xx[,1]</span><br><span class="line">dat$x2 &lt;- xx[,2]</span><br><span class="line">dat$x3 &lt;- xx[,3]</span><br><span class="line"></span><br><span class="line">dat$age &lt;- factor(dat$age)</span><br><span class="line">fit1 &lt;- aov(x~age,data=dat)</span><br><span class="line">yhat &lt;- fitted(fit1)</span><br><span class="line">yhat</span><br></pre></td></tr></table></figure><h2 id="c-1"><a href="#c-1" class="headerlink" title="c"></a>c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resid1 &lt;- resid(fit1)</span><br><span class="line">resid1</span><br></pre></td></tr></table></figure><h2 id="d"><a href="#d" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">summary(fit1)</span><br></pre></td></tr></table></figure><h2 id="e"><a href="#e" class="headerlink" title="e"></a>e</h2><script type="math/tex; mode=display">H_0:\mu_1=\mu_2=\mu_3 \\H_1: \text{otherwise} \\F^*=\frac{MSTR}{MSE}</script><p>Reject null hypothesis if F*&gt;$F_{0.99,3,33}$<br>The p value is 4.769e-12<br>We reject H_0</p><h2 id="f"><a href="#f" class="headerlink" title="f"></a>f</h2><p>If seems that middle aged people tend to offer more cash for a used car, while young and old people tend to offer less.</p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><h2 id="a-2"><a href="#a-2" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fit2 &lt;- lm(x~age,data=dat)</span><br><span class="line">summary(fit2)</span><br></pre></td></tr></table></figure><p>The model is $Yhat=21.5+6.25X_1-0.0833X_2$<br>The intercept term estimates the average cell sample mean.</p><h2 id="b-2"><a href="#b-2" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anova(fit2)</span><br></pre></td></tr></table></figure><p>$H_0:\tau_1=\tau_2$ </p><p>$H_1: otherwise$</p><p>$F^*=\frac{MSR}{MSE}$</p><p>Reject null hypothesis if F*&gt;$F_{0.99,2,33}$<br>The p value is 4.769e-12, so We reject H_0</p><h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><h2 id="b-3"><a href="#b-3" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Young=c(23, 25, 21, 22, 21, 22, 20, 23, 19, 22, 19, 21)</span><br><span class="line">Middle=c(28, 27, 27, 29, 26, 29, 27, 30, 28, 27, 26, 29)</span><br><span class="line">Elderly=c(23, 20, 25, 21, 22, 23, 21, 20, 19, 20, 22, 21)</span><br><span class="line">FactorLevels=c(1,2,3)</span><br><span class="line">n1=length(Young)</span><br><span class="line">n2=length(Middle)</span><br><span class="line">n3=length(Elderly)</span><br><span class="line"></span><br><span class="line">MyData=data.frame(</span><br><span class="line">Values=c(Young,Middle,Elderly),</span><br><span class="line">Treatment=c(rep(1,n1),rep(2,n2),rep(3,n3)))</span><br><span class="line"></span><br><span class="line">y=MyData$Values</span><br><span class="line">x=factor(MyData$Treatment)</span><br><span class="line">means=tapply(y,x,mean)</span><br><span class="line">n=tapply(y,x,length)</span><br><span class="line">df=sum(n)-2</span><br><span class="line"></span><br><span class="line">MSE=2.49</span><br><span class="line">alpha=0.01</span><br><span class="line">l1=means[1]-qt(1-alpha/2,df)*sqrt(MSE/n[1])</span><br><span class="line">u1=means[1]+qt(1-alpha/2,df)*sqrt(MSE/n[1])</span><br><span class="line">print(c(l1,u1))</span><br></pre></td></tr></table></figure><p>So the confidence level is (20.2572,22.7428)</p><h2 id="c-2"><a href="#c-2" class="headerlink" title="c"></a>c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MSE=2.49</span><br><span class="line">alpha=0.01</span><br><span class="line">l31=means[3]-means[1]-qt(1-alpha/2,df)*sqrt(MSE/n[1]+MSE/n[3])</span><br><span class="line">u31=means[3]-means[1]+qt(1-alpha/2,df)*sqrt(MSE/n[1]+MSE/n[3])</span><br><span class="line">print(c(l31,u31))</span><br></pre></td></tr></table></figure><p>This confidence interval contains 0, so we cannot reject the null hypothesis that $\mu_1=\mu_3$</p><h2 id="d-1"><a href="#d-1" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MSE=2.49;</span><br><span class="line">alpha=0.01;</span><br><span class="line">lcontrast=-means[1]+2*means[2]-means[3]-qt(1-alpha/2,df)*sqrt(MSE/n[1]+4*MSE/n[2]+MSE/n[3])</span><br><span class="line">ucontrast=-means[1]+2*means[2]-means[3]+qt(1-alpha/2,df)*sqrt(MSE/n[1]+4*MSE/n[2]+MSE/n[3])</span><br><span class="line">print(c(lcontrast,ucontrast))</span><br></pre></td></tr></table></figure><p>$H_0:\mu_2-\mu_1=\mu_3-\mu_2$<br>$H_1: otherwise$<br>Since the confidence interval for the contrast does not contain 0, we do not reject the null hypothesis.</p><h2 id="e-1"><a href="#e-1" class="headerlink" title="e"></a>e</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">results&lt;-aov(y~x);</span><br><span class="line">TukeyHSD(results)</span><br></pre></td></tr></table></figure><p>There is significant difference between young and middle aged people, as well as mlderly and middle aged people. But there is no significant difference between the young and elderly.</p><h2 id="f-1"><a href="#f-1" class="headerlink" title="f"></a>f</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pairwise.t.test(y,x,p.adjust=&quot;bonferroni&quot;)</span><br></pre></td></tr></table></figure><p>The bonferroni method gives the same result. But it won’t be more efficient, since it “overstates” the significnce level.</p><h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><h2 id="a-3"><a href="#a-3" class="headerlink" title="a"></a>a</h2><p>This has been done in the previous problem, question d.<br>The confidence interval is (-15.627664,-9.539003)</p><h2 id="b-4"><a href="#b-4" class="headerlink" title="b"></a>b</h2><p>D_1 = 6.2500, D_2 =  −6.3333, D_3 = −0.0833, </p><p>L_1 =−12.5833, s{D_i} =0.6442 (i = 1, 2, 3), s{L_1} = 1.1158,</p><p>F(0.90, 2, 33) = 2.47, S = 2.223</p><p>Then we can obtain the family intervals:</p><p>(4.818,7.682)</p><p>(−7.765,−4.901)</p><p>(−1.515,1.349)</p><p>(−15.064,−10.103)</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;The twelveth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
-    
-    
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
-      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
-    
-      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
-    
-      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
-    
-      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linear Regression Assignment 10</title>
     <link href="https://www.cmwonderland.com/2018/05/20/line5/"/>
     <id>https://www.cmwonderland.com/2018/05/20/line5/</id>
@@ -95,11 +96,41 @@
     
       <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
+    
       <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
       <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
+      <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linear Regression Assignment 12</title>
+    <link href="https://www.cmwonderland.com/2018/05/20/line6/"/>
+    <id>https://www.cmwonderland.com/2018/05/20/line6/</id>
+    <published>2018-05-20T02:01:19.000Z</published>
+    <updated>2018-05-21T14:14:32.125Z</updated>
+    
+    <content type="html"><![CDATA[<p>The twelveth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.</p><a id="more"></a><blockquote><p><strong>most recommend:</strong> <a href="https://www.cmwonderland.com/linearweek12.html"><strong>click here</strong></a> for <strong>html version</strong> of assignment, you can see codes as well as plots.</p></blockquote><p>You may also find the <a href="https://github.com/james20141606/somethingmore/tree/master/linear_regression_pdf" target="_blank" rel="noopener"><strong>PDF Version</strong></a> of this assignment from github. <strong>Or if you can cross the fire wall, just see below</strong>:<br><div class="row"><iframe src="https://drive.google.com/file/d/1TV_5cYmIUSdir6iIdjqZsDHVsWejGBpE/preview" style="width:100%; height:550px"></iframe></div></p><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="a"><a href="#a" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- seq(-5, 18, length=1000)</span><br><span class="line">y1 &lt;- dnorm(x, mean=5.1, sd=2.8)</span><br><span class="line">y2 &lt;- dnorm(x, mean=6.3, sd=2.8)</span><br><span class="line">y3 &lt;- dnorm(x, mean=7.9, sd=2.8)</span><br><span class="line">y4 &lt;- dnorm(x, mean=9.5, sd=2.8)</span><br><span class="line">plot(x, y1, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y2, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y3, type=&quot;l&quot;, lwd=1)</span><br><span class="line">lines(x, y4, type=&quot;l&quot;, lwd=1)</span><br><span class="line">abline(v=5.1)</span><br><span class="line">abline(v=6.3)</span><br><span class="line">abline(v=7.9)</span><br><span class="line">abline(v=9.5)</span><br></pre></td></tr></table></figure><h2 id="b"><a href="#b" class="headerlink" title="b"></a>b</h2><script type="math/tex; mode=display">E(MSE) = \sigma^2 = 7.84 \\E(MSTR) = \sigma^2 + \frac{\sum _i(\mu_i-\mu  )^2}{\gamma -1} \\=7.84+\frac{100[(5.1-7.2)^2+(6.3-7.2)^2+(7.9-7.2)^2+(9.5-7.2)^2]}{3} \approx 374</script><p>It suggests that the different treatments have substantially impact on Y</p><h2 id="c"><a href="#c" class="headerlink" title="c"></a>c</h2><script type="math/tex; mode=display">\text{Use same equation as b, we have: }E(MSTR) = \sigma^2 + \frac{\sum _i(\mu_i-\mu  )^2}{\gamma -1} \\=7.84+\frac{100[(5.1-7.2)^2+(5.6-7.2)^2+(9-7.2)^2+(9.5-7.2)^2]}{3} \approx 523</script><p>It is because the points distribution are more scattered compared to b.</p><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dat&lt;-read.table(&quot;CH16PR10.txt&quot;)</span><br><span class="line">names(dat)&lt;-c(&quot;x&quot;,&quot;age&quot;,&quot;num&quot;)</span><br></pre></td></tr></table></figure><h2 id="a-1"><a href="#a-1" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(x=dat$age, y=dat$x)</span><br></pre></td></tr></table></figure><p>The factor level means seem to differ, at least the middle ge group differs from the other two.<br>The variability within each factor level seems to be constant.</p><h2 id="b-1"><a href="#b-1" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">code &lt;- rbind(diag(1,3),-1)</span><br><span class="line">xx &lt;- code[dat$age,]</span><br><span class="line">dat$x1 &lt;- xx[,1]</span><br><span class="line">dat$x2 &lt;- xx[,2]</span><br><span class="line">dat$x3 &lt;- xx[,3]</span><br><span class="line"></span><br><span class="line">dat$age &lt;- factor(dat$age)</span><br><span class="line">fit1 &lt;- aov(x~age,data=dat)</span><br><span class="line">yhat &lt;- fitted(fit1)</span><br><span class="line">yhat</span><br></pre></td></tr></table></figure><h2 id="c-1"><a href="#c-1" class="headerlink" title="c"></a>c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resid1 &lt;- resid(fit1)</span><br><span class="line">resid1</span><br></pre></td></tr></table></figure><h2 id="d"><a href="#d" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">summary(fit1)</span><br></pre></td></tr></table></figure><h2 id="e"><a href="#e" class="headerlink" title="e"></a>e</h2><script type="math/tex; mode=display">H_0:\mu_1=\mu_2=\mu_3 \\H_1: \text{otherwise} \\F^*=\frac{MSTR}{MSE}</script><p>Reject null hypothesis if F*&gt;$F_{0.99,3,33}$<br>The p value is 4.769e-12<br>We reject H_0</p><h2 id="f"><a href="#f" class="headerlink" title="f"></a>f</h2><p>If seems that middle aged people tend to offer more cash for a used car, while young and old people tend to offer less.</p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><h2 id="a-2"><a href="#a-2" class="headerlink" title="a"></a>a</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fit2 &lt;- lm(x~age,data=dat)</span><br><span class="line">summary(fit2)</span><br></pre></td></tr></table></figure><p>The model is $Yhat=21.5+6.25X_1-0.0833X_2$<br>The intercept term estimates the average cell sample mean.</p><h2 id="b-2"><a href="#b-2" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anova(fit2)</span><br></pre></td></tr></table></figure><p>$H_0:\tau_1=\tau_2$ </p><p>$H_1: otherwise$</p><p>$F^*=\frac{MSR}{MSE}$</p><p>Reject null hypothesis if F*&gt;$F_{0.99,2,33}$<br>The p value is 4.769e-12, so We reject H_0</p><h1 id="4"><a href="#4" class="headerlink" title="4"></a>4</h1><h2 id="b-3"><a href="#b-3" class="headerlink" title="b"></a>b</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Young=c(23, 25, 21, 22, 21, 22, 20, 23, 19, 22, 19, 21)</span><br><span class="line">Middle=c(28, 27, 27, 29, 26, 29, 27, 30, 28, 27, 26, 29)</span><br><span class="line">Elderly=c(23, 20, 25, 21, 22, 23, 21, 20, 19, 20, 22, 21)</span><br><span class="line">FactorLevels=c(1,2,3)</span><br><span class="line">n1=length(Young)</span><br><span class="line">n2=length(Middle)</span><br><span class="line">n3=length(Elderly)</span><br><span class="line"></span><br><span class="line">MyData=data.frame(</span><br><span class="line">Values=c(Young,Middle,Elderly),</span><br><span class="line">Treatment=c(rep(1,n1),rep(2,n2),rep(3,n3)))</span><br><span class="line"></span><br><span class="line">y=MyData$Values</span><br><span class="line">x=factor(MyData$Treatment)</span><br><span class="line">means=tapply(y,x,mean)</span><br><span class="line">n=tapply(y,x,length)</span><br><span class="line">df=sum(n)-2</span><br><span class="line"></span><br><span class="line">MSE=2.49</span><br><span class="line">alpha=0.01</span><br><span class="line">l1=means[1]-qt(1-alpha/2,df)*sqrt(MSE/n[1])</span><br><span class="line">u1=means[1]+qt(1-alpha/2,df)*sqrt(MSE/n[1])</span><br><span class="line">print(c(l1,u1))</span><br></pre></td></tr></table></figure><p>So the confidence level is (20.2572,22.7428)</p><h2 id="c-2"><a href="#c-2" class="headerlink" title="c"></a>c</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MSE=2.49</span><br><span class="line">alpha=0.01</span><br><span class="line">l31=means[3]-means[1]-qt(1-alpha/2,df)*sqrt(MSE/n[1]+MSE/n[3])</span><br><span class="line">u31=means[3]-means[1]+qt(1-alpha/2,df)*sqrt(MSE/n[1]+MSE/n[3])</span><br><span class="line">print(c(l31,u31))</span><br></pre></td></tr></table></figure><p>This confidence interval contains 0, so we cannot reject the null hypothesis that $\mu_1=\mu_3$</p><h2 id="d-1"><a href="#d-1" class="headerlink" title="d"></a>d</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MSE=2.49;</span><br><span class="line">alpha=0.01;</span><br><span class="line">lcontrast=-means[1]+2*means[2]-means[3]-qt(1-alpha/2,df)*sqrt(MSE/n[1]+4*MSE/n[2]+MSE/n[3])</span><br><span class="line">ucontrast=-means[1]+2*means[2]-means[3]+qt(1-alpha/2,df)*sqrt(MSE/n[1]+4*MSE/n[2]+MSE/n[3])</span><br><span class="line">print(c(lcontrast,ucontrast))</span><br></pre></td></tr></table></figure><p>$H_0:\mu_2-\mu_1=\mu_3-\mu_2$<br>$H_1: otherwise$<br>Since the confidence interval for the contrast does not contain 0, we do not reject the null hypothesis.</p><h2 id="e-1"><a href="#e-1" class="headerlink" title="e"></a>e</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">results&lt;-aov(y~x);</span><br><span class="line">TukeyHSD(results)</span><br></pre></td></tr></table></figure><p>There is significant difference between young and middle aged people, as well as mlderly and middle aged people. But there is no significant difference between the young and elderly.</p><h2 id="f-1"><a href="#f-1" class="headerlink" title="f"></a>f</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pairwise.t.test(y,x,p.adjust=&quot;bonferroni&quot;)</span><br></pre></td></tr></table></figure><p>The bonferroni method gives the same result. But it won’t be more efficient, since it “overstates” the significnce level.</p><h1 id="5"><a href="#5" class="headerlink" title="5"></a>5</h1><h2 id="a-3"><a href="#a-3" class="headerlink" title="a"></a>a</h2><p>This has been done in the previous problem, question d.<br>The confidence interval is (-15.627664,-9.539003)</p><h2 id="b-4"><a href="#b-4" class="headerlink" title="b"></a>b</h2><p>D_1 = 6.2500, D_2 =  −6.3333, D_3 = −0.0833, </p><p>L_1 =−12.5833, s{D_i} =0.6442 (i = 1, 2, 3), s{L_1} = 1.1158,</p><p>F(0.90, 2, 33) = 2.47, S = 2.223</p><p>Then we can obtain the family intervals:</p><p>(4.818,7.682)</p><p>(−7.765,−4.901)</p><p>(−1.515,1.349)</p><p>(−15.064,−10.103)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The twelveth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
+    
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
+    
       <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
+    
+      <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
+    
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
       <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
@@ -123,11 +154,11 @@
       <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
+    
+      <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
     
   </entry>
   
@@ -149,9 +180,9 @@
       <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
   </entry>
   
@@ -175,11 +206,11 @@
     
       <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
+      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
+    
       <category term="R" scheme="https://www.cmwonderland.com/tags/R/"/>
     
       <category term="assignment" scheme="https://www.cmwonderland.com/tags/assignment/"/>
-    
-      <category term="statistics" scheme="https://www.cmwonderland.com/tags/statistics/"/>
     
       <category term="linear regression" scheme="https://www.cmwonderland.com/tags/linear-regression/"/>
     
@@ -238,6 +269,31 @@
   </entry>
   
   <entry>
+    <title>爷爷回忆录总结</title>
+    <link href="https://www.cmwonderland.com/2018/05/08/autobio/"/>
+    <id>https://www.cmwonderland.com/2018/05/08/autobio/</id>
+    <published>2018-05-08T11:47:25.000Z</published>
+    <updated>2018-05-08T12:06:33.121Z</updated>
+    
+    <content type="html"><![CDATA[<p>爷爷的回忆录是我投入了很多心力的一项工程，从把手写稿敲到word，排版排的十分吃力，到后续放到gitbook网站(<a href="https://james20141606.gitbooks.io/grandpa-autobiography/content/" target="_blank" rel="noopener">爷爷回忆录</a>)上，到在博客上分章节更新，到这篇博文(<a href="https://www.cmwonderland.com/2018/05/04/gitbook/">GitBook intro &amp; Grandpa’s Bio | James Chen’s Blogs</a>)所写的，为了更好的布局和字体和缩进所使用的本地版gitbook。</p><p><strong>现在内容基本确定，也把书打印了两本送给爷爷奶奶，后续希望可以有更多新的东西加入进去，现在先把相关的内容都总结在这里：</strong></p><a id="more"></a><h2 id="资源总结"><a href="#资源总结" class="headerlink" title="资源总结"></a>资源总结</h2><h3 id="博客连载"><a href="#博客连载" class="headerlink" title="博客连载"></a>博客连载</h3><p><a href="https://www.cmwonderland.com/2018/04/11/auto1/">回忆录 CHAPTER Ⅰ  我的童年 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto2/">回忆录 CHAPTER Ⅱ  初中生活 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto3/">回忆录 CHAPTER Ⅲ  难忘的一九五八 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto4/">回忆录 CHAPTER Ⅳ  新的篇章 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto5/">回忆录 CHAPTER Ⅴ 休学的日子 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto6/">回忆录 CHAPTER Ⅵ  婚后的生活 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto7/">回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto8/">回忆录 CHAPTER Ⅷ 工作,崭新的篇章 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto9/">回忆录 短文数篇 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto10/">回忆录 童年的诗 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto11/">回忆录 关于正义的故事 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto12/">回忆录 年表 | James Chen’s Blogs</a></p><h3 id="书籍预览（需翻墙）"><a href="#书籍预览（需翻墙）" class="headerlink" title="书籍预览（需翻墙）"></a>书籍预览（需翻墙）</h3><p><strong>A4版本：</strong></p><div class="row"><iframe src="https://drive.google.com/file/d/1GOYSpu4kwXQQtoKME6YaSA26WfL9cHb9/preview" style="width:100%; height:550px"></iframe></div><p><strong>B5版本</strong></p><div class="row"><iframe src="https://drive.google.com/file/d/18-WA9WnxuCwaK4wWSOmV04Iv3gNcnxHu/preview" style="width:100%; height:550px"></iframe></div><h3 id="在Gitbook网站浏览"><a href="#在Gitbook网站浏览" class="headerlink" title="在Gitbook网站浏览"></a>在Gitbook网站浏览</h3><p>在<strong>GitBook网站</strong>上可以分章节浏览本书，但<strong>更新及时性差</strong>。</p><p><a href="https://james20141606.gitbooks.io/grandpa-autobiography/content/" target="_blank" rel="noopener">爷爷回忆录</a></p><p>注意不要在这个网站上下载pdf，在<strong>以下网站</strong>可以下载:</p><h3 id="在GitHub下载PDF"><a href="#在GitHub下载PDF" class="headerlink" title="在GitHub下载PDF"></a>在GitHub下载PDF</h3><p><a href="https://github.com/james20141606/somethingmore/tree/master/grandpa_autobiography" target="_blank" rel="noopener">A4及B5两种排版pdf下载</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;爷爷的回忆录是我投入了很多心力的一项工程，从把手写稿敲到word，排版排的十分吃力，到后续放到gitbook网站(&lt;a href=&quot;https://james20141606.gitbooks.io/grandpa-autobiography/content/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;爷爷回忆录&lt;/a&gt;)上，到在博客上分章节更新，到这篇博文(&lt;a href=&quot;https://www.cmwonderland.com/2018/05/04/gitbook/&quot;&gt;GitBook intro &amp;amp; Grandpa’s Bio | James Chen’s Blogs&lt;/a&gt;)所写的，为了更好的布局和字体和缩进所使用的本地版gitbook。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;现在内容基本确定，也把书打印了两本送给爷爷奶奶，后续希望可以有更多新的东西加入进去，现在先把相关的内容都总结在这里：&lt;/strong&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="爷爷回忆录" scheme="https://www.cmwonderland.com/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
+    
+    
+      <category term="life" scheme="https://www.cmwonderland.com/tags/life/"/>
+    
+      <category term="autobiograpy" scheme="https://www.cmwonderland.com/tags/autobiograpy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>混沌之思</title>
     <link href="https://www.cmwonderland.com/2018/05/08/dailythoughts/"/>
     <id>https://www.cmwonderland.com/2018/05/08/dailythoughts/</id>
@@ -264,31 +320,6 @@
   </entry>
   
   <entry>
-    <title>爷爷回忆录总结</title>
-    <link href="https://www.cmwonderland.com/2018/05/08/autobio/"/>
-    <id>https://www.cmwonderland.com/2018/05/08/autobio/</id>
-    <published>2018-05-08T11:47:25.000Z</published>
-    <updated>2018-05-08T12:06:33.121Z</updated>
-    
-    <content type="html"><![CDATA[<p>爷爷的回忆录是我投入了很多心力的一项工程，从把手写稿敲到word，排版排的十分吃力，到后续放到gitbook网站(<a href="https://james20141606.gitbooks.io/grandpa-autobiography/content/" target="_blank" rel="noopener">爷爷回忆录</a>)上，到在博客上分章节更新，到这篇博文(<a href="https://www.cmwonderland.com/2018/05/04/gitbook/">GitBook intro &amp; Grandpa’s Bio | James Chen’s Blogs</a>)所写的，为了更好的布局和字体和缩进所使用的本地版gitbook。</p><p><strong>现在内容基本确定，也把书打印了两本送给爷爷奶奶，后续希望可以有更多新的东西加入进去，现在先把相关的内容都总结在这里：</strong></p><a id="more"></a><h2 id="资源总结"><a href="#资源总结" class="headerlink" title="资源总结"></a>资源总结</h2><h3 id="博客连载"><a href="#博客连载" class="headerlink" title="博客连载"></a>博客连载</h3><p><a href="https://www.cmwonderland.com/2018/04/11/auto1/">回忆录 CHAPTER Ⅰ  我的童年 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto2/">回忆录 CHAPTER Ⅱ  初中生活 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto3/">回忆录 CHAPTER Ⅲ  难忘的一九五八 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto4/">回忆录 CHAPTER Ⅳ  新的篇章 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto5/">回忆录 CHAPTER Ⅴ 休学的日子 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto6/">回忆录 CHAPTER Ⅵ  婚后的生活 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto7/">回忆录 CHAPTER Ⅶ 喜上加喜 喜中有忧 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto8/">回忆录 CHAPTER Ⅷ 工作,崭新的篇章 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto9/">回忆录 短文数篇 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto10/">回忆录 童年的诗 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto11/">回忆录 关于正义的故事 | James Chen’s Blogs</a> <br><br><a href="https://www.cmwonderland.com/2018/04/11/auto12/">回忆录 年表 | James Chen’s Blogs</a></p><h3 id="书籍预览（需翻墙）"><a href="#书籍预览（需翻墙）" class="headerlink" title="书籍预览（需翻墙）"></a>书籍预览（需翻墙）</h3><p><strong>A4版本：</strong></p><div class="row"><iframe src="https://drive.google.com/file/d/1GOYSpu4kwXQQtoKME6YaSA26WfL9cHb9/preview" style="width:100%; height:550px"></iframe></div><p><strong>B5版本</strong></p><div class="row"><iframe src="https://drive.google.com/file/d/18-WA9WnxuCwaK4wWSOmV04Iv3gNcnxHu/preview" style="width:100%; height:550px"></iframe></div><h3 id="在Gitbook网站浏览"><a href="#在Gitbook网站浏览" class="headerlink" title="在Gitbook网站浏览"></a>在Gitbook网站浏览</h3><p>在<strong>GitBook网站</strong>上可以分章节浏览本书，但<strong>更新及时性差</strong>。</p><p><a href="https://james20141606.gitbooks.io/grandpa-autobiography/content/" target="_blank" rel="noopener">爷爷回忆录</a></p><p>注意不要在这个网站上下载pdf，在<strong>以下网站</strong>可以下载:</p><h3 id="在GitHub下载PDF"><a href="#在GitHub下载PDF" class="headerlink" title="在GitHub下载PDF"></a>在GitHub下载PDF</h3><p><a href="https://github.com/james20141606/somethingmore/tree/master/grandpa_autobiography" target="_blank" rel="noopener">A4及B5两种排版pdf下载</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;爷爷的回忆录是我投入了很多心力的一项工程，从把手写稿敲到word，排版排的十分吃力，到后续放到gitbook网站(&lt;a href=&quot;https://james20141606.gitbooks.io/grandpa-autobiography/content/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;爷爷回忆录&lt;/a&gt;)上，到在博客上分章节更新，到这篇博文(&lt;a href=&quot;https://www.cmwonderland.com/2018/05/04/gitbook/&quot;&gt;GitBook intro &amp;amp; Grandpa’s Bio | James Chen’s Blogs&lt;/a&gt;)所写的，为了更好的布局和字体和缩进所使用的本地版gitbook。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;现在内容基本确定，也把书打印了两本送给爷爷奶奶，后续希望可以有更多新的东西加入进去，现在先把相关的内容都总结在这里：&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="爷爷回忆录" scheme="https://www.cmwonderland.com/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-    
-    
-      <category term="life" scheme="https://www.cmwonderland.com/tags/life/"/>
-    
-      <category term="autobiograpy" scheme="https://www.cmwonderland.com/tags/autobiograpy/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Snakemake初步</title>
     <link href="https://www.cmwonderland.com/2018/05/05/snakemake/"/>
     <id>https://www.cmwonderland.com/2018/05/05/snakemake/</id>
@@ -308,11 +339,11 @@
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/categories/techniques/bioinformatics/"/>
     
     
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
     
       <category term="bioinformatics" scheme="https://www.cmwonderland.com/tags/bioinformatics/"/>
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
   </entry>
   
@@ -444,9 +475,9 @@
       <category term="techniques" scheme="https://www.cmwonderland.com/categories/techniques/"/>
     
     
-      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
-    
       <category term="techniques" scheme="https://www.cmwonderland.com/tags/techniques/"/>
+    
+      <category term="codes" scheme="https://www.cmwonderland.com/tags/codes/"/>
     
   </entry>
   
@@ -548,32 +579,6 @@
       <category term="Wittgenstein" scheme="https://www.cmwonderland.com/tags/Wittgenstein/"/>
     
       <category term="thoughts" scheme="https://www.cmwonderland.com/tags/thoughts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记一下人生第一次GRE</title>
-    <link href="https://www.cmwonderland.com/2018/04/28/gre/"/>
-    <id>https://www.cmwonderland.com/2018/04/28/gre/</id>
-    <published>2018-04-28T11:49:36.000Z</published>
-    <updated>2018-04-29T02:28:36.118Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录一下2018.4.28一战裸考GRE的经历，verbal 154，quant 164，总体来看是惊喜中带着遗憾，首先语言部分154分？我可是单词书都没翻过，GRE单词根本没空背，题型都不知道，结果语言部分竟然可以一次过？简直像托福一样是纸老虎嘛，但是quant部分考的得我无地自容，做题的时候不屑于初中水平的考题，都是很快秒杀然后提前提交，然而数学分出来之后让我目瞪口呆，竟然扣了六分，，如果数学部分考满分的话，岂不是一次就过了GRE？简短地总结一下，一场因为疲劳和微恙略感麻木的带着惊喜和遗憾的考试。</p><a id="more"></a><h2 id="考前"><a href="#考前" class="headerlink" title="考前"></a>考前</h2><h3 id="预期时间"><a href="#预期时间" class="headerlink" title="预期时间"></a>预期时间</h3><p>一年前听林祖迪说了一句他暑研回来才考的托福和GRE，我想想蛮有道理，早考还得专门准备，在我看来是吃亏大了， 我理想的状态是一分钟别花。</p><h4 id="由托福来的经验"><a href="#由托福来的经验" class="headerlink" title="由托福来的经验"></a>由托福来的经验</h4><p>当年年幼无知，托福还报了个新东方班，现在想想心疼不已，花了十六天听四个老师瞎扯讲故事的风格真是贻害无穷，学到的东西寥寥，而且后来我认清了一个道理：早点学太亏了，准备半天，完全浪费时间，大二寒假我还想着好好学托福，结果到最后都只背了单词，然后开学看了八个多小时的李文勍的视频，觉得受益颇丰，第一次考了100分。一个学期没学托福，但是生活大爆炸全集听了很多遍，写代码读各种文档网站加上上课进一步练了阅读速度和单词，用英语记日记练了写作，期末完直接托福裸考，110，由此得出经验，早早准备托福真是愚蠢，在清华的环境下，加上自己的无形训练，自然而然的就高分了。</p><h4 id="更改预期时间"><a href="#更改预期时间" class="headerlink" title="更改预期时间"></a>更改预期时间</h4><p>突然更改时间是大三下开始，大三寒假基本都处于半养病状态，第一周也养了几天病，然后进入一段例行焦虑期，当时暑研没找好，学堂班的项目不想去做湿实验，自己想找的迟迟没发邮件，又听闻周围几个同学用寒假学了学GRE去考了一次，于是心里一动，觉得有必要在暑研前考一次“先感受感受”，免得暑研回来直接兵荒马乱了。于是挑选一番报了个北大4月28号的，北大考场还是很好的，离清华最近，骑车就过去了，上次裸考托福感觉很好，于是感觉选考场很满意。</p><h3 id="复习准备"><a href="#复习准备" class="headerlink" title="复习准备"></a>复习准备</h3><p>这块儿其实可以空白了，，因为完全没准备。说实话是有点自负的，而且实在是不想相信新东方之流以及微信公众号还有几个微信小助手各种狂轰滥炸的课程和经验分享，平时也忙得要死，是实在抽不出时间准备。</p><h4 id="背单词"><a href="#背单词" class="headerlink" title="背单词"></a>背单词</h4><p>都说GRE单词极其难，确实如此，看了看还是很受打击的，又没空背，很多人讲要你命3000词要刷个十几遍，这个很经典，我下了app，打印了单词，准备了几本单词书，但是都没有看，，别说背一遍了，看都没看，，，</p><h4 id="verbal部分"><a href="#verbal部分" class="headerlink" title="verbal部分"></a>verbal部分</h4><p>单词都没背就不说更进一步的准备了，之前买过好几本verbal的填空和阅读书，没看过一眼，下载过整理过很多网上资源，没有打开看过，事实上在上考场之前我都不知道verbal有几种题型考什么。。。（现在知道了，一空两空三空双选和阅读）</p><h4 id="quant部分"><a href="#quant部分" class="headerlink" title="quant部分"></a>quant部分</h4><p>这部分就更更更不用说了，，，由于受到主流观点的“误导”：都说GRE verbal极其变态，quant部分都是初中及以下题目，大家都是满分，因此我连看都没看，题型是完全不知道，觉得初中数学题也没什么练的，数学名词？平时数学课都英文的，应该没问题吧？（现在想想，代数和几何部分其实很多名词还是很不熟的）</p><h4 id="作文"><a href="#作文" class="headerlink" title="作文"></a>作文</h4><p>别提了，知道有issue和argument两种题型，而且官方的题库都有，但是别说一道题一道题准备了，看都没看过，也不知道这两种题会考什么，有什么区别，任何套路也没准备。</p><h2 id="考试"><a href="#考试" class="headerlink" title="考试"></a>考试</h2><p>综上所述，这次考试完全没有抱着要通过的心态，决定先试一次水，因此真是难得的让我惊讶的淡定，连题型都没搞清楚就上考场了。<br>4.28是个不好的考试时间，正好期中考试周，刚考完几门，累得要死，一堆大作业，因此完全没时间复习GRE，毕竟也不是一次性考试，于是也没想着要复习，考试前一天又感觉不舒服，又晕又发热，完全看不进去书，而且GRE的准备确实是个庞大工程，我是觉得一晚上也没什么可看的了，于是重温了一遍16年G7，看了看詹姆斯，重温了一遍左邻右舍，在实验室磨蹭到十一点半，买了小面包，顺手买了一罐红牛，发现自行车还在六教停着，又拐到六教取了车，回去洗漱洗漱看看手机，睡下来都一点多了。</p><p>早上晕晕乎乎的到了北大，发现需要红牛撑过四个小时，开始做题，前两个小时先是两篇作文然后一个语言一个数学模块。写作文的时候才知道这两种题型是什么，，完全没有套路地口语化地瞎扯，然后做verbal，发现真的很难，填空也难，阅读也比托福的难，主要是时间不够，但是竟然没有出现经验帖子里说的时间不够就放弃一些题的现象，数学部分感觉真简单，35分钟时间十几分钟就做完了，提前出去休息了。</p><p>10分钟break回来，继续两个语言section一个数学section，这次语言的更难了，这说明第一个做的还不错，据说第二个语言section如果越做越简单，说明第一个语言section是肯定做崩了的，但是依然没有出现做不完，因为通过第一个section了解了GRE语言部分在考什么，第二个section做的熟练了一些，依稀有些怀疑，第二个section不会简单了吧，难道第一个section做的很烂？然后打消念头，第二个还是很难的，不过确实做的快了一些。然后心里对GRE的尊重和畏惧变成快消失殆尽了，似乎和托福一样是纸老虎，而且阅读也太喜欢出科技类文章了，简直是送分的，读着太顺了，觉得这对其他学生很不公平（大概懂了孟孟为什么托福考不好了，同理）。</p><p>第二个数学section明显比第一个难了，开始后悔没有提前背一下数学部分专有名词（我是搜集了相关资料的），因为有几个题无法确定某几个词的意思。而且感觉数学的出题风格很乖，get不到有些题的点</p><p>最后考到了快两点，点提交，现场出分很刺激，看到verbal分惊讶了一下，154，这裸考都154了，岂不是不用再考了，一次通过？再看数学，164，，，感觉非常丢人，说好的都满分169呢，，，没想到竟然是在初中数学上栽跟头了，，，</p><p>回去搜到了这个帖子</p><p><a href="https://www.zhihu.com/question/24063337" target="_blank" rel="noopener">如何提高GRE数学成绩（普通gre，非sub）？ - 知乎</a><br>也许这个知乎回答是“受害者偏差？‘’，反正看了一遍之后发现自己处理数学上太naive了，没想到ETS这么狡猾，竟然有很多题要选“无法确定”？这个选项在中国就是凑数的好嘛。所以数学部分确实得刷点题看看ETS的坑在哪里，靠实力也会被拐到坑里吧。</p><p>当然这次对待GRE的态度本来就是naive的，完全没想准备，但是语言部分是知道大家都说很难得准备几个月没想到裸考之后发现不过如此，平时的水平竟然是完全够了，而数学部分是败给了没经验，看起来还是得做做ETS给的参考题，看看他们会挖什么坑。要是知道会这样，提前刷一个小时数学题，我不就和GRE直接拜拜了？现在就等着暑研之后再裸考一次好了。</p><p>由此可见托福和GRE的水平实在是不过如此，得益于英语的底子（其实没有，退步最大的时候，保送完大概一年的时间节点，英语已经感觉很烂了），加上生院的培养方案以及统辅的课程（比起基本中文的工科院系，生院的课程体系还是很锻炼大家的英语水平的），加上每日环境，基本工作和学习环境都切换到了英文，加上娱乐环境：无限循环美剧，应付托福和GRE已经绰绰有余了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录一下2018.4.28一战裸考GRE的经历，verbal 154，quant 164，总体来看是惊喜中带着遗憾，首先语言部分154分？我可是单词书都没翻过，GRE单词根本没空背，题型都不知道，结果语言部分竟然可以一次过？简直像托福一样是纸老虎嘛，但是quant部分考的得我无地自容，做题的时候不屑于初中水平的考题，都是很快秒杀然后提前提交，然而数学分出来之后让我目瞪口呆，竟然扣了六分，，如果数学部分考满分的话，岂不是一次就过了GRE？简短地总结一下，一场因为疲劳和微恙略感麻木的带着惊喜和遗憾的考试。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="school work" scheme="https://www.cmwonderland.com/categories/school-work/"/>
-    
-    
-      <category term="school" scheme="https://www.cmwonderland.com/tags/school/"/>
-    
-      <category term="language" scheme="https://www.cmwonderland.com/tags/language/"/>
-    
-      <category term="exam" scheme="https://www.cmwonderland.com/tags/exam/"/>
     
   </entry>
   
