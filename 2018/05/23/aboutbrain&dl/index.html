@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="thoughts,brain,deep learning," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="本文写于2016年末，作为《脑科学与人工智能》一课的作业 引言人工智能领域自惊艳出世以来已有几十年的历史，经过长久的蛰伏和起伏，在这两年徐徐展开渐至高潮的宏伟篇章。对人工智能的探讨是一个复杂的深奥的话题，我想选择人工智能与生物接壤的一个小角度，谈谈我对智能的理解。">
+<meta name="keywords" content="thoughts,brain,deep learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统临界态对智能的启发">
+<meta property="og:url" content="https://www.cmwonderland.com/2018/05/23/aboutbrain&dl/index.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="本文写于2016年末，作为《脑科学与人工智能》一课的作业 引言人工智能领域自惊艳出世以来已有几十年的历史，经过长久的蛰伏和起伏，在这两年徐徐展开渐至高潮的宏伟篇章。对人工智能的探讨是一个复杂的深奥的话题，我想选择人工智能与生物接壤的一个小角度，谈谈我对智能的理解。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://i1.fuimg.com/640680/e707a6c6f4ea10a4.png">
+<meta property="og:updated_time" content="2018-05-23T11:25:31.484Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="系统临界态对智能的启发">
+<meta name="twitter:description" content="本文写于2016年末，作为《脑科学与人工智能》一课的作业 引言人工智能领域自惊艳出世以来已有几十年的历史，经过长久的蛰伏和起伏，在这两年徐徐展开渐至高潮的宏伟篇章。对人工智能的探讨是一个复杂的深奥的话题，我想选择人工智能与生物接壤的一个小角度，谈谈我对智能的理解。">
+<meta name="twitter:image" content="http://i1.fuimg.com/640680/e707a6c6f4ea10a4.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/2018/05/23/aboutbrain&dl/"/>
+
+
+
+
+
+  <title>系统临界态对智能的启发 | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/05/23/aboutbrain&dl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">系统临界态对智能的启发</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-23T16:49:39+08:00">
+                2018-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/thoughts/" itemprop="url" rel="index">
+                    <span itemprop="name">thoughts</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/05/23/aboutbrain&dl/" class="leancloud_visitors" data-flag-title="系统临界态对智能的启发">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  6,167
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  21
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文写于2016年末，作为《脑科学与人工智能》一课的作业</p>
+<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>人工智能领域自惊艳出世以来已有几十年的历史，经过长久的蛰伏和起伏，在这两年徐徐展开渐至高潮的宏伟篇章。对人工智能的探讨是一个复杂的深奥的话题，我想选择人工智能与生物接壤的一个小角度，谈谈我对智能的理解。</p>
+<a id="more"></a>
+<p>脑科学与人工智能有着天然的交叉，虽然很多做技术的人并不懂得古老又崭新的神经学知识。我们的大脑确实格外神秘，我们的大脑有上千亿的神经元，还要再多上几个数量级的突触。这个数量虽然远远不如广袤的宇宙中行星的个数，但也足够赋予渺小的人类畅想的资质和勇气。思考本身就是个值得思考的有趣的话题，然而这类话题往往陷入人择原理的尴尬处境。人脑是如此复杂精细的结构，以至于我们用还原论的方法研究至今还进展尚浅，甚至也弄不明白人工智能和大脑结构究竟哪个能更快地弄明白原理。因此我想稍微降低一些难度，也是受到宋老师的启发，从智能的角度思考，试图像数学家和物理学家那样，思考得更基本一些。</p>
+<h3 id="简单与复杂"><a href="#简单与复杂" class="headerlink" title="简单与复杂"></a>简单与复杂</h3><p>智能、生命的定义是什么，是一个不止由生物学家专有的宏大的问题。薛定谔就曾经写过令生物学家折服的小册子《生命是什么》，其负熵的概念颇有新意，只是那个时候意识和智能并没有被摆到很高的位置，而如今身体其他部位问题的解惑愈发加重了人们对于智能和意识的兴趣，我甚至觉得意识和智能就是万物之源，自然真理乃至永生之匙。</p>
+<p>一门自称为科学的学科总是试图用尽可能少的通行的原理构建体系。物理学家苦苦寻觅统一基本作用力的终极理论，生物学家却不得不一开始就面对真实世界的复杂的模型。Paul Nurse曾经评论道：要真正理解细胞系统的复杂网络，可能不得不进入一个更抽象的陌生领域，这个领域更适于进行数学分析。</p>
+<p>自从洛伦兹在分析天气问题时搞出来一套混沌科学的想法，这套神奇又诱人的理论就格外深入人心，人们可以把简单至三体问题复杂至生物系统、经济社会等各种问题代入其中并且摊手摇头。过去我们习惯于研究生物化学中的平衡状态，但是平衡态意味着寂静和死亡，生物系统中存在着大量的非平衡态，正是在非平衡态中得以产生秩序与结构。</p>
+<p>大脑是无可置疑的复杂系统，神经元的立体连接，不同化学物质的复杂作用让整个系统复杂得让人心碎。随着连接组学等学科的深入发展，有更多的理论工作者开始努力阐释系统的原理。我们希望系统是尽可能简洁的，纵然结果并不简洁，但是希望源头是简洁的。就像四种基本作用力和精确的宇宙常数带来的宏大的宇宙，机械决定论畅想过拉普拉斯妖这样的预言家。现在我们知道仅从物理角度是不够拼凑出真理的全部的，那么我们还需要多少尽量简单的东西呢？</p>
+<p>简单可以产生让人炫目的复杂，比如冯诺依曼提出的元胞自动机。就是一种简单的对真实世界的模型化建构。通过简单的非线性函数的耦合，元胞自动机可以产生极端复杂的结果。比如规则为184的自动机，可以描述交通流、模拟晶体生长。规则30可以产生混沌，用来做伪随机数发生器。最强大的110，被证明具有图灵完备性，具有通用的计算能力。110也许是目前最简单的通用计算机了，可以计算自然界能够计算的复杂性的上限。Wolfram大胆地提出了新的自然定律，指出自然系统不可能产生不可计算的行为。自然界中各种过程实现的计算在复杂程度上都是本质等价的，没有比通用计算机所能进行的计算更复杂的了。</p>
+<p>元胞自动机的规则如此简单，却能产生如此复杂的强大的结果让人振奋。如果，人脑也是这么简单就好了，或者，稍微复杂一些，但是逃不过一些简单的规则的组合，只是这些规则的非线性乃至量子性像一团薄雾蒙住了我们的眼睛，这样的迷雾我们是不怕的，人类对简洁的天然的追求总会为我们拨云见日，揭示复杂背后的简单。</p>
+<h3 id="从简单到复杂：描述智能的临界态"><a href="#从简单到复杂：描述智能的临界态" class="headerlink" title="从简单到复杂：描述智能的临界态"></a>从简单到复杂：描述智能的临界态</h3><p>人工智能已经在很多领域取得了成就，语音、视觉、自动驾驶、语言、博弈等等领域。</p>
+<p>但是遗憾的是每个机器学习的系统只能解决特定问题，并不像人类大脑经过简单学习学会新的东西，通用的智能似乎是计算机很难实现的。</p>
+<p>通用的智能是否有方法进行描述？人工智能解决某个具体问题，我们总能找到一个标准去判断其好坏，比如下围棋，视觉、语音识别准确率。那么通用性的评价标准是什么呢？</p>
+<p>在《临界：智能设计的原则》一书中有这样有趣的观点：</p>
+<blockquote>
+<p>把智能/人工智能定义为在任意环境中找到最优解的能力。</p>
+</blockquote>
+<p>这种神奇的能力，在我看来受到一些更基本的原理的影响：比如对称性，最小作用量原理和熵。比如很简单的例子：一个粒子在盒子里自由运动，一旦撞到壁游戏就结束，那么最安全的，选择最多的位置就是正中央；当单摆恰好直立时，有两种不同的摆动方向，这位它自身提供了最大的未来的可能性，虽然它本身会处于一种不稳定平衡的状态。而当系统变得复杂的时候，这种不稳定的最大化可能就很容易维持了。</p>
+<p>比如在鸟群或者昆虫群的集体运动中，要让未来有更多的可能性，鸟群的可能性包括更多的食物和对捕食者的应对，当未来有无穷的可能性时它们仍然有办法做出响应。一个天然的想法是无限可能性=每个粒子完全随机，其实这个想法是不对的，完全随机意味着可能性的急剧降低，系统的统计学指标会趋于完全确定，而完全的有序当然也不是可能性最多的选择。只有在处于某种临界态上，群体可以维持完整的同时每个粒子个体可以感受到未来刺激，并且在整个群体中产生长程的效应，微小的扰动就可以在群体中产生剧烈的响应。这样的性质是临界态的重要特点，这样的临界态才是对应于未来可能性最大的状态，也就是智能的状态。这个例子很好理解，看一下鸟群和海洋中的鱼群是如何在空间中做出令人炫目的群体运动就可以有最直观的感受了。完全的无序和完全的有序都不是最大化未来可能的选择，真正的选择应该是自组织临界态。</p>
+<p>未来选择最多的状态应该是处于对称状态，可以发生对称性破缺；从动力学角度看，应该停留在分叉点或者中间转变态的点。某个对称性消失，系统就可能产生转变。在临界态附近系统会表现出既不完全随机也不完全有序的状态。两个晶体的温度差距可以非常小，但是图案样式可以有非常大的变化。临界态的图像的构象上有自相似的特性，图案上有分形的结构，这是临界现象的特点。</p>
+<h3 id="沙堆模型与森林大火"><a href="#沙堆模型与森林大火" class="headerlink" title="沙堆模型与森林大火"></a>沙堆模型与森林大火</h3><p>桌子上放着一些沙子，沙子还比较少，不断增加沙子之后沙堆的斜坡的斜率会增加，但是不会无限增加，我们从来没有见过九十度的沙堆。当沙堆的斜坡斜率小于某个值，不断加沙子就会增加斜率，而达到某个值之后，不管怎么加沙子，尽管斜率会发生一些微小的变化，但是会维持在一个临界的斜率，它不需要我们用某种智能的方法维持就会自发维持，这就是沙堆模型，这就是能让系统自动保持在临界态附近的最简单模型。</p>
+<p>我对沙堆模型感兴趣的原因之一是我的实验室老板(2016年)汤超教授也是该模型的发现者之一。这个模型有非常非常深刻又广泛的内涵。当我们去研究简单的东西（比如沙堆）时却能发现深刻的规律的时候，我们就会不禁去想，这背后应该有什么非常有趣的规律。</p>
+<p>沙堆模型是非平衡物理中非常简单又深刻的模型，沙堆不断流入的沙粒可以看做系统对外界能量和信息的吸收，从而使自己维持在自组织临界的状态，这个模型是具有普适的意义的。前面从简单到复杂的模型已经让我们意识到，自组织临界的维持是需要条件的，沙堆模型向我们很好的演示了这一点，而这样的思想与生命拥有的智能不谋而合：我们正是依靠摄入能量和信息来抵御熵增，避免生命走向彻底的无序。</p>
+<p>一粒沙子也可以改变整个系统的临界态。有可能造成巨大的崩塌的，也有可能没有什么影响。接下来再放的沙子又有可能恢复系统的临界态，也就是说沙子会造成系统的崩塌，但是系统的临界态还可以保持在很小的范围内。如果沙堆还没有到达临界态上，放上一粒沙子我们就可以很确定地说沙堆不会发生崩塌，而达到临界态之后沙堆有可能发生任意规模的崩塌，这也就是我们前面说的最大未来可能性。至于发生多大规模的崩塌，几位专家很容易地统计出来，沙堆崩塌规模的大小与概率符合幂律分布。</p>
+<p>如果在临界状态下，外界不做干预的情况下沙堆的未来是无法预知的，而非临界态时的未来是可知的，这也是我们前面说的最大化未来可能。地质学家很快发现，地震震级与发生概率也符合幂律分布，地壳的活动可能也处于自组织临界的状态，这也是地震等灾害难以预测的原因。沙堆模型也是一种特殊的元胞自动机模型，有很多相关的研究。</p>
+<p>不但许多自然现象里蕴含着沙堆模型，更贴近生命与智能的例子里也蕴含着这样的思想。鱼群的游动受到的扰动与一条鱼的速度分布符合幂律分布，人群的合作也可以与沙堆模型类比。一个沙子扰动附近的沙子的分叉行为就符合分形产生的规则，如果有初始状态的确定，这个结构还可以不断增长，比如生物发育中三个胚层的发育。</p>
+<p><img src="http://i1.fuimg.com/640680/e707a6c6f4ea10a4.png" alt="Markdown"></p>
+<p>生物/智能“自发选择”的符合自组织临界的特性让人欣喜，我们可以考虑把研究生物智能问题和研究系统自组织问题融入一体，从简单的动力学和统计学角度去思考智能的特性，这无疑是很好的结果了。</p>
+<h3 id="森林大火与大脑的临界态"><a href="#森林大火与大脑的临界态" class="headerlink" title="森林大火与大脑的临界态"></a>森林大火与大脑的临界态</h3><p>森林大火模型与沙堆模型以一些相似性。一棵树的燃烧可能造成周围格点，也就是其他树的燃烧，这与沙子掉落导致斜率超过临界值带来的崩塌是类似的。不同之处在于：沙堆可以继续放沙子，而森林大火刚刚燃烧过的地方是不能再燃烧的，这种本来就是自然的特性的东西显然与生物模型更符合！稍微考虑一下就会想到，这可以与生物的不应期对应，这在大脑的功能中是重要的。因此研究森林大火的统计性质，从某种程度上也是在研究大脑神经活动的统计性质。</p>
+<p>何帆先生曾经写过一篇政治杂文，用森林大火的模型研究政治现象（可见这种朴素普适的想法是很容易被人接受的），他提出如果不断地掉落一些小的火种，让森林部分燃烧，这样森林虽然燃烧一部分，但是火灾规模都不大，如果平时不燃烧，那么系统有小概率产生大的火灾的时候就很糟糕了，这里面想讲的政治道理其实已经比较明显了。</p>
+<p>森林可能不是一年四季都处于临界状态的，何帆先生先放一把火的做法就让森林不那么容易发生火灾了，这就是让系统偏离平衡态的方法。雨水很多的地方不易发生火灾，可以被称为亚临界状态，如果非常干燥极易发生火灾，可以被称为超临界状态。</p>
+<p>超临界状态也是系统和生命常见的状态。如果崩塌中有正反馈，一个崩塌就越容易造成崩塌，就像马太效应一样。正反馈的直接效果会带来要不然不崩塌要不然剧烈崩塌的双稳态。<br>其实这个现象是非常容易发生的，在非理想情况的沙堆实验中，沙子落下时会带有一定冲击力，沙子掉下时就会造成本来不至于崩塌的地方也崩塌，也就是说沙堆会处于某种超临界的状态，这种正反馈的效果就是真实实验观察时发现了很多巨大的崩塌。</p>
+<p>换句话说，在沙堆实验中只要给系统一些正反馈，就会使系统处于一种超临界的状态下，使系统要不不崩塌要不产生巨大崩塌，这种状态就是双稳态。因为沙堆的崩塌是连带性的，因此一个崩塌区域是连城一片的，所以真实的沙堆模型可能就没有抽象的理论中那么复杂的分形结构。</p>
+<p>下面是针对大脑神经活动的思考。图灵曾经有过一段深受时代影响的对机器思想的论述。他从原子弹的原理受到启发，提出人类的大脑输入的想法就像反应堆外界轰击的中子，这些中子会造成我们大脑的反应，这些反应可能会逐步消失，但是过量的轰击甚至会导致反应堆解体。图灵进一步提出了不具有真正思想的动物的大脑可能的情况：动物的大脑处于亚临界状态，输入想法则回到静息状态，而人类的一部分思想处于超临界状态，给一个想法可以创造出无穷无尽的想法。图灵很自然地就提出，想让机器拥有智能，就要让机器也拥有超临界的状态。<br>然而图灵的想法有两个重大的失误，这种设想并不直接对应于神经的活动，超临界状态也并不是最好的选择。超临界状态只有两种结果：大的崩塌或者小的崩塌。如果大脑真的出现超临界状态，比如大脑大范围的神经放电，这种现象就对应于癫痫。（当然超临界状态也许会给人一些因祸得福的好处，比如近乎“疯狂”的创造力）到了八九十年代，提出沙堆模型的bak在一个神经科学会议上提出，人类的大脑应该是临界态的，虽然当时没有办法进行实验验证，但是如今我们已经有非常多的实验证明大脑确实处于临界状态。</p>
+<p>从小尺度上，我们可以观察到与沙堆模型相似的神经雪崩，一个神经的兴奋造成周围神经的兴奋。大尺度上，类似于鸟群一样，大脑皮层在时间空间上产生长程关联，虽然是小概率但是可能发生在行为层次上，产生类似于临界慢化的现象，类似于疾病的潜伏期。</p>
+<p>虽然实验说明在大脑一小块儿区域有临界态，切片与完整的大脑还是不一样的，如今通过对整个大脑的测量，比如功能核磁共振FMRI，来做大脑神经活动研究，如果要说明大脑整体处于临界状态，就要看大脑的神经关联是否足够长。FMRI实验证明了大脑皮层的神经活动存在长程关联，从而说明了大脑在整体上也处于临界态。如今已经有理论说明了大脑的临界性与大脑的网络结构有关。</p>
+<p>有一些人因为看一些画面闪烁过快的电视节目发生癫痫：频率过高的输入信号就像沙堆模型中大规模的沙粒下落会导致大规模沙崩导致癫痫。而正常人在看到这些画面不会癫痫的保护机制包括输入信号频率增加后突触的活动会降低，就像发生小火变多之后森林大火的可能性减小，也就是说我们的大脑存在机制保持在临界态上不会产生崩溃。这个例子也让人联想到最近一项治疗阿尔兹海默症的突破性研究，在大量的药物治疗尝试后，科学家试着用一定频率的闪光治疗阿尔兹海默症并且取得了奇效。这让人浮想联翩，除了对某些化学物质的刺激，一定频率（40Hz）的光还对大脑产生了什么影响。现在人们已经知道大脑的临界态对大脑的意义包括信息传输、存储、计算能力的提升。</p>
+<h3 id="大脑中的幂律分布"><a href="#大脑中的幂律分布" class="headerlink" title="大脑中的幂律分布"></a>大脑中的幂律分布</h3><p>大脑中也是存在幂律分布的，新近的研究更是进一步阐释了这一点。该研究的其中一个实验是以蒙着眼睛的小鼠作为实验对象，实验结果表明在生物大脑中可能存在一种通用的计算原理。在小鼠大脑发育的关键阶段，蒙着眼睛的小鼠的大脑中与视觉相关的大脑区域会被重新分配其它心智任务。这似乎能够证明人脑和老鼠的大脑相似，都具有可塑性，可以以一种通用计算机器（universal computing machine）的方式进行重新编程。</p>
+<p>钱卓教授花费了十多年的时间研究连接理论（Theory of Connectivity）中，试图发现人脑灰质（grey matter）中存在的一种占据主导地位的统一计算原理</p>
+<p>很多人都一直在思考，在智能的起源和大脑的进化上一定有一个基本的设计原理，就像是 DNA 的双螺旋结构，每一个生物都有普遍存在的遗传密码。钱卓给出了证据说明人脑可能是按照一种极其简单的数理逻辑来运作的。连接理论（Theory of Connectivity）认为一个叫做基于二次幂的置换（power-of-two-based permutation）的简单算法可以被用来解释大脑的回路，其可表示为$N = 2^i -1$</p>
+<p>研究观察说明大脑的基本计算算法确实是通过基于二次幂的置换逻辑进行组织的。这个简单的数学逻辑可以用来解释整个进化谱（evolutionary spectrum）中的大脑计算，范围涵盖最简单的神经网络到最复杂的神经网络。这种工作是令人震撼和激动的。想一想，一项结合了神经科学，自然世界与人工神经网络的研究，把一种普适的规律就这样发现了：自然界的幂律分布，大脑的简洁又普适的运算机制，又能给深度学习很多启发，这样的发现是对神经科学的重大的冲击，对人工智能的极大地促进，对自己的更加深刻的认识。这个公式的简洁让人舒适又开心，自然界就应该是这样的：复杂又简单，简单源自于思想与原理的统一，只要原理是统一的，我们就只需要处理数学和具体条件的复杂，这样的复杂性就可以被聪明的人类掌握于手中。这就是自然、科学、数理与思想的奇妙和联系！</p>
+<p>进一步把临界态的特征适用于大脑中，可以看到大脑的一些特点，比如长程性：大脑存在着长程的时间与空间相关，让大脑有了更高的整合特性，这也是大家关注的大脑与AI的重要区别。比如均衡性，保持整体与保持敏感的平衡，而且在做出反应后依然可以保持敏感，而不是接受一波信息之后就放松了。这种状态是稳定性与随机性的最佳的平衡。人的大脑还在有序无序之间表达出很强的适应性，一个很随机的系统很灵活但是不稳定，比如今天做这个明天做这个但是记不住，没法应用和进步；一个很稳定的大脑可以记住很多东西但是并不能互相联系（比如AI），因此一个适应性很强的大脑应该在稳定性与随机性之间。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我相信世界应该是简洁的，我们总是希望用各种方法逼近一些尽可能简洁美好的基本真理。现在工业界的深度学习进展迅速，这是对人类发展有益的好事，但是对于科学界来说，更关键的不是盲目的冒进，而是静下心来发现原理性的东西，计算科学家希望从数学和计算的角度研究，神经科学家希望从大脑结构和功能的角度研究，我想我们应该加入更多的系统生物学和物理学、统计学的想法，把所有的这些东西都融合起来，追本溯源，也许就可拨云见日，目见真理。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/thoughts/" rel="tag"><i class="fa fa-tag"></i> thoughts</a>
+          
+            <a href="/tags/brain/" rel="tag"><i class="fa fa-tag"></i> brain</a>
+          
+            <a href="/tags/deep-learning/" rel="tag"><i class="fa fa-tag"></i> deep learning</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/23/multi2/" rel="next" title="Multivariate Statistics Assignment 5">
+                <i class="fa fa-chevron-left"></i> Multivariate Statistics Assignment 5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单与复杂"><span class="nav-number">2.</span> <span class="nav-text">简单与复杂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从简单到复杂：描述智能的临界态"><span class="nav-number">3.</span> <span class="nav-text">从简单到复杂：描述智能的临界态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#沙堆模型与森林大火"><span class="nav-number">4.</span> <span class="nav-text">沙堆模型与森林大火</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#森林大火与大脑的临界态"><span class="nav-number">5.</span> <span class="nav-text">森林大火与大脑的临界态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大脑中的幂律分布"><span class="nav-number">6.</span> <span class="nav-text">大脑中的幂律分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共101.0k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>
