@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/05/04/jupyter/</loc>
+    <lastmod>2018-06-02T13:41:44.456Z</lastmod>
+    <data>
+        <display>
+        <title>Jupyter自定义设置详解</title>
+        <pubTime>2018-05-04T07:09:56.000Z</pubTime>
+        
+        <tag>codes</tag>
+         
+        <tag>techniques</tag>
+         
+         
+           
+             
+              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/28/line7/</loc>
     <lastmod>2018-05-28T08:45:29.327Z</lastmod>
     <data>
@@ -68,9 +90,9 @@
         <title>系统临界态对智能的启发</title>
         <pubTime>2018-05-23T08:49:39.000Z</pubTime>
         
-        <tag>thoughts</tag>
-         
         <tag>deep learning</tag>
+         
+        <tag>thoughts</tag>
          
         <tag>brain</tag>
          
@@ -711,28 +733,6 @@
         <tag>syntax</tag>
          
         <tag>composing</tag>
-         
-         
-           
-             
-              <breadCrumb title="techniques" url="https://www.cmwonderland.com/categories/techniques/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/05/04/jupyter/</loc>
-    <lastmod>2018-05-04T16:04:27.763Z</lastmod>
-    <data>
-        <display>
-        <title>Jupyter自定义设置详解</title>
-        <pubTime>2018-05-04T07:09:56.000Z</pubTime>
-        
-        <tag>codes</tag>
-         
-        <tag>techniques</tag>
          
          
            

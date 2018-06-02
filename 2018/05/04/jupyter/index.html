@@ -105,7 +105,8 @@
 <meta property="og:image" content="http://i4.fuimg.com/640680/7fc861662f88de4a.png">
 <meta property="og:image" content="http://i4.fuimg.com/640680/5a2fe35422f87b5e.png">
 <meta property="og:image" content="http://i1.fuimg.com/640680/c493f72487089e34.png">
-<meta property="og:updated_time" content="2018-05-04T16:04:27.763Z">
+<meta property="og:image" content="http://i4.fuimg.com/640680/a5c74f6ebc23a233.png">
+<meta property="og:updated_time" content="2018-06-02T13:41:44.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jupyter自定义设置详解">
 <meta name="twitter:description" content="今天专门花时间总结梳理一下jupyter的一些高级设置，jupyter我已经介绍过一次基本内容了,Setup and Linux | James Chen’s Blogs，尤其是如何在服务器运行jupyter并且在本地浏览器显示，简直是使用python进行机器学习、深度学习、大数据的工作者的巨大福音。作为一个重度python&amp;amp;jupyter使用者，我已经习惯于在jupyter上进行大量的实">
@@ -387,7 +388,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,469
+                  2,134
                 </span>
               
 
@@ -403,7 +404,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7
+                  10
                 </span>
               
             </div>
@@ -430,8 +431,9 @@
 <h2 id="jupyter-extension"><a href="#jupyter-extension" class="headerlink" title="jupyter  extension"></a>jupyter  extension</h2><p><strong>相见恨晚，用着非常非常爽，强烈推荐</strong><br><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions" target="_blank" rel="noopener">https://github.com/ipython-contrib/jupyter_contrib_nbextensions</a></p>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br><span class="line">pip3 <span class="keyword">install </span><span class="keyword">jupyter_contrib_nbextensions</span></span><br><span class="line"><span class="keyword">jupyter </span>contrib nbextension <span class="keyword">install </span>--user</span><br></pre></td></tr></table></figure>
 <h3 id="推荐使用的插件"><a href="#推荐使用的插件" class="headerlink" title="推荐使用的插件"></a>推荐使用的插件</h3><h4 id="table-of-contents"><a href="#table-of-contents" class="headerlink" title="table of contents"></a>table of contents</h4><p>设置着很简单，找到后打个对勾就行了，<strong>效果很棒</strong>：<br><img src="http://i4.fuimg.com/640680/5bfe6a9b5a48e822.png" alt="Markdown"></p>
-<h4 id="freeze"><a href="#freeze" class="headerlink" title="freeze"></a>freeze</h4><p><img src="http://i4.fuimg.com/640680/a6412152652237a6.png" alt="Markdown"></p>
-<h4 id="highlighter"><a href="#highlighter" class="headerlink" title="highlighter"></a>highlighter</h4><p><img src="http://i4.fuimg.com/640680/5cf4c30a3f01295d.png" alt="Markdown"></p>
+<p>jupyter支持markdown，只需要将某个代码框选为markdown格式，使用table of contents插件，就会自动在左边栏生成目录。对于写的很长的代码，可以帮助整理思路，快速定位代码。大家用jupyter一般是做前期的各种各样的实验，思路可能比较发散，所以用table of contents可以帮忙梳理思路，也方便以后再寻找、理解代码</p>
+<h4 id="freeze"><a href="#freeze" class="headerlink" title="freeze"></a>freeze</h4><p>可以“冰冻”某个代码块，有个代码块儿暂时不再使用，就可以暂时冰冻，这样就无法运行，也不会被误删除。是个很有用的功能。<br><img src="http://i4.fuimg.com/640680/a6412152652237a6.png" alt="Markdown"></p>
+<h4 id="highlighter"><a href="#highlighter" class="headerlink" title="highlighter"></a>highlighter</h4><p>可以高亮注释<br><img src="http://i4.fuimg.com/640680/5cf4c30a3f01295d.png" alt="Markdown"></p>
 <h4 id="Gist-it"><a href="#Gist-it" class="headerlink" title="Gist-it"></a>Gist-it</h4><p>Adds a button to publish the current notebook as a gist</p>
 <h4 id="Snippets-menu"><a href="#Snippets-menu" class="headerlink" title="Snippets menu"></a>Snippets menu</h4><p>帮助懒人插入一些经典库的经典方法的代码块，感觉很不错哦，比去Stack Overflow搜要快一些~不过支持的还是比较少的。<br><img src="http://i4.fuimg.com/640680/7fc861662f88de4a.png" alt="Markdown"></p>
 <h4 id="Snippet"><a href="#Snippet" class="headerlink" title="Snippet:"></a>Snippet:</h4><p><strong>强烈强烈推荐！</strong>感觉有望帮助节约不少写代码的时间</p>
@@ -460,6 +462,27 @@
 <p>测试几个机器的配置均通过</p>
 <p>配置好了还是很美的：</p>
 <p><img src="http://i1.fuimg.com/640680/c493f72487089e34.png" alt="Markdown"></p>
+<p>jupyter dashboard<br>看起来是可以进一步帮助展示的利器<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install </span><span class="keyword">jupyter_dashboards</span></span><br><span class="line"><span class="keyword">jupyter </span>dashboards quick-setup --sys-<span class="keyword">prefix</span></span><br><span class="line"><span class="keyword">jupyter </span>nbextension <span class="keyword">install </span>--py <span class="keyword">jupyter_dashboards </span>--sys-<span class="keyword">prefix</span></span><br><span class="line"><span class="keyword">jupyter </span>nbextension enable --py <span class="keyword">jupyter_dashboards </span>--sys-<span class="keyword">prefix</span></span><br></pre></td></tr></table></figure></p>
+<p>不过用了一下，过分自动化的布局反而限制的比较死，，不太好看</p>
+<h3 id="hide-input"><a href="#hide-input" class="headerlink" title="hide input"></a>hide input</h3><p>不显示code，只显示output，适合展示时用。</p>
+<h3 id="ipywidgets-interactive-coding"><a href="#ipywidgets-interactive-coding" class="headerlink" title="ipywidgets interactive coding"></a>ipywidgets interactive coding</h3><p>使用专为jupyter设计的ipywidgets，可以更好地展示、调整代码，尤其适合运行较快、有较多参数需要探索、选取的场合，比如绘图</p>
+<p>以使用python的seaborn绘制boxplot为例，我们有多个参数待选，比如：</p>
+<ul>
+<li>context &amp; style 可以设置不同的背景和字体风格</li>
+<li>width &amp; height 设置图片的宽和高</li>
+<li>boxplot/violinplot 使用传统的box表示还是用可以同时表示点的分布密度的violinplot表示</li>
+<li>showdot &amp; showbox  可以选择是否显示点，以及是否显示box，或者同时都显示、都不显示</li>
+<li>fondsize &amp; dotsize，分别调整文字大小和点的大小</li>
+<li>boxwidth 调整box和violin的宽度</li>
+<li>ylim 调整纵坐标的最大与最小值</li>
+<li>compareheight*  调整几个注释文字距离box顶点的高度</li>
+<li>palettesind 选择第几套配色方案</li>
+<li>saturation 调整色彩饱和度</li>
+</ul>
+<p>可以看到python的绘图函数一般都留有很大的调整空间，可选参数较多，可以组合出很多效果，但是也给调整带来了很多麻烦。如果把这些参数都传入绘图函数中，每次调整其中的一个或几个，依照经验来调整，效率就比较低。这个时候就可以考虑使用ipywidgets方便地调整这些参数。通过ipywidgets，可以把这些控制浮点型、整型或字符串控制参数用Float、Int slider、Dropdown，RadioButtion等控制，不需要每次更改参数再运行代码框，可以快速地调整出自己想要的图像。</p>
+<p>效果如下：</p>
+<p><img src="http://i4.fuimg.com/640680/a5c74f6ebc23a233.png" alt="Markdown"></p>
+<p>一份示例代码plots_roc.ipynb放在了<a href="https://github.com/james20141606/somethingmore/interact_plot" target="_blank" rel="noopener">something more</a></p>
 
       
     </div>
@@ -674,7 +697,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义主题"><span class="nav-number">1.</span> <span class="nav-text">自定义主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter-extension"><span class="nav-number">2.</span> <span class="nav-text">jupyter  extension</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐使用的插件"><span class="nav-number">2.1.</span> <span class="nav-text">推荐使用的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#table-of-contents"><span class="nav-number">2.1.1.</span> <span class="nav-text">table of contents</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#freeze"><span class="nav-number">2.1.2.</span> <span class="nav-text">freeze</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#highlighter"><span class="nav-number">2.1.3.</span> <span class="nav-text">highlighter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gist-it"><span class="nav-number">2.1.4.</span> <span class="nav-text">Gist-it</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Snippets-menu"><span class="nav-number">2.1.5.</span> <span class="nav-text">Snippets menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Snippet"><span class="nav-number">2.1.6.</span> <span class="nav-text">Snippet:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic-science"><span class="nav-number">2.1.6.1.</span> <span class="nav-text">Basic science</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Highlevel-plot"><span class="nav-number">2.1.6.2.</span> <span class="nav-text">Highlevel plot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Deeplearning-keras"><span class="nav-number">2.1.6.3.</span> <span class="nav-text">Deeplearning  keras</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pytorch"><span class="nav-number">2.1.6.4.</span> <span class="nav-text">Pytorch</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义主题"><span class="nav-number">1.</span> <span class="nav-text">自定义主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter-extension"><span class="nav-number">2.</span> <span class="nav-text">jupyter  extension</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐使用的插件"><span class="nav-number">2.1.</span> <span class="nav-text">推荐使用的插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#table-of-contents"><span class="nav-number">2.1.1.</span> <span class="nav-text">table of contents</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#freeze"><span class="nav-number">2.1.2.</span> <span class="nav-text">freeze</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#highlighter"><span class="nav-number">2.1.3.</span> <span class="nav-text">highlighter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gist-it"><span class="nav-number">2.1.4.</span> <span class="nav-text">Gist-it</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Snippets-menu"><span class="nav-number">2.1.5.</span> <span class="nav-text">Snippets menu</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Snippet"><span class="nav-number">2.1.6.</span> <span class="nav-text">Snippet:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Basic-science"><span class="nav-number">2.1.6.1.</span> <span class="nav-text">Basic science</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Highlevel-plot"><span class="nav-number">2.1.6.2.</span> <span class="nav-text">Highlevel plot</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Deeplearning-keras"><span class="nav-number">2.1.6.3.</span> <span class="nav-text">Deeplearning  keras</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Pytorch"><span class="nav-number">2.1.6.4.</span> <span class="nav-text">Pytorch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hide-input"><span class="nav-number">2.2.</span> <span class="nav-text">hide input</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ipywidgets-interactive-coding"><span class="nav-number">2.3.</span> <span class="nav-text">ipywidgets interactive coding</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -712,7 +735,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共102.6k字</span>
+  <span class="post-count">博客全站共103.2k字</span>
 </div>
 
         
