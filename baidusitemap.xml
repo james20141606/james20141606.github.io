@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/06/16/dad/</loc>
+    <lastmod>2018-06-16T15:56:49.622Z</lastmod>
+    <data>
+        <display>
+        <title>记和爸爸的点点滴滴</title>
+        <pubTime>2018-06-16T15:58:06.000Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="https://www.cmwonderland.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/05/04/jupyter/</loc>
     <lastmod>2018-06-02T13:41:44.456Z</lastmod>
     <data>
@@ -90,11 +110,11 @@
         <title>系统临界态对智能的启发</title>
         <pubTime>2018-05-23T08:49:39.000Z</pubTime>
         
-        <tag>deep learning</tag>
-         
         <tag>thoughts</tag>
          
         <tag>brain</tag>
+         
+        <tag>deep learning</tag>
          
          
            
