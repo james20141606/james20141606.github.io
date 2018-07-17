@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google5b248f7b86cbcee5.html" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="deep learning,project,summer intern,neural science,Jeff Lichtman," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="WonderLand" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 2 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
+<meta name="keywords" content="deep learning,project,summer intern,neural science,Jeff Lichtman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synapse Prediction">
+<meta property="og:url" content="https://www.cmwonderland.com/2018/07/14/summerintern_Synapse Prediction/index.html">
+<meta property="og:site_name" content="WonderLand">
+<meta property="og:description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 2 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-17T03:31:55.398Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Synapse Prediction">
+<meta name="twitter:description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 2 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.cmwonderland.com/2018/07/14/summerintern_Synapse Prediction/"/>
+
+
+
+
+
+  <title>Synapse Prediction | WonderLand</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6656499bfc0e07b4e20ee4975eb85f31";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <a href="https://github.com/james20141606"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">WonderLand</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Somnium & Somniator</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/07/14/summerintern_Synapse Prediction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Synapse Prediction</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T22:50:06-04:00">
+                2018-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">project</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/14/summerintern_Synapse Prediction/" class="leancloud_visitors" data-flag-title="Synapse Prediction">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,389
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>It is part of my computational task during my summer intern in Lichtman lab</p>
+<ul>
+<li>It is part of the big synapse project. Also the challenge 2 of <a href="https://cremi.org" target="_blank" rel="noopener">CREMI</a></li>
+</ul>
+<p>The codes related are here: <a href="https://github.com/james20141606/Summer_Intern/tree/master/synapse_prediction" target="_blank" rel="noopener">Summer_Intern/synaptic_partner at master · james20141606/Summer_Intern · GitHub</a></p>
+<a id="more"></a>
+<hr>
+<h1 id="First-two-weeks"><a href="#First-two-weeks" class="headerlink" title="First two weeks"></a>First two weeks</h1><h2 id="summarize-and-rewrite-some-data-augmentation-repo"><a href="#summarize-and-rewrite-some-data-augmentation-repo" class="headerlink" title="summarize and rewrite some data augmentation repo"></a>summarize and rewrite some data augmentation repo</h2><p>The three main repos are gunpowder from funke lab, EM-data, EM-seglib from Sebastian lab.</p>
+<p>Gunpowder is quite complicated since it includes a whole pipeline of data preprocessing. It defines some batch provider and batch filter at first, making it harder to understand the data augmentation steps in the middle. Since it is written in python2 and designed for caffe, I rewrite and summarize, compare the gunpowder’s four augmentation methods with Sebastian’s codes.</p>
+<p>Funke said in his paper about CREMI challenge 2 that data augmentation is the most important steps in the whole pipeline. I rewrite the four kinds of data augmentation methods combining Funkey and Sebastian’s codes.<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/jupyter/gunpowder.ipynb" target="_blank" rel="noopener">gunpowder</a><br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/jupyter/gunpowder_cremi.ipynb" target="_blank" rel="noopener">gunpowder on cremi</a></p>
+<ul>
+<li>simple augmentation</li>
+<li>intensity augment</li>
+<li>ElasticAugment</li>
+<li>DefectAugment</li>
+</ul>
+<h2 id="simple-augmentation"><a href="#simple-augmentation" class="headerlink" title="simple augmentation"></a>simple augmentation</h2><p>class gunpowder.SimpleAugment(mirror_only=None, transpose_only=None)<br>Randomly mirror and transpose all Arrays and Points in a batch.</p>
+<p>simple augment can be achieved by EM-segLib/em_segLib/transform.py!<br>in this repo, only transpose_only_xy=True is used!</p>
+<h2 id="intensity-augment"><a href="#intensity-augment" class="headerlink" title="intensity augment"></a>intensity augment</h2><p>class gunpowder.IntensityAugment(array, scale_min, scale_max, shift_min, shift_max, z_section_wise=False)<br>Randomly scale and shift the values of an intensity array.</p>
+<ul>
+<li>array (ArrayKey) – The intensity array to modify.</li>
+<li>scale_min (float) –</li>
+<li>scale_max (float) –</li>
+<li>shift_min (float) –</li>
+<li>shift_max (float) –<br>The min and max of the uniformly randomly drawn scaling and shifting values for the intensity augmentation. Intensities are changed as:</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> = <span class="selector-tag">a</span>.mean() + (a-<span class="selector-tag">a</span>.mean())*scale + shift</span><br></pre></td></tr></table></figure>
+<ul>
+<li>z_section_wise (bool) – Perform the augmentation z-section wise. Requires 3D arrays and assumes that z is the first dimension.</li>
+</ul>
+<h3 id="Randomly-scale-and-shift-the-values-of-an-intensity-array，"><a href="#Randomly-scale-and-shift-the-values-of-an-intensity-array，" class="headerlink" title="Randomly scale and shift the values of an intensity array，"></a>Randomly scale and shift the values of an intensity array，</h3><ul>
+<li>can do z axis sections augmentation，first dim should be z</li>
+<li>normalized array desired</li>
+<li>set scale and shift’s biggest and smallest value</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np<span class="selector-class">.random</span><span class="selector-class">.uniform</span>(low=self<span class="selector-class">.shift_min</span>, high=self.shift_max))</span><br></pre></td></tr></table></figure>
+<p>Return scale and shift value</p>
+<ul>
+<li>for each array: a.mean() + (a-a.mean())*scale + shift</li>
+<li>np.clip(0,1)</li>
+</ul>
+<h3 id="similar-implementation"><a href="#similar-implementation" class="headerlink" title="similar implementation!"></a>similar implementation!</h3><ul>
+<li>scale is similar to DataProvider/python/data_augmentation.py class GreyAugment(DataAugment)!</li>
+<li>DataProvider/python/data_augmentation.py class GreyAugment(DataAugment)<strong>may be better</strong>：</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> *= <span class="number">1</span> + (np<span class="selector-class">.random</span><span class="selector-class">.rand</span>() - <span class="number">0.5</span>)*self.CONTRAST_FACTOR</span><br><span class="line"><span class="selector-tag">img</span> += (np<span class="selector-class">.random</span><span class="selector-class">.rand</span>() - <span class="number">0.5</span>)*self.BRIGHTNESS_FACTOR</span><br><span class="line"><span class="selector-tag">img</span> = np.<span class="attribute">clip</span>(img, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line"><span class="selector-tag">img</span> **= <span class="number">2.0</span>**(np<span class="selector-class">.random</span><span class="selector-class">.rand</span>()*<span class="number">2</span> - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>it borrows from (<a href="http://elektronn.org/).ELEKTRONN" target="_blank" rel="noopener">http://elektronn.org/).ELEKTRONN</a> is used for 2D/3D large scale image. Also used for segmentation</li>
+</ul>
+<h2 id="ElasticAugment"><a href="#ElasticAugment" class="headerlink" title="ElasticAugment"></a>ElasticAugment</h2><p>The author used ElasticAugment([4,40,40], [0,2,2], [0,math.pi/2.0], prob_slip=0.05,prob_shift=0.05,max_misalign=25)</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class gunpowder.ElasticAugment(control_point_spacing, jitter_sigma, rotation_interval, <span class="attribute">prob_slip</span>=0, <span class="attribute">prob_shift</span>=0, <span class="attribute">max_misalign</span>=0, <span class="attribute">subsample</span>=1)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>reshape array data into (channels,) + spatial dims</li>
+<li>first  <strong>create_identity_transformation</strong><ul>
+<li>create_identity_transformation from funkey another repo augment，create_identity_transformation, channel change to three , use np.meshgrid increase two channels</li>
+</ul>
+</li>
+<li>if sum(jitter_sigma) &gt; 0: <strong>create_elastic_transformation</strong></li>
+<li><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">augment.create_elastic_transformation(</span><br><span class="line">                    target_shape,</span><br><span class="line">                    self<span class="selector-class">.control_point_spacing</span>,</span><br><span class="line">                    self<span class="selector-class">.jitter_sigma</span>,</span><br><span class="line">                    subsample=self.subsample)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>first get control_point_offsets，the interpolation to upscale，generate 3 channel images</p>
+</li>
+<li><p>then by rotation_interval [0,math.pi/2.0], rotation_start = rotation_interval[0], rotation_max_amount = rotation_interval[1] - rotation_interval[0]</p>
+<p>  rotation = random.random()*self.rotation_max_amount + self.rotation_start(less than 90)</p>
+</li>
+</ul>
+<p>If rotation&gt;0,do <strong>create_rotation_transformation</strong></p>
+<ul>
+<li>then if prob_slip + prob_shift &gt; 0，做<strong>__misalign(transformation)</strong></li>
+</ul>
+<p>According to thres to do randomly shift by section</p>
+<ul>
+<li><p>at last if subsample &gt;1 before elastic augmentation do subsampling to speed up elasticaugment after augmentation then do upscale</p>
+<p>  Instead of creating an elastic transformation on the full<br>  resolution, create one subsampled by the given factor, and linearly<br>  interpolate to obtain the full resolution transformation. This can<br>  significantly speed up this node, at the expense of having visible<br>  piecewise linear deformations for large factors. Usually, a factor<br>  of 4 can savely by used without noticable changes. However, the<br>  default is 1 (i.e., no subsampling).</p>
+</li>
+</ul>
+<h2 id="DefectAugment"><a href="#DefectAugment" class="headerlink" title="DefectAugment"></a>DefectAugment</h2><p>class gunpowder.DefectAugment(intensities, prob_missing=0.05, prob_low_contrast=0.05, prob_artifact=0.0, prob_deform=0.0, contrast_scale=0.1, artifact_source=None, artifacts=None, artifacts_mask=None, deformation_strength=20, axis=0)[source]</p>
+<p>Augment intensity arrays section-wise with artifacts like missing sections, low-contrast sections, by blending in artifacts drawn from a separate source, or by deforming a section.</p>
+<ul>
+<li>intensities (ArrayKey) – The key of the array of intensities to modify.</li>
+<li>prob_missing (float) –</li>
+<li>prob_low_contrast (float) –</li>
+<li>prob_artifact (float) –</li>
+<li>prob_deform (float) – Probabilities of having a missing section, low-contrast section, an artifact (see param artifact_source) or a deformed slice. The sum should not exceed 1. Values in missing sections will be set to 0.<br>contrast_scale (float, optional) – By how much to scale the intensities for a low-contrast section, used if prob_low_contrast &gt; 0.</li>
+<li><p>(class (artifact_source) – BatchProvider, optional):A gunpowder batch provider that delivers intensities (via ArrayKey artifacts) and an alpha mask (via ArrayKey artifacts_mask), used if prob_artifact &gt; 0.</p>
+</li>
+<li><p>artifacts (ArrayKey, optional) – The key to query artifact_source for to get the intensities of the artifacts.</p>
+</li>
+<li>artifacts_mask (ArrayKey, optional) – The key to query artifact_source for to get the alpha mask of the artifacts to blend them with intensities.</li>
+<li>deformation_strength (int, optional) – Strength of the slice deformation in voxels, used if prob_deform &gt; 0. The deformation models a fold by shifting the section contents towards a randomly oriented line in the section. The line itself will be drawn with a value of 0.</li>
+<li>axis (int, optional) – Along which axis sections are cut.</li>
+</ul>
+<p>From a special artifect source read data and defectaugment</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">artifact_source = (</span><br><span class="line">        Hdf5Source(</span><br><span class="line">            'sample_ABC_padded_20160501.defects.hdf',</span><br><span class="line">            datasets = &#123;</span><br><span class="line">                ArrayKeys.RAW: 'defect_sections/raw',</span><br><span class="line">                ArrayKeys.ALPHA_MASK: 'defect_sections/mask',</span><br><span class="line">            &#125;</span><br><span class="line">        ) +</span><br><span class="line">        RandomLocation(<span class="name">min_masked=0</span>.<span class="number">05</span>, mask_array_key=ArrayKeys.ALPHA_MASK) +</span><br><span class="line">        Normalize() +</span><br><span class="line">        IntensityAugment(<span class="number">0.9</span>, <span class="number">1.1</span>, <span class="number">-0.1</span>, <span class="number">0.1</span>, z_section_wise=True) +</span><br><span class="line">        ElasticAugment([<span class="number">4</span>,<span class="number">40</span>,<span class="number">40</span>], [<span class="number">0</span>,<span class="number">2</span>,<span class="number">2</span>], [<span class="number">0</span>,math.pi/2.<span class="number">0</span>]) +</span><br><span class="line">        SimpleAugment(<span class="name">transpose_only_xy=True</span>)</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>threshold：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DefectAugment(</span><br><span class="line">            <span class="attribute">prob_missing</span>=0.03,</span><br><span class="line">            <span class="attribute">prob_low_contrast</span>=0.01,</span><br><span class="line">            <span class="attribute">prob_artifact</span>=0.03,</span><br><span class="line">            <span class="attribute">artifact_source</span>=artifact_source,</span><br><span class="line">            <span class="attribute">contrast_scale</span>=0.1)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>get missing，low_contrast, artifact, deform value    prob_missing_threshold = self.prob_missing   (0.03=0.03)<br>  prob_low_contrast_threshold = prob_missing_threshold + self.prob_low_contrast  (0.04=0.03+0.01)<br>  prob_artifact_threshold = prob_low_contrast_threshold + self.prob_artifact    (0.07=0.03+0.04)<br>  prob_deform_slice = prob_artifact_threshold + self.prob_deform   (0.07=0.07+0)</p>
+</li>
+<li>for each slice，generate 0-1 random value r，if：<ul>
+<li>r &lt; prob_missing_threshold:  ‘zero_out’<ul>
+<li>do nothing</li>
+</ul>
+</li>
+<li>elif r &lt; prob_low_contrast_threshold:  ‘lower_contrast’<ul>
+<li>mean = section.mean(), section -= mean, section *= self.contrast_scale, section += mean</li>
+</ul>
+</li>
+<li>elif r &lt; prob_artifact_threshold:’artifact’<ul>
+<li>raw.data[section_selector] = section<em>(1.0 - artifact_alpha) + artifact_raw</em>artifact_alpha</li>
+<li>artifact_alpha, artifact_raw from artifact_source’s mask and raw， equals to a <strong>Alpha Blending</strong></li>
+</ul>
+</li>
+<li>elif r &lt; prob_deform_slice: ‘deformed_slice’ if deformed slice, needs bigger upstream roi for deformed slice</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">section = raw.data[section_selector].squeeze()</span><br><span class="line">interpolation = 3 if self.spec[self.intensities].interpolatable <span class="keyword">else</span> 0</span><br><span class="line">flow_x, flow_y, line_mask = self.deform_slice_transformations[c]</span><br><span class="line">shape = section.shape</span><br><span class="line"><span class="comment">#做双线性插值</span></span><br><span class="line">section = map_coordinates(</span><br><span class="line">    section, (flow_y, flow_x), mode='constant', order=interpolation</span><br><span class="line">).reshape(shape)</span><br><span class="line">section = np.clip(section, 0., 1.)</span><br><span class="line">section[line_mask] = 0</span><br><span class="line">raw.data[section_selector] = section</span><br></pre></td></tr></table></figure>
+<p><strong>cremi exapmle</strong><br><a href="https://github.com/funkey/gunpowder/tree/master/examples/cremi" target="_blank" rel="noopener">gunpowder/examples/cremi at master · funkey/gunpowder · GitHub</a></p>
+<p>docker has problems (MALIS, pycaffe)<br>Install docker on server <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-from-a-package" target="_blank" rel="noopener">Get Docker CE for Ubuntu | Docker Documentation</a></p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker pull funkey/gunpowder</span><br><span class="line"></span><br><span class="line">sudo docker images</span><br><span class="line">sudo docker <span class="built_in">run</span> -i -t <span class="comment">--name=chen ubuntu:latest</span></span><br><span class="line"><span class="keyword">exit</span>  </span><br><span class="line">docker start <span class="built_in">id</span> / <span class="built_in">name</span></span><br><span class="line">docker attach <span class="built_in">id</span> /<span class="built_in">name</span></span><br></pre></td></tr></table></figure>
+<p>Encounter problems with installing nvidia docker and docker run.</p>
+<p>Seems we should try to rewrite some codes to incorporate directly without the bothering of docker, python2, caffe, malis and other settings.</p>
+<h3 id="resources"><a href="#resources" class="headerlink" title="resources"></a>resources</h3><p><a href="https://github.com/donglaiw/em-data" target="_blank" rel="noopener">GitHub - donglaiw/EM-data: dataset loader</a><br><a href="https://github.com/torms3/DataProvider/tree/refactoring/python/dataprovider" target="_blank" rel="noopener">DataProvider/python/dataprovider at refactoring · torms3/DataProvider · GitHub</a><br><a href="https://arxiv.org/abs/1706.00120" target="_blank" rel="noopener">1706.00120 Superhuman Accuracy on the SNEMI3D Connectomics Challenge</a> Sebastian group</p>
+<p>Then I incorporate the data augmentation methods into synapse prediction model for further use.<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/jupyter/augment_cremi.ipynb" target="_blank" rel="noopener">augmentation on cremi</a></p>
+<h3 id="Model-test-and-redesign"><a href="#Model-test-and-redesign" class="headerlink" title="Model test and redesign"></a>Model test and redesign</h3><p>I tried zudi’s synapse prediction model using 3D U-net, since it is based on pytorch, I spent some time to read the pytorch documentation. We have discussed about the model improvement issue and I have tried to use other architecture for better prediction results.<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/jupyter/pytorch_synapse.ipynb" target="_blank" rel="noopener">synapse prediction model</a><br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/jupyter/syn_pytorch_add_dink.ipynb" target="_blank" rel="noopener">improvement on U net</a></p>
+<p>I can try a lot fine tune and redesign about U-net and 3D U-net, maybe from kaggle top solutions and github. </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-----The ---- end ----<i class="fa fa-paw"></i>--- Thanks --- for --- Reading----</div>
+    
+</div>
+
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/deep-learning/" rel="tag"><i class="fa fa-tag"></i> deep learning</a>
+          
+            <a href="/tags/project/" rel="tag"><i class="fa fa-tag"></i> project</a>
+          
+            <a href="/tags/summer-intern/" rel="tag"><i class="fa fa-tag"></i> summer intern</a>
+          
+            <a href="/tags/neural-science/" rel="tag"><i class="fa fa-tag"></i> neural science</a>
+          
+            <a href="/tags/Jeff-Lichtman/" rel="tag"><i class="fa fa-tag"></i> Jeff Lichtman</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/14/summerintern_NMJ/" rel="next" title="Synaptic Partner and Cluster Project">
+                <i class="fa fa-chevron-left"></i> Synaptic Partner and Cluster Project
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/14/summerintern_Synaptic Partner and Cluster Project/" rel="prev" title="Synaptic Partner and Cluster Project">
+                Synaptic Partner and Cluster Project <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="James Chen" />
+            
+              <p class="site-author-name" itemprop="name">James Chen</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">58</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/james20141606" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xp-chen14@mails.tsinghua.edu.cn" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">First two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#summarize-and-rewrite-some-data-augmentation-repo"><span class="nav-number">1.1.</span> <span class="nav-text">summarize and rewrite some data augmentation repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#simple-augmentation"><span class="nav-number">1.2.</span> <span class="nav-text">simple augmentation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#intensity-augment"><span class="nav-number">1.3.</span> <span class="nav-text">intensity augment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Randomly-scale-and-shift-the-values-of-an-intensity-array，"><span class="nav-number">1.3.1.</span> <span class="nav-text">Randomly scale and shift the values of an intensity array，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#similar-implementation"><span class="nav-number">1.3.2.</span> <span class="nav-text">similar implementation!</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ElasticAugment"><span class="nav-number">1.4.</span> <span class="nav-text">ElasticAugment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DefectAugment"><span class="nav-number">1.5.</span> <span class="nav-text">DefectAugment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#resources"><span class="nav-number">1.5.1.</span> <span class="nav-text">resources</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model-test-and-redesign"><span class="nav-number">1.5.2.</span> <span class="nav-text">Model test and redesign</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">James Chen</span>
+
+  
+</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共114.2k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("klOjl0RBA8qP5IKgIXkOszBr-gzGzoHsz", "rCaN5wX4mjiRkRMzP95g7XHz");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+</body>
+</html>

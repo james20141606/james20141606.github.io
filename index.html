@@ -1056,6 +1056,637 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/07/14/summerintern_Synaptic Partner and Cluster Project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/14/summerintern_Synaptic Partner and Cluster Project/" itemprop="url">Synaptic Partner and Cluster Project</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T23:58:06-04:00">
+                2018-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">project</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/14/summerintern_Synaptic Partner and Cluster Project/" class="leancloud_visitors" data-flag-title="Synaptic Partner and Cluster Project">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  989
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>It is part of my computational task during my summer intern in Lichtman lab</p>
+<ul>
+<li>It is part of the big synapse project. Also the challenge 3 of <a href="https://cremi.org" target="_blank" rel="noopener">CREMI</a></li>
+</ul>
+<p>The codes related are here: <a href="https://github.com/james20141606/Summer_Intern/tree/master/synaptic_partner" target="_blank" rel="noopener">Summer_Intern/synaptic_partner at master · james20141606/Summer_Intern · GitHub</a></p>
+<ul>
+<li>Also synapse clustering is summarized here, codes related are here: <a href="https://github.com/james20141606/Summer_Intern/tree/master/synapse_cluster" target="_blank" rel="noopener">Summer_Intern/synapse_cluster at master · james20141606/Summer_Intern · GitHub</a></li>
+</ul>
+<!--mor-->
+<hr>
+<h1 id="first-two-weeks"><a href="#first-two-weeks" class="headerlink" title="first two weeks"></a>first two weeks</h1><h2 id="creteria"><a href="#creteria" class="headerlink" title="creteria"></a>creteria</h2><p>I try to understand the task3, I read through metrics provided by CREMI website, and find the data processing and evaluation scripts provided by Cremi organization.<br><a href="https://github.com/cremi/cremi_python/blob/master/cremi/evaluation/synaptic_partners.py" target="_blank" rel="noopener">cremi_python/synaptic_partners.py at master · cremi/cremi_python · GitHub</a>. </p>
+<p>They made it very hard to use their pipeline to store and process data. Since we have our own pipeline, I only use the core function about evaluation. By rewriting the scripts I understand how to calculate F-score, it is harder to fully understand the criteria since it needs many steps to calculate, so it is essential to read the original scripts.</p>
+<p>I have summarized the metrics and show it to zudi and donglai.<br><img src="http://i2.tiimg.com/640680/f079765865fff1ca.png" alt="Markdown"></p>
+<p>This means we need the location data and neuron_id for wrong partner evaluation</p>
+<h3 id="steps-to-calculate-F-score"><a href="#steps-to-calculate-F-score" class="headerlink" title="steps to calculate F-score"></a>steps to calculate F-score</h3><ul>
+<li>cost_matrix :<ul>
+<li>pre_post_locations get pre and post location，may consider offset shift       get rec and gt location</li>
+<li>pre_post_labels  get pre and post segmentation( GT neuron_id) as rec_labels  segmentation[pre]  return the pixel value of a certain coordinates for further comparison of wrong partners for further comparison of wrong partners</li>
+<li>create cost matrix，find the bigger one of rec and gt location as matrix size  init value is  2*matching_threshold</li>
+<li>use cost function to calculate, for every rec and gt pair, input rec_locations[i], gt_locations[j], rec_labels[i], gt_labels[j], matching_threshold</li>
+<li>in cost function, set max_cost = 2*matching_threshold，fisrt if labels1 != labels2(rec_labels[i], gt_labels[j]), from pre_post_labels we can know rec and gt comes from different segmentation(neuron).return max_cost</li>
+<li>cost function continue, use np.linalg.norm to calculate pre and post L2 distance, if any of it is larger than thres, return max_cost. Else return average of pre and post. i.e. if  wrong partner (rec and gt not in same seg),  or FP: succeed thres</li>
+<li>if none of them happens, return average of pre and post</li>
+<li>return to cost_matrix, if distance less than thres, add potential pair count by 1, through loop, cost_matrix is filled with numbers, but the loop traverse rec_locations，gt_locations, positions not traverseed is max_cost</li>
+</ul>
+</li>
+<li>match using Hungarian method<blockquote>
+<p>All detected pairs that have both annotations inside the matching areas of a ground truth pair are considered potential matches. Of all potential matches, we find true matches by solving an assignment problem minimizing the Euclidean distance. Unmatched detected pairs are considered FP, unmatched ground truth pairs FN. The final score is the F1-score of the FPs and FNs.</p>
+<ul>
+<li>use linear_sum_assignment(costs - np.amax(costs) - 1)  np.amax(costs) almost is max_cost(2*matching_threshold)<ul>
+<li>scpiy的linear<em>sum_assignment <strong>solves assign problems</strong>, which is one of the tricky part in this criteria.<br>let X be a boolean matrix where X[i,j] =1 if row i is assigned to column j. Then the optimal assignment has cost $$min \sum_i \sum_j C</em>{ij}X_{ij}$$, it finds the minimum Euclidean distance in all potential pairs. So we can submit all locations in a random way, it doesn’t matter.<ul>
+<li>retain the assigned pairs by distance less than threshold</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>unmatched in rec = FP，all pairs detected by models subtracted by cost matrix’s pairs are FP</li>
+<li>unmatched in gt = FN，all GT pairs subtracted by cost matrix’s pairs are FN</li>
+<li>all ground truth elements - FN = TP</li>
+<li>Then we can calculate fscore, precision, recall, fp, fn, filtered_matches</li>
+</ul>
+<h2 id="Study-others’-methods"><a href="#Study-others’-methods" class="headerlink" title="Study others’ methods"></a>Study others’ methods</h2><h4 id="1st-place"><a href="#1st-place" class="headerlink" title="1st place"></a>1st place</h4><p>Last month Funkey put a paper <strong>Synaptic partner prediction from point annotations in insect brains</strong> it is the  top in leaderboard method. They combined synapse detection and partner identification into one steps. They train a 3D Unet，directly predict directed edges formed by voxels. Balance computational resource and coverage of synaptic partner. Then calculate score of all edges from one segment to another segment. Threshold and certify candidate synapse，for candidate synapse, calculate the mass center of all related edges, getting coordinates of synapse’s pre and post.</p>
+<ul>
+<li>3D U-Net architecture to directly identify pairs of voxels that are pre- and postsynaptic to each other</li>
+<li>formulate the problem of synaptic partner identiﬁcation as a classiﬁcation problem on long-range edges between voxels to encode <strong>both the presence of a synaptic pair and its direction</strong>. This formulation allows us to <strong>directly learn from synaptic point annotations</strong> instead of more expensive voxel-based synaptic cleft or vesicle annotations.</li>
+<li>The proposed representation also allows us to learn from synaptic point annotations only, since we do not rely on labeled synaptic features, such as synaptic clefts or vesicle clouds.</li>
+</ul>
+<p>From fig 1we can have a connectome matrix, actually it is what the evaluation scripts do(they are written by funkey group too.)</p>
+<h4 id="2nd-place-by-previous-postdoc-in-Hanspeter-group"><a href="#2nd-place-by-previous-postdoc-in-Hanspeter-group" class="headerlink" title="2nd place by previous postdoc in Hanspeter group"></a>2nd place by previous postdoc in Hanspeter group</h4><p>Use 3D convolutional neural network for two steps.<br>3D U-net+3D CNN, Use 3D U-net to learn labels by formulate a function, then prune it by 3D CNN<br><a href="https://www.dropbox.com/s/vug579prnxt454n/miccai18syn.pdf?dl=0" target="_blank" rel="noopener">https://www.dropbox.com/s/vug579prnxt454n/miccai18syn.pdf?dl=0</a><br>学习代码<a href="https://github.com/paragt/EMSynConn" target="_blank" rel="noopener">GitHub - paragt/EMSynConn: One algorithm to detect synaptic location AND connectivity, both dyadic and polyadic, in Electron Microscopy volume.</a></p>
+<h4 id="4th-place-FN-is-good"><a href="#4th-place-FN-is-good" class="headerlink" title="4th place, FN is good"></a>4th place, FN is good</h4><p>Use Asymmetric Unet<br><a href="https://github.com/nicholasturner1/Synaptor" target="_blank" rel="noopener">GitHub - nicholasturner1/Synaptor: Processing voxelwise Convolutional Network output trained to predict synaptic clefts for connectomics</a></p>
+<h2 id="Cluster"><a href="#Cluster" class="headerlink" title="Cluster"></a>Cluster</h2><p>I did some data visualization for cerebellum and CREMI data which will be used in clustering work. Also implement some computer vision algorithm for feature extraction.<a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_cluster/jupyter/visualize_cerebellum_sample.ipynb" target="_blank" rel="noopener">visualize cerebellum</a></p>
+<p>I am considering to use deep learning based clustering methods, to do feature selection and clustering simultaneously. Also it is essential to consider model interpretability. </p>
+<p>Resources: <a href="http://elektronn.org/" target="_blank" rel="noopener">ELEKTRONN - Convolutional Neural Network Toolkit in Python. Fast GPU acceleration and easy usage.</a> is used for generate skeletons using deep learning.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/07/14/summerintern_Synapse Prediction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/14/summerintern_Synapse Prediction/" itemprop="url">Synapse Prediction</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T22:50:06-04:00">
+                2018-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">project</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/14/summerintern_Synapse Prediction/" class="leancloud_visitors" data-flag-title="Synapse Prediction">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1,389
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>It is part of my computational task during my summer intern in Lichtman lab</p>
+<ul>
+<li>It is part of the big synapse project. Also the challenge 2 of <a href="https://cremi.org" target="_blank" rel="noopener">CREMI</a></li>
+</ul>
+<p>The codes related are here: <a href="https://github.com/james20141606/Summer_Intern/tree/master/synapse_prediction" target="_blank" rel="noopener">Summer_Intern/synaptic_partner at master · james20141606/Summer_Intern · GitHub</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/14/summerintern_Synapse Prediction/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/14/summerintern_NMJ/" itemprop="url">Synaptic Partner and Cluster Project</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T20:35:19-04:00">
+                2018-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">project</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/14/summerintern_NMJ/" class="leancloud_visitors" data-flag-title="Synaptic Partner and Cluster Project">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  531
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="网站NMJ-project"><a href="#网站NMJ-project" class="headerlink" title="网站NMJ project"></a>网站NMJ project</h1><p>It is my main task during my summer intern in Lichtman lab.<br>The codes related are here: <a href="https://github.com/james20141606/Summer_Intern/tree/master/NMJ" target="_blank" rel="noopener">Summer_Intern/NMJ/jupyter at master · james20141606/Summer_Intern · GitHub</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/14/summerintern_NMJ/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/06/20/wittgenstein_bio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1622,585 +2253,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/05/28/line7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WonderLand">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/line7/" itemprop="url">Linear Regression Assignment 13</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-28T16:01:19-04:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/school-work/" itemprop="url" rel="index">
-                    <span itemprop="name">school work</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/05/28/line7/" class="leancloud_visitors" data-flag-title="Linear Regression Assignment 13">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  730
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>The thirteenth assignment of Linear Regression. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/line7/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/05/23/multi2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WonderLand">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/23/multi2/" itemprop="url">Multivariate Statistics Assignment 5</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-23T12:59:19-04:00">
-                2018-05-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/school-work/" itemprop="url" rel="index">
-                    <span itemprop="name">school work</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/05/23/multi2/" class="leancloud_visitors" data-flag-title="Multivariate Statistics Assignment 5">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  547
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>The fifth assignment of Multivariate Statistics. The assignment is written in Rmarkdown, a smart syntax supported by RStudio helping with formula, plot visualization and plugin codes running.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/23/multi2/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/05/22/customizeapp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WonderLand">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/22/customizeapp/" itemprop="url">MAC用automator创建小应用解决一些简单需求</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-22T17:35:37-04:00">
-                2018-05-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/techniques/" itemprop="url" rel="index">
-                    <span itemprop="name">techniques</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/05/22/customizeapp/" class="leancloud_visitors" data-flag-title="MAC用automator创建小应用解决一些简单需求">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  392
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>本来是要解决mac一个很蠢的问题的：无法新建文件。</strong></p>
-<p>之前的策略有两种：一是复制粘贴其他的文件过来。另一个是cd到当前目录下然后touch一个文件。这个有点麻烦，首先cd还得拖到终端一个文件才能找对位置。</p>
-<p>这次用了Mac自带的automator自己做一个简单的生成新文件的应用，非常简单。</p>
-<p>显然既然automator还可以用shell脚本，能低成本实现的东西还是很多的。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/22/customizeapp/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2255,7 +2307,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2266,7 +2318,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2277,7 +2329,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -2355,7 +2407,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共111.3k字</span>
+  <span class="post-count">博客全站共114.2k字</span>
 </div>
 
         
