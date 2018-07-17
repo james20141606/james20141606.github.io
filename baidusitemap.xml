@@ -4,8 +4,64 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synapse%20Prediction/</loc>
+    <lastmod>2018-07-17T03:44:12.749Z</lastmod>
+    <data>
+        <display>
+        <title>Synapse Prediction</title>
+        <pubTime>2018-07-15T02:50:06.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
+    <lastmod>2018-07-17T03:44:08.624Z</lastmod>
+    <data>
+        <display>
+        <title>Synaptic Partner and Cluster Project</title>
+        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synaptic%20Partner%20and%20Cluster%20Project/</loc>
-    <lastmod>2018-07-17T03:43:24.575Z</lastmod>
+    <lastmod>2018-07-17T03:43:59.822Z</lastmod>
     <data>
         <display>
         <title>Synaptic Partner and Cluster Project</title>
@@ -24,7 +80,7 @@
          
            
              
-              <breadCrumb title="project" url="https://www.cmwonderland.com/categories/project/"/>
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
           
         </display>
     </data>
@@ -47,62 +103,6 @@
            
              
               <breadCrumb title="爷爷回忆录" url="https://www.cmwonderland.com/categories/%E7%88%B7%E7%88%B7%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
-    <lastmod>2018-07-17T03:33:36.702Z</lastmod>
-    <data>
-        <display>
-        <title>Synaptic Partner and Cluster Project</title>
-        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>project</tag>
-         
-        <tag>summer intern</tag>
-         
-        <tag>neural science</tag>
-         
-        <tag>Jeff Lichtman</tag>
-         
-         
-           
-             
-              <breadCrumb title="project" url="https://www.cmwonderland.com/categories/project/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synapse%20Prediction/</loc>
-    <lastmod>2018-07-17T03:31:55.398Z</lastmod>
-    <data>
-        <display>
-        <title>Synapse Prediction</title>
-        <pubTime>2018-07-15T02:50:06.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>project</tag>
-         
-        <tag>summer intern</tag>
-         
-        <tag>neural science</tag>
-         
-        <tag>Jeff Lichtman</tag>
-         
-         
-           
-             
-              <breadCrumb title="project" url="https://www.cmwonderland.com/categories/project/"/>
           
         </display>
     </data>
@@ -185,9 +185,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T19:09:56.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -264,9 +264,9 @@
         <title>系统临界态对智能的启发</title>
         <pubTime>2018-05-23T20:49:39.000Z</pubTime>
         
-        <tag>deep learning</tag>
-         
         <tag>thoughts</tag>
+         
+        <tag>deep learning</tag>
          
         <tag>brain</tag>
          
@@ -410,9 +410,9 @@
         <title>论文与排版</title>
         <pubTime>2018-05-04T18:58:25.000Z</pubTime>
         
-        <tag>research</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>research</tag>
          
         <tag>paper</tag>
          
@@ -687,9 +687,9 @@
         <title>Differential Expression&作业</title>
         <pubTime>2018-05-20T04:08:12.000Z</pubTime>
         
-        <tag>assignment</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>assignment</tag>
          
         <tag>bioinformatics</tag>
          
@@ -711,9 +711,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-17T01:13:27.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -779,9 +779,9 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-06T02:39:51.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
         <tag>bioinformatics</tag>
          
@@ -1022,11 +1022,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-13T03:30:17.000Z</pubTime>
         
+        <tag>techniques</tag>
+         
         <tag>codes</tag>
          
         <tag>statistics</tag>
-         
-        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
