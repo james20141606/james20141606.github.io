@@ -100,7 +100,20 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://i2.tiimg.com/640680/674ef868297b66d0.gif">
 <meta property="og:image" content="http://i1.fuimg.com/640680/45e727fc31a9b0dc.png">
-<meta property="og:updated_time" content="2018-07-22T20:46:08.316Z">
+<meta property="og:image" content="http://i2.tiimg.com/640680/8b18f43f830a2eb7.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/2a5303ed7c054769.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/96c7c89bc409d6ba.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/070eef826c0612ae.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/2b1b68b735d93e29.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/c9d99655bdaf9cac.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/06d9ead45f4caa9a.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/68a5d5858d2eca5f.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/14e81611ee917fa6.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/20dac5fc8da5ae1f.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/6ba0407959138c82.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/83ebcf388707f0a6.png">
+<meta property="og:image" content="http://i2.tiimg.com/640680/f618886ef775eb3c.png">
+<meta property="og:updated_time" content="2018-07-30T01:44:31.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NMJ Project">
 <meta name="twitter:description" content="It is my main task during my summer intern in Lichtman lab.The codes related are here: NMJ codes">
@@ -382,7 +395,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  695
+                  2,172
                 </span>
               
 
@@ -398,7 +411,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  14
                 </span>
               
             </div>
@@ -439,6 +452,108 @@
 <p>I have seeded three masks Adi sent back, <strong>for about 900 sections mainly in bundle area.</strong></p>
 <p>I also wrote python script <a href="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/jupyter/plot_segment.ipynb" target="_blank" rel="noopener">Summer_Intern/plot_segment.ipynb at master · james20141606/Summer_Intern · GitHub</a> for further analysis. Since I am proficient in using python for visualization, statistical analysis and machine learning, I wrote some python scripts to read seeding result, visualize them and plot them in 3D and animation. It will be better to have more statistical analysis when I collect more seeding data.<br><img src="http://i1.fuimg.com/640680/45e727fc31a9b0dc.png" alt="Markdown"></p>
 <h2 id="discussion-on-mask"><a href="#discussion-on-mask" class="headerlink" title="discussion on mask"></a>discussion on mask</h2><p>When we put masks on ROI, we found many branches even in bundle area, two branches from one stem may encounter and form a closed loop. We are worried if it will be a problem when we merge all masks together. After discussing with Adi and Daniel, we understand that the spatial structure’s change isn’t a big problem.</p>
+<hr>
+<p>Week 4</p>
+<h2 id="My-thought-about-how-the-whole-project"><a href="#My-thought-about-how-the-whole-project" class="headerlink" title="My thought about how the whole project"></a>My thought about how the whole project</h2><p>This week I continue to seed on Mask3, and then I do a lot of exploration on how to do the NMJ project automatically.</p>
+<p>I have understood how big and challenging this project is, it requires so many manually labeling work than we can’t finish all the masking and seeding and segmentation and reconstruction work in two months. We know that it took KK and Marco several months to finish part of the bundle parts. But the remaining parts are more complex to seed, segment and it contains maybe 200 masks with approximately 50,000 sections. It is hard to estimate how long it will take to finish the whole project</p>
+<p>However, as I am getting more familiar with this project, I am trying to build a more automatically pipeline for seeding, predicting membrane and segmentation. If it works, the project may move faster when we are here and after we leave:)</p>
+<h3 id="Seeding-on-Mask3"><a href="#Seeding-on-Mask3" class="headerlink" title="Seeding on Mask3"></a>Seeding on Mask3</h3><p>I felt that seeding on mask3 is much more complex than previous bundle seeding, the axon travels very fast and I should look up and down to look for one axon, it takes much more time to trace the branch than the main bundle.</p>
+<h2 id="Automatic-pipeline"><a href="#Automatic-pipeline" class="headerlink" title="Automatic pipeline"></a>Automatic pipeline</h2><p><strong>We would like to build up a more automatic pipeline before we leave and test the whole pipeline on several masks to see if they can be merged and reconstructed.</strong></p>
+<p>We would like to build up the whole pipeline, prepare all the codes and model for prediction and processing and write down the protocol.</p>
+<p>The complete pipeline should contain:<br><strong>Generating Masks —&gt; Seeding —&gt; Predict Membrane —&gt; Expand Seeds —&gt; Merge different Masks</strong></p>
+<p>Previously we do seeding manually and then predict membrane, but the remaining masks have so many sections, I would like to do the seeding work more automatically too.</p>
+<h3 id="Predict-Membrane"><a href="#Predict-Membrane" class="headerlink" title="Predict Membrane"></a>Predict Membrane</h3><p>The automatically prediction parts must include membrane prediction, because it is “easier” to predict since the raw image already have the membrane.</p>
+<h3 id="Automatically-seeding"><a href="#Automatically-seeding" class="headerlink" title="Automatically seeding"></a>Automatically seeding</h3><p>The traditional way is to manually put seeds on each axon, but we have approximately 50,000 sections if all masks are generated, it is so time-consuming to manually put seeds. I will <strong>generate seeds by distance transformation from membrane</strong></p>
+<p>Then the seeds must be indexed to track each seed is from which axon, so we will manually put seeds  per 100 sections, then do <strong>Hungarian matching.</strong></p>
+<h3 id="segmentation"><a href="#segmentation" class="headerlink" title="segmentation"></a>segmentation</h3><p>Expand the seed to generate segments</p>
+<h3 id="Merge-masks"><a href="#Merge-masks" class="headerlink" title="Merge masks"></a>Merge masks</h3><p>We are thinking about linear interpolation to merge anchor sections for loop problems. We will discuss it more with Daniel and Yaron after the segmentation</p>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p>The related codes are here:<br><a href="https://github.com/james20141606/membrane_prediction" target="_blank" rel="noopener">GitHub - james20141606/membrane_prediction: Use 3D U-net to predict membrane predition</a></p>
+<h3 id="Predict-Membrane-1"><a href="#Predict-Membrane-1" class="headerlink" title="Predict Membrane"></a>Predict Membrane</h3><p>I will use a 3D U-net model to use contours extracted from dense segmentation sections. Use 50 sections for training, then predict more, proofread predicted sections to generate more training samples. <strong>The iterative training and predicting method will make the model more precise.</strong></p>
+<p>The model’s weight is adaptive to the pixels ratio, I can do fine tune on the model iteratively. So the model will be more precise and requires fewer proofreading. Last week I do many augmentation works, it is also useful to generate more training images since I only have 50 sections for training now.</p>
+<p><strong>How to fine tune:</strong><br>If we want better result, we can manually label several sections on each mask and retrain the model on each mask.</p>
+<p>For membrane prediction, since we do not consider affinity, we can also consider 2D U-net, it contains much less parameters and easier to train.</p>
+<h3 id="Automatically-seeding-1"><a href="#Automatically-seeding-1" class="headerlink" title="Automatically seeding"></a>Automatically seeding</h3><ul>
+<li><strong>Distance transformation</strong> to generate seeds from membrane</li>
+<li><strong>Hungarian matching</strong> to label each seeds for different axons. Manually label one section’ s seed and do Hungarian matching for the next 100 sections.</li>
+</ul>
+<h3 id="Watershed"><a href="#Watershed" class="headerlink" title="Watershed"></a>Watershed</h3><p>Use watershed to expand seeds and generate segments</p>
+<h3 id="Useful-resources"><a href="#Useful-resources" class="headerlink" title="Useful resources"></a>Useful resources</h3><p><a href="https://github.com/tdedecko/hungarian-algorithm/blob/master/hungarian.py#L6" target="_blank" rel="noopener">hungarian-algorithm/hungarian.py at master · tdedecko/hungarian-algorithm · GitHub</a><br><a href="https://github.com/hrldcpr/hungarian" target="_blank" rel="noopener">GitHub - hrldcpr/hungarian: Hungarian / Munkres’ algorithm for the linear assignment problem, in Python</a></p>
+<p><a href="https://github.com/microns-ariadne/pipeline_engine/tree/cf100202997d3c848a21de441e15deb9f975042d/ariadne_microns_pipeline/tasks" target="_blank" rel="noopener">pipeline_engine/ariadne_microns_pipeline/tasks at cf100202997d3c848a21de441e15deb9f975042d · microns-ariadne/pipeline_engine · GitHub</a></p>
+<p>Other possible algorithm:</p>
+<ul>
+<li>seeding<br>Use EM data to predict seeds, train seeding prediction network, using affinity because the axon travels fast. Sebastian’s group has some work. But I think it is imprecise compared to membrane prediction—distance transformation algorithm</li>
+</ul>
+<blockquote>
+<p>Convolutional Networks Can Learn to Generate Affinity<br>Graphs for Image Segmentation<br>Maximin affinity learning of image segmentation</p>
+</blockquote>
+<p><a href="https://github.com/jiwoon-ahn/psa" target="_blank" rel="noopener">GitHub - jiwoon-ahn/psa: Learning Pixel-level Semantic Affinity with Image-level Supervision for Weakly Supervised Semantic Segmentation, CVPR 2018</a></p>
+<h2 id="Work-on-membrane-prediction"><a href="#Work-on-membrane-prediction" class="headerlink" title="Work on membrane prediction"></a>Work on membrane prediction</h2><h3 id="Prepare-ground-truth-training-set"><a href="#Prepare-ground-truth-training-set" class="headerlink" title="Prepare ground truth training set"></a>Prepare ground truth training set</h3><p>I have started on membrane prediction pipeline after discussion with zudi, yaron and others. I would like to use previously label siyan and I have done in first two weeks to save time. We have done dense segmentation on 51 sections, I wrote a python script</p>
+<p>Codes: <a href="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/jupyter/extract_membrane_gt.ipynb" target="_blank" rel="noopener">Summer_Intern/extract_membrane_gt.ipynb at master · james20141606/Summer_Intern · GitHub</a></p>
+<p> to extract the needed EM image and contours of the membrane in the following steps:</p>
+<ul>
+<li>export segmentation and EM ROI from VAST</li>
+<li>read in python, converting id array to RGB array for visualization</li>
+</ul>
+<p><img src="http://i2.tiimg.com/640680/8b18f43f830a2eb7.png" alt="Markdown"></p>
+<ul>
+<li>find bounding box of each segmentation and EM image</li>
+</ul>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def find_bounding(data):</span><br><span class="line">    xmin = <span class="built_in">np</span>.<span class="built_in">sort</span>(<span class="built_in">np</span>.where(data[:,:,<span class="number">0</span>]!=<span class="number">0</span>)[<span class="number">0</span>])[<span class="number">0</span>]</span><br><span class="line">    xmax = <span class="built_in">np</span>.<span class="built_in">sort</span>(<span class="built_in">np</span>.where(data[:,:,<span class="number">0</span>]!=<span class="number">0</span>)[<span class="number">0</span>])[-<span class="number">1</span>]</span><br><span class="line">    ymin = <span class="built_in">np</span>.<span class="built_in">sort</span>(<span class="built_in">np</span>.where(data[:,:,<span class="number">0</span>]!=<span class="number">0</span>)[<span class="number">1</span>])[<span class="number">0</span>]</span><br><span class="line">    ymax = <span class="built_in">np</span>.<span class="built_in">sort</span>(<span class="built_in">np</span>.where(data[:,:,<span class="number">0</span>]!=<span class="number">0</span>)[<span class="number">1</span>])[-<span class="number">1</span>]</span><br><span class="line">    <span class="built_in">return</span> xmin, xmax, ymin, ymax</span><br><span class="line"><span class="built_in">row</span> = <span class="number">26</span></span><br><span class="line">fig,ax=plt.subplots(<span class="built_in">row</span>,<span class="number">2</span>,figsize=(<span class="number">16</span>,<span class="number">6</span>*<span class="built_in">row</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">row</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        xmin, xmax, ymin, ymax = find_bounding(segdata[i*<span class="number">2</span>+j])</span><br><span class="line">        ax[i,j].imshow(transform_rgb(segdata[i*<span class="number">2</span>+j][(xmin-<span class="number">10</span>): (xmax+<span class="number">10</span>), (ymin-<span class="number">10</span>): (ymax+<span class="number">10</span>)]))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>remove Schwann cell to concentrate on axons</li>
+</ul>
+<p>First it has some problems</p>
+<p><img src="http://i2.tiimg.com/640680/2a5303ed7c054769.png" alt="Markdown"></p>
+<p>Then I separately plot and find the black wrong region is 25 and 38</p>
+<p>After correction:</p>
+<p><img src="http://i2.tiimg.com/640680/96c7c89bc409d6ba.png" alt="Markdown"></p>
+<ul>
+<li>convert the segment array to binary mask</li>
+</ul>
+<p><img src="http://i2.tiimg.com/640680/070eef826c0612ae.png" alt="Markdown"></p>
+<ul>
+<li>Make sure each mask and EM data are in same bounding box</li>
+</ul>
+<p><img src="http://i2.tiimg.com/640680/2b1b68b735d93e29.png" alt="Markdown"></p>
+<ul>
+<li>Generate contours as training set label<br>opencv’s findcontour function is not suitable for same grayscale image, so I use erode and dilation<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">open = cv2.erode(grayimg, None, iterations = 4)</span><br><span class="line">open1 = cv2.dilate(open, None, iterations = 3)</span><br><span class="line">imshow(open1-open)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://i2.tiimg.com/640680/c9d99655bdaf9cac.png" alt="Markdown"></p>
+<ul>
+<li>Padding for same image size<br>Do reflection padding on each image to generate images with same size.</li>
+</ul>
+<p><img src="http://i2.tiimg.com/640680/06d9ead45f4caa9a.png" alt="Markdown"></p>
+<p>The margin is the reflection of the original image<br>Store in HDF5</p>
+<ul>
+<li>Save image and label as HDF5<br>EM data as training set’s image and contour as label</li>
+</ul>
+<p>Save as uint8   (51, 530, 835)</p>
+<h3 id="Train-membrane-prediction-model"><a href="#Train-membrane-prediction-model" class="headerlink" title="Train membrane prediction model"></a>Train membrane prediction model</h3><p>Input image and label are the 51 bundle sections.</p>
+<p><strong>Train model args:</strong><br>Run on two machines: one with one gpu and another with 4 gpus</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span> python3 -u bin/train.py -t data/train_set/ -dn em_51 -ln mask_51 -o outputs/nmj0729mixloss -lr <span class="number">0.001</span> --volume-total <span class="number">40000</span> --volume-save <span class="number">2000</span> -mi <span class="number">4</span>,<span class="number">256</span>,<span class="number">256</span> -g <span class="number">1</span> -c <span class="number">12</span> -b <span class="number">4</span> -lt <span class="number">4</span> -ac <span class="number">2</span></span><br><span class="line"></span><br><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">0</span> python3 -u bin/train.py -t data/train_set/ -dn em_51 -ln mask_51 -o outputs/nmj0729mixloss -lr <span class="number">0.001</span> --volume-total <span class="number">40000</span> --volume-save <span class="number">2000</span> -mi <span class="number">4</span>,<span class="number">256</span>,<span class="number">256</span> -g <span class="number">1</span> -c <span class="number">6</span> -b <span class="number">1</span> -lt <span class="number">4</span> -ac <span class="number">2</span></span><br><span class="line"></span><br><span class="line">#-lt <span class="number">4</span> focal and dice loss</span><br></pre></td></tr></table></figure>
+<p>References:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">0</span>,<span class="number">1</span> python3 -u bin/synapse_pytorch/train<span class="selector-class">.py</span> -t data/cremi/ -dn images/im_A_v2_200.h5@images/im_B_v2_200.h5@images/im_C_v2_200<span class="selector-class">.h5</span> -ln gt-syn/syn_A_v2_200.h5@gt-syn/syn_B_v2_200.h5@gt-syn/syn_C_v2_200<span class="selector-class">.h5</span> -o outputs/cremi0719mixloss -lr <span class="number">0.001</span> --volume-total <span class="number">400000</span> --volume-save <span class="number">20000</span> -mi <span class="number">24</span>,<span class="number">256</span>,<span class="number">256</span> -g <span class="number">2</span> -c <span class="number">6</span> -<span class="selector-tag">b</span> <span class="number">2</span> -l mix</span><br><span class="line"><span class="selector-id">#b</span>:<span class="number">6</span>  try to keep gpu and batch size same</span><br></pre></td></tr></table></figure>
+<p>The hp003 memory is small, also train on hpc</p>
+<h4 id="Check-loss"><a href="#Check-loss" class="headerlink" title="Check loss"></a>Check loss</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard <span class="attribute">--logdir</span>=outputs/nmj0729mixloss</span><br></pre></td></tr></table></figure>
+<p>Monitor loss and test on new EM image. If is good, train it longer with more GPUs</p>
+<p>Train loss( DICE + Focal loss)</p>
+<p><img src="http://i2.tiimg.com/640680/68a5d5858d2eca5f.png" alt="Markdown"></p>
+<p>Focal loss</p>
+<p><img src="http://i2.tiimg.com/640680/14e81611ee917fa6.png" alt="Markdown"></p>
+<p>Dice loss</p>
+<p><img src="http://i2.tiimg.com/640680/20dac5fc8da5ae1f.png" alt="Markdown"></p>
+<p>It seems that the combined loss and both focal and dice loss decrease well.</p>
+<h4 id="real-time-monitoring-predicted-result"><a href="#real-time-monitoring-predicted-result" class="headerlink" title="real time monitoring predicted result"></a>real time monitoring predicted result</h4><p>Use TensorboardX to monitor predicted results:</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if i % <span class="number">20</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="comment">#draw image every 20 batches</span></span><br><span class="line">            writer.add_image(<span class="string">'EM image '</span>+str(i),</span><br><span class="line">                             torchvision.utils.make_grid(<span class="keyword">volume</span><span class="bash">), i)</span></span><br><span class="line"><span class="bash">            writer.add_image(<span class="string">'GT image '</span>+str(i), torchvision.utils.make_grid(label), i)</span></span><br><span class="line"><span class="bash">            writer.add_image(<span class="string">'predict image '</span>+str(i), torchvision.utils.make_grid(output), i)</span></span><br></pre></td></tr></table></figure>
+<p>This will allow me to see the improvement of model’s performance more clearly.</p>
+<p>EM in 3680th batches</p>
+<p><img src="http://i2.tiimg.com/640680/6ba0407959138c82.png" alt="Markdown"></p>
+<p>Ground truth in 3680th batches</p>
+<p><img src="http://i2.tiimg.com/640680/83ebcf388707f0a6.png" alt="Markdown"></p>
+<p>Predicted in 3680th batches</p>
+<p><img src="http://i2.tiimg.com/640680/f618886ef775eb3c.png" alt="Markdown"></p>
+<p>Then I will predict new EM image which is preprocessed by the previous steps. Then do proofreading on the predicted membrane. Then do distance transformation to generate seeds.</p>
 
       
     </div>
@@ -659,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">First two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Future-work"><span class="nav-number">1.1.</span> <span class="nav-text">Future work</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-3"><span class="nav-number">2.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mask-and-seeding"><span class="nav-number">2.1.</span> <span class="nav-text">mask and seeding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#discussion-on-mask"><span class="nav-number">2.2.</span> <span class="nav-text">discussion on mask</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">First two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Future-work"><span class="nav-number">1.1.</span> <span class="nav-text">Future work</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-3"><span class="nav-number">2.</span> <span class="nav-text">Week 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mask-and-seeding"><span class="nav-number">2.1.</span> <span class="nav-text">mask and seeding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#discussion-on-mask"><span class="nav-number">2.2.</span> <span class="nav-text">discussion on mask</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-thought-about-how-the-whole-project"><span class="nav-number">2.3.</span> <span class="nav-text">My thought about how the whole project</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Seeding-on-Mask3"><span class="nav-number">2.3.1.</span> <span class="nav-text">Seeding on Mask3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Automatic-pipeline"><span class="nav-number">2.4.</span> <span class="nav-text">Automatic pipeline</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Predict-Membrane"><span class="nav-number">2.4.1.</span> <span class="nav-text">Predict Membrane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Automatically-seeding"><span class="nav-number">2.4.2.</span> <span class="nav-text">Automatically seeding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#segmentation"><span class="nav-number">2.4.3.</span> <span class="nav-text">segmentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merge-masks"><span class="nav-number">2.4.4.</span> <span class="nav-text">Merge masks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">2.5.</span> <span class="nav-text">Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Predict-Membrane-1"><span class="nav-number">2.5.1.</span> <span class="nav-text">Predict Membrane</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Automatically-seeding-1"><span class="nav-number">2.5.2.</span> <span class="nav-text">Automatically seeding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Watershed"><span class="nav-number">2.5.3.</span> <span class="nav-text">Watershed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Useful-resources"><span class="nav-number">2.5.4.</span> <span class="nav-text">Useful resources</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Work-on-membrane-prediction"><span class="nav-number">2.6.</span> <span class="nav-text">Work on membrane prediction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Prepare-ground-truth-training-set"><span class="nav-number">2.6.1.</span> <span class="nav-text">Prepare ground truth training set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Train-membrane-prediction-model"><span class="nav-number">2.6.2.</span> <span class="nav-text">Train membrane prediction model</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Check-loss"><span class="nav-number">2.6.2.1.</span> <span class="nav-text">Check loss</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#real-time-monitoring-predicted-result"><span class="nav-number">2.6.2.2.</span> <span class="nav-text">real time monitoring predicted result</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -697,7 +812,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共118.7k字</span>
+  <span class="post-count">博客全站共120.2k字</span>
 </div>
 
         

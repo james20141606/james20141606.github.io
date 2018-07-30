@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
+    <lastmod>2018-07-30T01:44:31.951Z</lastmod>
+    <data>
+        <display>
+        <title>NMJ Project</title>
+        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synapse_Prediction/</loc>
     <lastmod>2018-07-22T22:58:59.401Z</lastmod>
     <data>
@@ -38,34 +66,6 @@
         <display>
         <title>Synaptic Partner and Cluster Project</title>
         <pubTime>2018-07-15T03:58:06.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>project</tag>
-         
-        <tag>summer intern</tag>
-         
-        <tag>neural science</tag>
-         
-        <tag>Jeff Lichtman</tag>
-         
-         
-           
-             
-              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
-    <lastmod>2018-07-22T20:46:08.316Z</lastmod>
-    <data>
-        <display>
-        <title>NMJ Project</title>
-        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
         
         <tag>deep learning</tag>
          
@@ -266,9 +266,9 @@
         
         <tag>thoughts</tag>
          
-        <tag>brain</tag>
-         
         <tag>deep learning</tag>
+         
+        <tag>brain</tag>
          
          
            
