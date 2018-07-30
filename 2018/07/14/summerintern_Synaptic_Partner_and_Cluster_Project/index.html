@@ -99,7 +99,11 @@
 <meta property="og:description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 3 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://i2.tiimg.com/640680/ad617dc9489cb429.png">
-<meta property="og:updated_time" content="2018-07-22T21:00:50.954Z">
+<meta property="og:image" content="http://i1.fuimg.com/640680/db4521d532057170.png">
+<meta property="og:image" content="http://i1.fuimg.com/640680/239c484ca9b1ab55.png">
+<meta property="og:image" content="http://i1.fuimg.com/640680/c6241b5b0bf7630b.png">
+<meta property="og:image" content="http://i1.fuimg.com/640680/44ce375316d09d8a.png">
+<meta property="og:updated_time" content="2018-07-30T02:07:16.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Synaptic Partner and Cluster Project">
 <meta name="twitter:description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 3 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
@@ -381,7 +385,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,236
+                  1,960
                 </span>
               
 
@@ -397,7 +401,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  8
+                  12
                 </span>
               
             </div>
@@ -482,6 +486,41 @@
 <p>Which I thought will be useful</p>
 <h2 id="synaptic-partner"><a href="#synaptic-partner" class="headerlink" title="synaptic partner"></a>synaptic partner</h2><p>I have read and summarized some paper and codes last week on synaptic partner project. This week zudi and I discuss about previous work’s strategy. We have decided that I read and study the synaptic partner codes written by a previous postdoc. </p>
 <p>Now the codes is incomplete in github, later we may get the complete codes. The codes isn’t in a very good structure, and task 3 is harder and more complex than synapse prediction, so it will take me some time to fully understand the codes and make more improvements on it.</p>
+<hr>
+<h1 id="Week-4"><a href="#Week-4" class="headerlink" title="Week 4"></a>Week 4</h1><h2 id="synaptic-partner-1"><a href="#synaptic-partner-1" class="headerlink" title="synaptic partner"></a>synaptic partner</h2><p>This week we mainly focus on task 3, synaptic partner prediction, this is a new and more challenging task for us. Previously we never try to predict synaptic partner, so we have to understand this task and process the raw data to get the train label.</p>
+<h3 id="Align-and-process-location-to-create-training-labels"><a href="#Align-and-process-location-to-create-training-labels" class="headerlink" title="Align and process location to create training labels"></a>Align and process location to create training labels</h3><p>I study and understand the synaptic partner’s identification criterion and process the location value in the same alignment steps with raw and clefts image.</p>
+<ul>
+<li>extract location and pre-post id, put these points in a volume</li>
+<li>align the volume, padding and deal with bad slices using same strategy </li>
+</ul>
+<p>location is only point id, we can shift the point by first draw the point in zero array and then extract location. Each point use pre and post id to trace back. The premise is location and clefts matches, I have checked it.</p>
+<p><img src="http://i1.fuimg.com/640680/db4521d532057170.png" alt="Markdown"></p>
+<p><img src="http://i1.fuimg.com/640680/239c484ca9b1ab55.png" alt="Markdown"></p>
+<p>Codes:</p>
+<ul>
+<li>alignment matlab script<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synaptic_partner/bin/T_align.m" target="_blank" rel="noopener">Summer_Intern/T_align.m at master · james20141606/Summer_Intern · GitHub</a><br>This script can align raw, clefts and location and reverse them</li>
+<li>jupyter<br>Deal with pre and post processing of locations array.<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synaptic_partner/jupyter/cremi_shift.ipynb" target="_blank" rel="noopener">Summer_Intern/cremi_shift.ipynb at master · james20141606/Summer_Intern · GitHub</a></li>
+</ul>
+<p><strong>visualize shift results</strong></p>
+<p><img src="http://i1.fuimg.com/640680/c6241b5b0bf7630b.png" alt="Markdown"></p>
+<p>I also find that in A, B, C three volumes, the partner numbers differ a lot:432, 1324, 2276<br>But clefts numbers are similar:123, 131, 165</p>
+<p>The align work needs many patience, I did it over ten times to ensure it is 100 percent right. The axis, scatter and imshow tradition and many steps process made it easy to make mistakes. At last I found that it is best to dilate the points in location array and visualize it using imshow uniformly to check the alignment.</p>
+<h3 id="Synaptic-partner-identification-model"><a href="#Synaptic-partner-identification-model" class="headerlink" title="Synaptic partner identification model"></a>Synaptic partner identification model</h3><p>The model can be derived from synapse identification model. We also use 3D U-net and add some changes. We study Funke’s previous work, it has some strengths and drawbacks.</p>
+<p>For example, they use 14 vectors to represent all possible partner vectors. And the model predict a 14 channel one-hot vector. But this methods deliberately overfits on CREMI datasets. Since we would like to develop a model to predict synaptic partners on JWR datasets, we should use a more generalized methods. But the searching space will increase a lot.</p>
+<ul>
+<li>dilate location point<br>for each points(so it can specify location)</li>
+<li>Generate 4 channel output (binary, Z, Y, X)<br>binary for <strong>localization</strong>, and Z, Y, X for vector <strong>orientation</strong><br>We will use cosine loss to evaluate orientation<br>So this can be considered as a multi task training</li>
+<li>use branched model to predict two parts<br>Output mask and vector separately.<br>A very natural thought is we can design the model further to multiply the binary channel to the orientation part as <strong>Attention mechanism</strong>, the two branched models can share weights. I use a similar architecture in another project and it works well</li>
+</ul>
+<p>It is hard to both predict orientation and length. So maybe we can do post-processing work: we only predict orientation, and calculate the distance from pre synapse to clefts, and add the distance to produce post synapse location.</p>
+<h3 id="Hacking-toufiq’s-codes"><a href="#Hacking-toufiq’s-codes" class="headerlink" title="Hacking toufiq’s codes:"></a>Hacking toufiq’s codes:</h3><p>I also try to study and understand Toufiq’s work. I found Toufiq and Lee has done a lot on task 3 and related synapse work. They have some valuable work and codes to be recovered. So I try to find something useful to use. </p>
+<p>They have a github  repo which has many useful codes for synapses. It even has codes for finding seeds etc. <a href="https://github.com/microns-ariadne/pipeline_engine/" target="_blank" rel="noopener">GitHub - microns-ariadne/pipeline_engine: reconstruction pipeline</a></p>
+<p>Prediction of pre and post and segmentation(pre and post is self-labeled and segmentation is predicted) and clefts(ground truth in original dataset)</p>
+<p><img src="http://i1.fuimg.com/640680/44ce375316d09d8a.png" alt="Markdown"></p>
+<p>use binary dilation for gt-syn<br>Use segment_vesicle_style function</p>
+<h2 id="Synapse-cluster"><a href="#Synapse-cluster" class="headerlink" title="Synapse cluster"></a>Synapse cluster</h2><p>Help siyan with 3D skeleton. Direct 3D skeleton isn’t very good since the distance of sections (30/40 nm) is a little long. Direct interpolation or dilation also works badly.</p>
+<p>So I try a ICP and KNN algorithm to maximize matching of two 2D contours and find the nearest neighbor of each point in two neighbor contour. This idea originate from calculating the volume size of a 3D object. After finding each points neighbor, we can do linear interpolation to create another 9 sections for better 3D skeleton.  </p>
+<p>Codes:<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_cluster/jupyter/ICP_KNN.ipynb" target="_blank" rel="noopener">Summer_Intern/ICP_KNN.ipynb at master · james20141606/Summer_Intern · GitHub</a></p>
 
       
     </div>
@@ -698,7 +737,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">first two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#creteria"><span class="nav-number">1.1.</span> <span class="nav-text">creteria</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-calculate-F-score"><span class="nav-number">1.1.1.</span> <span class="nav-text">steps to calculate F-score</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Study-others’-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Study others’ methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st-place"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1st place</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd-place-by-previous-postdoc-in-Hanspeter-group"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2nd place by previous postdoc in Hanspeter group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4th-place-FN-is-good"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">4th place, FN is good</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster"><span class="nav-number">1.3.</span> <span class="nav-text">Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cluster"><span class="nav-number">1.4.</span> <span class="nav-text">cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner"><span class="nav-number">1.5.</span> <span class="nav-text">synaptic partner</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">first two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#creteria"><span class="nav-number">1.1.</span> <span class="nav-text">creteria</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-calculate-F-score"><span class="nav-number">1.1.1.</span> <span class="nav-text">steps to calculate F-score</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Study-others’-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Study others’ methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st-place"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1st place</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd-place-by-previous-postdoc-in-Hanspeter-group"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2nd place by previous postdoc in Hanspeter group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4th-place-FN-is-good"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">4th place, FN is good</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster"><span class="nav-number">1.3.</span> <span class="nav-text">Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cluster"><span class="nav-number">1.4.</span> <span class="nav-text">cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner"><span class="nav-number">1.5.</span> <span class="nav-text">synaptic partner</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-4"><span class="nav-number">2.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner-1"><span class="nav-number">2.1.</span> <span class="nav-text">synaptic partner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Align-and-process-location-to-create-training-labels"><span class="nav-number">2.1.1.</span> <span class="nav-text">Align and process location to create training labels</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synaptic-partner-identification-model"><span class="nav-number">2.1.2.</span> <span class="nav-text">Synaptic partner identification model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hacking-toufiq’s-codes"><span class="nav-number">2.1.3.</span> <span class="nav-text">Hacking toufiq’s codes:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synapse-cluster"><span class="nav-number">2.2.</span> <span class="nav-text">Synapse cluster</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -736,7 +775,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共121.1k字</span>
+  <span class="post-count">博客全站共121.8k字</span>
 </div>
 
         
