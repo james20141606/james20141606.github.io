@@ -103,7 +103,14 @@
 <meta property="og:image" content="http://i1.fuimg.com/640680/239c484ca9b1ab55.png">
 <meta property="og:image" content="http://i1.fuimg.com/640680/c6241b5b0bf7630b.png">
 <meta property="og:image" content="http://i1.fuimg.com/640680/44ce375316d09d8a.png">
-<meta property="og:updated_time" content="2018-07-30T02:07:16.283Z">
+<meta property="og:image" content="http://i4.fuimg.com/640680/14407c5eb5a7dc2e.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/2a531757ef1d035b.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/9cd40ceb9e49ebe8.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/cb94994ad0869007.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/abd068c68b9d05f6.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/78d027d947270dee.png">
+<meta property="og:image" content="http://i4.fuimg.com/640680/1f61c116cc41a292.png">
+<meta property="og:updated_time" content="2018-08-13T00:00:37.354Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Synaptic Partner and Cluster Project">
 <meta name="twitter:description" content="It is part of my computational task during my summer intern in Lichtman lab  It is part of the big synapse project. Also the challenge 3 of CREMI  The codes related are here: Summer_Intern/synaptic_pa">
@@ -385,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,960
+                  2,499
                 </span>
               
 
@@ -401,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  12
+                  16
                 </span>
               
             </div>
@@ -521,6 +528,45 @@
 <h2 id="Synapse-cluster"><a href="#Synapse-cluster" class="headerlink" title="Synapse cluster"></a>Synapse cluster</h2><p>Help siyan with 3D skeleton. Direct 3D skeleton isn’t very good since the distance of sections (30/40 nm) is a little long. Direct interpolation or dilation also works badly.</p>
 <p>So I try a ICP and KNN algorithm to maximize matching of two 2D contours and find the nearest neighbor of each point in two neighbor contour. This idea originate from calculating the volume size of a 3D object. After finding each points neighbor, we can do linear interpolation to create another 9 sections for better 3D skeleton.  </p>
 <p>Codes:<br><a href="https://github.com/james20141606/Summer_Intern/blob/master/synapse_cluster/jupyter/ICP_KNN.ipynb" target="_blank" rel="noopener">Summer_Intern/ICP_KNN.ipynb at master · james20141606/Summer_Intern · GitHub</a></p>
+<hr>
+<h1 id="Week-5-amp-6"><a href="#Week-5-amp-6" class="headerlink" title="Week 5 &amp; 6"></a>Week 5 &amp; 6</h1><h2 id="Cluster-1"><a href="#Cluster-1" class="headerlink" title="Cluster"></a>Cluster</h2><p>Use auto encoder to reconstruct synapse and cluster the latent variable. Generate missing slides, intensity, rotation, elastic to force auto-encoder learn</p>
+<p>I also find a paper by FAIR:  Deep Clustering for Unsupervised Learning of Visual Features <a href="https://arxiv.org/pdf/1807.05520v1.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1807.05520v1.pdf</a>, it proposed an end-to-end method using  deep learning for clustering. They test it on  ImageNet and outperforms the current model. Maybe it is also useful in our datasets too.</p>
+<h2 id="Synaptic-partner"><a href="#Synaptic-partner" class="headerlink" title="Synaptic partner"></a>Synaptic partner</h2><h3 id="Run-and-test-a-model-to-predict-synapse-and-synaptic-partner-simultaneously"><a href="#Run-and-test-a-model-to-predict-synapse-and-synaptic-partner-simultaneously" class="headerlink" title="Run and test a model to predict synapse and synaptic partner simultaneously"></a>Run and test a model to predict synapse and synaptic partner simultaneously</h3><p>I try to understand toufiq’s paper <a href="https://arxiv.org/pdf/1807.02739.pdf" target="_blank" rel="noopener">https://arxiv.org/pdf/1807.02739.pdf</a> Detecting Synapse Location &amp; Connectivity by Signed Proximity Estimation and Pruning with Deep Nets. And rebuild the model using Keras. So we can have two different kinds of models to solve the <strong>synaptic partner problems</strong>. One is discussed before, and the other is toufiq’s model. We will compare this two model and take the advantages of two models to get better performance on CREMI.</p>
+<p>I  rewrite and modify toufiq’s model using our data and understand his solutions about synaptic partner problems.<br>I apply multiple changes to the model.</p>
+<ul>
+<li>Change keras backend from theano to tensorflow and modify the corresponding codes.</li>
+<li>Change depraceted function and update codes.</li>
+<li>Change merge to concatenate, update model, conv3D </li>
+</ul>
+<p>The model looks like this:</p>
+<p><img src="http://i4.fuimg.com/640680/14407c5eb5a7dc2e.png" alt="Markdown"></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">THEANO_FLAGS=device=cuda<span class="variable">$1</span>,floatX=float32,dnn.enabled=True,dnn.library_path=<span class="regexp">/n/</span>home05<span class="regexp">/paragt/</span>cuda<span class="regexp">/lib64,dnn.include_path=/</span>n<span class="regexp">/home05/</span>paragt<span class="regexp">/cuda/i</span>nclude python -u  bin<span class="regexp">/vertebrate/</span>pixel<span class="regexp">/unet_3d_valid_unnorm_leaky_f24.py --trial=kasthuri_synapse_polarity_full_linear_leaky_f24_316_32 --imagedir=/</span>n<span class="regexp">/coxfs01/</span>paragt<span class="regexp">/test_submit/</span>ecs_synapse_polarity_full<span class="regexp">/grayscale_maps2_ac4/</span>  --gtname=<span class="regexp">/n/</span>coxfs01<span class="regexp">/paragt/</span>test_submit<span class="regexp">/ecs_synapse_polarity_full/</span>ac4_syn_polarity_both_corrected.h5 --ft=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module <span class="keyword">load</span> cuda/<span class="number">9.0</span>-fasrc01</span><br><span class="line"><span class="keyword">module</span> <span class="keyword">load</span> cudnn/<span class="number">7.0</span><span class="number">.3</span>-fasrc02</span><br><span class="line"><span class="keyword">module</span> <span class="keyword">load</span> Anaconda</span><br><span class="line"><span class="keyword">source</span> ~/anaconda2/<span class="keyword">bin</span>/<span class="keyword">activate</span> kears_theano</span><br><span class="line"></span><br><span class="line">THEANO_FLAGS=device=cuda,floatX=float32,dnn.enabled=<span class="literal">True</span> python -u test_pixelwise.py <span class="comment">--imagedir test_data/grayscale_maps_half/ --savename test_data/jwr_pixelwise_polarity.h5 --modelname models/3D_unet_jwr_synapse_polarity_half_linear_leaky_f24_316_32_100000.json --weightname models/3D_unet_jwr_synapse_polarity_half_linear_leaky_f24_316_32_100000_weights.h5</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://i4.fuimg.com/640680/2a531757ef1d035b.png" alt="Markdown"></p>
+<h3 id="post-processing"><a href="#post-processing" class="headerlink" title="post processing"></a>post processing</h3><p>Toufiq has many post processing methods and it will be useful to process our prediction. So I study his codes and implement them.</p>
+<p>dilate gt-syn to have bigger region</p>
+<p><img src="http://i4.fuimg.com/640680/9cd40ceb9e49ebe8.png" alt="Markdown"></p>
+<p><img src="http://i4.fuimg.com/640680/cb94994ad0869007.png" alt="Markdown"></p>
+<p>some functions in<br><a href="https://github.com/microns-ariadne/pipeline_engine" target="_blank" rel="noopener">https://github.com/microns-ariadne/pipeline_engine</a></p>
+<ul>
+<li>segment_vesicle_style<br>Segment according to the “Vesicle” algorithm  See<br><a href="http://arxiv.org/abs/1403.3724" target="_blank" rel="noopener">http://arxiv.org/abs/1403.3724</a><br>VESICLE: Volumetric Evaluation of  Synaptic Interfaces using Computer Vision at Large Scale</li>
+</ul>
+<p>Volumetric Evaluation of Synaptic Interfaces using Computer vision at Large Scale<br>Segment according to the “Vesicle” algorithm</p>
+<p><img src="http://i4.fuimg.com/640680/abd068c68b9d05f6.png" alt="Markdown"></p>
+<p>It seems the algorithm  <strong>segment_vesicle_style</strong> do some post processing to <strong>smooth the results</strong></p>
+<ul>
+<li>match_synapses_by_overlap(gt_syn_np, syn_seg)<br>Determine the <strong>best ground truth synapse for a detected synapse by overlap</strong>,  <strong>gt_syn_np</strong>: dilated gt synapse, <strong>syn_seg</strong>: post processed prediction<br>Return two vectors. <ul>
+<li>The first vector is the matching label in d for each gt label (with zero for “not a match”). </li>
+<li>The second vector is the matching label in gt for each detected label.</li>
+</ul>
+</li>
+</ul>
+<p>interactively show blend of EM and dilated prediction</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def draw_synseg(idx):</span><br><span class="line">    fig,<span class="attribute">ax</span>=plt.subplots(1,figsize=(8,8))</span><br><span class="line">    pylab.imshow(img[idx], <span class="attribute">cmap</span>=<span class="string">'gray'</span>)</span><br><span class="line">    pylab.imshow(gt_syn_np[idx], <span class="attribute">cmap</span>=<span class="string">'tab20'</span>, <span class="attribute">alpha</span>=.3)</span><br><span class="line">    pylab.colorbar()</span><br><span class="line">    pylab.show()</span><br><span class="line">interact(draw_synseg, idx=(0, 144))</span><br></pre></td></tr></table></figure>
+<p>Dilated GT</p>
+<p><img src="http://i4.fuimg.com/640680/78d027d947270dee.png" alt="Markdown"></p>
+<p>post processed prediction</p>
+<p><img src="http://i4.fuimg.com/640680/1f61c116cc41a292.png" alt="Markdown"></p>
 
       
     </div>
@@ -737,7 +783,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">first two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#creteria"><span class="nav-number">1.1.</span> <span class="nav-text">creteria</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-calculate-F-score"><span class="nav-number">1.1.1.</span> <span class="nav-text">steps to calculate F-score</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Study-others’-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Study others’ methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st-place"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1st place</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd-place-by-previous-postdoc-in-Hanspeter-group"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2nd place by previous postdoc in Hanspeter group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4th-place-FN-is-good"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">4th place, FN is good</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster"><span class="nav-number">1.3.</span> <span class="nav-text">Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cluster"><span class="nav-number">1.4.</span> <span class="nav-text">cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner"><span class="nav-number">1.5.</span> <span class="nav-text">synaptic partner</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-4"><span class="nav-number">2.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner-1"><span class="nav-number">2.1.</span> <span class="nav-text">synaptic partner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Align-and-process-location-to-create-training-labels"><span class="nav-number">2.1.1.</span> <span class="nav-text">Align and process location to create training labels</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synaptic-partner-identification-model"><span class="nav-number">2.1.2.</span> <span class="nav-text">Synaptic partner identification model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hacking-toufiq’s-codes"><span class="nav-number">2.1.3.</span> <span class="nav-text">Hacking toufiq’s codes:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synapse-cluster"><span class="nav-number">2.2.</span> <span class="nav-text">Synapse cluster</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#first-two-weeks"><span class="nav-number">1.</span> <span class="nav-text">first two weeks</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#creteria"><span class="nav-number">1.1.</span> <span class="nav-text">creteria</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#steps-to-calculate-F-score"><span class="nav-number">1.1.1.</span> <span class="nav-text">steps to calculate F-score</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Study-others’-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Study others’ methods</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1st-place"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">1st place</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2nd-place-by-previous-postdoc-in-Hanspeter-group"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">2nd place by previous postdoc in Hanspeter group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4th-place-FN-is-good"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">4th place, FN is good</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster"><span class="nav-number">1.3.</span> <span class="nav-text">Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cluster"><span class="nav-number">1.4.</span> <span class="nav-text">cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner"><span class="nav-number">1.5.</span> <span class="nav-text">synaptic partner</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-4"><span class="nav-number">2.</span> <span class="nav-text">Week 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#synaptic-partner-1"><span class="nav-number">2.1.</span> <span class="nav-text">synaptic partner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Align-and-process-location-to-create-training-labels"><span class="nav-number">2.1.1.</span> <span class="nav-text">Align and process location to create training labels</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synaptic-partner-identification-model"><span class="nav-number">2.1.2.</span> <span class="nav-text">Synaptic partner identification model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hacking-toufiq’s-codes"><span class="nav-number">2.1.3.</span> <span class="nav-text">Hacking toufiq’s codes:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synapse-cluster"><span class="nav-number">2.2.</span> <span class="nav-text">Synapse cluster</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Week-5-amp-6"><span class="nav-number">3.</span> <span class="nav-text">Week 5 &amp; 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cluster-1"><span class="nav-number">3.1.</span> <span class="nav-text">Cluster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Synaptic-partner"><span class="nav-number">3.2.</span> <span class="nav-text">Synaptic partner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-and-test-a-model-to-predict-synapse-and-synaptic-partner-simultaneously"><span class="nav-number">3.2.1.</span> <span class="nav-text">Run and test a model to predict synapse and synaptic partner simultaneously</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post-processing"><span class="nav-number">3.2.2.</span> <span class="nav-text">post processing</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -775,7 +821,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共124.6k字</span>
+  <span class="post-count">博客全站共125.2k字</span>
 </div>
 
         
