@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
+    <lastmod>2018-08-13T00:09:49.729Z</lastmod>
+    <data>
+        <display>
+        <title>NMJ Project</title>
+        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synaptic_Partner_and_Cluster_Project/</loc>
     <lastmod>2018-08-13T00:00:37.354Z</lastmod>
     <data>
@@ -38,34 +66,6 @@
         <display>
         <title>Synapse Prediction</title>
         <pubTime>2018-07-15T02:50:06.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>project</tag>
-         
-        <tag>summer intern</tag>
-         
-        <tag>neural science</tag>
-         
-        <tag>Jeff Lichtman</tag>
-         
-         
-           
-             
-              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
-    <lastmod>2018-08-12T23:53:02.224Z</lastmod>
-    <data>
-        <display>
-        <title>NMJ Project</title>
-        <pubTime>2018-07-15T00:35:19.000Z</pubTime>
         
         <tag>deep learning</tag>
          
@@ -185,9 +185,9 @@
         <title>Jupyter自定义设置详解</title>
         <pubTime>2018-05-04T19:09:56.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -687,9 +687,9 @@
         <title>Differential Expression&作业</title>
         <pubTime>2018-05-20T04:08:12.000Z</pubTime>
         
-        <tag>assignment</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>assignment</tag>
          
         <tag>bioinformatics</tag>
          
@@ -711,9 +711,9 @@
         <title>分享一个微信机器人</title>
         <pubTime>2018-05-17T01:13:27.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
          
            
@@ -779,9 +779,9 @@
         <title>Snakemake初步</title>
         <pubTime>2018-05-06T02:39:51.000Z</pubTime>
         
-        <tag>codes</tag>
-         
         <tag>techniques</tag>
+         
+        <tag>codes</tag>
          
         <tag>bioinformatics</tag>
          
@@ -1022,11 +1022,11 @@
         <title>eMaize_Tutorial</title>
         <pubTime>2018-04-13T03:30:17.000Z</pubTime>
         
+        <tag>techniques</tag>
+         
         <tag>codes</tag>
          
         <tag>statistics</tag>
-         
-        <tag>techniques</tag>
          
         <tag>bioinformatics</tag>
          
