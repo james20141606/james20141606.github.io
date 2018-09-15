@@ -4,36 +4,8 @@
 
     
   <url>
-    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
-    <lastmod>2018-09-15T01:36:51.642Z</lastmod>
-    <data>
-        <display>
-        <title>NMJ Project</title>
-        <pubTime>2018-07-14T12:35:19.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>project</tag>
-         
-        <tag>summer intern</tag>
-         
-        <tag>neural science</tag>
-         
-        <tag>Jeff Lichtman</tag>
-         
-         
-           
-             
-              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synaptic_Partner_and_Cluster_Project/</loc>
-    <lastmod>2018-08-13T00:00:37.354Z</lastmod>
+    <lastmod>2018-09-15T03:06:09.796Z</lastmod>
     <data>
         <display>
         <title>Synaptic Partner and Cluster Project</title>
@@ -61,11 +33,39 @@
     
   <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synapse_Prediction/</loc>
-    <lastmod>2018-08-12T23:57:53.116Z</lastmod>
+    <lastmod>2018-09-15T03:01:05.653Z</lastmod>
     <data>
         <display>
         <title>Synapse Prediction</title>
         <pubTime>2018-07-14T14:50:06.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
+    <lastmod>2018-09-15T01:36:51.642Z</lastmod>
+    <data>
+        <display>
+        <title>NMJ Project</title>
+        <pubTime>2018-07-14T12:35:19.000Z</pubTime>
         
         <tag>deep learning</tag>
          
