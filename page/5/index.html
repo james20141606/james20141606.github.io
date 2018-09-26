@@ -1279,6 +1279,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/11/ECCV_2018/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="WonderLand">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/11/ECCV_2018/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T23:30:40+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/11/ECCV_2018/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  861
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: ECCV 2018 paper reading<br>date: 2018-09-26 21:23:55<br>categories:</p>
+<ul>
+<li>techniques</li>
+<li>machine learning<br>tags: </li>
+<li>deep learning</li>
+<li>paper reading</li>
+</ul>
+<hr>
+<p>I mainly focus on semantic segmentation and potentially related papers.</p>
+<h1 id="semantic-segmentation"><a href="#semantic-segmentation" class="headerlink" title="semantic segmentation"></a>semantic segmentation</h1><ul>
+<li><p>A Dataset for Lane Instance Segmentation in Urban Environments<br>a dataset paper</p>
+</li>
+<li><p>BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation<br><em>spatial path &amp; context path to solve real time segmentation</em></p>
+</li>
+<li><p>ICNet for Real-Time Semantic Segmentation on High-Resolution Images<br>solve <em>real time segmentation</em></p>
+</li>
+<li><p>Multi-Scale Context Intertwining for Semantic Segmentation<br>a novel scheme for aggregating features from diﬀerent scales, which we refer to as MultiScale Context Intertwining (MSCI).<br>merge pairs of feature maps <em>in a bidirectional and recurrent fashion</em>, via connections between two LSTM chains. By training the parameters of the LSTM units on the segmentation task, the above approach learns how to extract powerful and eﬀective features for pixellevel semantic segmentation, which are then combined hierarchically.</p>
+</li>
+<li><p>Eﬃcient Semantic Scene Completion Network with Spatial Group Convolution<br>Spatial Group Convolution (SGC) for <em>accelerating the computation of 3D dense prediction</em> tasks. SGC is orthogonal to group convolution, <em>which works on spatial dimensions</em> rather than feature channel dimension. It divides input voxels into diﬀerent groups, then conducts 3D sparse convolution on these separated groups.</p>
+</li>
+<li><p>Adaptive Afﬁnity Fields for Semantic Segmentation<br>propose the concept of Adaptive Afﬁnity Fields (AAF) to capture and match the semantic relations between neighbouring pixels in the label space</p>
+</li>
+<li><p>Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation<br>Spatial pyramid pooling module or encode-decoder structure<br>Encoder-Decoder with Atrous Convolution<br>Depthwise separable convolution:<br>DeepLabv3 as encoder<br><a href="https: //github.com/tensorflow/models/tree/master/research/deeplab" target="_blank" rel="noopener">implementation</a></p>
+</li>
+<li><p>MVTec D2S: Densely Segmented Supermarket Dataset<br>a dataset paper<br>a novel benchmark for instance-aware semantic segmentation in an industrial domain, It contains 21 000 high-resolution images with pixel-wise labels of all object instances.  The objects comprise groceries and everyday products from 60 categories.</p>
+</li>
+<li><p>Predicting Future Instance Segmentation by Forecasting Convolutional Features</p>
+</li>
+<li><p>ESPNet: Efﬁcient Spatial Pyramid of Dilated Convolutions for Semantic Segmentation<br>for semantic segmentation of high resolution images under resource constraints. ESPNet is based on a new convolutional module, efﬁcient spatial pyramid (ESP), which is efﬁcient in terms of computation, memory, and power.</p>
+</li>
+<li><p>Penalizing Top Performers: Conservative Loss for Semantic Segmentation Adaptation<br>a novel loss function, i.e., Conservative Loss, which penalizes the extreme good and bad cases while encouraging the moderate examples. More speciﬁcally, it enables the network to learn features that are discriminative by gradient descent and are invariant to the change of domains via gradient ascend method.</p>
+</li>
+<li><p>Aﬃnity Derivation and Graph Merge for Instance Segmentation<br>In our scheme, we use two neural networks with similar structures. One predicts the pixel level semantic score and the other is designed to derive pixel aﬃnities. Regarding pixels as the vertexes and aﬃnities as edges, we then propose a simple yet eﬀective graph merge algorithm to cluster pixels into instances.</p>
+</li>
+<li><p>ExFuse: Enhancing Feature Fusion for Semantic Segmentation<br>In this paper, we ﬁrst point out that a simple fusion of low-level and high-level features could be less eﬀective because of the gap in semantic levels and spatial resolution. We ﬁnd that introducing semantic information into low-level features and high-resolution details into high-level features is more eﬀective for the later fusion. Based on this observation, we propose a new framework, named ExFuse, to bridge the gap between low-level and high-level features thus signiﬁcantly improve the segmentation quality by 4.0% in total.</p>
+</li>
+<li><p>Deep Clustering for Unsupervised Learning of Visual Features<br>a clustering method that jointly learns the parameters of a neural network and the cluster assignments of the resulting features. DeepCluster iteratively groups the features with a standard clustering algorithm, kmeans, and uses the subsequent assignments as supervision to update the weights of the network.</p>
+</li>
+<li><p>Bidirectional Feature Pyramid Network with Recurrent Attention Residual Modules for Shadow Detection<br>recurrent attention residual (RAR) module to combine the contexts in two adjacent CNN layers and learn an attention map to select a residual and then reﬁne the context features. Second, we develop a bidirectional feature pyramid network (BFPN) to aggregate shadow contexts spanned across diﬀerent CNN layers by deploying two series of RAR modules in the network to iteratively combine and reﬁne context features: one series to reﬁne context features from deep to shallow layers, and another series from shallow to deep layers<br>better suppress false detections and enhance shadow details at the same time.</p>
+</li>
+<li><p>Multi-scale Residual Network for Image Super-Resolution<br>a novel multiscale residual network (MSRN) to fully exploit the image features, which outperform most of the state-of-the-art methods. Based on the residual block, we introduce convolution kernels of diﬀerent sizes to adaptively detect the image features in diﬀerent scales. Meanwhile, we let these features interact with each other to get the most eﬃcacious image information, we call this structure Multi-scale Residual Block (MSRB). Furthermore, the outputs of each MSRB are used as the hierarchical features for global feature fusion.</p>
+</li>
+</ul>
+<ul>
+<li>Predicting Future Instance Segmentation by Forecasting Convolutional Features<br>For video next frame prediction</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+    
+    </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/11/auto0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2035,198 +2247,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.cmwonderland.com/2018/04/11/auto4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Chen">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="WonderLand">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/11/auto4/" itemprop="url">回忆录 CHAPTER Ⅳ  新的篇章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T10:09:55+08:00">
-                2018-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/爷爷回忆录/" itemprop="url" rel="index">
-                    <span itemprop="name">爷爷回忆录</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/04/11/auto4/" class="leancloud_visitors" data-flag-title="回忆录 CHAPTER Ⅳ  新的篇章">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1,738
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>我在一九五九年夏季初中毕业，学校要求毕业生要主要报考高中、师范。高中是绝对上不起的，当教师是臭老九，经过反复的斟酌，我选择了当时自己觉得最受人崇拜的专业：农机化专业，这可是毛主席提出的四化之一，就这样我顺利录取到了郑州农机化专科学校（1960年，郑州农业机械化专科学校并入河南农学院（现河南农业大学），组建河南农学院农业机械化分院），我仿佛已经能够想象出自己开着铁牛奔驰在祖国广阔原野上的场景了。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/auto4/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2281,7 +2301,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">59</span>
+                  <span class="site-state-item-count">60</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2381,7 +2401,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共129.4k字</span>
+  <span class="post-count">博客全站共129.5k字</span>
 </div>
 
         
