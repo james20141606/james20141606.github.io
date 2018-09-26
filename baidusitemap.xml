@@ -29,6 +29,40 @@
 
     
   <url>
+    <loc>https://www.cmwonderland.com/2018/07/14/summerintern_NMJ/</loc>
+    <lastmod>2018-09-26T14:36:08.647Z</lastmod>
+    <data>
+        <display>
+        <title>NMJ Project</title>
+        <pubTime>2018-07-14T12:35:19.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>project</tag>
+         
+        <tag>neural science</tag>
+         
+        <tag>summer intern</tag>
+         
+        <tag>connectomics</tag>
+         
+        <tag>computational neural science</tag>
+         
+        <tag>computer vision</tag>
+         
+        <tag>Jeff Lichtman</tag>
+         
+         
+           
+             
+              <breadCrumb title="summer intern" url="https://www.cmwonderland.com/categories/summer-intern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.cmwonderland.com/2018/07/14/summerintern_Synapse_Prediction/</loc>
     <lastmod>2018-09-16T09:56:48.645Z</lastmod>
     <data>
@@ -273,9 +307,9 @@
         <title>系统临界态对智能的启发</title>
         <pubTime>2018-05-23T08:49:39.000Z</pubTime>
         
-        <tag>thoughts</tag>
-         
         <tag>deep learning</tag>
+         
+        <tag>thoughts</tag>
          
         <tag>brain</tag>
          
