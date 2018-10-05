@@ -2,6 +2,7 @@
 <html>
 
 	<head>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
 		<title>Xupeng Chen's Blog</title>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -56,7 +57,13 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-
+<style>
+.blog_txt{
+	font-size: 22px;
+    color: #000000;
+	font-weight: bold;
+}
+</style>
 	<body class="loading">
 		<div id="wrapper">
 			<div id="bg"></div>
@@ -64,7 +71,7 @@
 			<div id="main">
 
 				<!-- Header -->
-				<header id="header">
+				<header id="header" style="height:70vh;">
 					<div align="center">
 						<img src="css/images/portrait.jpg" style="width:100px; height:100px; border-radius:50%; overflow:hidden;" />
 					</div>
@@ -74,13 +81,31 @@
 					<nav>
 						<ul>
 							<li>
+								<div>
+								<span  class="blog_txt">BLOG</span>
 								<a href="https://www.cmwonderland.com/blog/" class="fa  fa-pencil-square-o" style="color:mediumspringgreen"><span>Blog</span></a>
+								</div>
 							</li>
 							<li>
-								<a href="https://www.cmwonderland.com/blog/about/" class="fa fa-book"><span>CV</span></a>
+								<span class="blog_txt">CV</span>
+								<a href="https://www.cmwonderland.com/blog/about/" class="fa fa-id-card-o"><span>CV</span></a>
+								
+							
 							</li>
 							<li>
+								<span class="blog_txt">Project</span>
+								<a href="https://www.cmwonderland.com/blog/categories/projects/" class="fa fa-bar-chart"><span>Project</span></a>
+							
+							</li>
+							<li>
+								<span class="blog_txt">GitHub</span>
 								<a href="https://github.com/james20141606" class="fa fa-github"><span>Github</span></a>
+						
+							</li>
+							<li>
+								<span class="blog_txt">BOOK</span>
+								<a href="https://www.cmwonderland.com/blog/categories/Book/" class="fa fa-book"><span>Book</span></a>
+
 							</li>
 						</ul>
 					</nav>
